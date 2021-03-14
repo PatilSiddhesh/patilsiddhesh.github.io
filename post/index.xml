@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Siddhesh Patil - Android Engineer and Kotlin Advocate</title>
+    <link>https://siddroid.com/post/</link>
+    <description>Recent content in Posts on Siddhesh Patil - Android Engineer and Kotlin Advocate</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 14 Mar 2021 22:49:09 +0530</lastBuildDate>
+    
+	<atom:link href="https://siddroid.com/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Dive into Kotlin/JS with Sebastian Aigner</title>
+      <link>https://siddroid.com/post/post-diving-into-kotlin-js-sebastian-aigner-siddhesh-patil/</link>
+      <pubDate>Sun, 14 Mar 2021 22:49:09 +0530</pubDate>
+      
+      <guid>https://siddroid.com/post/post-diving-into-kotlin-js-sebastian-aigner-siddhesh-patil/</guid>
+      <description>Event Details We&amp;rsquo;re going fully online into 2021 as a community our last meetup was a global collaboration of communities with Android Worldwide.</description>
+    </item>
+    
+    <item>
+      <title>Kotlin Mumbai x Android Worldwide</title>
+      <link>https://siddroid.com/post/post-joda-time-kotlin-flows-android-worldwide-2021/</link>
+      <pubDate>Tue, 19 Jan 2021 13:27:37 +0530</pubDate>
+      
+      <guid>https://siddroid.com/post/post-joda-time-kotlin-flows-android-worldwide-2021/</guid>
+      <description>Event Details I. Be the flow in a reactive world Himanshu Singh and Niharika Arora, Google Developer experts for Android talk about reactive programming and how Kotlin flows can help solve some problems with reactive programming.</description>
+    </item>
+    
+    <item>
+      <title>Kotlin Mumbai: Exploring Future of Android UI With Jetpack Compose</title>
+      <link>https://siddroid.com/post/post-exploring-future-of-android-with-jetpack-compose-siddhesh-patil/</link>
+      <pubDate>Sat, 26 Dec 2020 19:48:27 +0530</pubDate>
+      
+      <guid>https://siddroid.com/post/post-exploring-future-of-android-with-jetpack-compose-siddhesh-patil/</guid>
+      <description>Event Details  Speaker: Gurupreet Singh , Android Developer at Foodpanda Location: Online, Microsoft Teams   Exploring the future of Android UI with Jetpack Compose Compose is a new declarative way of making user interfaces on Android.</description>
+    </item>
+    
+    <item>
+      <title>Kotlin Mumbai: Dissecting Coroutines</title>
+      <link>https://siddroid.com/post/post-dissecting-coroutines-kotlin-mumbai-nov-2020-siddhesh-patil-siddroid/</link>
+      <pubDate>Sat, 28 Nov 2020 15:18:16 +0530</pubDate>
+      
+      <guid>https://siddroid.com/post/post-dissecting-coroutines-kotlin-mumbai-nov-2020-siddhesh-patil-siddroid/</guid>
+      <description>Event Details  Speaker: Mohit Sarveiya ,Google Developer Expert for Kotlin Date: 28th November 2020 Location: Online   Dissecting Coroutines The coroutines library contains many features for starting coroutines, creating Flows and Channels, and handling a mutable shared state.</description>
+    </item>
+    
+    <item>
+      <title>Hacktoberfest: Speed up your workflows with ZSH and command line aliases!</title>
+      <link>https://siddroid.com/post/post-hacktoberfest-kotlin-mumbai-git-alias-zsh-siddhesh-patil/</link>
+      <pubDate>Sat, 24 Oct 2020 16:37:06 +0530</pubDate>
+      
+      <guid>https://siddroid.com/post/post-hacktoberfest-kotlin-mumbai-git-alias-zsh-siddhesh-patil/</guid>
+      <description>Using ZSH and OHMYZSH and Command line aliases Workflows can get tedious, often at times you&amp;rsquo;ll find yourself switching between tools to accomplish your tasks.</description>
+    </item>
+    
+    <item>
+      <title>Build a game with Jetpack Compose and Keep up with scoped storage on Android</title>
+      <link>https://siddroid.com/post/post-kotlin-mumbai-jetpack-compose-scoped-storage-on-android-2020-siddhesh-patil/</link>
+      <pubDate>Sat, 26 Sep 2020 21:31:29 +0530</pubDate>
+      
+      <guid>https://siddroid.com/post/post-kotlin-mumbai-jetpack-compose-scoped-storage-on-android-2020-siddhesh-patil/</guid>
+      <description>Event Details  Speaker: Wajahat Karim, GDE for Android &amp;amp; Carlos Mota, Organizer of GDG Coimbra Date: 26th September 2020 Location: Online   Scoped Storage on Android Scoped storage is still a sensitive subject to most of us due to the impact it had on most apps, but the most needed one!</description>
+    </item>
+    
+    <item>
+      <title>Kotlin Mumbai: Building a better codebase with Lint on Android</title>
+      <link>https://siddroid.com/post/post-august-kotlin-mumbai-2020-siddhesh-patil/</link>
+      <pubDate>Sat, 22 Aug 2020 20:58:04 +0530</pubDate>
+      
+      <guid>https://siddroid.com/post/post-august-kotlin-mumbai-2020-siddhesh-patil/</guid>
+      <description>Event Details  Speaker: Subhrajyoti Sen, Android Developer from smallcase Date: 22nd August 2020 Location: Online   Description Lint is a powerful static analysis tool that can be used to enforce coding styles and also find common bugs across a codebase.</description>
+    </item>
+    
+    <item>
+      <title>How Kotlin won the language war in Android App Development</title>
+      <link>https://siddroid.com/post/post-siddhesh-patil-times-of-india-kotlin/</link>
+      <pubDate>Thu, 20 Aug 2020 20:06:51 +0530</pubDate>
+      
+      <guid>https://siddroid.com/post/post-siddhesh-patil-times-of-india-kotlin/</guid>
+      <description>Details Publication: Times of India
+Date: 19th August 2020</description>
+    </item>
+    
+    <item>
+      <title>VESIT: Building Apps For Android in Kotlin</title>
+      <link>https://siddroid.com/post/talk-building-apps-for-android-in-kotlin-vesit-cmpn-siddhesh-patil/</link>
+      <pubDate>Sat, 08 Aug 2020 01:11:44 +0530</pubDate>
+      
+      <guid>https://siddroid.com/post/talk-building-apps-for-android-in-kotlin-vesit-cmpn-siddhesh-patil/</guid>
+      <description>Talk details Title: Building apps for Android in Kotlin</description>
+    </item>
+    
+    <item>
+      <title>VESIT: Getting Started With Kotlin</title>
+      <link>https://siddroid.com/post/talk-getting-started-with-kotlin-vesit-cmpn-siddhesh-patil/</link>
+      <pubDate>Fri, 07 Aug 2020 01:10:38 +0530</pubDate>
+      
+      <guid>https://siddroid.com/post/talk-getting-started-with-kotlin-vesit-cmpn-siddhesh-patil/</guid>
+      <description>Talk details Title: Getting Started With Kotlin
+Date: 7th August 2020</description>
+    </item>
+    
+    <item>
+      <title>Kotlin Hyderabad: Introduction to Kotlin</title>
+      <link>https://siddroid.com/post/talk-introduction-to-kotlin-siddhesh-patil-kotlin-hyderabad/</link>
+      <pubDate>Sat, 01 Aug 2020 16:17:09 +0530</pubDate>
+      
+      <guid>https://siddroid.com/post/talk-introduction-to-kotlin-siddhesh-patil-kotlin-hyderabad/</guid>
+      <description>Talk details Title: Introduction to Kotlin
+Platform: Youtube live stream</description>
+    </item>
+    
+    <item>
+      <title>Kotlin Mumbai: Increase Your Product Quality Through Accessibility</title>
+      <link>https://siddroid.com/post/post-july-kotlin-mumbai-2020/</link>
+      <pubDate>Sat, 25 Jul 2020 20:58:04 +0530</pubDate>
+      
+      <guid>https://siddroid.com/post/post-july-kotlin-mumbai-2020/</guid>
+      <description>Making your app accessible for everyone is more than a “nice thing to do” It also increases the quality of your app.</description>
+    </item>
+    
+    <item>
+      <title>Android 11 Meetup: GDG MAD and Kotlin Mumbai</title>
+      <link>https://siddroid.com/post/post-android-11-meetup-gdg-mad-kotlin-mumbai-siddhesh-patil/</link>
+      <pubDate>Sat, 11 Jul 2020 21:47:51 +0530</pubDate>
+      
+      <guid>https://siddroid.com/post/post-android-11-meetup-gdg-mad-kotlin-mumbai-siddhesh-patil/</guid>
+      <description>It&amp;rsquo;s July 11th and Android 11 is just around the corner!</description>
+    </item>
+    
+    <item>
+      <title>Understanding Context in Android</title>
+      <link>https://siddroid.com/post/post-understanding-context-in-android-siddhesh-patil/</link>
+      <pubDate>Thu, 09 Jul 2020 03:39:54 +0530</pubDate>
+      
+      <guid>https://siddroid.com/post/post-understanding-context-in-android-siddhesh-patil/</guid>
+      <description>If you have recently started to develop apps on Android or have been developing them from a long time, you know what context is.</description>
+    </item>
+    
+    <item>
+      <title>Kotlin Mumbai: TDD using Spek</title>
+      <link>https://siddroid.com/post/post-june-kotlin-mumbai-2020/</link>
+      <pubDate>Wed, 01 Jul 2020 19:18:45 +0530</pubDate>
+      
+      <guid>https://siddroid.com/post/post-june-kotlin-mumbai-2020/</guid>
+      <description>Senior Android Engineer at BYJU&amp;rsquo;s, Rivu Chakraborty gives a talk on test driven development using Spek</description>
+    </item>
+    
+    <item>
+      <title>Kotlin Mumbai: Github Actions!</title>
+      <link>https://siddroid.com/post/post-may-kotlin-mumbai-2020/</link>
+      <pubDate>Sat, 30 May 2020 16:50:05 +0530</pubDate>
+      
+      <guid>https://siddroid.com/post/post-may-kotlin-mumbai-2020/</guid>
+      <description>Nicola Corti from Spotify walks us through Github actions! It&#39;s time to roll up your sleeves and make production easier!</description>
+    </item>
+    
+    <item>
+      <title>Kotlin Mumbai: Kotlin basics and Flows</title>
+      <link>https://siddroid.com/post/post-april-kotlin-mumbai-2020/</link>
+      <pubDate>Mon, 27 Apr 2020 18:56:47 +0530</pubDate>
+      
+      <guid>https://siddroid.com/post/post-april-kotlin-mumbai-2020/</guid>
+      <description>Introductions &amp;amp; Introductions We recently organized our April meetup at Kotlin Mumbai.</description>
+    </item>
+    
+    <item>
+      <title>Kotlin Mumbai: Dagger and Jetpack Navigation</title>
+      <link>https://siddroid.com/post/post-march-kotlin-mumbai-2020/</link>
+      <pubDate>Sun, 05 Apr 2020 15:33:09 +0530</pubDate>
+      
+      <guid>https://siddroid.com/post/post-march-kotlin-mumbai-2020/</guid>
+      <description>With the current situation and lockdowns due to coronavirus, we had to roll up our sleeves and prepare for a fully online meetup.</description>
+    </item>
+    
+    <item>
+      <title>Better permissions on Android</title>
+      <link>https://siddroid.com/post/post-android-rationale-permission-dialogs-2020/</link>
+      <pubDate>Sun, 08 Mar 2020 20:11:21 +0530</pubDate>
+      
+      <guid>https://siddroid.com/post/post-android-rationale-permission-dialogs-2020/</guid>
+      <description>Permissions request dialogs are a vital part of user’s experience on the app.</description>
+    </item>
+    
+  </channel>
+</rss>

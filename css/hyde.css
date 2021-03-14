@@ -1,0 +1,301 @@
+/*
+ *  __                  __
+ * /\ \                /\ \
+ * \ \ \___   __  __   \_\ \     __
+ *  \ \  _ `\/\ \/\ \  /'_` \  /'__`\
+ *   \ \ \ \ \ \ \_\ \/\ \_\ \/\  __/
+ *    \ \_\ \_\/`____ \ \___,_\ \____\
+ *     \/_/\/_/`/___/> \/__,_ /\/____/
+ *                /\___/
+ *                \/__/
+ *
+ * Designed, built, and released under MIT license by @mdo. Learn more at
+ * https://github.com/poole/hyde.
+ */
+
+
+/*
+ * Contents
+ *
+ * Global resets
+ * Sidebar
+ * Container
+ * Reverse layout
+ * Themes
+ */
+
+
+/*
+ * Global resets
+ *
+ * Update the foundational and global aspects of the page.
+ */
+
+html {
+  font-family: "sansfont";
+}
+@media (min-width: 48em) {
+  html {
+    font-size: 16px;
+  }
+}
+@media (min-width: 58em) {
+  html {
+    font-size: 20px;
+  }
+}
+
+
+/*
+ * Sidebar
+ *
+ * Flexible banner for housing site name, intro, and "footer" content. Starts
+ * out above content in mobile and later moves to the side with wider viewports.
+ */
+
+.sidebar {
+  text-align: center;
+  padding: 2rem 1rem;
+  color: rgba(255,255,255,.5);
+  background-color: #202020;
+}
+@media (min-width: 48em) {
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 18rem;
+  }
+}
+
+/* Sidebar links */
+.sidebar a {
+  color: #fff;
+}
+
+/* About section */
+.sidebar-about h1 {
+  color: #fff;
+  margin-top: 0;
+  font-size: 2.25rem;
+  font-weight: 400;
+}
+
+/* Sidebar nav */
+.sidebar-nav {
+  padding-left: 0;
+  list-style: none;
+}
+.sidebar-nav-item {
+  display: block;
+}
+a.sidebar-nav-item:hover,
+a.sidebar-nav-item:focus {
+  text-decoration: underline;
+  color: #4285f4;
+}
+.sidebar-nav-item.active {
+  font-weight: bold;
+}
+
+/* Container
+ *
+ * Align the contents of the site above the proper threshold with some margin-fu
+ * with a 25%-wide `.sidebar`.
+ */
+
+.content {
+  padding-top:    2rem;
+  padding-bottom: 2rem;
+  min-height: 50%;
+}
+
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+.copyright {
+  font-size: .7rem;
+  text-align: center;
+}
+
+footer {
+  height: 40px;
+}
+
+
+@media (min-width: 48em) {
+  .content {
+    margin-left: 20rem;
+    margin-right: 2rem;
+    min-height: 100%;
+  }
+}
+
+.gg {
+  padding: 2rem;
+}
+
+@media (min-width: 64em) {
+  .content {
+    margin-left: 22rem;
+    margin-right: 4rem;
+  }
+}
+
+@media (min-width: 48em) {
+  .gg {
+    padding: 2rem;
+    margin-left: 20rem;
+    margin-right: 2rem;
+    min-height: 100%;
+  }
+}
+
+.hackyz {
+  width: 75%;
+}
+
+
+@media (max-width: 48em) {
+  .hackyz {
+    width: 100%;
+  }
+}
+
+.hackyr {
+  height: 0px;
+}
+
+@media (max-width: 48em) {
+  .hackyr {
+    height: 100px;
+  }
+}
+
+.hacky {
+  width: 30%;
+}
+
+@media (max-width: 48em) {
+  .hacky {
+    width: 0px;
+  }
+}
+
+
+@media (max-width: 48em) {
+  .readTime {
+    width: 0px;
+    opacity: 0;
+  }
+}
+
+@media (max-width: 48em) {
+  .otherTwoTags {
+    max-height: 45px;
+  }
+}
+
+@media (min-width: 64em) {
+  .gg {
+    padding: 2rem;
+    margin-left: 22rem;
+    margin-right: 4rem;
+  }
+}
+
+.img-circle {
+  border-radius: 50%;
+}
+
+.img-headshot {
+  border: 4px solid #3ddc84;
+  padding: 0.2em;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.sidebar {
+  background-color: #073042;
+  color: #fff;
+}
+
+.sidebar a,
+.sidebar-about h1 {
+  color: #fff;
+}
+
+footer a,
+.content a,
+.related-posts li a:hover {
+  color: #49757a;
+}
+
+.read-more-link {
+  margin-top: 1rem;
+}
+
+.read-more-link a {
+  padding: 8px 16px;
+  border: 1px solid;
+  border-color: #49757a;
+  border-radius: 4px;
+}
+
+.read-more-link a:hover {
+  text-decoration: none;
+}
+
+.pull-right {
+  float: right;
+}
+
+ul.posts {
+  list-style: none;
+}
+
+.social-icons,
+.sidebar nav {
+  margin-top: 1rem;
+}
+
+.social-icons a,
+.social-icons a:hover,
+.social-icons a:focus {
+  text-decoration: none !important;
+}
+
+@font-face {
+  font-family: sansfont;
+  src: url(/images/Manrope-Medium.woff2);
+}
+
+.tagBg{
+  background-color:#eeeeee;
+  border-radius: 7px;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  font-size: 70%;
+  color: #4b4b4b;
+}
+
+.twitterFollow{
+  background-color:#fff;
+  border-radius: 7px;
+  margin: 2em;
+  font-size: 70%;
+  font-weight: bold;
+  color: #073042;
+}

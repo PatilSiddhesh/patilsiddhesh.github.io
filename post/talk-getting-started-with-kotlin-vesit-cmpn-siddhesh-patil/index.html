@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:image" content="https://siddroid.com//images/talk_getting_started_with_kotlin_vesit_cmpn_siddhesh_patil.jpg" />
+  <meta name="theme-color" content="#073042" />
+  <meta name="generator" content="Hugo 0.73.0" />
+
+  <title>VESIT: Getting Started With Kotlin &middot; Siddhesh Patil</title>
+
+  <meta name="description" content="A talk aimed to introduce the power of Kotlin to over 170 computer engineering students from VES Institute of Technology in Chembur, Mumbai" />
+
+  
+  <meta property="og:locale" content="en-us"/>
+
+  
+  <meta property="og:image" content="https://siddroid.com//images/siddhesh_patil_android_dev_thumb_truestark.jpg">
+
+  
+  <meta property="og:site_name" content="Siddhesh Patil - Android Engineer and Kotlin Advocate"/>
+  <meta property="og:title" content="VESIT: Getting Started With Kotlin"/>
+  <meta property="og:description" content="A talk aimed to introduce the power of Kotlin to over 170 computer engineering students from VES Institute of Technology in Chembur, Mumbai"/>
+  <meta property="og:url" content="https://siddroid.com/post/talk-getting-started-with-kotlin-vesit-cmpn-siddhesh-patil/"/>
+  <meta property="og:type" content="article"/>
+  <meta property="article:published_time" content="2020-08-07T01:10:38&#43;0530"/>
+  <meta property="article:modified_time" content="2020-08-07T01:10:38&#43;0530"/>
+  <meta property="article:author" content="Siddhesh Patil">
+  
+  
+  <meta name="thumbnail" content="https://siddroid.com//images/talk_getting_started_with_kotlin_vesit_cmpn_siddhesh_patil.jpg">
+  <meta name="twitter:image" content="https://siddroid.com//images/talk_getting_started_with_kotlin_vesit_cmpn_siddhesh_patil.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  
+
+  
+  <script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "TechArticle",
+    "name": "VESIT: Getting Started With Kotlin",
+    "headline": "VESIT: Getting Started With Kotlin",
+    "alternativeHeadline": "Learn Kotlin and Android development with Siddhesh Patil",
+    "editor": "Siddhesh Patil",
+    "genre": "Android development and Kotlin programming",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Siddroid",
+      "url": "https://siddroid.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://siddroid.com/images/siddhesh_patil.jpg"
+      },
+      "sameAs" : [ "https://www.linkedin.com/in/patilsid/",
+        "https://www.github.com/patilsiddhesh/",
+        "https://facebook.com/siddroid/",
+        "https://patilsiddhesh.medium.com/",
+        "http://twitter.com/siddroid"]
+    },
+    "keywords": "Siddhesh patil Siddroid Android Engineer Mumbai Kotlin Developer Expert Jetbrains Speaker Opensource contributor community organizer Paytm Insider Cyanogenmod",
+     
+    "datePublished": "2020-08-07T01:10:38",
+    
+    "dateModified": "2020-08-07T01:10:38",
+    "author": {
+      "@type" : "Person",
+      "name": "Siddhesh Patil",
+      "alternateName" : "Sid Patil",
+      "@id": "https://siddroid.com/about",
+      "image": "https://siddroid.com/images/siddhesh_patil.jpg",
+      "alumniOf": [
+      {
+       "@type": "CollegeOrUniversity",
+       "name": "University of Mumbai",
+       "sameAs": "https://en.wikipedia.org/wiki/University_of_Mumbai"
+      },
+      {
+        "@type": "CollegeOrUniversity",
+        "name": "Atharva College of Engineering",
+        "sameAs": "http://www.atharvacoe.ac.in/"
+       },
+      {
+       "@type": "CollegeOrUniversity",
+       "name": "Bhavans College",
+       "sameAs": "https://en.wikipedia.org/wiki/Bhavan's_College"
+      }
+    ],
+      "nationality": "Indian",
+      "gender": "male",
+      "sameAs" : [ "https://www.linkedin.com/in/patilsid/",
+        "https://facebook.com/siddroid/",
+        "https://www.github.com/patilsiddhesh/",
+        "https://patilsiddhesh.medium.com/",
+        "http://twitter.com/siddroid"],
+        "birthPlace": {
+          "@type": "Place",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Mumbai",
+            "addressRegion": "Maharashtra"
+          }
+        },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Mumbai",
+        "addressRegion": "Maharashtra"
+      },
+      "affiliation": [
+	    {
+		  "@type": "Organization",
+		  "name": "Paytm",
+		  "sameAs": [
+			"https://twitter.com/paytm",
+			"https://paytm.com"
+		  ]
+  	},
+    {
+		  "@type": "Organization",
+		  "name": "Paytm Insider",
+		  "sameAs": [
+			"https://twitter.com/paytminsider",
+			"https://insider.in"
+		  ]
+  	},
+    {
+		  "@type": "Organization",
+		  "name": "Kotlin Mumbai",
+		  "sameAs": [
+			"https://twitter.com/kotlinmumbai",
+			"https://kotlinmumbai.tech"
+		  ]
+  	}
+
+],
+      "jobTitle": "Android Engineer",
+      "worksFor": [
+      {
+      "@type": "Organization",
+      "name": "Paytm",
+      "sameAs": [
+        "https://twitter.com/Paytm",
+        "https://paytm.com"
+      ]
+      },
+          {
+      "@type": "Organization",
+      "name": "Paytm Insider",
+      "sameAs": [
+        "https://twitter.com/PaytmInsider",
+        "https://insider.in"
+      ]
+      }
+    ],
+      "url" : "https://siddroid.com",
+      "disambiguatingDescription": "Android Engineer at Paytm Insider and Organizer of Kotlin Mumbai",
+      "description": "Android Engineer and Kotlin Advocate from Mumbai. Learn to develop quality Android apps and build software with Kotlin programming."
+    
+    },
+    
+    "image": "https://siddroid.com//images/talk_getting_started_with_kotlin_vesit_cmpn_siddhesh_patil.jpg",
+    "url": "https://siddroid.com/post/talk-getting-started-with-kotlin-vesit-cmpn-siddhesh-patil/",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://siddroid.com/"
+    },
+    "description": "A talk aimed to introduce the power of Kotlin to over 170 computer engineering students from VES Institute of Technology in Chembur, Mumbai",
+    "articleBody": "A talk aimed to introduce the power of Kotlin to over 170 computer engineering students from VES Institute of Technology in Chembur, Mumbai"
+  }
+  </script>
+  
+
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="https://siddroid.com/css/print.css"
+        media="print">
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="https://siddroid.com/css/poole.css">
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="https://siddroid.com/css/hyde.css">
+
+  
+<style type="text/css">
+  .sidebar {
+    background-color: #4285f4;
+  }
+
+  .read-more-link a {
+    border-color: #4285f4;
+  }
+
+  footer a,
+  .content a,
+  .related-posts li a:hover {
+    color: #4285f4;
+  }
+</style>
+
+
+
+  
+
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700&display=swap">
+
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk="
+        crossorigin="anonymous" />
+
+
+
+        <link rel="apple-touch-icon-precomposed" sizes="57x57" href="https://siddroid.com/favicon/apple-touch-icon-57x57.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://siddroid.com/favicon/apple-touch-icon-114x114.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://siddroid.com/favicon/apple-touch-icon-72x72.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://siddroid.com/favicon/apple-touch-icon-144x144.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="60x60" href="https://siddroid.com/favicon/apple-touch-icon-60x60.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="120x120" href="https://siddroid.com/favicon/apple-touch-icon-120x120.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="76x76" href="https://siddroid.com/favicon/apple-touch-icon-76x76.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="https://siddroid.com/favicon/apple-touch-icon-152x152.png" />
+        <link rel="icon" type="image/png" href="https://siddroid.com/favicon/favicon-196x196.png" sizes="196x196" />
+        <link rel="icon" type="image/png" href="https://siddroid.com/favicon/favicon-96x96.png" sizes="96x96" />
+        <link rel="icon" type="image/png" href="https://siddroid.com/favicon/favicon-32x32.png" sizes="32x32" />
+        <link rel="icon" type="image/png" href="https://siddroid.com/favicon/favicon-16x16.png" sizes="16x16" />
+        <link rel="icon" type="image/png" href="https://siddroid.com/favicon/favicon-128.png" sizes="128x128" />
+        <meta name="application-name" content="Siddroid"/>
+        <meta name="msapplication-TileColor" content="#FFFFFF" />
+        <meta name="msapplication-TileImage" content="https://siddroid.com/favicon/mstile-144x144.png" />
+        <meta name="msapplication-square70x70logo" content="https://siddroid.com/favicon/mstile-70x70.png" />
+        <meta name="msapplication-square150x150logo" content="https://siddroid.com/favicon/mstile-150x150.png" />
+        <meta name="msapplication-wide310x150logo" content="https://siddroid.com/favicon/mstile-310x150.png" />
+        <meta name="msapplication-square310x310logo" content="https://siddroid.com/favicon/mstile-310x310.png" />
+
+  
+  </head>
+<body>
+  <aside class="sidebar" style="background-color: #073042;display: flex;align-items: center;justify-content: center;background-image: url('/images/android_side.png');background-repeat: no-repeat;background-position: top right;background-size: 15%;">
+  <div class="container">
+    <div class="sidebar-about" >
+      
+        <div class="author-image" style="justify-content: center;">
+          <img src="https://siddroid.com/images/siddhesh_patil.jpg" class="img-circle img-headshot center" width="150px" height="150px" title="Siddhesh Patil" alt="Siddhesh Patil is an Android Engineer at Paytm Insider. Works on Paytm consumer and business apps. He is the organzier of Kotlin Mumbai, a developer community in Mumbai, India. Find talks, articles and latest developments in Android and Kotlin on this website siddroid.com">
+        </div>
+        
+
+        <div style="display: flex;justify-content: center;">
+          <p class="lead" style="color: #fff;font-family:sansfont;" >Siddhesh</p>  
+          <p class="lead" style="color: #fff;font-family:sansfont;white-space: pre;" > Patil</p>
+        </div>
+
+        <div style="display: flex;justify-content: center;">
+          <p style="color: #3ddc84;font-family:sansfont;" >Android &middot;</p>  
+          <p style="color: #fff;font-family:sansfont;white-space: pre;" > Kotlin</p>
+        </div>
+      
+      
+      
+
+    </div>
+      <div style="display: flex;margin-top: 30px;width: 5rem;">
+          <a href="https://siddroid.com/" title="Go to Homepage" style="color: #fff;font-family:sansfont;text-decoration: none;-webkit-tap-highlight-color: transparent;
+          ">   
+            <div style="display: flex;width: 50%;">
+              <i class="fas fa-newspaper" aria-hidden="true" style="height: 20px;width: 25px;"></i>
+              <p style="font-size:80%; color: #fff; font-family:sansfont;margin-left: 10px;" >Home</p>
+            </div>     
+          </a>
+        
+        
+        <a href="/browse/" title="Navigate this site" style="color: #fff;font-family:sansfont;text-decoration: none;-webkit-tap-highlight-color: transparent;
+        ">        
+          <div style="display: flex;width: 50%;">
+            <i class="fas fa-compass" aria-hidden="true" style="margin-left: 62px;height: 20px;width: 25px;"></i>
+            <p style="font-size:80%; color: #fff; font-family:sansfont;margin-left: 10px;" >Browse</p>
+          </div>  
+        </a>
+        
+        
+        
+        
+        
+      </div>
+   
+      <div style="display: flex;margin-top: 10px;width: 5rem;">      
+        
+        
+        
+        <a href="/projects/" title="New and old projects" style="color: #fff;font-family:sansfont;text-decoration: none;-webkit-tap-highlight-color: transparent;
+        ">        
+        <div style="display: flex;width: 50%;">
+          <i class="fa fa-terminal" aria-hidden="true" style="height: 20px;width: 25px;"></i>
+          <p style="font-size:80%; color: #fff; font-family:sansfont;margin-left: 10px;" >Projects</p>
+        </div> 
+        </a>
+        
+        
+        <a href="/about/" title="Some stuff about Siddhesh" style="color: #fff;font-family:sansfont;text-decoration: none;-webkit-tap-highlight-color: transparent;
+        ">        
+          <div style="display: flex;width: 50%;">
+            <i class="fas fa-hand-spock" aria-hidden="true" style="margin-left: 45px;height: 20px;width: 25px;"></i>
+            <p class="lead" style="font-size:80%; color: #fff; font-family:sansfont;margin-left: 10px;" >About</p>
+          </div> 
+        </a>
+        
+      </div>
+    
+    
+
+
+    <section class="social-icons" style="margin-bottom: 30px;">
+      
+      <a href="https://www.linkedin.com/in/patilsid/" rel="me" title="Linkedin" target="_blank" style="color: #fff;">
+        <i class="fab fa-linkedin" aria-hidden="true" style="margin:0.5em;height: 20px;width: 25px;"></i>
+      </a>
+      
+      <a href="https://github.com/patilsiddhesh" rel="me" title="GitHub" target="_blank" style="color: #fff;">
+        <i class="fab fa-github" aria-hidden="true" style="margin:0.5em;height: 20px;width: 25px;"></i>
+      </a>
+      
+      <a href="https://play.google.com/store/apps/dev?id=5340193411980337477" rel="me" title="Playstore" target="_blank" style="color: #fff;">
+        <i class="fab fa-google-play" aria-hidden="true" style="margin:0.5em;height: 20px;width: 25px;"></i>
+      </a>
+      
+      <a href="mailto:work.sidpatil@gmail.com?subject=Hey%20Siddhesh!&amp;body=Hey%20Siddhesh%2C%0D%0A%0D%0A%0D%0A" rel="me" title="Mail" target="_blank" style="color: #fff;">
+        <i class="fas fa-envelope" aria-hidden="true" style="margin:0.5em;height: 20px;width: 25px;"></i>
+      </a>
+      
+      <a href="https://www.reddit.com/user/siddheshpatil/" rel="me" title="Reddit" target="_blank" style="color: #fff;">
+        <i class="fab fa-reddit" aria-hidden="true" style="margin:0.5em;height: 20px;width: 25px;"></i>
+      </a>
+      
+    </section>
+
+
+    <a  href="http://twitter.com/intent/user?screen_name=siddroid" data-show-count="false" style="text-decoration: none;"> 
+      <div class="twitterFollow" style="display: flex;justify-content: center; height: 30px;align-items: center;">
+      <i class="fab fa-twitter" aria-hidden="true" style="height: 20px;width: 25px; margin-right: 5px;"></i>
+      Follow @siddroid
+    </div> 
+  </a>
+
+
+  </div>
+
+  
+</aside>
+
+
+
+
+  <main id="main-container" class="gg">
+      <div class="post">
+  <h1>VESIT: Getting Started With Kotlin</h1>
+
+  <div class="post-date">
+    <time datetime="2020-08-07T01:10:38&#43;0530">Aug 7, 2020</time> · 2 min read
+  </div>
+
+  <meta name="thumbnail" content="https://siddroid.com/images/talk_getting_started_with_kotlin_vesit_cmpn_siddhesh_patil.jpg">
+<meta name="twitter:image" content="https://siddroid.com/images/talk_getting_started_with_kotlin_vesit_cmpn_siddhesh_patil.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<hr>
+<img src="/images/talk_getting_started_with_kotlin_vesit_cmpn_siddhesh_patil.jpg" alt="Siddhesh Patil talks about Kotlin and the language features at CMPN department of VESIT Mumbai">
+<hr>
+<h2 id="talk-details">Talk details</h2>
+<p><strong>Title:</strong> Getting Started With Kotlin</p>
+<p><strong>Date:</strong> 7th August 2020</p>
+<p><strong>Platform:</strong> Google Meet</p>
+<p><strong>Institute:</strong> Vivekanand Education Society&rsquo;s Institute of Technology</p>
+<p><strong>Location:</strong> Online</p>
+<p><strong>Attendees:</strong> 170 + Students from Department of Computer Engineering</p>
+<p><strong>Patrons:</strong> Dr.(Mrs). Nupur Giri, Head of department, Computer Engineering</p>
+<p><strong>From Codecell:</strong> Mr. Prashant Kanade, Mr. Richard Joseph</p>
+<p><strong>Coordinators:</strong> Mr.SujitKumar Singh, Ms.Tina Chandwani, Mr.Amit Chhabria, Mr.Rohan Gosalkar, Mr.Arnav Bagchi, Mr.Kunal Kotkar, Mr.Sanket Jangle, Mr.Sahil Rajpal</p>
+<p><strong>Hon:</strong> Shri. B.L. Boolani (President VES), Dr.(Mrs) J.M. Nair (Principal), Dr.(Mrs) M. Vijayalakshmi (Vice Principal)</p>
+<hr>
+<h2 id="abstract">Abstract</h2>
+<p>Kotlin empowers Android apps and enables developers to express themselves freely than any other object-oriented programming language. This introductory talk as a part of a two-day program aims to cover the basics of Kotlin.</p>
+<hr>
+<h2 id="coverage">Coverage</h2>
+<ul>
+<li>Brush-up on Object-Oriented Programing</li>
+<li>Evolution of OOP</li>
+<li>Why Kotlin</li>
+<li>What is Kotlin</li>
+<li>Facts about Kotlin</li>
+<li>Interoperability &amp; Tools used</li>
+<li>val and var declarations</li>
+<li>Type inference</li>
+<li>Type casting</li>
+<li>Functions in Kotlin</li>
+<li>Nullability and Null-safety</li>
+<li>Data classes and Primitive types</li>
+<li>Lists &amp; Arrays</li>
+<li>if statements and flow control</li>
+<li>for loop and iteration</li>
+<li>Classes</li>
+</ul>
+<hr>
+<h2 id="slidedeck">Slidedeck</h2>
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSf5wndvJhh9nGFW9J1RTIrg70CXKsEWUpgE5MIBVI7LApjTP9jP9X00IJ8cV5GpUXe59uhk3tOMuWC/embed?start=false&loop=true&delayms=5000" frameborder="0" width="100%" height="300px" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+<hr>
+<h2 id="acknowledgements">Acknowledgements</h2>
+<p>A big thanks to every student who attended this session. Thanks to Mr. Richard Joseph who was kind enough to introduce me to the students and faculty. This talk went wonderfully and students who never knew Kotlin were able to grasp the concepts easily. We had a small Q&amp;A at the end of day one. With this introductory session on Kotlin the students are now prepared to build their very first Android app!</p>
+
+</div>
+
+
+
+
+<div class="authorCard" style="margin-bottom: 1em;">
+
+  <p style="font-weight: bold;">
+    <i class="fas fa-bookmark" style="margin-right: 0.5em;"></i>
+    About the author
+  </p>
+
+  <div>
+
+    <div style="justify-content: center;">
+      <img src="/images/siddhesh_patil.jpg" class="img-circle img-headshot center" width="100px" height="100px" alt="Profile Picture" style="border: 4px solid #4b4b4b; padding: 0.2em;">
+    </div>
+  
+    <p style="font-size: 80%;">Siddhesh Patil is an Android engineer at Paytm Insider.
+      He is currently working on Paytm, a leading payments platform in India. Being passionate about Android and Kotlin, he 
+      maintains this website to talk about the latest trends in mobile software. He also organizes a community of developers called Kotlin Mumbai with Jetbrains and is also 
+      a Google community lead.
+      <br>
+      
+    </p>
+
+  </div>
+  
+
+</div>
+
+
+
+
+
+
+
+<style>
+#share-buttons {display: inline-block; vertical-align: middle; }
+#share-buttons:after {content: ""; display: block; clear: both;}
+#share-buttons > div {
+position: relative;
+text-align: left; 
+height: 36px; 
+width: 32px; 
+float: left; 
+text-align: center;
+}
+#share-buttons > div > svg {height: 16px; fill: #383838; margin-top: 10px;}
+#share-buttons > div:hover {cursor: pointer;}
+#share-buttons > div.facebook:hover > svg {fill: #3B5998;}
+#share-buttons > div.twitter:hover > svg {fill: #55ACEE;}
+#share-buttons > div.mail:hover > svg {fill: rgb(238, 36, 36);}
+#share-buttons > div.instagram:hover > svg {fill: #C73B92;}
+#share-buttons > div.facebook > svg {height: 18px; margin-top: 9px;}
+#share-buttons > div.twitter > svg {height: 20px; margin-top: 8px;}
+#share-buttons > div.mail > svg {height: 14px; margin-top: 11px;}
+</style>
+
+<span style="color: #383838">Share this post on </span><div id="share-buttons">
+<div class="facebook" title="Share this on Facebook" onclick="window.open('http://www.facebook.com/share.php?u=https:\/\/siddroid.com\/post\/talk-getting-started-with-kotlin-vesit-cmpn-siddhesh-patil\/');"><svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1343 12v264h-157q-86 0-116 36t-30 108v189h293l-39 296h-254v759h-306v-759h-255v-296h255v-218q0-186 104-288.5t277-102.5q147 0 228 12z"/></svg></div>
+<div class="twitter" title="Share this on Twitter" onclick="window.open('https://twitter.com/intent/tweet?&url=https:\/\/siddroid.com\/post\/talk-getting-started-with-kotlin-vesit-cmpn-siddhesh-patil\/');"><svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1684 408q-67 98-162 167 1 14 1 42 0 130-38 259.5t-115.5 248.5-184.5 210.5-258 146-323 54.5q-271 0-496-145 35 4 78 4 225 0 401-138-105-2-188-64.5t-114-159.5q33 5 61 5 43 0 85-11-112-23-185.5-111.5t-73.5-205.5v-4q68 38 146 41-66-44-105-115t-39-154q0-88 44-163 121 149 294.5 238.5t371.5 99.5q-8-38-8-74 0-134 94.5-228.5t228.5-94.5q140 0 236 102 109-21 205-78-37 115-142 178 93-10 186-50z"/></svg></div>
+<div class="mail" title="Share this through Email" onclick="window.open('mailto:?&body=https:\/\/siddroid.com\/post\/talk-getting-started-with-kotlin-vesit-cmpn-siddhesh-patil\/');"><svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1792 710v794q0 66-47 113t-113 47h-1472q-66 0-113-47t-47-113v-794q44 49 101 87 362 246 497 345 57 42 92.5 65.5t94.5 48 110 24.5h2q51 0 110-24.5t94.5-48 92.5-65.5q170-123 498-345 57-39 100-87zm0-294q0 79-49 151t-122 123q-376 261-468 325-10 7-42.5 30.5t-54 38-52 32.5-57.5 27-50 9h-2q-23 0-50-9t-57.5-27-52-32.5-54-38-42.5-30.5q-91-64-262-182.5t-205-142.5q-62-42-117-115.5t-55-136.5q0-78 41.5-130t118.5-52h1472q65 0 112.5 47t47.5 113z"/></svg></div>
+</div>
+
+
+
+<div id="disqus_thread"></div>
+
+
+
+
+<script>
+(function() {
+var d = document, s = d.createElement('script');
+s.src = 'https://truestark.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+  </main>
+  <footer>
+  <div class="copyright">
+    &copy; Siddhesh Patil 2021 · <a href="https://drive.google.com/file/d/1h92CMXP8OYFuEdiKkduL8XTGP-YaEw_8/view?usp=sharing">Content & Privacy Policy</a>
+  </div>
+</footer>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js"
+          integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0="
+          crossorigin="anonymous"></script>
+
+  
+
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-172413499-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+  <script src="https://siddroid.com/js/custom.js"></script> </script>
+</body>
+</html>

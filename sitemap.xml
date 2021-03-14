@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://siddroid.com/work/</loc>
+    <lastmod>2020-03-08T20:09:35+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://siddroid.com/projects/</loc>
+    <lastmod>2020-03-08T20:09:35+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://siddroid.com/gallery/</loc>
+    <lastmod>2020-03-08T20:09:52+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://siddroid.com/about/</loc>
+    <lastmod>2020-03-08T20:22:27+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://siddroid.com/browse/</loc>
+    <lastmod>2021-03-14T22:49:09+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://siddroid.com/browse/community/</loc>
+    <lastmod>2021-03-14T22:49:09+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://siddroid.com/post/post-diving-into-kotlin-js-sebastian-aigner-siddhesh-patil/</loc>
+    <lastmod>2021-03-14T22:49:09+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://siddroid.com/post/</loc>
+    <lastmod>2021-03-14T22:49:09+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://siddroid.com/</loc>
+    <lastmod>2021-03-14T22:49:09+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://siddroid.com/post/post-joda-time-kotlin-flows-android-worldwide-2021/</loc>
+    <lastmod>2021-01-19T13:27:37+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://siddroid.com/post/post-exploring-future-of-android-with-jetpack-compose-siddhesh-patil/</loc>
+    <lastmod>2020-12-26T19:48:27+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://siddroid.com/post/post-dissecting-coroutines-kotlin-mumbai-nov-2020-siddhesh-patil-siddroid/</loc>
+    <lastmod>2020-11-28T15:18:16+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://siddroid.com/post/post-hacktoberfest-kotlin-mumbai-git-alias-zsh-siddhesh-patil/</loc>
+    <lastmod>2020-10-24T16:37:06+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://siddroid.com/browse/talks/</loc>
+    <lastmod>2020-10-24T16:37:06+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://siddroid.com/post/post-kotlin-mumbai-jetpack-compose-scoped-storage-on-android-2020-siddhesh-patil/</loc>
+    <lastmod>2020-09-26T21:31:29+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://siddroid.com/post/post-august-kotlin-mumbai-2020-siddhesh-patil/</loc>
+    <lastmod>2020-08-22T20:58:04+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://siddroid.com/post/post-siddhesh-patil-times-of-india-kotlin/</loc>
+    <lastmod>2020-08-20T20:06:51+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://siddroid.com/browse/updates/</loc>
+    <lastmod>2020-08-20T20:06:51+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://siddroid.com/post/talk-building-apps-for-android-in-kotlin-vesit-cmpn-siddhesh-patil/</loc>
+    <lastmod>2020-08-08T01:11:44+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://siddroid.com/post/talk-getting-started-with-kotlin-vesit-cmpn-siddhesh-patil/</loc>
+    <lastmod>2020-08-07T01:10:38+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://siddroid.com/post/talk-introduction-to-kotlin-siddhesh-patil-kotlin-hyderabad/</loc>
+    <lastmod>2020-08-01T16:17:09+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://siddroid.com/post/post-july-kotlin-mumbai-2020/</loc>
+    <lastmod>2020-07-25T20:58:04+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://siddroid.com/post/post-android-11-meetup-gdg-mad-kotlin-mumbai-siddhesh-patil/</loc>
+    <lastmod>2020-07-11T21:47:51+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://siddroid.com/browse/android/</loc>
+    <lastmod>2020-07-09T03:39:54+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://siddroid.com/post/post-understanding-context-in-android-siddhesh-patil/</loc>
+    <lastmod>2020-07-09T03:39:54+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://siddroid.com/post/post-june-kotlin-mumbai-2020/</loc>
+    <lastmod>2020-07-01T19:18:45+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://siddroid.com/post/post-may-kotlin-mumbai-2020/</loc>
+    <lastmod>2020-05-30T16:50:05+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://siddroid.com/post/post-april-kotlin-mumbai-2020/</loc>
+    <lastmod>2020-04-27T18:56:47+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://siddroid.com/post/post-march-kotlin-mumbai-2020/</loc>
+    <lastmod>2020-04-05T15:33:09+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://siddroid.com/post/post-android-rationale-permission-dialogs-2020/</loc>
+    <lastmod>2020-03-08T20:11:21+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://siddroid.com/categories/</loc>
+  </url>
+  
+</urlset>
