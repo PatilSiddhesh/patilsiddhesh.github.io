@@ -4,7 +4,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta property="og:image" content="https://siddroid.com//images/thoughtdev.png" />
-  <meta name="theme-color" content="#073042" />
+  <meta name="theme-color" content="#121212" />
   <meta name="generator" content="Hugo 0.73.0" />
 
   <title>Better permissions on Android &middot; Siddhesh Patil</title>
@@ -360,7 +360,8 @@
   <h1>Better permissions on Android</h1>
 
   <div class="post-date">
-    <time datetime="2020-03-08T20:11:21&#43;0530">Mar 8, 2020</time> · 4 min read
+    <p style="color: #a5a5a5;"><time datetime="2020-03-08T20:11:21&#43;0530">Mar 8, 2020</time> · 4 min read
+    </p>
   </div>
 
   
@@ -377,29 +378,29 @@
 Let’s get started!</p>
 <p>In this example we’ll be making a simple app in Kotlin which requests permissions and presents the user with a rationale for granting a denied permission. We’ll take a case where the app requires READ_CONTACTS permission from the user.</p>
 <p><strong>Step 1:</strong> Define the permission in the Manifest</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">&lt;uses-permission android:name=<span style="color:#f1fa8c">&#34;android.permission.READ_CONTACTS&#34;</span>/&gt;</code></pre></div>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">&lt;uses-permission android:name=<span style="color:#ed9d13">&#34;android.permission.READ_CONTACTS&#34;</span>/&gt;</code></pre></div>
 <p>AndroidManifest.xml</p>
 <p><strong>Step 2:</strong> Define a function that checks for the permission</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin"><span style="color:#ff79c6">private</span> <span style="color:#ff79c6">fun</span> <span style="color:#50fa7b">checkContactsPermission</span>() {
-    <span style="color:#ff79c6">if</span> (ContextCompat.checkSelfPermission(<span style="color:#ff79c6">this</span>, android.Manifest.permission.READ_CONTACTS) !=
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin"><span style="color:#6ab825;font-weight:bold">private</span> <span style="color:#6ab825;font-weight:bold">fun</span> <span style="color:#447fcf">checkContactsPermission</span>() {
+    <span style="color:#6ab825;font-weight:bold">if</span> (ContextCompat.checkSelfPermission(<span style="color:#6ab825;font-weight:bold">this</span>, android.Manifest.permission.READ_CONTACTS) !=
         PackageManager.PERMISSION_GRANTED
     ) {
-        <span style="color:#6272a4">// Check if permission is not granted
-</span><span style="color:#6272a4"></span>        Log.d(TAG, <span style="color:#f1fa8c">&#34;Permission for contacts is not granted&#34;</span>)
-        <span style="color:#6272a4">// This condition only becomes true if the user has denied the permission previously
-</span><span style="color:#6272a4"></span>        <span style="color:#ff79c6">if</span> (shouldShowRequestPermissionRationale(android.Manifest.permission.READ_CONTACTS)) {
+        <span style="color:#999;font-style:italic">// Check if permission is not granted
+</span><span style="color:#999;font-style:italic"></span>        Log.d(TAG, <span style="color:#ed9d13">&#34;Permission for contacts is not granted&#34;</span>)
+        <span style="color:#999;font-style:italic">// This condition only becomes true if the user has denied the permission previously
+</span><span style="color:#999;font-style:italic"></span>        <span style="color:#6ab825;font-weight:bold">if</span> (shouldShowRequestPermissionRationale(android.Manifest.permission.READ_CONTACTS)) {
             showRationaleDialog(getString(R.string.rationale_title),
                 getString(R.string.rationale_desc),
                 android.Manifest.permission.READ_CONTACTS,
                 REQUEST_CONTACTS_STATE)
-        } <span style="color:#ff79c6">else</span> {
-            <span style="color:#6272a4">// Perform a permission check
-</span><span style="color:#6272a4"></span>            Log.d(TAG, <span style="color:#f1fa8c">&#34;Checking permission&#34;</span>)
+        } <span style="color:#6ab825;font-weight:bold">else</span> {
+            <span style="color:#999;font-style:italic">// Perform a permission check
+</span><span style="color:#999;font-style:italic"></span>            Log.d(TAG, <span style="color:#ed9d13">&#34;Checking permission&#34;</span>)
             requestPermissions(arrayOf(android.Manifest.permission.READ_CONTACTS),REQUEST_CONTACTS_STATE)
         }
-    } <span style="color:#ff79c6">else</span> {
-        <span style="color:#6272a4">// Permission is already granted, do your magic here!
-</span><span style="color:#6272a4"></span>    }
+    } <span style="color:#6ab825;font-weight:bold">else</span> {
+        <span style="color:#999;font-style:italic">// Permission is already granted, do your magic here!
+</span><span style="color:#999;font-style:italic"></span>    }
 }</code></pre></div>
 <p><strong>Here the code is checking if the read contacts permission is granted or not.
 The following cases will occur:</strong></p>
@@ -410,31 +411,31 @@ The following cases will occur:</strong></p>
 </ol>
 <p><strong>Step 3:</strong> Define your function for showing a rationale dialog
 This can be done simply by using an AlertDialog as shown below</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin"><span style="color:#ff79c6">private</span> <span style="color:#ff79c6">fun</span> <span style="color:#50fa7b">showRationaleDialog</span>(title: String, message: String, permission: String, requestCode: Int) {
-    <span style="color:#ff79c6">val</span> builder: AlertDialog.Builder = AlertDialog.Builder(<span style="color:#ff79c6">this</span>)
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin"><span style="color:#6ab825;font-weight:bold">private</span> <span style="color:#6ab825;font-weight:bold">fun</span> <span style="color:#447fcf">showRationaleDialog</span>(title: String, message: String, permission: String, requestCode: Int) {
+    <span style="color:#6ab825;font-weight:bold">val</span> builder: AlertDialog.Builder = AlertDialog.Builder(<span style="color:#6ab825;font-weight:bold">this</span>)
     builder.setTitle(title)
         .setMessage(message)
-        .setPositiveButton(<span style="color:#f1fa8c">&#34;Ok&#34;</span>, { dialog, which -&gt;
+        .setPositiveButton(<span style="color:#ed9d13">&#34;Ok&#34;</span>, { dialog, which -&gt;
             requestPermissions(arrayOf(permission), requestCode)
         })
     builder.create().show()
 }</code></pre></div>
 <p>We’ll also add strings for the dialog. In this example our sample app needs read contacts permission for suggesting connections or people the user may know.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#ff79c6">&lt;string</span> <span style="color:#50fa7b">name=</span><span style="color:#f1fa8c">&#34;rationale_title&#34;</span><span style="color:#ff79c6">&gt;</span>We need permission to read your contacts<span style="color:#ff79c6">&lt;/string&gt;</span>
-<span style="color:#ff79c6">&lt;string</span> <span style="color:#50fa7b">name=</span><span style="color:#f1fa8c">&#34;rationale_desc&#34;</span><span style="color:#ff79c6">&gt;</span>This app relies on read access to your contacts. We require access to this permission to find your contacts in our database and suggest people you may know. We will not store any contact info in our data base if they are not a part of our platform. For further info read our privacy policy.<span style="color:#ff79c6">&lt;/string&gt;</span></code></pre></div>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#6ab825;font-weight:bold">&lt;string</span> <span style="color:#bbb">name=</span><span style="color:#ed9d13">&#34;rationale_title&#34;</span><span style="color:#6ab825;font-weight:bold">&gt;</span>We need permission to read your contacts<span style="color:#6ab825;font-weight:bold">&lt;/string&gt;</span>
+<span style="color:#6ab825;font-weight:bold">&lt;string</span> <span style="color:#bbb">name=</span><span style="color:#ed9d13">&#34;rationale_desc&#34;</span><span style="color:#6ab825;font-weight:bold">&gt;</span>This app relies on read access to your contacts. We require access to this permission to find your contacts in our database and suggest people you may know. We will not store any contact info in our data base if they are not a part of our platform. For further info read our privacy policy.<span style="color:#6ab825;font-weight:bold">&lt;/string&gt;</span></code></pre></div>
 <p>strings.xml</p>
 <p><strong>Step 4:</strong> Let’s handle the permission results
 We’ll display a Toast message once permission has been granted or denied by overriding onPermissionResults()</p>
 <div style="font-family="jetbrains">
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin"><span style="color:#ff79c6">override</span> <span style="color:#ff79c6">fun</span> <span style="color:#50fa7b">onRequestPermissionsResult</span>(requestCode: Int,
-                                        permissions: Array&lt;<span style="color:#ff79c6">out</span> String&gt;,
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin"><span style="color:#6ab825;font-weight:bold">override</span> <span style="color:#6ab825;font-weight:bold">fun</span> <span style="color:#447fcf">onRequestPermissionsResult</span>(requestCode: Int,
+                                        permissions: Array&lt;<span style="color:#6ab825;font-weight:bold">out</span> String&gt;,
                                         grantResults:IntArray) {
-    <span style="color:#ff79c6">when</span> (requestCode) {
+    <span style="color:#6ab825;font-weight:bold">when</span> (requestCode) {
         REQUEST_CONTACTS_STATE -&gt; {
-            <span style="color:#ff79c6">if</span> (grantResults.isNotEmpty() &amp;&amp; grantResults[<span style="color:#bd93f9">0</span>] == PackageManager.PERMISSION_GRANTED) {
-                Toast.makeText(<span style="color:#ff79c6">this</span>, <span style="color:#f1fa8c">&#34;Permission granted&#34;</span>, Toast.LENGTH_SHORT).show()
-            } <span style="color:#ff79c6">else</span> {
-                Toast.makeText(<span style="color:#ff79c6">this</span>, <span style="color:#f1fa8c">&#34;Permission denied&#34;</span>, Toast.LENGTH_SHORT).show()
+            <span style="color:#6ab825;font-weight:bold">if</span> (grantResults.isNotEmpty() &amp;&amp; grantResults[<span style="color:#3677a9">0</span>] == PackageManager.PERMISSION_GRANTED) {
+                Toast.makeText(<span style="color:#6ab825;font-weight:bold">this</span>, <span style="color:#ed9d13">&#34;Permission granted&#34;</span>, Toast.LENGTH_SHORT).show()
+            } <span style="color:#6ab825;font-weight:bold">else</span> {
+                Toast.makeText(<span style="color:#6ab825;font-weight:bold">this</span>, <span style="color:#ed9d13">&#34;Permission denied&#34;</span>, Toast.LENGTH_SHORT).show()
             }
         }
     }
