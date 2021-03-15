@@ -66,13 +66,13 @@ body {
 }
 
 ::selection {
-  color: #fff;
-  background-color: #9575CD;
+  color: #121212;
+  background-color: #FFF176;
 }
 
 ::-moz-selection {
-  color: #fff;
-  background-color: #9575CD;
+  color: #121212;
+  background-color: #FFF176;
 }
 
 /* No `:visited` state is required by default (browsers will use `a`) */
@@ -166,7 +166,7 @@ abbr[title] {
 /* Code */
 code,
 pre {
-  font-family: sansfont;
+  font-family: jetbrains;
 }
 code {
   padding: .25em .5em;
@@ -177,11 +177,12 @@ code {
 }
 pre {
   display: block;
+  border-radius: 1rem;
   margin-top: 0;
   margin-bottom: 1rem;
   padding: 1rem;
   font-size: .8rem;
-  line-height: 1.4;
+  line-height: 1.6;
   white-space: pre;
   white-space: pre-wrap;
   word-break: break-all;
@@ -197,6 +198,7 @@ pre code {
 .highlight {
   margin-bottom: 1rem;
   border-radius: 4px;
+  font-family: jetbrains;
 }
 .highlight pre {
   margin-bottom: 0;
@@ -425,6 +427,11 @@ a.pagination-item:hover {
 @font-face {
   font-family: sansfont;
   src: url(/images/Nunito-Regular.woff2);
+}
+
+@font-face {
+  font-family: jetbrains;
+  src: url(/images/JetBrainsMono-Regular.woff2);
 }
 
 .card {

@@ -138,6 +138,11 @@ footer {
 
 .gg {
   padding: 2rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 1rem;
   background-color: #151515;
 }
 
@@ -154,6 +159,9 @@ footer {
     margin-left: 20rem;
     margin-right: 2rem;
     min-height: 100%;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 1rem;
     background-color: #151515;
 
   }
@@ -222,7 +230,7 @@ footer {
 }
 
 .img-headshot {
-  border: 4px solid #3ddc84;
+  border: 3px solid #3ddc84;
   padding: 0.2em;
 }
 
@@ -235,6 +243,11 @@ footer {
 
 .sidebar {
   background-color: #073042;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 1rem;
   color: #fff;
 }
 
@@ -302,8 +315,13 @@ ul.posts {
 .twitterFollow{
   background-color:#333333;
   border-radius: 7px;
-  margin: 2em;
+  margin: 2rem;
   font-size: 70%;
   font-weight: bold;
   color: #c7c7c7;
+}
+
+@font-face {
+  font-family: jetbrains;
+  src: url(/images/JetBrainsMono-Regular.woff2);
 }
