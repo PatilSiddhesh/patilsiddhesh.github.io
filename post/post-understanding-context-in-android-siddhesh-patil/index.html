@@ -363,6 +363,12 @@
     <time datetime="2020-07-09T03:39:54&#43;0530">Jul 9, 2020</time> · 2 min read
   </div>
 
+  
+  <p style="background-color: #1e1e1e; border-radius: 0.5rem; width:fit-content;padding-left: 15px;padding-right: 15px;padding-top: 5px;padding-bottom: 5px;">
+    Updated for Android 12, SDK 31
+  </p>
+
+
   <meta name="thumbnail" content="https://siddroid.com/images/post_understanding_context_android_banner_siddhesh_patil.png">
 <meta name="twitter:image" content="https://siddroid.com/images/post_understanding_context_android_banner_siddhesh_patil.png">
 <meta name="twitter:card" content="summary_large_image">
@@ -371,16 +377,15 @@
 <hr>
 <h2 id="what-is-context">What is context?</h2>
 <p>If you look into the context class on Android Studio by hitting cmd + b you&rsquo;ll see some methods like these</p>
-<pre><code>public abstract AssetManager getAssets();
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">abstract</span> AssetManager <span style="color:#50fa7b">getAssets</span><span style="color:#ff79c6">();</span>
 
-public abstract Resources getResources();
+    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">abstract</span> Resources <span style="color:#50fa7b">getResources</span><span style="color:#ff79c6">();</span>
 
-public abstract PackageManager getPackageManager();
+    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">abstract</span> PackageManager <span style="color:#50fa7b">getPackageManager</span><span style="color:#ff79c6">();</span>
 
-public abstract ContentResolver getContentResolver();
+    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">abstract</span> ContentResolver <span style="color:#50fa7b">getContentResolver</span><span style="color:#ff79c6">();</span>
 
-public abstract Looper getMainLooper();
-</code></pre>
+    <span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">abstract</span> Looper <span style="color:#50fa7b">getMainLooper</span><span style="color:#ff79c6">();</span></code></pre></div>
 <p>most of these methods look familiar and I&rsquo;m sure you have used these. But what is context?</p>
 <p>Context is an abstract class and a part of Android&rsquo;s content package. Context allows us to access application&rsquo;s resources, classes and for performing various operations such as launching an activity or firing intents. The implementation of this abstract class is provided by Android&rsquo;s system.</p>
 <p>Simple right? It actually is. But if I ask you a simple question like what is the difference between activty context and application context, how will you distinguish it?</p>
@@ -450,6 +455,15 @@ public abstract Looper getMainLooper();
     </p>
 
   </div>
+
+  <div>
+    <p style="font-size: 80%;">
+      This article was last updated on <time datetime="2020-07-09">2021-03-15 20:22:27 &#43;0530 IST</time>  
+    </p>
+
+  </div>
+
+
   
 
 </div>
