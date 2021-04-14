@@ -13,7 +13,6 @@
  * https://github.com/poole/hyde.
  */
 
-
 /*
  * Contents
  *
@@ -24,7 +23,6 @@
  * Themes
  */
 
-
 /*
  * Global resets
  *
@@ -34,17 +32,18 @@
 html {
   font-family: "sansfont";
 }
+
 @media (min-width: 48em) {
   html {
     font-size: 16px;
   }
 }
+
 @media (min-width: 58em) {
   html {
     font-size: 20px;
   }
 }
-
 
 /*
  * Sidebar
@@ -56,9 +55,10 @@ html {
 .sidebar {
   text-align: center;
   padding: 2rem 1rem;
-  color: rgba(255,255,255,.5);
+  color: rgba(255, 255, 255, .5);
   background-color: #202020;
 }
+
 @media (min-width: 48em) {
   .sidebar {
     position: fixed;
@@ -70,11 +70,13 @@ html {
 }
 
 /* Sidebar links */
+
 .sidebar a {
   color: #fff;
 }
 
 /* About section */
+
 .sidebar-about h1 {
   color: #fff;
   margin-top: 0;
@@ -83,18 +85,21 @@ html {
 }
 
 /* Sidebar nav */
+
 .sidebar-nav {
   padding-left: 0;
   list-style: none;
 }
+
 .sidebar-nav-item {
   display: block;
 }
-a.sidebar-nav-item:hover,
-a.sidebar-nav-item:focus {
+
+a.sidebar-nav-item:hover, a.sidebar-nav-item:focus {
   text-decoration: underline;
   color: #4285f4;
 }
+
 .sidebar-nav-item.active {
   font-weight: bold;
 }
@@ -106,14 +111,12 @@ a.sidebar-nav-item:focus {
  */
 
 .content {
-  padding-top:    2rem;
+  padding-top: 2rem;
   padding-bottom: 2rem;
   min-height: 50%;
 }
 
-
-html,
-body {
+html, body {
   height: 100%;
   width: 100%;
 }
@@ -126,7 +129,6 @@ body {
 footer {
   height: 40px;
 }
-
 
 @media (min-width: 48em) {
   .content {
@@ -163,14 +165,12 @@ footer {
     margin-bottom: 2rem;
     border-radius: 1rem;
     background-color: #151515;
-
   }
 }
 
 .hackyz {
   width: 75%;
 }
-
 
 @media (max-width: 48em) {
   .hackyz {
@@ -198,7 +198,6 @@ footer {
   }
 }
 
-
 @media (max-width: 48em) {
   .readTime {
     width: 0px;
@@ -221,17 +220,19 @@ footer {
     margin-bottom: 2rem;
     border-radius: 1rem;
     background-color: #151515;
-
   }
 }
 
 .img-circle {
   border-radius: 50%;
+  flex-shrink: 0;
+  align-self: center;
 }
 
 .img-headshot {
-  border: 3px solid #3ddc84;
-  padding: 0.2em;
+  border: 3px solid #333333;
+  flex-shrink: 0;
+  align-self: center;
 }
 
 .center {
@@ -239,7 +240,6 @@ footer {
   margin-left: auto;
   margin-right: auto;
 }
-
 
 .sidebar {
   background-color: #073042;
@@ -251,14 +251,11 @@ footer {
   color: #fff;
 }
 
-.sidebar a,
-.sidebar-about h1 {
+.sidebar a, .sidebar-about h1 {
   color: #fff;
 }
 
-footer a,
-.content a,
-.related-posts li a:hover {
+footer a, .content a, .related-posts li a:hover {
   color: #49757a;
 }
 
@@ -285,14 +282,11 @@ ul.posts {
   list-style: none;
 }
 
-.social-icons,
-.sidebar nav {
+.social-icons, .sidebar nav {
   margin-top: 1rem;
 }
 
-.social-icons a,
-.social-icons a:hover,
-.social-icons a:focus {
+.social-icons a, .social-icons a:hover, .social-icons a:focus {
   text-decoration: none !important;
 }
 
@@ -301,8 +295,8 @@ ul.posts {
   src: url(/images/Nunito-Regular.woff2);
 }
 
-.tagBg{
-  background-color:#272727;
+.tagBg {
+  background-color: #272727;
   border-radius: 7px;
   padding-left: 0.5em;
   padding-right: 0.5em;
@@ -312,8 +306,8 @@ ul.posts {
   color: #a5a5a5;
 }
 
-.twitterFollow{
-  background-color:#333333;
+.twitterFollow {
+  background-color: #333333;
   border-radius: 7px;
   margin: 2rem;
   font-size: 70%;
@@ -321,7 +315,128 @@ ul.posts {
   color: #c7c7c7;
 }
 
+.kotlinCourseHeader {
+  text-decoration-line: underline;
+  text-underline-offset: 0.3rem;
+  color: #9575CD;
+  text-decoration-color: #202020;
+}
+
+.learnKotlinSubHeader {
+  text-decoration: underline;
+  text-underline-offset: 0.3rem;
+  color: #a5a5a5;
+  text-decoration-color: #202020;
+  
+}
+
+.kotlinCourseHeaderTxt {
+  color: #9575CD;
+}
+
+.learnKotlinSubHeaderTxt {
+  color: #a5a5a5;
+  margin-left:1.7rem;
+}
+
 @font-face {
   font-family: jetbrains;
   src: url(/images/JetBrainsMono-Regular.woff2);
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.parentContainer {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  margin-left: 10rem;
+  margin-right: 10rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 1rem;
+  background-color: #151515;
+}
+
+@media (max-width: 64em) {
+  .parentContainer {
+    padding: 2rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 1rem;
+  background-color: #151515;
+  }
+}
+
+
+.topBar {
+  padding-top: 1rem;
+  margin-left: 10rem;
+  margin-right: 10rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 1rem;
+  background-color: #151515;
+}
+
+@media (max-width: 64em) {
+  .topBar {
+  padding-top: 1rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 1rem;
+  background-color: #151515;
+  }
+}
+
+.siteHeaderText {
+  margin-top: 0;
+  }
+
+@media (max-width: 64em) {
+  .siteHeaderText {
+  margin-top: 0.4rem;
+  }
+}
+
+@media (min-width: 64em) {
+  .listItemsOnDesktop {
+  padding-left: 8rem;
+  padding-right: 8rem;
+  }
+}
+
+.topBarLayoutDesk {
+  visibility: visible;
+  height:fit-content;
+  width: 100%;
+}
+
+@media (max-width: 64em) {
+  .topBarLayoutDesk {
+    visibility: hidden;
+    height: 0;
+    width: 0;
+  }
+}
+
+.topBarLayoutMobile {
+  visibility: hidden;
+  height: 0;
+  width: 0;
+}
+
+@media (max-width: 64em) {
+  .topBarLayoutMobile {
+  visibility: visible;
+  height:fit-content;
+  width: 100%;
+  }
 }

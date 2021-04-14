@@ -6,7 +6,7 @@
     <description>Recent content on Siddhesh Patil - Android Engineer and Kotlin Advocate</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 14 Mar 2021 22:49:09 +0530</lastBuildDate>
+    <lastBuildDate>Tue, 30 Mar 2021 13:22:25 +0530</lastBuildDate>
     
 	<atom:link href="https://siddroid.com/index.xml" rel="self" type="application/rss+xml" />
     
@@ -27,7 +27,8 @@ Mumbai, India</description>
       <pubDate>Sun, 08 Mar 2020 20:09:35 +0530</pubDate>
       
       <guid>https://siddroid.com/projects/</guid>
-      <description>Active Projects  Currently there are no active projects I&amp;rsquo;m working on.</description>
+      <description>Active Projects Some projects that I am currently maintaining
+   Holi  An open-source library of colors, gradients and utils built using Jetpack Compose for Android.</description>
     </item>
     
     <item>
@@ -45,7 +46,25 @@ Mumbai, India</description>
       <pubDate>Sun, 08 Mar 2020 20:22:27 +0530</pubDate>
       
       <guid>https://siddroid.com/about/</guid>
-      <description>Hey 👋 I&amp;rsquo;m an Android Engineer and Kotlin Advocate from Mumbai.</description>
+      <description>Hey 👋 I am Siddhesh Patil, an Android Engineer and Kotlin Advocate from Mumbai.</description>
+    </item>
+    
+    <item>
+      <title>Holi: A library of colors, gradients and utils for Jetpack Compose</title>
+      <link>https://siddroid.com/post/projects/holi-a-library-of-colors-for-jetpack-compose/</link>
+      <pubDate>Tue, 30 Mar 2021 13:22:25 +0530</pubDate>
+      
+      <guid>https://siddroid.com/post/projects/holi-a-library-of-colors-for-jetpack-compose/</guid>
+      <description>Holi A library of colors, gradients and utils built using Jetpack Compose for Android  Features  A wide collection of colors from different palettes for easy access in your pet projects Provides easy gradient building functions that all your composable brushes need Just 28 KB in size!</description>
+    </item>
+    
+    <item>
+      <title>Policy</title>
+      <link>https://siddroid.com/policy/</link>
+      <pubDate>Sat, 20 Mar 2021 06:31:08 +0530</pubDate>
+      
+      <guid>https://siddroid.com/policy/</guid>
+      <description>Privacy Policy for Siddhesh Patil At Siddroid, accessible from https://siddroid.com, one of our main priorities is the privacy of our visitors.</description>
     </item>
     
     <item>
