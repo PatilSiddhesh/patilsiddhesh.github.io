@@ -406,12 +406,13 @@ ul.posts {
   }
 }
 
-@media (min-width: 64em) {
+@media (min-width: 100em) {
   .listItemsOnDesktop {
   padding-left: 8rem;
   padding-right: 8rem;
   }
 }
+
 
 .topBarLayoutDesk {
   visibility: visible;
