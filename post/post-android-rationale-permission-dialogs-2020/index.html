@@ -24,7 +24,7 @@
   <meta property="og:url" content="https://siddroid.com/post/post-android-rationale-permission-dialogs-2020/"/>
   <meta property="og:type" content="article"/>
   <meta property="article:published_time" content="2020-03-08T20:11:21&#43;0530"/>
-  <meta property="article:modified_time" content="2021-04-15T00:41:25"/>
+  <meta property="article:modified_time" content="2021-04-15T01:33:40"/>
   <meta property="article:author" content="Siddhesh Patil">
   
   
@@ -61,7 +61,7 @@
      
     "datePublished": "2020-03-08T20:11:21",
     
-    "dateModified": "2021-04-15T00:41:25",
+    "dateModified": "2021-04-15T01:33:40",
     "author": {
       "@type" : "Person",
       "name": "Siddhesh Patil",
@@ -172,16 +172,16 @@
 
   <link type="text/css"
         rel="stylesheet"
-        href="https://siddroid.com/css/print.css?v=973"
+        href="https://siddroid.com/css/print.css?v=869"
         media="print">
 
   <link type="text/css"
         rel="stylesheet"
-        href="https://siddroid.com/css/poole.css?v=779">
+        href="https://siddroid.com/css/poole.css?v=470">
 
   <link type="text/css"
         rel="stylesheet"
-        href="https://siddroid.com/css/hyde.css?v=661">
+        href="https://siddroid.com/css/hyde.css?v=470">
 
 
   
@@ -364,13 +364,7 @@
       </a>
       </h1>
       </div>
-  
-      <div style="display:flex;justify-content: center;align-items: center;">
-          <p style="font-size: 80%;color: #a5a5a5;max-height: 3em;text-overflow: ellipsis;overflow: hidden;margin-left: 1rem;margin-right: 1rem; text-align: center;">
-              
-              Android, Kotlin, Jetpack, Open source projects and everything in between!
-            </p>
-      </div>
+
   
       <div style="display:flex;justify-content: center;">
       
@@ -391,7 +385,7 @@
       
       <a href="/browse/" title="Navigate this site" style="color: #c7c7c7;font-family:sansfont;text-decoration: none;-webkit-tap-highlight-color: transparent;
         ">
-        <div style="width: 50px;margin-left: 3rem;">
+        <div style="width: 50px;margin-left: 2rem;">
           <div style="display: flex;align-items: center;justify-content: center;">
               <i class="fas fa-compass" aria-hidden="true" style="height: 21px;width: 21px;"></i>
           </div>
@@ -413,7 +407,7 @@
       <a href="/projects/" title="New and old projects" style="color: #c7c7c7;font-family:sansfont;text-decoration: none;-webkit-tap-highlight-color: transparent;
         ">
   
-  <div style="width: 50px;margin-left: 3rem;">
+  <div style="width: 50px;margin-left: 2rem;">
       <div style="display: flex;align-items: center;justify-content: center;">
           <i class="fa fa-code-branch" aria-hidden="true" style="height: 21px;width: 21px;"></i>
       </div>
@@ -426,7 +420,7 @@
       
       <a href="/about/" title="Some stuff about Siddhesh" style="color: #c7c7c7;font-family:sansfont;text-decoration: none;-webkit-tap-highlight-color: transparent;
         ">
-      <div style="width: 50px;margin-left: 3rem;">
+      <div style="width: 50px;margin-left: 2rem;">
           <div style="display: flex;align-items: center;justify-content: center;">
               <i class="fas fa-hand-spock" aria-hidden="true" style="height: 21px;width: 21px;"></i>
           </div>
@@ -464,6 +458,10 @@
 
   <div style="display: flex;justify-content: center;align-items: center;">
     
+    <p
+      style="border-radius: 0.5em; width:fit-content;padding-right: 15px;padding-top: 5px;padding-bottom: 5px;font-size: 90%;">
+      Updated for Android 12, for SDK 31
+    </p>
   </div>
 
 
@@ -481,8 +479,11 @@
 Let’s get started!</p>
 <p>In this example we’ll be making a simple app in Kotlin which requests permissions and presents the user with a rationale for granting a denied permission. We’ll take a case where the app requires READ_CONTACTS permission from the user.</p>
 <p><strong>Step 1:</strong> Define the permission in the Manifest</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">&lt;uses-permission android:name=<span style="color:#f1fa8c">&#34;android.permission.READ_CONTACTS&#34;</span>/&gt;</code></pre></div>
-<p>AndroidManifest.xml</p>
+<p><div style="display: flex;margin-left:0.5rem">   
+    <i class="fas fa-terminal" style="color: #a5a5a5;margin-top:3px"></i>
+    <p style="color: #a5a5a5;margin-left:0.5rem">AndroidManifest.xml</p>  
+</div>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#ff79c6">&lt;uses-permission</span> <span style="color:#50fa7b">android:name=</span><span style="color:#f1fa8c">&#34;android.permission.READ_CONTACTS&#34;</span><span style="color:#ff79c6">/&gt;</span></code></pre></div></p>
 <p><strong>Step 2:</strong> Define a function that checks for the permission</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin"><span style="color:#ff79c6">private</span> <span style="color:#ff79c6">fun</span> <span style="color:#50fa7b">checkContactsPermission</span>() {
     <span style="color:#ff79c6">if</span> (ContextCompat.checkSelfPermission(<span style="color:#ff79c6">this</span>, android.Manifest.permission.READ_CONTACTS) !=
@@ -505,15 +506,15 @@ Let’s get started!</p>
         <span style="color:#6272a4">// Permission is already granted, do your magic here!
 </span><span style="color:#6272a4"></span>    }
 }</code></pre></div>
-<p><strong>Here the code is checking if the read contacts permission is granted or not.
+<p><strong>Here the code will perform a check if the read contacts permission is granted or not.
 The following cases will occur:</strong></p>
 <ol>
 <li>First time user who is opening the app will be presented with a standard request permission dialog.</li>
 <li>A user who has denied the permission previously will be presented with a rationale dialog.</li>
 <li>User has granted the permission.</li>
 </ol>
-<p><strong>Step 3:</strong> Define your function for showing a rationale dialog
-This can be done simply by using an AlertDialog as shown below</p>
+<p><strong>Step 3:</strong> Define your function for showing a rationale dialog</p>
+<p>We can acheive this with an AlertDialog as shown in the below function</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin"><span style="color:#ff79c6">private</span> <span style="color:#ff79c6">fun</span> <span style="color:#50fa7b">showRationaleDialog</span>(title: String, message: String, permission: String, requestCode: Int) {
     <span style="color:#ff79c6">val</span> builder: AlertDialog.Builder = AlertDialog.Builder(<span style="color:#ff79c6">this</span>)
     builder.setTitle(title)
@@ -524,11 +525,14 @@ This can be done simply by using an AlertDialog as shown below</p>
     builder.create().show()
 }</code></pre></div>
 <p>We’ll also add strings for the dialog. In this example our sample app needs read contacts permission for suggesting connections or people the user may know.</p>
+<p><div style="display: flex;margin-left:0.5rem">   
+    <i class="fas fa-terminal" style="color: #a5a5a5;margin-top:3px"></i>
+    <p style="color: #a5a5a5;margin-left:0.5rem">strings.xml</p>  
+</div>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#ff79c6">&lt;string</span> <span style="color:#50fa7b">name=</span><span style="color:#f1fa8c">&#34;rationale_title&#34;</span><span style="color:#ff79c6">&gt;</span>We need permission to read your contacts<span style="color:#ff79c6">&lt;/string&gt;</span>
-<span style="color:#ff79c6">&lt;string</span> <span style="color:#50fa7b">name=</span><span style="color:#f1fa8c">&#34;rationale_desc&#34;</span><span style="color:#ff79c6">&gt;</span>This app relies on read access to your contacts. We require access to this permission to find your contacts in our database and suggest people you may know. We will not store any contact info in our data base if they are not a part of our platform. For further info read our privacy policy.<span style="color:#ff79c6">&lt;/string&gt;</span></code></pre></div>
-<p>strings.xml</p>
-<p><strong>Step 4:</strong> Let’s handle the permission results
-We’ll display a Toast message once permission has been granted or denied by overriding onPermissionResults()</p>
+<span style="color:#ff79c6">&lt;string</span> <span style="color:#50fa7b">name=</span><span style="color:#f1fa8c">&#34;rationale_desc&#34;</span><span style="color:#ff79c6">&gt;</span>This app relies on read access to your contacts. We require access to this permission to find your contacts in our database and suggest people you may know. We will not store any contact info in our data base if they are not a part of our platform. For further info read our privacy policy.<span style="color:#ff79c6">&lt;/string&gt;</span></code></pre></div></p>
+<p><strong>Step 4:</strong> Let’s handle the permission results</p>
+<p>We’ll display a Toast message once permission has been granted or denied by overriding onPermissionResults()</p>
 <div style="font-family="jetbrains">
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin"><span style="color:#ff79c6">override</span> <span style="color:#ff79c6">fun</span> <span style="color:#50fa7b">onRequestPermissionsResult</span>(requestCode: Int,
                                         permissions: Array&lt;<span style="color:#ff79c6">out</span> String&gt;,
@@ -545,17 +549,30 @@ We’ll display a Toast message once permission has been granted or denied by ov
 }</code></pre></div>
 </div>
 <p>All Done! Let’s see how this works</p>
-<p><strong>Step 1:</strong> User opens the app for the first time and denies the permission
-The user is greeted with a standard permissions dialog. In this case we’ll deny the requested permission.</p>
-<img src="/images/dialogone.png" width="50%" alt="A permission request dialogue on Android">
-<p><strong>Step 2:</strong> Next time the user opens the app they are greeted with a rationale dialog</p>
-<img src="/images/dialogtwo.png" width="50%" alt="A permission rationale request dialogue on Android">
+<table>
+<thead>
+<tr>
+<th align="center">User denies the permission</th>
+<th align="center">Rational dialog on next open</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><img src="/images/dialogone.png" alt=""></td>
+<td align="center"><img src="/images/dialogtwo.png" alt=""></td>
+</tr>
+</tbody>
+</table>
 <p>The user now sees a rationale dialog since the permission was previously denied and shouldShowRequestPermissionRationale for the given permission has now become true.</p>
-<p>Permission rationale dialog
-Once the user taps on the positive button, the app will request permissions again. Hopefully this time you have convinced your user on why the permission is required.</p>
-<p>Cheers! We have successfully implemented rationale dialogs for permissions by following best practices.
-I’m sharing the GitHub repo for this sample for reference.</p>
-<p><a href="https://github.com/patilsiddhesh/android-permission-rationale">Github Repo</a></p>
+<p>Once the user taps on the positive button, the app will request permissions again. Hopefully this time you have convinced your user on why the permission is required.</p>
+<p>Here is a Github link for the above project as a sample for your reference.</p>
+<div class="githubProject" style="display: flex;">
+    <i class="fab fa-github" style="color: #a5a5a5;margin-top:3px"></i>
+    <a href="https://github.com/PatilSiddhesh/android-permission-rationale" style="color: #a5a5a5;margin-left: 10px;text-decoration:none;" target="_blank">PatilSiddhesh/android-permission-rationale</a>
+</div>
+
+
+<p>Cheers! We have successfully implemented rationale dialogs for permissions by following best practices.</p>
 
 </div>
 
