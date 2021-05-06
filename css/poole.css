@@ -268,7 +268,7 @@ td, th {
   border: 1px solid #252525;
   background-color: #1e1e1e;
   background: #1e1e1e;
-  color: #e5e5e5;
+  color: #a5a5a5;
 }
 
 tbody tr:nth-child(odd) td, tbody tr:nth-child(odd) th {
@@ -499,6 +499,7 @@ img.card {
   /* Add shadows to create the "card" effect */
   background-color: #1e1e1e;
   padding: 1em;
+  border-radius: 1rem;
   margin-top: 10px;
   margin-bottom: 10px;
 }

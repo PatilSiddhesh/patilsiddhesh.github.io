@@ -6,7 +6,7 @@
     <description>Recent content on Siddhesh Patil - Android Engineer and Kotlin Advocate</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 30 Mar 2021 13:22:25 +0530</lastBuildDate>
+    <lastBuildDate>Thu, 06 May 2021 22:59:25 +0530</lastBuildDate>
     
 	<atom:link href="https://siddroid.com/index.xml" rel="self" type="application/rss+xml" />
     
@@ -47,6 +47,15 @@ Mumbai, India</description>
       
       <guid>https://siddroid.com/about/</guid>
       <description>Hey 👋 I am Siddhesh Patil, an Android Engineer and Kotlin Advocate from Mumbai.</description>
+    </item>
+    
+    <item>
+      <title>Android Worldwide: April 2021</title>
+      <link>https://siddroid.com/post/kotlin-mumbai-events/post-android-worldwide-april-2021/</link>
+      <pubDate>Thu, 06 May 2021 22:59:25 +0530</pubDate>
+      
+      <guid>https://siddroid.com/post/kotlin-mumbai-events/post-android-worldwide-april-2021/</guid>
+      <description>Event Details The second event of the Android Worldwide group of communities happened on April 27th, 2021.</description>
     </item>
     
     <item>
