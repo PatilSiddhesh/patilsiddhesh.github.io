@@ -118,8 +118,8 @@ h4, h5, h6 {
 /* Body text */
 
 p {
-  margin-top: 0;
-  margin-bottom: 1rem;
+  margin-top: 0rem;
+  margin-bottom: 0.5rem;
 }
 
 strong {
@@ -147,16 +147,14 @@ hr {
   position: relative;
   margin: 1.5rem 0;
   border: 0;
-  border-top: 1px solid #1e1e1e;
-  border-bottom: 1px solid #1e1e1e;
+  border-top: 0.08rem solid #2b2b2b;
 }
 
 .gghr {
   position: relative;
   border: 0;
   margin: 0;
-  border-top: 1px solid #1e1e1e;
-  border-bottom: 1px solid #1e1e1e;
+  border-top: 0.08rem solid #2b2b2b;
 }
 
 abbr {
@@ -181,7 +179,7 @@ code {
   padding: .25em .5em;
   font-size: 85%;
   color: #b3555e;
-  background-color: #1e1e1e;
+  background-color: #202020;
   border-radius: 3px;
 }
 
@@ -193,12 +191,12 @@ pre {
   padding: 1rem;
   font-size: .8rem;
   line-height: 1.6;
+  border:0.08rem solid#3d3d3d;
   overflow-x: scroll;
   word-wrap: normal;
   white-space: pre;
   word-break: break-all;
   word-wrap: break-word;
-  background-color: #1e1e1e;
 }
 
 pre code {
@@ -219,8 +217,9 @@ pre code {
 
 .highlight pre {
   margin-bottom: 0;
+  border:0.08rem solid#3d3d3d;
   color: #a5a5a5 !important;
-  background-color: #1e1e1e !important;
+  background-color: #202020 !important;
 }
 
 /* Quotes */
@@ -228,12 +227,10 @@ pre code {
 blockquote {
   padding: .5rem 1rem;
   margin: .8rem 0;
-  font-size: 80%;
+  font-size: 90%;
   font-style: italic;
   color: #a5a5a5;
-  background-color: #1e1e1e;
   border-radius: 1rem;
-  border: .15rem solid #252525;
 }
 
 blockquote p:last-child {
@@ -259,13 +256,14 @@ img {
 table {
   margin-bottom: 1rem;
   width: 100%;
-  border: 1px solid #252525;
+  border: 0.08rem solid #252525;
+  border-radius: 1em;
   border-collapse: collapse;
 }
 
 td, th {
   padding: .25rem .5rem;
-  border: 1px solid #252525;
+  border: 0.08rem solid #3d3d3d;
   background-color: #1e1e1e;
   background: #1e1e1e;
   color: #a5a5a5;
@@ -273,6 +271,7 @@ td, th {
 
 tbody tr:nth-child(odd) td, tbody tr:nth-child(odd) th {
   background-color: #1e1e1e;
+  border: 0.08rem solid #3d3d3d;
 }
 
 /*
@@ -462,27 +461,27 @@ a.pagination-item:hover {
 
 @font-face {
   font-family: sansfont;
-  src: url(/images/Nunito-Regular.woff2);
+  src: url(/fonts/NunitoSans-Regular.woff2);
 }
 
 @font-face {
   font-family: jetbrains;
-  src: url(/images/JetBrainsMono-Regular.woff2);
+  src: url(/fonts/JetBrainsMono-Regular.woff2);
 }
 
 .card {
   /* Add shadows to create the "card" effect */
-  transition: 0.3s;
   border-radius: 20px;
   /* 5px rounded corners */
-  background-color: #1e1e1e;
+  border:0.08rem solid#3d3d3d;
+  background-color: #1d1d1d;
 }
 
 /* On mouse-over, add a deeper shadow */
 
-.card:hover {
+/* .card:hover {
   box-shadow: 0 8px 16px 0 #1d1d1d;
-}
+} */
 
 /* Add some padding inside the card container */
 
@@ -497,7 +496,8 @@ img.card {
 
 .authorCard {
   /* Add shadows to create the "card" effect */
-  background-color: #1e1e1e;
+  border:0.08rem solid#3d3d3d;
+  background-color: #1d1d1d;
   padding: 1em;
   border-radius: 1rem;
   margin-top: 10px;
@@ -506,10 +506,10 @@ img.card {
 
 .githubProject {
   /* Add shadows to create the "card" effect */
-  background-color: #1e1e1e;
+  background-color: #1d1d1d;
   padding: 1em;
   border-radius: 1rem;
-  border: .10rem solid #6272a4;
+  border: .08rem solid #3d3d3d;
   margin-top: 10px;
   margin-bottom: 10px;
 }
@@ -517,7 +517,7 @@ img.card {
 .cardContainer {
   border-radius: 1rem;
   padding: 1rem;
-  background-color: #1e1e1e;
+  background-color: #1d1d1d;
 }
 
 .learnKotlinChapterDescText {
@@ -558,7 +558,7 @@ img.card {
 }
 
 .CodeMirror-gutters {
-  background: #1e1e1e !important;
+  background: #202020 !important;
   border-right: 1px solid #1e1e1e !important;
 }
 
