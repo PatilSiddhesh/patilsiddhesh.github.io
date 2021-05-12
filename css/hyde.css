@@ -198,6 +198,32 @@ footer {
   }
 }
 
+.cardDesc {
+  font-size: 80%;
+  color: #a5a5a5;
+  max-height: 5em;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+@media (max-width: 48em) {
+  .cardDesc {
+    max-height: 3em;
+  }
+}
+
+.cardHeight{
+  min-height: 170px;
+  max-height: 500px;
+  display: flex;
+}
+
+@media (max-width: 48em) {
+  .cardHeight {
+    min-height: 150px;
+    max-height: 500px;  }
+}
+
 @media (max-width: 48em) {
   .readTime {
     width: 0px;
@@ -298,7 +324,7 @@ ul.posts {
   background-color: #1d1d1d;
   padding-left: 0.5em;
   padding-right: 0.5em;
-  font-size: 70%;
+  font-size: 80%;
   color: #a5a5a5;
 }
 
@@ -381,6 +407,30 @@ ul.posts {
   border-radius: 1rem;
   border:0.08rem solid#3d3d3d;
   background-color: #1d1d1d;
+}
+
+.bottomBar {
+  padding-bottom: 1rem;
+  margin-left: 10rem;
+  margin-right: 10rem;
+  margin-top: 2rem;
+  border-radius: 1rem;
+  border:0.08rem solid#3d3d3d;
+  background-color: #1d1d1d;
+  
+}
+
+@media (max-width: 64em) {
+  .bottomBar {
+  padding-top: 1rem;
+  border:0.08rem solid#3d3d3d;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  border-radius: 1rem;
+  background-color: #1d1d1d;
+  }
 }
 
 @media (max-width: 64em) {

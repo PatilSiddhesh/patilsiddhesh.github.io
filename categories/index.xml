@@ -5,10 +5,6 @@
     <link>https://siddroid.com/categories/</link>
     <description>Recent content in Categories on Siddhesh Patil - Android Engineer and Kotlin Advocate</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    
-	<atom:link href="https://siddroid.com/categories/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <language>en-us</language><atom:link href="https://siddroid.com/categories/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
