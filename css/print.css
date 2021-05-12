@@ -17,13 +17,3 @@
   padding-right: 1rem;
   margin: 0 auto;
 }
-
-@font-face {
-  font-family: sansfont;
-  src: url(/images/Nunito-Regular.woff2);
-}
-
-@font-face {
-  font-family: jetbrains;
-  src: url(/images/JetBrainsMono-Regular.woff2);
-}
