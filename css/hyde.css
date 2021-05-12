@@ -199,10 +199,11 @@ footer {
 }
 
 .cardDesc {
+  display: block;
   font-size: 80%;
   color: #a5a5a5;
-  max-height: 5em;
-  text-overflow: ellipsis;
+  max-height: 5rem;
+  text-overflow:ellipsis;
   overflow: hidden;
 }
 
