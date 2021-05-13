@@ -366,7 +366,7 @@ ul.posts {
 
 @font-face {
   font-family: jetbrains;
-  src: url(/images/JetBrainsMono-Regular.woff2);
+  src: url(/fonts/JetBrainsMono-Regular.woff2);
 }
 
 ::-webkit-scrollbar {
@@ -382,7 +382,6 @@ ul.posts {
   margin-right: 10rem;
   margin-top: 2rem;
   margin-bottom: 2rem;
-  min-height: 100vh;
   border-radius: 1rem;
   border:0.08rem solid#3d3d3d;
   background-color: #1d1d1d;
@@ -545,3 +544,27 @@ textarea:focus,input:focus {
 
 }
 
+.utterances {
+  max-width: 100% !important;
+  font-family: sansfont !important;
+  background-color: #1d1d1d;
+}
+.utterances-frame {
+  font-family: sansfont !important;
+}
+
+.timeline-header em {
+  color: #1d1d1d !important;
+}
+
+.timeline-header {
+  font-family: sansfont !important;
+}
+
+.utterances-frame em {
+  color: #1d1d1d !important;
+}
+
+.btn-primary {
+  background-color: transparent !important;
+}
