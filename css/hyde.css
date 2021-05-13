@@ -254,6 +254,8 @@ footer {
   border-radius: 50%;
   flex-shrink: 0;
   align-self: center;
+  padding: 0.10rem;
+  border: 0.10rem solid#3d3d3d;
 }
 
 .img-headshot {
