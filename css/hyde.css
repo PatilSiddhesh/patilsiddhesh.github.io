@@ -323,6 +323,15 @@ ul.posts {
   src: url(/fonts/NunitoSans-Regular.woff2);
 }
 
+@font-face {
+  font-family: manropebold;
+  src: url(/fonts/Manrope-Bold.woff2);
+}
+@font-face {
+  font-family: manropesb;
+  src: url(/fonts/Manrope-SemiBold.woff2);
+}
+
 .tagBg {
   background-color: #1d1d1d;
   padding-left: 0.5em;
@@ -403,22 +412,15 @@ ul.posts {
 
 .topBar {
   padding-top: 1rem;
-  margin-left: 10rem;
-  margin-right: 10rem;
-  margin-top: 2rem;
   margin-bottom: 1rem;
-  border-radius: 1rem;
-  border:0.08rem solid#3d3d3d;
+  border-bottom:0.08rem solid#3d3d3d;
   background-color: #1d1d1d;
 }
 
 .bottomBar {
   padding-bottom: 1rem;
-  margin-left: 10rem;
-  margin-right: 10rem;
   margin-top: 2rem;
-  border-radius: 1rem 1rem 0 0;
-  border:0.08rem solid#3d3d3d;
+  border-top:0.08rem solid#3d3d3d;
   background-color: #1d1d1d;
   
 }
@@ -426,12 +428,8 @@ ul.posts {
 @media (max-width: 64em) {
   .bottomBar {
   padding-top: 1rem;
-  border:0.08rem solid#3d3d3d;
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
+  border-top:0.08rem solid#3d3d3d;
   margin-top: 2rem;
-  margin-bottom: 1rem;
-  border-radius: 1rem;
   background-color: #1d1d1d;
   }
 }
@@ -439,11 +437,7 @@ ul.posts {
 @media (max-width: 64em) {
   .topBar {
   padding-top: 1rem;
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
-  margin-top: 2rem;
   margin-bottom: 1rem;
-  border-radius: 1rem;
   background-color: #1d1d1d;
   }
 }
@@ -472,11 +466,21 @@ ul.posts {
   width: 100%;
 }
 
+@media (min-width: 64em) {
+  .topBarLayoutDesk {
+    display:flex;
+    justify-content:space-between;
+  }
+}
+
+
 @media (max-width: 64em) {
   .topBarLayoutDesk {
     visibility: hidden;
-    height: 0;
-    width: 0;
+    height: 0px;
+    width: 0px;
+    display:flex;
+    justify-content:space-around;
   }
 }
 
