@@ -428,8 +428,8 @@ ul.posts {
   margin-bottom: 0rem;
   border-bottom:0.08rem solid#3d3d3d;
   box-shadow:
-  8px -8px 12px 12px rgba(0, 0, 0, 0.3),
-  -20px 20px 20px rgba(0, 0, 0, 0.3);
+  8px -8px 12px 12px rgba(0, 0, 0, 0.2),
+  -20px 20px 20px rgba(0, 0, 0, 0.2);
   background-color: #1d1d1d;
 }
 
@@ -438,8 +438,8 @@ ul.posts {
   margin-top: 2rem;
   border-top:0.08rem solid#3d3d3d;
   box-shadow:
-  8px -8px 8px 8px rgba(0, 0, 0, 0.3),
-  -20px 20px 20px rgba(0, 0, 0, 0.3);
+  8px -8px 8px 8px rgba(0, 0, 0, 0.1),
+  -20px 20px 20px rgba(0, 0, 0, 0.2);
   background-color: #1d1d1d;
   
 }
