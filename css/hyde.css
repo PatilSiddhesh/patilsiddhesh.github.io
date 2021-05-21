@@ -142,7 +142,7 @@ footer {
   font-size:40pt;
 }
 
-@media (max-width: 64em) {
+@media (max-width: 74em) {
   .postTitleHeading {
     font-size:30pt;
   }
@@ -158,7 +158,7 @@ footer {
   background-color: #151515;
 }
 
-@media (min-width: 64em) {
+@media (min-width: 74em) {
   .content {
     margin-left: 22rem;
     margin-right: 4rem;
@@ -248,7 +248,7 @@ footer {
   }
 }
 
-@media (min-width: 64em) {
+@media (min-width: 74em) {
   .gg {
     padding: 2rem;
     margin-left: 22rem;
@@ -391,11 +391,14 @@ ul.posts {
   display: none;
 }
 
+/**
+ * General
+**/
 .parentContainer {
   padding-top: 2rem;
   padding-bottom: 2rem;
-  padding-left: 5rem;
-  padding-right: 5rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
   margin-left: 10rem;
   margin-right: 10rem;
   margin-top: 2rem;
@@ -408,9 +411,24 @@ ul.posts {
   background-color: #191919;
 }
 
-@media (max-width: 64em) {
+/**
+* Mobile and Ipad
+**/
+@media (min-width: 90em) {
   .parentContainer {
-    padding: 2rem;
+    margin-left: 18rem;
+    margin-right: 18rem;
+  }
+}
+
+
+
+/**
+* Mobile and Ipad
+**/
+@media (max-width: 74em) {
+  .parentContainer {
+  padding: 2rem;
   margin-left: 0.5rem;
   margin-right: 0.5rem;
   margin-top: 2rem;
@@ -443,7 +461,7 @@ ul.posts {
   
 }
 
-@media (max-width: 64em) {
+@media (max-width: 74em) {
   .bottomBar {
   padding-top: 1rem;
   border-top:0.08rem solid#3d3d3d;
@@ -452,7 +470,7 @@ ul.posts {
   }
 }
 
-@media (max-width: 64em) {
+@media (max-width: 74em) {
   .topBar {
   padding-top: 1rem;
   margin-bottom: 1rem;
@@ -464,7 +482,7 @@ ul.posts {
   margin-top: 0;
   }
 
-@media (max-width: 64em) {
+@media (max-width: 74em) {
   .siteHeaderText {
   margin-top: 0.4rem;
   }
@@ -484,7 +502,7 @@ ul.posts {
   width: 100%;
 }
 
-@media (min-width: 64em) {
+@media (min-width: 74em) {
   .topBarLayoutDesk {
     display:flex;
     justify-content:space-between;
@@ -492,7 +510,7 @@ ul.posts {
 }
 
 
-@media (max-width: 64em) {
+@media (max-width: 74em) {
   .topBarLayoutDesk {
     visibility: hidden;
     height: 0px;
@@ -508,7 +526,7 @@ ul.posts {
   width: 0;
 }
 
-@media (max-width: 64em) {
+@media (max-width: 74em) {
   .topBarLayoutMobile {
   visibility: visible;
   height:fit-content;
