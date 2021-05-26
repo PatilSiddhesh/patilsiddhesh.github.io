@@ -105,10 +105,10 @@ function updateSearchResults(query, results) {
       (hit) => `
       <a href="${hit.href}" style="text-decoration:none;color:#a5a5a5">
 
-    <div class="card" style="padding:1rem;margin-bottom:1rem" data-score="${hit.score.toFixed(2)}">
+    <div class="card" style="padding:1rem;margin-bottom:2rem" data-score="${hit.score.toFixed(2)}">
       <h3>${hit.title}</h3>
       
-      <p style="font-size:80%;width:100%;overflow:hidden">${createSearchResultBlurb(query, hit.content)}</p>
+      <p style="font-size:80%;width:100%;overflow:hidden;color:var(--color-text-l2)">${createSearchResultBlurb(query, hit.content)}</p>
     </div>
     </a>
     `
@@ -153,7 +153,7 @@ function createSearchResultBlurb(query, pageContent) {
   }
   return ellipsize(searchResultText, MAX_SUMMARY_LENGTH).replace(
     searchQueryRegex,
-    '<strong style ="color:#3ddc84">$&</strong>'
+    '<strong style ="color:var(--color-accent)">$&</strong>'
   );
 }
 
