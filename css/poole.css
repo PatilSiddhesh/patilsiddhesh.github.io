@@ -202,6 +202,7 @@ pre {
   padding: 1rem;
   font-size: .8rem;
   line-height: 1.6;
+  background-color: var(--color-canvas-pitview) !important;
   border:0.08rem solid var(--color-canvas-border);
   overflow-x: scroll !important;
   word-wrap: normal;
@@ -217,6 +218,7 @@ pre code {
   background-color: transparent;
   overflow-x: scroll !important;
   word-wrap: normal;
+  background-color: var(--color-canvas-pitview) !important;
   white-space: pre;
 }
 
@@ -224,6 +226,7 @@ pre code {
   overflow-x: scroll !important;
   margin-bottom: 1rem;
   border-radius: 4px;
+  background-color: var(--color-canvas-pitview) !important;
   font-family: jetbrains;
 }
 
