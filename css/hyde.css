@@ -325,12 +325,12 @@ ul.posts {
 }
 
 @font-face {
-  font-family: opensanssb;
+  font-family: manropesb;
   src: url(/fonts/OpenSans-SemiBold.woff2);
 }
 
 @font-face {
-  font-family: opensbold;
+  font-family: manropeb;
   src: url(/fonts/OpenSans-SemiBold.woff2);
 }
 
