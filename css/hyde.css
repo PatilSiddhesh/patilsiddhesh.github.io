@@ -48,7 +48,7 @@
  }
 
 html {
-  font-family: "sansfont";
+  font-family: "notosans";
 }
 
 @media (min-width: 48em) {
@@ -320,17 +320,13 @@ ul.posts {
 }
 
 @font-face {
-  font-family: sansfont;
-  src: url(/fonts/Inter-Regular.woff2);
+  font-family: notosans;
+  src: url(/fonts/NotoSans-Regular.woff2);
 }
 
 @font-face {
-  font-family: manropebold;
-  src: url(/fonts/Inter-Medium.woff2);
-}
-@font-face {
   font-family: manropesb;
-  src: url(/fonts/Inter-Medium.woff2);
+  src: url(/fonts/Manrope-SemiBold.woff2);
 }
 
 .tagBg {
@@ -574,11 +570,11 @@ textarea:focus,input:focus {
 
 .utterances {
   max-width: 100% !important;
-  font-family: sansfont !important;
+  font-family: notosans !important;
   background-color:  var(--color-canvas-l1);
 }
 .utterances-frame {
-  font-family: sansfont !important;
+  font-family: notosans !important;
 }
 
 .timeline-header em {
@@ -586,7 +582,7 @@ textarea:focus,input:focus {
 }
 
 .timeline-header {
-  font-family: sansfont !important;
+  font-family: notosans !important;
 }
 
 .utterances-frame em {
@@ -729,5 +725,31 @@ textarea:focus,input:focus {
   /* prettylights-syntax-markup-deleted */
   color: #b31d28;
   background-color: #ffeef0;
+}
+
+
+.material-icons-outlined {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
 }
 
