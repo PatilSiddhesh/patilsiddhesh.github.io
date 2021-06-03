@@ -326,12 +326,12 @@ ul.posts {
 
 @font-face {
   font-family: manropesb;
-  src: url(/fonts/Inter-Medium.woff2);
+  src: url(/fonts/Manrope-SemiBold.woff2);
 }
 
 @font-face {
   font-family: manropeb;
-  src: url(/fonts/Inter-SemiBold.woff2);
+  src: url(/fonts/Manrope-SemiBold.woff2);
 }
 
 .tagBg {
