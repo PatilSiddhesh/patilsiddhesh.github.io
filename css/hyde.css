@@ -48,7 +48,7 @@
  }
 
 html {
-  font-family: "notosans";
+  font-family: "sansfont";
 }
 
 @media (min-width: 48em) {
@@ -320,7 +320,7 @@ ul.posts {
 }
 
 @font-face {
-  font-family: notosans;
+  font-family: sansfont;
   src: url(/fonts/NotoSans-Regular.woff2);
 }
 
@@ -570,11 +570,11 @@ textarea:focus,input:focus {
 
 .utterances {
   max-width: 100% !important;
-  font-family: notosans !important;
+  font-family: sansfont !important;
   background-color:  var(--color-canvas-l1);
 }
 .utterances-frame {
-  font-family: notosans !important;
+  font-family: sansfont !important;
 }
 
 .timeline-header em {
@@ -582,7 +582,7 @@ textarea:focus,input:focus {
 }
 
 .timeline-header {
-  font-family: notosans !important;
+  font-family: sansfont !important;
 }
 
 .utterances-frame em {
