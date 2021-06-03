@@ -96,7 +96,6 @@ a:hover, a:focus {
 h1, h2, h3, h4, h5, h6 {
   margin-bottom: .5rem;
   line-height: 1.25;
-  font-family: "manropesb";
   color:  var(--color-text-l1);
   text-rendering: optimizeLegibility;
 }
@@ -104,27 +103,27 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: 2rem;
-  font-family: "manropeb";
+  font-family: "opensans-bolder";
 
 }
 
 h2 {
   margin-top: 1rem;
   font-size: 1.5rem;
-  font-family: "manropesb";
+  font-family: "opensans-bold";
 
 }
 
 h3 {
   margin-top: 1rem;
   font-size: 1.25rem;
-  font-family: manropesb;
+  font-family: opensans-bold;
 }
 
 h4, h5, h6 {
   margin-top: 1rem;
   font-size: 1rem;
-  font-family: manropesb;
+  font-family: opensans-bold;
 }
 
 /* Body text */
