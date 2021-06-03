@@ -103,27 +103,27 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: 2rem;
-  font-family: "opensansbolder";
+  font-family: "opensbold";
 
 }
 
 h2 {
   margin-top: 1rem;
   font-size: 1.5rem;
-  font-family: "opensansbold";
+  font-family: "opensanssb";
 
 }
 
 h3 {
   margin-top: 1rem;
   font-size: 1.25rem;
-  font-family: opensansbold;
+  font-family: opensanssb;
 }
 
 h4, h5, h6 {
   margin-top: 1rem;
   font-size: 1rem;
-  font-family: opensansbold;
+  font-family: opensanssb;
 }
 
 /* Body text */
