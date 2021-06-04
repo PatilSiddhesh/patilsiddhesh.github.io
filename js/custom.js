@@ -11,3 +11,13 @@ function snapTop() {
     containerId.scrollIntoView({ behavior: 'smooth', block: 'start' });
     
 }
+
+function copyToClipboard(toCopy) {
+    var $temp = $("<input>");
+    $("body").append($temp);
+    $temp.value = toCopy
+    $temp.val($(element).text()).select();
+    document.execCommand("copy");
+    $temp.remove();
+}
+  

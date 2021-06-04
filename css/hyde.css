@@ -36,12 +36,12 @@
    --color-canvas-l2: rgb(251,251,251);
    --color-canvas-l3: rgb(249,249,249);
    --color-canvas-border: #dadce0;
-   --color-text-l1:#181818;
+   --color-text-l1:#2c2c2c;
    --color-text-l2: #444444;
    --color-text-experimental: #444444;
    --color-accent: #00897b;
    --color-topbar: #fff;
-   --color-site-logo-text: #181818;
+   --color-site-logo-text: #2c2c2c;
    --color-text-highlight: #8cdfb1;
    --color-canvas-border-l2:#e8eaed;
    --color-canvas-pitview: #f8f9fa;
@@ -320,18 +320,23 @@ ul.posts {
 }
 
 @font-face {
+  font-family: jetbrains;
+  src: url(/fonts/JetBrainsMono-Regular.woff2);
+}
+
+@font-face {
   font-family: sansfont;
   src: url(/fonts/Roboto-Regular.woff2);
 }
 
 @font-face {
   font-family: manropesb;
-  src: url(/fonts/Manrope-SemiBold.woff2);
+  src: url(/fonts/PlusJakartaDisplay-Medium.woff2);
 }
 
 @font-face {
   font-family: manropeb;
-  src: url(/fonts/Manrope-SemiBold.woff2);
+  src: url(/fonts/PlusJakartaDisplay-Medium.woff2);
 }
 
 .tagBg {
@@ -375,10 +380,7 @@ ul.posts {
   margin-left:1.7rem;
 }
 
-@font-face {
-  font-family: jetbrains;
-  src: url(/fonts/JetBrainsMono-Regular.woff2);
-}
+
 
 ::-webkit-scrollbar {
   display: none;
@@ -392,8 +394,8 @@ ul.posts {
   padding-bottom: 2rem;
   padding-left: 3rem;
   padding-right: 3rem;
-  margin-left: 10rem;
-  margin-right: 10rem;
+  margin-left: 13rem;
+  margin-right: 13rem;
   margin-top: 2rem;
   margin-bottom: 2rem;
   border-radius: 0.5rem;
@@ -405,7 +407,7 @@ ul.posts {
 /**
 * Mobile and Ipad
 **/
-@media (min-width: 90em) {
+@media (min-width: 100em) {
   .parentContainer {
     margin-left: 16rem;
     margin-right: 16rem;
@@ -416,7 +418,7 @@ ul.posts {
 /**
 * Mobile and Ipad
 **/
-@media (max-width: 74em) {
+@media (max-width: 64em) {
   .parentContainer {
   padding: 1.5rem;
   margin-left: 0.5rem;
@@ -449,7 +451,7 @@ ul.posts {
   
 }
 
-@media (max-width: 74em) {
+@media (max-width: 64em) {
   .bottomBar {
   padding-top: 1rem;
   margin-top: 2rem;
@@ -458,7 +460,7 @@ ul.posts {
   }
 }
 
-@media (max-width: 74em) {
+@media (max-width: 64em) {
   .topBar {
   padding-top: 1rem;
   margin-bottom: 1rem;
@@ -492,7 +494,7 @@ ul.posts {
   width: 100%;
 }
 
-@media (min-width: 74em) {
+@media (min-width: 64em) {
   .topBarLayoutDesk {
     display:flex;
     justify-content:space-between;
@@ -500,7 +502,7 @@ ul.posts {
 }
 
 
-@media (max-width: 74em) {
+@media (max-width: 64em) {
   .topBarLayoutDesk {
     visibility: hidden;
     height: 0px;
@@ -516,7 +518,7 @@ ul.posts {
   width: 0;
 }
 
-@media (max-width: 74em) {
+@media (max-width: 64em) {
   .topBarLayoutMobile {
   visibility: visible;
   height:fit-content;
