@@ -331,12 +331,12 @@ ul.posts {
 
 @font-face {
   font-family: manropesb;
-  src: url(/fonts/PlusJakartaDisplay-Medium.woff2);
+  src: url(/fonts/PlusJakartaSans-Medium.woff2);
 }
 
 @font-face {
   font-family: manropeb;
-  src: url(/fonts/PlusJakartaDisplay-Medium.woff2);
+  src: url(/fonts/PlusJakartaSans-Medium.woff2);
 }
 
 .tagBg {
