@@ -36,15 +36,28 @@
    --color-canvas-l2: rgb(251,251,251);
    --color-canvas-l3: rgb(249,249,249);
    --color-canvas-border: #dadce0;
-   --color-text-l1:#2c2c2c;
-   --color-text-l2: #444444;
-   --color-text-experimental: #444444;
-   --color-accent: #00897b;
+   --color-text-l1:#212121;
+   --color-text-l2: #212121;
+   --color-text-experimental: #212121;
+   --color-accent: #FF5722;
    --color-topbar: #fff;
-   --color-site-logo-text: #2c2c2c;
+   --color-site-logo-text: #212121;
    --color-text-highlight: #8cdfb1;
    --color-canvas-border-l2:#e8eaed;
    --color-canvas-pitview: #f8f9fa;
+   --color-red: #f03009;
+   --color-red-orange: #ff2e00;
+   --color-hot-orange: #ff5c00;
+   --color-orange: #ff7105;
+   --color-warm-yellow: #ffe310;
+   --color-yellow: #fff310;
+   --color-light-yellow: #ffffb3;
+   --color-green: #12c05b;
+   --color-ocean-green: #008f5d;
+   --color-pear-green: #77dd86;
+   --color-blue: #0366d6;
+   --color-sunset-pink: #ff7b81;
+   --color-light-pink: #ffb3ba;
  }
 
 html {
@@ -326,17 +339,17 @@ ul.posts {
 
 @font-face {
   font-family: sansfont;
-  src: url(/fonts/Roboto-Regular.woff2);
+  src: url(/fonts/Poppins-Regular.woff2);
 }
 
 @font-face {
   font-family: manropesb;
-  src: url(/fonts/PlusJakartaSans-Medium.woff2);
+  src: url(/fonts/DMSans-Medium.woff2);
 }
 
 @font-face {
   font-family: manropeb;
-  src: url(/fonts/PlusJakartaSans-Medium.woff2);
+  src: url(/fonts/DMSans-Medium.woff2);
 }
 
 .tagBg {
@@ -344,7 +357,9 @@ ul.posts {
   justify-content: center;
   padding-right: 0.5em;
   font-size: 80%;
-  color: var(--color-text-l2);
+  color: var(--color-accent);
+
+  /* color: var(--color-text-l2); */
 }
 
 .twitterFollow {
