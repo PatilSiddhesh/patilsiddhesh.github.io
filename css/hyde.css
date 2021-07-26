@@ -339,17 +339,17 @@ ul.posts {
 
 @font-face {
   font-family: sansfont;
-  src: url(/fonts/Poppins-Regular.woff2);
+  src: url(/fonts/PlusJakartaText-Regular.woff2);
 }
 
 @font-face {
   font-family: manropesb;
-  src: url(/fonts/DMSans-Medium.woff2);
+  src: url(/fonts/PlusJakartaDisplay-Medium.woff2);
 }
 
 @font-face {
   font-family: manropeb;
-  src: url(/fonts/DMSans-Medium.woff2);
+  src: url(/fonts/PlusJakartaDisplay-Medium.woff2);
 }
 
 .tagBg {
