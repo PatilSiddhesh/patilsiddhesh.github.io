@@ -36,12 +36,12 @@
    --color-canvas-l2: rgb(251,251,251);
    --color-canvas-l3: rgb(249,249,249);
    --color-canvas-border: #dadce0;
-   --color-text-l1:#212121;
-   --color-text-l2: #212121;
-   --color-text-experimental: #212121;
+   --color-text-l1:#303030;
+   --color-text-l2: #434343;
+   --color-text-experimental: #434343;
    --color-accent: #FF5722;
    --color-topbar: #fff;
-   --color-site-logo-text: #212121;
+   --color-site-logo-text: #434343;
    --color-text-highlight: #8cdfb1;
    --color-canvas-border-l2:#e8eaed;
    --color-canvas-pitview: #f8f9fa;
@@ -339,17 +339,17 @@ ul.posts {
 
 @font-face {
   font-family: sansfont;
-  src: url(/fonts/PlusJakartaText-Regular.woff2);
+  src: url(/fonts/Nunito-Regular.woff2);
 }
 
 @font-face {
   font-family: manropesb;
-  src: url(/fonts/PlusJakartaDisplay-Medium.woff2);
+  src: url(/fonts/Nunito-SemiBold.woff2);
 }
 
 @font-face {
   font-family: manropeb;
-  src: url(/fonts/PlusJakartaDisplay-Medium.woff2);
+  src: url(/fonts/Nunito-SemiBold.woff2);
 }
 
 .tagBg {
@@ -417,6 +417,17 @@ ul.posts {
   /* box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px; */
   border:0.08rem solid var(--color-canvas-border);
   background-color: var(--color-canvas-l1);
+}
+
+/**
+* Mobile and Ipad
+**/
+@media only screen and (min-width: 1112px) and (orientation: landscape) {
+  .parentContainer {
+    margin-left: 2rem;
+    margin-right: 2rem;
+    /* box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px; */
+  }
 }
 
 /**
