@@ -435,6 +435,20 @@ ul.posts {
     }
 }
 
+/* Landscape */
+@media only screen 
+  and (min-width: 2160px) 
+  and (max-height: 1620px) 
+  and (orientation: landscape) {
+    .parentContainer {
+      margin-left: 2rem;
+      margin-right: 2rem;
+    }
+  
+  
+  }
+
+
 
 /**
 * Mobile and Ipad
