@@ -434,7 +434,7 @@ ul.posts {
       margin-right: 2rem;
     }
 }
-@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape){ 
+@media only screen and (min-width: 834px) and (max-width: 1112px) and (orientation: landscape){ 
   .parentContainer {
     margin-left: 2rem;
     margin-right: 2rem;
