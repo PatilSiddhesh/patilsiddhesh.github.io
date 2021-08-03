@@ -36,12 +36,13 @@
    --color-canvas-l2: rgb(251,251,251);
    --color-canvas-l3: rgb(249,249,249);
    --color-canvas-border: #dadce0;
-   --color-text-l1:#303030;
-   --color-text-l2: #434343;
-   --color-text-experimental: #434343;
-   --color-accent: #FF5722;
-   --color-topbar: #fff;
-   --color-site-logo-text: #434343;
+   --color-text-l1:#100303;
+   --color-text-l2: #100303;
+   --color-text-experimental: #fff;
+   --color-accent: #3ddc84;
+   --color-topbar: #073042;
+   --color-hyperlink: #1769e0;
+   --color-site-logo-text: #fff;
    --color-text-highlight: #8cdfb1;
    --color-canvas-border-l2:#e8eaed;
    --color-canvas-pitview: #f8f9fa;
@@ -268,8 +269,8 @@ footer {
   border-radius: 50%;
   flex-shrink: 0;
   align-self: center;
-  /* padding: 0.08rem;
-  border: 0.08rem solid var(--color-text-l2); */
+  /* padding: 0.15rem;
+  border: 0.15rem solid var(--color-text-l1); */
 }
 
 .img-headshot {
@@ -357,7 +358,7 @@ ul.posts {
   justify-content: center;
   padding-right: 0.5em;
   font-size: 80%;
-  color: var(--color-accent);
+  color: var(--color-text-l2);
 
   /* color: var(--color-text-l2); */
 }
