@@ -269,8 +269,8 @@ footer {
   border-radius: 50%;
   flex-shrink: 0;
   align-self: center;
-  /* padding: 0.15rem;
-  border: 0.15rem solid var(--color-text-l1); */
+  padding: 0.10rem;
+  border: 0.10rem solid var(--color-accent);
 }
 
 .img-headshot {
@@ -340,17 +340,17 @@ ul.posts {
 
 @font-face {
   font-family: sansfont;
-  src: url(/fonts/Nunito-Regular.woff2);
+  src: url(/fonts/NunitoSans-Regular.woff2);
 }
 
 @font-face {
   font-family: manropesb;
-  src: url(/fonts/Nunito-SemiBold.woff2);
+  src: url(/fonts/HeadingStandard.woff2);
 }
 
 @font-face {
   font-family: manropeb;
-  src: url(/fonts/Nunito-SemiBold.woff2);
+  src: url(/fonts/HeadingStandard.woff2);
 }
 
 .tagBg {
