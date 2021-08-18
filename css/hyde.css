@@ -31,18 +31,18 @@
 
 
  :root {
-   --color-canvas-bg: rgb(252, 252, 252);
+   --color-canvas-bg: rgb(255, 255, 255);
    --color-canvas-l1: #fff;
    --color-canvas-l2: rgb(251,251,251);
    --color-canvas-l3: rgb(249,249,249);
    --color-canvas-border: #dadce0;
    --color-text-l1:#100303;
    --color-text-l2: #100303;
-   --color-text-experimental: #fff;
-   --color-accent: #3ddc84;
-   --color-topbar: #073042;
+   --color-text-experimental: #100303;
+   --color-accent: #1769e0;
+   --color-topbar: #fff;
    --color-hyperlink: #1769e0;
-   --color-site-logo-text: #fff;
+   --color-site-logo-text: #100303;
    --color-text-highlight: #8cdfb1;
    --color-canvas-border-l2:#e8eaed;
    --color-canvas-pitview: #f8f9fa;
@@ -406,7 +406,7 @@ ul.posts {
  * General
 **/
 .parentContainer {
-  padding-top: 2rem;
+  padding-top: 1rem;
   padding-bottom: 2rem;
   padding-left: 3rem;
   padding-right: 3rem;
@@ -416,8 +416,8 @@ ul.posts {
   margin-bottom: 2rem;
   border-radius: 0.5rem;
   /* box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px; */
-  border:0.08rem solid var(--color-canvas-border);
-  background-color: var(--color-canvas-l1);
+  /* border:0.08rem solid var(--color-canvas-border); */
+  /* background-color: var(--color-canvas-l1); */
 }
 
 /**
@@ -462,6 +462,7 @@ ul.posts {
 @media (max-width: 64em) {
   .parentContainer {
   padding: 1.5rem;
+  padding-top: 2rem;
   margin-left: 0.5rem;
   margin-right: 0.5rem;
   margin-top: 2rem;
@@ -476,7 +477,10 @@ ul.posts {
   padding-top: 0.6rem;
   margin-bottom: 0rem;
   border-bottom:0.08rem solid var(--color-canvas-border);
-
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
   /* box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px; */
   background-color:  var(--color-topbar);
 }
