@@ -6,7 +6,25 @@
     <description>Recent content in Community on Siddhesh Patil - Android Engineer and Kotlin Advocate</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 27 Jun 2021 15:00:25 +0530</lastBuildDate><atom:link href="https://siddroid.com/browse/community/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 19 Aug 2021 00:02:16 +0530</lastBuildDate><atom:link href="https://siddroid.com/browse/community/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Android Worldwide: July 2021</title>
+      <link>https://siddroid.com/post/kotlin-mumbai-events/post-android-worldwide-july-2021/</link>
+      <pubDate>Thu, 19 Aug 2021 00:02:16 +0530</pubDate>
+      
+      <guid>https://siddroid.com/post/kotlin-mumbai-events/post-android-worldwide-july-2021/</guid>
+      <description>Event Details Our third event at Android worldwide took place on 27th July 2021 over two days (or one day depending on your timezone).</description>
+    </item>
+    
+    <item>
+      <title>Kotlin Mumbai: Multiplatform projects and server-driven UI</title>
+      <link>https://siddroid.com/post/kotlin-mumbai-events/post-kotlin-multiplatform-graphql-compose-and-server-driven-ui/</link>
+      <pubDate>Wed, 18 Aug 2021 23:45:34 +0530</pubDate>
+      
+      <guid>https://siddroid.com/post/kotlin-mumbai-events/post-kotlin-multiplatform-graphql-compose-and-server-driven-ui/</guid>
+      <description>Event Details A page out of server-driven UI: Speaker: Adit Lal from Gojek</description>
+    </item>
+    
     <item>
       <title>Uncoiling the Coil with Sagar Viradiya</title>
       <link>https://siddroid.com/post/kotlin-mumbai-events/post-uncoiling-the-coil-with-sagar-viradiya-2021/</link>
