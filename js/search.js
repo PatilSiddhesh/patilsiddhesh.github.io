@@ -153,7 +153,7 @@ function createSearchResultBlurb(query, pageContent) {
   }
   return ellipsize(searchResultText, MAX_SUMMARY_LENGTH).replace(
     searchQueryRegex,
-    '<strong style ="color:var(--color-accent)">$&</strong>'
+    '<strong style ="color:var(--color-accent) !important;">$&</strong>'
   );
 }
 
