@@ -13,7 +13,7 @@
       <pubDate>Mon, 23 Aug 2021 18:06:12 +0530</pubDate>
       
       <guid>https://siddroid.com/post/kotlin/build-function-chains-using-composition-in-kotlin/</guid>
-      <description>In this article we are going to focus on how we can use functions to alter the nature of an object and change it, and how we can chain functions together to apply their effects on an object in one go with a compositional pattern.</description>
+      <description>In this article, we are going to focus on how we can use functions to alter the nature of an object and change it, and how we can chain functions together to apply their effects on an object in one go with a composite pattern.</description>
     </item>
     
   </channel>
