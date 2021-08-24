@@ -224,7 +224,7 @@ pre code {
 }
 
 .highlight {
-  overflow-x: scroll !important;
+  overflow-x: hidden !important;
   margin-bottom: 1rem;
   border-radius: 4px;
   background-color: var(--color-canvas-pitview) !important;
