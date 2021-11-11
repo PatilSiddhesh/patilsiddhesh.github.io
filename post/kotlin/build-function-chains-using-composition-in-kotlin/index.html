@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta property="og:image" content="https://siddroid.com//images/composition.gif" />
   <meta name="theme-color" content="#fff" />
-  <meta name="generator" content="Hugo 0.80.0" />
+  <meta name="generator" content="Hugo 0.89.0" />
 
   <title>Build Function Chains Using Composition in Kotlin &middot; Sid Patil</title>
 
@@ -24,7 +24,7 @@
   <meta property="og:url" content="https://siddroid.com/post/kotlin/build-function-chains-using-composition-in-kotlin/"/>
   <meta property="og:type" content="article"/>
   <meta property="article:published_time" content="2021-08-24T12:06:12&#43;0530"/>
-  <meta property="article:modified_time" content="2021-10-02T14:45:31"/>
+  <meta property="article:modified_time" content="2021-11-11T13:53:19"/>
   <meta property="article:author" content="Sid Patil">
   
   
@@ -60,7 +60,7 @@
      
     "datePublished": "2021-08-24T12:06:12",
     
-    "dateModified": "2021-10-02T14:45:31",
+    "dateModified": "2021-11-11T13:53:19",
     "author": {
       "@type" : "Person",
       "name": "Siddhesh Patil",
@@ -174,16 +174,16 @@
 
   <link type="text/css"
         rel="stylesheet"
-        href="https://siddroid.com/css/print.css?v=777"
+        href="https://siddroid.com/css/print.css?v=839"
         media="print">
 
   <link type="text/css"
         rel="stylesheet"
-        href="https://siddroid.com/css/poole.css?v=935">
+        href="https://siddroid.com/css/poole.css?v=297">
 
   <link type="text/css"
         rel="stylesheet"
-        href="https://siddroid.com/css/hyde.css?v=303">
+        href="https://siddroid.com/css/hyde.css?v=267">
   
   <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined"
         rel="stylesheet">
@@ -211,26 +211,26 @@
   
 
 
-        <link rel="apple-touch-icon-precomposed" sizes="57x57" href="https://siddroid.com//favicon/apple-touch-icon-57x57.png?v=333" />
-        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://siddroid.com//favicon/apple-touch-icon-114x114.png?v=443" />
-        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://siddroid.com//favicon/apple-touch-icon-72x72.png?v=263" />
-        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://siddroid.com//favicon/apple-touch-icon-144x144.png?v=528" />
-        <link rel="apple-touch-icon-precomposed" sizes="60x60" href="https://siddroid.com//favicon/apple-touch-icon-60x60.png?v=596" />
-        <link rel="apple-touch-icon-precomposed" sizes="120x120" href="https://siddroid.com//favicon/apple-touch-icon-120x120.png?v=382" />
-        <link rel="apple-touch-icon-precomposed" sizes="76x76" href="https://siddroid.com//favicon/apple-touch-icon-76x76.png?v=498" />
-        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="https://siddroid.com//favicon/apple-touch-icon-152x152.png?v=625" />
-        <link rel="icon" type="image/png" href="https://siddroid.com//favicon/favicon-196x196.png?v=198" sizes="196x196" />
-        <link rel="icon" type="image/png" href="https://siddroid.com//favicon/favicon-96x96.png?v=677" sizes="96x96" />
-        <link rel="icon" type="image/png" href="https://siddroid.com//favicon/favicon-32x32.png?v=390" sizes="32x32" />
-        <link rel="icon" type="image/png" href="https://siddroid.com//favicon/favicon-16x16.png?v=696" sizes="16x16" />
-        <link rel="icon" type="image/png" href="https://siddroid.com//favicon/favicon-128.png?v=809" sizes="128x128" />
+        <link rel="apple-touch-icon-precomposed" sizes="57x57" href="https://siddroid.com//favicon/apple-touch-icon-57x57.png?v=648" />
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://siddroid.com//favicon/apple-touch-icon-114x114.png?v=410" />
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://siddroid.com//favicon/apple-touch-icon-72x72.png?v=870" />
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://siddroid.com//favicon/apple-touch-icon-144x144.png?v=829" />
+        <link rel="apple-touch-icon-precomposed" sizes="60x60" href="https://siddroid.com//favicon/apple-touch-icon-60x60.png?v=585" />
+        <link rel="apple-touch-icon-precomposed" sizes="120x120" href="https://siddroid.com//favicon/apple-touch-icon-120x120.png?v=822" />
+        <link rel="apple-touch-icon-precomposed" sizes="76x76" href="https://siddroid.com//favicon/apple-touch-icon-76x76.png?v=552" />
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="https://siddroid.com//favicon/apple-touch-icon-152x152.png?v=612" />
+        <link rel="icon" type="image/png" href="https://siddroid.com//favicon/favicon-196x196.png?v=616" sizes="196x196" />
+        <link rel="icon" type="image/png" href="https://siddroid.com//favicon/favicon-96x96.png?v=435" sizes="96x96" />
+        <link rel="icon" type="image/png" href="https://siddroid.com//favicon/favicon-32x32.png?v=283" sizes="32x32" />
+        <link rel="icon" type="image/png" href="https://siddroid.com//favicon/favicon-16x16.png?v=193" sizes="16x16" />
+        <link rel="icon" type="image/png" href="https://siddroid.com//favicon/favicon-128.png?v=733" sizes="128x128" />
         <meta name="application-name" content="Siddroid"/>
         <meta name="msapplication-TileColor" content="#FFFFFF" />
-        <meta name="msapplication-TileImage" content="https://siddroid.com//favicon/mstile-144x144.png?v=103" />
-        <meta name="msapplication-square70x70logo" content="https://siddroid.com//favicon/mstile-70x70.png?v=64" />
-        <meta name="msapplication-square150x150logo" content="https://siddroid.com//favicon/mstile-150x150.png?v=828" />
-        <meta name="msapplication-wide310x150logo" content="https://siddroid.com//favicon/mstile-310x150.png?v=995" />
-        <meta name="msapplication-square310x310logo" content="https://siddroid.com//favicon/mstile-310x310.png?v=756" />
+        <meta name="msapplication-TileImage" content="https://siddroid.com//favicon/mstile-144x144.png?v=543" />
+        <meta name="msapplication-square70x70logo" content="https://siddroid.com//favicon/mstile-70x70.png?v=767" />
+        <meta name="msapplication-square150x150logo" content="https://siddroid.com//favicon/mstile-150x150.png?v=443" />
+        <meta name="msapplication-wide310x150logo" content="https://siddroid.com//favicon/mstile-310x150.png?v=95" />
+        <meta name="msapplication-square310x310logo" content="https://siddroid.com//favicon/mstile-310x310.png?v=1" />
 
   
   </head>
@@ -250,7 +250,7 @@
       </div>
 
       <div>
-          <p style="font-size: 20px;color: var(--color-text-l2);;font-weight: bold;">
+          <p style="font-size: 20px;color: var(--color-text-l2);;font-weight: bold;margin-bottom: 0;">
             <span id="siteTitleText">Siddroid</span><span id="siteTitleText"></span>   
           </p> 
           
@@ -635,12 +635,12 @@
 <hr>
 <h2 id="function-chaining">Function chaining</h2>
 <p>I&rsquo;m sure with the recent stable release of <a href="https://developer.android.com/jetpack/compose">Jetpack Compose</a>, you are familiar with its <strong>Modifier</strong> system. The modifier system by class design allows us to set &ldquo;modifications&rdquo; on the class by chaining functions.</p>
-<div class="highlight"><pre class="chroma"><code class="language-Kotlin" data-lang="Kotlin"><span class="c1">// f(x) -&gt; g(x) -&gt; h(x) 
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Kotlin" data-lang="Kotlin"><span class="c1">// f(x) -&gt; g(x) -&gt; h(x) 
 </span><span class="c1"></span><span class="n">Modifier</span><span class="p">.</span><span class="n">width</span><span class="p">(</span><span class="m">10.</span><span class="n">dp</span><span class="p">).</span><span class="n">height</span><span class="p">(</span><span class="m">10.</span><span class="n">dp</span><span class="p">).</span><span class="n">padding</span><span class="p">(</span><span class="n">start</span> <span class="p">=</span> <span class="m">8.</span><span class="n">dp</span><span class="p">).</span><span class="n">background</span><span class="p">(</span><span class="n">color</span> <span class="p">=</span> <span class="n">Color</span><span class="p">(</span><span class="m">0xFFFFF0C4</span><span class="p">))</span></code></pre></div>
 <p>Notice how each function can be called directly after the invocation of the other, once <strong>.width()</strong> is called immediately you can call <strong>.height()</strong> and in this manner, endlessly chain the functions one after the other till the desired modifications are applied or composed together. Super convenient!</p>
 <p>How can we build a pattern similar to this?</p>
 <p>Let&rsquo;s take an example of a <strong>Car</strong> class. It has two properties, <strong>ownerName</strong> and <strong>color</strong>.</p>
-<div class="highlight"><pre class="chroma"><code class="language-Kotlin" data-lang="Kotlin"><span class="k">class</span> <span class="nc">Car</span><span class="p">(</span><span class="k">var</span> <span class="py">ownerName</span><span class="p">:</span> <span class="n">String</span><span class="p">,</span> <span class="k">var</span> <span class="py">color</span><span class="p">:</span> <span class="n">String</span><span class="p">)</span> <span class="p">{</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Kotlin" data-lang="Kotlin"><span class="k">class</span> <span class="nc">Car</span><span class="p">(</span><span class="k">var</span> <span class="py">ownerName</span><span class="p">:</span> <span class="n">String</span><span class="p">,</span> <span class="k">var</span> <span class="py">color</span><span class="p">:</span> <span class="n">String</span><span class="p">)</span> <span class="p">{</span>
 
     <span class="k">fun</span> <span class="nf">changeOwner</span><span class="p">(</span><span class="n">newName</span><span class="p">:</span> <span class="n">String</span><span class="p">)</span> <span class="p">{</span>
         <span class="k">this</span><span class="p">.</span><span class="n">ownerName</span> <span class="p">=</span> <span class="n">newName</span>
@@ -651,7 +651,7 @@
     <span class="p">}</span>
 <span class="p">}</span></code></pre></div>
 <p>If we create an instance of this class and try to access the functions, we can&rsquo;t chain them successively.</p>
-<div class="highlight"><pre class="chroma"><code class="language-Kotlin" data-lang="Kotlin">    <span class="k">var</span> <span class="py">myCar</span><span class="p">:</span> <span class="n">Car</span> <span class="p">=</span> <span class="n">Car</span><span class="p">(</span><span class="s2">&#34;Sid&#34;</span><span class="p">,</span><span class="s2">&#34;Red&#34;</span><span class="p">)</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Kotlin" data-lang="Kotlin">    <span class="k">var</span> <span class="py">myCar</span><span class="p">:</span> <span class="n">Car</span> <span class="p">=</span> <span class="n">Car</span><span class="p">(</span><span class="s2">&#34;Sid&#34;</span><span class="p">,</span><span class="s2">&#34;Red&#34;</span><span class="p">)</span>
 
     <span class="c1">// Standard way of calling functions one after another
 </span><span class="c1"></span>    <span class="n">myCar</span><span class="p">.</span><span class="n">changeOwner</span><span class="p">(</span><span class="s2">&#34;New Owner&#34;</span><span class="p">)</span>
@@ -660,7 +660,7 @@
     <span class="c1">// Not possible, none of the functions can be chained together
 </span><span class="c1"></span>    <span class="n">myCar</span><span class="p">.</span><span class="n">changeOwner</span><span class="p">(</span><span class="s2">&#34;Sid Patil&#34;</span><span class="p">).</span><span class="n">repaint</span><span class="p">(</span><span class="s2">&#34;Green&#34;</span><span class="p">)</span></code></pre></div>
 <p>The first thing we all would probably think about is just returning the instance of the same class and chaining will be possible. But this means changing all functions to return an instance of the same class with the return type specifier.</p>
-<div class="highlight"><pre class="chroma"><code class="language-Kotlin" data-lang="Kotlin">    <span class="c1">// Now both functions return the instance of the class and have return type specifiers
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Kotlin" data-lang="Kotlin">    <span class="c1">// Now both functions return the instance of the class and have return type specifiers
 </span><span class="c1"></span>
     <span class="k">fun</span> <span class="nf">changeOwner</span><span class="p">(</span><span class="n">newName</span><span class="p">:</span> <span class="n">String</span><span class="p">)</span> <span class="p">:</span> <span class="n">Car</span> <span class="p">{</span>
         <span class="k">this</span><span class="p">.</span><span class="n">ownerName</span> <span class="p">=</span> <span class="n">newName</span>
@@ -673,7 +673,7 @@
     <span class="p">}</span></code></pre></div>
 <p>The above works but does not support multiple types and is not intuitive. The compose modifier system has separate typed modifiers eg <strong>PaddingModifier</strong>, <strong>FillModifier</strong>, etc and they combine to form linkages between modifiers and generate views.</p>
 <p>At this point let me highlight that the compose <strong>Modifier</strong> system leverages Kotlin&rsquo;s extension function capabilities. For example, take fillMaxWidth()</p>
-<div class="highlight"><pre class="chroma"><code class="language-Kotlin" data-lang="Kotlin"><span class="k">fun</span> <span class="nf">Modifier</span><span class="p">.</span><span class="n">fillMaxWidth</span><span class="p">(</span><span class="n">fraction</span><span class="p">:</span> <span class="n">Float</span> <span class="p">=</span> <span class="m">1f</span><span class="p">)</span> <span class="p">:</span> <span class="n">Modifier</span></code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Kotlin" data-lang="Kotlin"><span class="k">fun</span> <span class="nf">Modifier</span><span class="p">.</span><span class="n">fillMaxWidth</span><span class="p">(</span><span class="n">fraction</span><span class="p">:</span> <span class="n">Float</span> <span class="p">=</span> <span class="m">1f</span><span class="p">)</span> <span class="p">:</span> <span class="n">Modifier</span></code></pre></div>
 <p>Here the function is extending the <strong>Modifier</strong> object. The function also returns a <strong>Modifier</strong> instance so that consecutive function calls can be chained together.</p>
 <p>Wait.. but how is this any different than us simply returning class instances to enable function chaining?</p>
 <p>Firstly it supports multiple types of classes (Since modifier is an interface), different implementations of Modifiers can be returned and the chain would still work. Secondly, the modifier system uses an aggregation logic to enable chaining.</p>
@@ -684,13 +684,13 @@
 <p>In our context, aggregation applies to the act of collectively applying operations together. This means applying our functions in a chain to the instance of the object and altering its nature. Kotlin contains powerful in-built aggregating functions.</p>
 <h3 id="folding">Folding</h3>
 <p>Kotlin&rsquo;s <strong>fold()</strong> function allows us to aggregate operations and collects the result once all operations are performed. Here in our example, we sum all numbers from 1 to 5 using fold.</p>
-<div class="highlight"><pre class="chroma"><code class="language-Kotlin" data-lang="Kotlin">    <span class="c1">// starts folding with initial value 0
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Kotlin" data-lang="Kotlin">    <span class="c1">// starts folding with initial value 0
 </span><span class="c1"></span>    <span class="c1">// aggregates operation from left to right 
 </span><span class="c1"></span>
     <span class="k">val</span> <span class="py">numbers</span> <span class="p">=</span> <span class="n">listOf</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="m">2</span><span class="p">,</span><span class="m">3</span><span class="p">,</span><span class="m">4</span><span class="p">,</span><span class="m">5</span><span class="p">)</span>
     <span class="n">numbers</span><span class="p">.</span><span class="n">fold</span><span class="p">(</span><span class="m">0</span><span class="p">)</span> <span class="p">{</span> <span class="n">total</span><span class="p">,</span> <span class="n">number</span> <span class="o">-&gt;</span> <span class="n">total</span> <span class="p">+</span> <span class="n">number</span><span class="p">}</span></code></pre></div>
 <p>There is <strong>reduce()</strong> function as well, which we can also use if we don&rsquo;t want an initial value before aggregation. Folding is always done in a given direction, left to right or right to left.</p>
-<div class="highlight"><pre class="chroma"><code class="language-Kotlin" data-lang="Kotlin">    <span class="k">val</span> <span class="py">numbers</span> <span class="p">=</span> <span class="n">listOf</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="m">2</span><span class="p">,</span><span class="m">3</span><span class="p">,</span><span class="m">4</span><span class="p">,</span><span class="m">5</span><span class="p">)</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Kotlin" data-lang="Kotlin">    <span class="k">val</span> <span class="py">numbers</span> <span class="p">=</span> <span class="n">listOf</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="m">2</span><span class="p">,</span><span class="m">3</span><span class="p">,</span><span class="m">4</span><span class="p">,</span><span class="m">5</span><span class="p">)</span>
 
     <span class="c1">// 1 + 2 -&gt; 3 + 3 -&gt; 6 + 4 -&gt; 10 + 5 = 15
 </span><span class="c1"></span>    <span class="n">numbers</span><span class="p">.</span><span class="n">fold</span><span class="p">(</span><span class="m">0</span><span class="p">)</span> <span class="p">{</span> <span class="n">total</span><span class="p">,</span> <span class="n">number</span> <span class="o">-&gt;</span> <span class="n">total</span> <span class="p">+</span> <span class="n">number</span><span class="p">}</span>
@@ -711,7 +711,7 @@
 <p>An understanding of these four building blocks of <strong>Compose UI</strong> will allow us to gain insight into how we can build a simpler version of the same pattern.</p>
 <h3 id="i-modifier-interface">I. Modifier Interface</h3>
 <p>The modifier interface is the starting unit of the modifier logic. Being an interface it outlines the various operations that can be performed by its implementing classes.</p>
-<div class="highlight"><pre class="chroma"><code class="language-Kotlin" data-lang="Kotlin"><span class="k">interface</span> <span class="nc">Modifier</span> <span class="p">{</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Kotlin" data-lang="Kotlin"><span class="k">interface</span> <span class="nc">Modifier</span> <span class="p">{</span>
 
     <span class="k">fun</span> <span class="p">&lt;</span><span class="nc">R</span><span class="p">&gt;</span> <span class="nf">foldIn</span><span class="p">(</span><span class="n">initial</span><span class="p">:</span> <span class="n">R</span><span class="p">,</span> <span class="n">operation</span><span class="p">:</span> <span class="p">(</span><span class="n">R</span><span class="p">,</span> <span class="n">Element</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">R</span><span class="p">):</span> <span class="n">R</span>
 
@@ -730,7 +730,7 @@
 <p>The other two functions, <strong>any()</strong> and <strong>all()</strong> are used while materializing for the runtime. Materialize function is an extension of <strong>Composer</strong> which will prepare the modifiers for attaching to the runtime tree-node or for tooling in <strong>Android Studio</strong> through the layout inspector.</p>
 <h3 id="ii-modifier-element">II. Modifier Element</h3>
 <p>The modifier element is a node within the modifier chain, think of this as a linkage. Many linkages together form the full chain data structure. The modifier element is also an interface.</p>
-<div class="highlight"><pre class="chroma"><code class="language-Kotlin" data-lang="Kotlin">    <span class="k">interface</span> <span class="nc">Element</span> <span class="p">:</span> <span class="n">Modifier</span> <span class="p">{</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Kotlin" data-lang="Kotlin">    <span class="k">interface</span> <span class="nc">Element</span> <span class="p">:</span> <span class="n">Modifier</span> <span class="p">{</span>
         <span class="k">override</span> <span class="k">fun</span> <span class="p">&lt;</span><span class="nc">R</span><span class="p">&gt;</span> <span class="nf">foldIn</span><span class="p">(</span><span class="n">initial</span><span class="p">:</span> <span class="n">R</span><span class="p">,</span> <span class="n">operation</span><span class="p">:</span> <span class="p">(</span><span class="n">R</span><span class="p">,</span> <span class="n">Element</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">R</span><span class="p">):</span> <span class="n">R</span> <span class="p">=</span>
             <span class="n">operation</span><span class="p">(</span><span class="n">initial</span><span class="p">,</span> <span class="k">this</span><span class="p">)</span>
 
@@ -743,7 +743,7 @@
     <span class="p">}</span></code></pre></div>
 <h3 id="iii-modifier-companion">III. Modifier Companion</h3>
 <p>The modifier companion is an object primarily responsible for starting the chain, it&rsquo;s a simple companion object that implements the modifier interface.</p>
-<div class="highlight"><pre class="chroma"><code class="language-Kotlin" data-lang="Kotlin">    <span class="k">companion</span> <span class="k">object</span> <span class="p">:</span> <span class="n">Modifier</span> <span class="p">{</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Kotlin" data-lang="Kotlin">    <span class="k">companion</span> <span class="k">object</span> <span class="p">:</span> <span class="n">Modifier</span> <span class="p">{</span>
         <span class="k">override</span> <span class="k">fun</span> <span class="p">&lt;</span><span class="nc">R</span><span class="p">&gt;</span> <span class="nf">foldIn</span><span class="p">(</span><span class="n">initial</span><span class="p">:</span> <span class="n">R</span><span class="p">,</span> <span class="n">operation</span><span class="p">:</span> <span class="p">(</span><span class="n">R</span><span class="p">,</span> <span class="n">Element</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">R</span><span class="p">):</span> <span class="n">R</span> <span class="p">=</span> <span class="n">initial</span>
         <span class="k">override</span> <span class="k">fun</span> <span class="p">&lt;</span><span class="nc">R</span><span class="p">&gt;</span> <span class="nf">foldOut</span><span class="p">(</span><span class="n">initial</span><span class="p">:</span> <span class="n">R</span><span class="p">,</span> <span class="n">operation</span><span class="p">:</span> <span class="p">(</span><span class="n">Element</span><span class="p">,</span> <span class="n">R</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">R</span><span class="p">):</span> <span class="n">R</span> <span class="p">=</span> <span class="n">initial</span>
         <span class="k">override</span> <span class="k">fun</span> <span class="nf">any</span><span class="p">(</span><span class="n">predicate</span><span class="p">:</span> <span class="p">(</span><span class="n">Element</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Boolean</span><span class="p">):</span> <span class="n">Boolean</span> <span class="p">=</span> <span class="k">false</span>
@@ -754,7 +754,7 @@
 <p>This companion is what is being called when you start chaining with Modifier.width().height()&hellip;</p>
 <h3 id="iv-combined-modifier">IV. Combined Modifier</h3>
 <p>The combined modifier forms as a unit of the chain and constitutes an Outer and Inner linkage, connecting <strong>Element</strong> and other <strong>CombinedModifier</strong> instances. This is a separate class, that implements the modifier interface as well.</p>
-<div class="highlight"><pre class="chroma"><code class="language-Kotlin" data-lang="Kotlin"><span class="k">class</span> <span class="nc">CombinedModifier</span><span class="p">(</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Kotlin" data-lang="Kotlin"><span class="k">class</span> <span class="nc">CombinedModifier</span><span class="p">(</span>
     <span class="k">private</span> <span class="k">val</span> <span class="py">outer</span><span class="p">:</span> <span class="n">Modifier</span><span class="p">,</span>
     <span class="k">private</span> <span class="k">val</span> <span class="py">inner</span><span class="p">:</span> <span class="n">Modifier</span>
 <span class="p">)</span> <span class="p">:</span> <span class="n">Modifier</span> <span class="p">{</span>
@@ -818,7 +818,7 @@
 </ol>
 <h3 id="ii-building-the-chain-pattern">II. Building the chain pattern</h3>
 <p>Taking inspiration from <strong>Compose</strong>, To build our project-wide chaining logic let&rsquo;s start with a simple Chain interface</p>
-<div class="highlight"><pre class="chroma"><code class="language-Kotlin" data-lang="Kotlin"><span class="cm">/**
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Kotlin" data-lang="Kotlin"><span class="cm">/**
 </span><span class="cm"> * Chain core interface
 </span><span class="cm"> */</span>
 <span class="k">interface</span> <span class="nc">Chain</span> <span class="p">{</span>
@@ -873,7 +873,7 @@
 <p>Our core interface contains one <strong>fold()</strong> function which moves from left to right and a then function that builds a <strong>LinkedChain</strong>. The <strong>then()</strong> function is what creates a <strong>LinkedChain</strong>. A companion is declared to start the <strong>Chain</strong> with initial implementations.</p>
 <h3 id="iv-linkedchain">IV. LinkedChain</h3>
 <p>A <strong>LinkedChain</strong> houses the outer and inner objects and enables repeated nested wrapping to form the actual chain.</p>
-<div class="highlight"><pre class="chroma"><code class="language-Kotlin" data-lang="Kotlin"><span class="k">class</span> <span class="nc">LinkedChain</span><span class="p">(</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Kotlin" data-lang="Kotlin"><span class="k">class</span> <span class="nc">LinkedChain</span><span class="p">(</span>
         <span class="k">private</span> <span class="k">val</span> <span class="py">outer</span><span class="p">:</span> <span class="n">Chain</span><span class="p">,</span>
         <span class="k">private</span> <span class="k">val</span> <span class="py">inner</span><span class="p">:</span> <span class="n">Chain</span>
 <span class="p">)</span> <span class="p">:</span> <span class="n">Chain</span> <span class="p">{</span>
@@ -885,7 +885,7 @@
 <p>Now that our Chain logic is complete let&rsquo;s build our Car. <em><strong>Vroom!</strong></em></p>
 <h2 id="building-an-object-with-our-compose-function">Building an object with our Compose() function</h2>
 <p>We&rsquo;ll build our car keeping in mind that we want to follow a compositional pattern and ensure that our properties of the car are built in a modular, plug-and-play manner allowing us to easily couple change or decouple them in the future if needed.</p>
-<div class="highlight"><pre class="chroma"><code class="language-Kotlin" data-lang="Kotlin"><span class="k">interface</span> <span class="nc">Vehicle</span> <span class="p">{</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Kotlin" data-lang="Kotlin"><span class="k">interface</span> <span class="nc">Vehicle</span> <span class="p">{</span>
     <span class="k">fun</span> <span class="nf">isSafeForEnvironment</span><span class="p">()</span> <span class="p">:</span> <span class="n">Boolean</span>
 
     <span class="k">fun</span> <span class="nf">color</span><span class="p">()</span> <span class="p">:</span> <span class="n">String</span>
@@ -899,7 +899,7 @@
     <span class="k">fun</span> <span class="nf">manufacturer</span><span class="p">()</span> <span class="p">:</span> <span class="n">String</span>
 <span class="p">}</span></code></pre></div>
 <p>We start by defining the functionality of our <strong>Car</strong>, here a <strong>Vehicle</strong> interface is used which will be implemented by our car class.</p>
-<div class="highlight"><pre class="chroma"><code class="language-Kotlin" data-lang="Kotlin"><span class="k">class</span> <span class="nc">Car</span> <span class="k">private</span> <span class="k">constructor</span><span class="p">(</span><span class="n">chainer</span><span class="p">:</span> <span class="n">Chain</span><span class="p">)</span> <span class="p">:</span> <span class="n">Vehicle</span> <span class="p">{</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Kotlin" data-lang="Kotlin"><span class="k">class</span> <span class="nc">Car</span> <span class="k">private</span> <span class="k">constructor</span><span class="p">(</span><span class="n">chainer</span><span class="p">:</span> <span class="n">Chain</span><span class="p">)</span> <span class="p">:</span> <span class="n">Vehicle</span> <span class="p">{</span>
 
     <span class="k">companion</span> <span class="k">object</span> <span class="p">{</span>
 
@@ -925,7 +925,7 @@
 <li>We have a companion object in which we have a <strong>compose()</strong> function, which takes the chain as a param. The <strong>compose()</strong> function calls the <strong>fold()</strong> function to compose our car. For now, it&rsquo;s just an empty function that just returns the Car through its type specifier and the accumulated result of the folding.</li>
 </ul>
 <p>We want all the functionalities and properties of our <strong>Car</strong> to be modular, we&rsquo;ll start by building four modules for the car; <strong>CarEngine</strong>, <strong>CarSpecs</strong>, <strong>CarOwner</strong>, and <strong>CarVisuals</strong>. Each module we build will implement <strong>ChainUnit</strong> interface for chaining capabilities.</p>
-<div class="highlight"><pre class="chroma"><code class="language-Kotlin" data-lang="Kotlin"><span class="k">class</span> <span class="nc">CarEngine</span><span class="p">(</span><span class="k">var</span> <span class="py">engineType</span><span class="p">:</span> <span class="n">EngineType</span><span class="p">)</span> <span class="p">:</span> <span class="n">Chain</span><span class="p">.</span><span class="n">ChainUnit</span> <span class="p">{</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Kotlin" data-lang="Kotlin"><span class="k">class</span> <span class="nc">CarEngine</span><span class="p">(</span><span class="k">var</span> <span class="py">engineType</span><span class="p">:</span> <span class="n">EngineType</span><span class="p">)</span> <span class="p">:</span> <span class="n">Chain</span><span class="p">.</span><span class="n">ChainUnit</span> <span class="p">{</span>
 
     <span class="k">fun</span> <span class="nf">needRecharge</span><span class="p">()</span> <span class="p">:</span> <span class="n">Boolean</span> <span class="p">{</span>
         <span class="k">return</span> <span class="p">(</span><span class="n">engineType</span> <span class="o">==</span> <span class="n">EngineType</span><span class="p">.</span><span class="n">ELECTRIC</span><span class="p">)</span>
@@ -959,7 +959,7 @@
 <p>For demonstration, I&rsquo;ve implemented functions for the <strong>CarEngine</strong> module. The rest of the modules serve as an example for now but can house more logic.</p>
 <p>Let&rsquo;s add the modules to our car class and complete our <strong>compose()</strong> function. In the compose function, with each fold, we check if the chain unit is a given module and bind it to our object.</p>
 <p>Note that in our example, during fold operations we are just binding modules, more powerful logic can be written per fold depending on <strong>ChainUnit</strong> type that will determine the final properties of our object just from the <strong>compose()</strong> function alone.</p>
-<div class="highlight"><pre class="chroma"><code class="language-Kotlin" data-lang="Kotlin"><span class="k">class</span> <span class="nc">Car</span> <span class="k">private</span> <span class="k">constructor</span><span class="p">(</span><span class="n">chainer</span><span class="p">:</span> <span class="n">Chain</span><span class="p">)</span> <span class="p">:</span> <span class="n">Vehicle</span> <span class="p">{</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Kotlin" data-lang="Kotlin"><span class="k">class</span> <span class="nc">Car</span> <span class="k">private</span> <span class="k">constructor</span><span class="p">(</span><span class="n">chainer</span><span class="p">:</span> <span class="n">Chain</span><span class="p">)</span> <span class="p">:</span> <span class="n">Vehicle</span> <span class="p">{</span>
 
     <span class="k">private</span> <span class="k">var</span> <span class="py">carEngine</span><span class="p">:</span> <span class="n">CarEngine</span><span class="p">?</span> <span class="p">=</span> <span class="k">null</span>
     <span class="k">private</span> <span class="k">var</span> <span class="py">carOwner</span><span class="p">:</span> <span class="n">CarOwner</span><span class="p">?</span> <span class="p">=</span> <span class="k">null</span>
@@ -984,7 +984,7 @@
 <p>Our <strong>compose()</strong> function is the only way we can construct the car hence, safe to say that the modules would be present when instantiating a new <strong>Car</strong>. Yes, we can pass an empty <strong>Chain</strong>, which can be handled with a simple conditional check.</p>
 <p>The result of the chained operations is the accumulator after folding through all the chain units. The accumulator is the final composed object <strong>(The car)</strong>.</p>
 <p>Furthermore, our <strong>Vehicle</strong> interface function implementations can now be completed since we have the necessary modules in our car class.</p>
-<div class="highlight"><pre class="chroma"><code class="language-Kotlin" data-lang="Kotlin"> <span class="k">override</span> <span class="k">fun</span> <span class="nf">isSafeForEnvironment</span><span class="p">():</span> <span class="n">Boolean</span> <span class="p">{</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Kotlin" data-lang="Kotlin"> <span class="k">override</span> <span class="k">fun</span> <span class="nf">isSafeForEnvironment</span><span class="p">():</span> <span class="n">Boolean</span> <span class="p">{</span>
         <span class="k">return</span> <span class="k">if</span><span class="p">(</span><span class="n">carEngine</span> <span class="o">!=</span> <span class="k">null</span><span class="p">)</span> <span class="p">{</span>
             <span class="p">!</span><span class="n">carEngine</span><span class="o">!!</span><span class="p">.</span><span class="n">causesPollution</span><span class="p">()</span>
         <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
@@ -995,7 +995,7 @@
 <p>In the above snippet, we use the car engine and call the <strong>causesPollution()</strong> function from <strong>CarEngine</strong> module to determine if the car is safe for our environment.</p>
 <h2 id="extending-and-using-the-chain">Extending and using the Chain</h2>
 <p>To use the chain, we&rsquo;ll use Kotlin&rsquo;s extending functions and leverage the <strong>then()</strong> function to chain our function calls.</p>
-<div class="highlight"><pre class="chroma"><code class="language-Kotlin" data-lang="Kotlin"><span class="k">fun</span> <span class="nf">Chain</span><span class="p">.</span><span class="n">carEngineType</span><span class="p">(</span><span class="n">engineType</span><span class="p">:</span> <span class="n">EngineType</span><span class="p">)</span> <span class="p">:</span> <span class="n">Chain</span> <span class="p">=</span> <span class="k">this</span><span class="p">.</span><span class="n">then</span><span class="p">(</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Kotlin" data-lang="Kotlin"><span class="k">fun</span> <span class="nf">Chain</span><span class="p">.</span><span class="n">carEngineType</span><span class="p">(</span><span class="n">engineType</span><span class="p">:</span> <span class="n">EngineType</span><span class="p">)</span> <span class="p">:</span> <span class="n">Chain</span> <span class="p">=</span> <span class="k">this</span><span class="p">.</span><span class="n">then</span><span class="p">(</span>
         <span class="n">CarEngine</span><span class="p">(</span><span class="n">engineType</span><span class="p">)</span>
 <span class="p">)</span>
 
@@ -1013,7 +1013,7 @@
 <p>Each extension function calls the linking then function from the <strong>Chain</strong> to build <strong>LinkedChain</strong> objects <strong>composing</strong> our final Car.</p>
 <p>These extensions are for <strong>Car</strong> object you can build extensions for multiple objects as well.</p>
 <h2 id="the-result">The result</h2>
-<div class="highlight"><pre class="chroma"><code class="language-Kotlin" data-lang="Kotlin">    <span class="c1">// Composing our car
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Kotlin" data-lang="Kotlin">    <span class="c1">// Composing our car
 </span><span class="c1"></span>    <span class="k">val</span> <span class="py">car</span> <span class="p">=</span> <span class="n">Car</span><span class="p">.</span><span class="n">compose</span><span class="p">(</span><span class="n">Chain</span><span class="p">.</span><span class="n">carEngineType</span><span class="p">(</span><span class="n">EngineType</span><span class="p">.</span><span class="n">ELECTRIC</span><span class="p">)</span>
             <span class="p">.</span><span class="n">carOwnerDetails</span><span class="p">(</span><span class="n">name</span> <span class="p">=</span> <span class="s2">&#34;Android Dev Community&#34;</span><span class="p">,</span>
                     <span class="n">licenceNo</span> <span class="p">=</span> <span class="s2">&#34;API31&#34;</span><span class="p">,</span>
@@ -1053,12 +1053,17 @@
   </p>
 
   <img src="/images/siddhesh_patil.jpg" style="width: 3rem;height:3rem;float:left;margin-right:0.5rem;margin-bottom: 0.5rem;clip-path: circle(50% at 50% 50%);shape-outside: circle(50%);
-  " alt="Siddhesh Patil is an Android Engineer at Paytm Insider. Works on Paytm consumer and business apps. He is the organzier of Kotlin Mumbai, a developer community in Mumbai, India. Find talks, articles and latest developments in Android and Kotlin on this website siddroid.com">
+  " alt="Siddhesh Patil is an Android Engineer at DeliveryHero. Building core ordering experiences at Foodpanda and Foodora. He is the organzier of Kotlin Mumbai, a developer community in Mumbai, India. Find talks, articles and latest developments in Android and Kotlin on this website siddroid.com">
 
   <p style="font-size: 80%;">
-      Sid Patil is an Android Engineer and Kotlin Advocate from Mumbai, India. He architects and builds software for Paytm, a mobile-payments platform. 
-      He also organizes and hosts developer focused events at Kotlin Mumbai and Android Worldwide.
+      Sid Patil is an Android Engineer and Kotlin Advocate based in Berlin, Germany. He works at Delivery Hero, building ordering experiences of food delivery and Q-commerce brands like Foodpanda and Foodora. 
   </p>
+  
+  
+
+
+
+
 
     <a href="https://twitter.com/Siddroid?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="true">Follow @Siddroid</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
@@ -1070,7 +1075,7 @@
 
   <div>
     <p style="font-size: 90%;margin-top: 10px;font-style: italic;">
-      This publication was last updated on October 2, 2021
+      This publication was last updated on November 11, 2021
     </p>
   
   </div>
