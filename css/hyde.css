@@ -32,17 +32,18 @@
 
  :root {
    --color-canvas-bg: rgb(255, 255, 255);
-   --color-canvas-l1: #fff;
-   --color-canvas-l2: rgb(251,251,251);
-   --color-canvas-l3: rgb(249,249,249);
+   --color-canvas-l1: rgb(255, 255, 255);
+   --color-canvas-l2: rgb(245,245,247);
+   --color-canvas-l3: rgb(245,245,247);
    --color-canvas-border: #dadce0;
-   --color-text-l1:#100303;
-   --color-text-l2: #100303;
-   --color-text-experimental: #100303;
+   --color-text-l1:rgb(29,29,31);
+   --color-text-l2: rgb(29,29,31);
+   --color-text-experimental: rgb(29,29,31);
+   --color-text-sub: #86868B;
    --color-accent: #1769e0;
    --color-topbar: #fff;
    --color-hyperlink: #1769e0;
-   --color-site-logo-text: #100303;
+   --color-site-logo-text: rgb(29,29,31);
    --color-text-highlight: #8cdfb1;
    --color-canvas-border-l2:#e8eaed;
    --color-canvas-pitview: #f8f9fa;
@@ -491,7 +492,7 @@ ul.posts {
 .topBar {
   padding-top: 0.6rem;
   margin-bottom: 0rem;
-  border-bottom:0.08rem solid var(--color-canvas-border);
+  /* border-bottom:0.08rem solid var(--color-canvas-border); */
   position: fixed;
   top: 0;
   width: 100%;
@@ -505,9 +506,9 @@ ul.posts {
   margin-top: 2rem;
   padding-top: 1rem;
   /* box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px; */
-  border-top:0.08rem solid var(--color-canvas-border);
+  /* border-top:0.08rem solid var(--color-canvas-border); */
   color: var(--color-text-experimental);
-  background-color:  var(--color-topbar);
+  background-color:  var(--color-canvas-l2);
   
 }
 

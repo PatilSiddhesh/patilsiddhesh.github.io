@@ -492,19 +492,19 @@ a.pagination-item:hover {
 
 .card {
   border-radius: 1rem;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  /* box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px; */
   background-color: var(--color-canvas-l2);
-  transition: all 0.6s cubic-bezier(.25,.8,.25,1);
+  /* transition: all 0.6s cubic-bezier(.25,.8,.25,1); */
 
   /* border:0.08rem solid var(--color-canvas-border); */
 
 
 }
 
-.card:hover {
+/* .card:hover {
   transition: all 0.6s cubic-bezier(.25,.8,.25,1);
   box-shadow: rgba(0, 0, 0, 0.26) 0px 5px 10px;
-}
+} */
 .container {
   padding: 2px 16px;
 }
