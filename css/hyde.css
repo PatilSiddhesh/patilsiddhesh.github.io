@@ -42,6 +42,8 @@
    --color-text-sub: #86868B;
    --color-accent: #1769e0;
    --color-topbar: #fff;
+   --color-topbar2: #1d1d1d;
+   --color-topbar-text2: rgb(245,245,247);
    --color-hyperlink: #1769e0;
    --color-site-logo-text: rgb(29,29,31);
    --color-text-highlight: #8cdfb1;
@@ -498,7 +500,7 @@ ul.posts {
   width: 100%;
   z-index: 10;
   /* box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px; */
-  background-color:  var(--color-topbar);
+  background-color:  var(--color-topbar2);
 }
 
 .bottomBar {
@@ -517,7 +519,7 @@ ul.posts {
   padding-top: 1rem;
   margin-top: 2rem;
   color: var(--color-text-experimental);
-  background-color:  var(--color-topbar);
+  background-color:  var(--color-canvas-l2);
   }
 }
 
@@ -525,7 +527,7 @@ ul.posts {
   .topBar {
   padding-top: 1rem;
   margin-bottom: 1rem;
-  background-color:  var(--color-topbar);
+  background-color:  var(--color-topbar2);
   }
 }
 
