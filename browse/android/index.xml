@@ -6,25 +6,7 @@
     <description>Recent content in Android on Sid Patil - Android Engineer and Kotlin Advocate</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 24 Aug 2021 12:06:12 +0530</lastBuildDate><atom:link href="https://siddroid.com/browse/android/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Build Function Chains Using Composition in Kotlin</title>
-      <link>https://siddroid.com/post/kotlin/build-function-chains-using-composition-in-kotlin/</link>
-      <pubDate>Tue, 24 Aug 2021 12:06:12 +0530</pubDate>
-      
-      <guid>https://siddroid.com/post/kotlin/build-function-chains-using-composition-in-kotlin/</guid>
-      <description>We are going to focus on how we can use functions to alter the nature of an object and change it, and how we can chain functions together to apply their effects on an object in one go with a composite pattern.</description>
-    </item>
-    
-    <item>
-      <title>Understanding Context in Android</title>
-      <link>https://siddroid.com/post/post-understanding-context-in-android-siddhesh-patil/</link>
-      <pubDate>Thu, 09 Jul 2020 03:39:54 +0530</pubDate>
-      
-      <guid>https://siddroid.com/post/post-understanding-context-in-android-siddhesh-patil/</guid>
-      <description>If you have recently started to develop apps on Android or have been developing them from a long time, you know what context is.</description>
-    </item>
-    
+    <lastBuildDate>Sun, 08 Mar 2020 20:11:21 +0530</lastBuildDate><atom:link href="https://siddroid.com/browse/android/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Better permissions on Android</title>
       <link>https://siddroid.com/post/post-android-rationale-permission-dialogs-2020/</link>

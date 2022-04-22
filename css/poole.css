@@ -265,10 +265,12 @@ blockquote p:last-child {
 img {
   display: block;
   margin: 0 0 1rem;
-  border-radius: 5px;
   max-width: 100%;
 }
 
+.rimg {
+  border-radius: 1rem;
+}
 /* Tables */
 
 table {
@@ -493,13 +495,18 @@ a.pagination-item:hover {
 .card {
   border-radius: 1rem;
   /* box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px; */
-  background-color: var(--color-canvas-l2);
+  background-color: var(--color-canvas-l3);
   /* transition: all 0.6s cubic-bezier(.25,.8,.25,1); */
-
+  /* max-width: 70%; */
   /* border:0.08rem solid var(--color-canvas-border); */
-
-
 }
+
+/* @media (max-width: 64em) {
+  .card {
+    max-width: 100%;
+  }
+} */
+
 
 /* .card:hover {
   transition: all 0.6s cubic-bezier(.25,.8,.25,1);

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Compose on Sid Patil - Android Engineer and Kotlin Advocate</title>
+    <link>https://siddroid.com/browse/compose/</link>
+    <description>Recent content in Compose on Sid Patil - Android Engineer and Kotlin Advocate</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 24 Aug 2021 12:06:12 +0530</lastBuildDate><atom:link href="https://siddroid.com/browse/compose/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Build Function Chains Using Composition in Kotlin</title>
+      <link>https://siddroid.com/post/kotlin/build-function-chains-using-composition-in-kotlin/</link>
+      <pubDate>Tue, 24 Aug 2021 12:06:12 +0530</pubDate>
+      
+      <guid>https://siddroid.com/post/kotlin/build-function-chains-using-composition-in-kotlin/</guid>
+      <description>We are going to focus on how we can use functions to alter the nature of an object and change it, and how we can chain functions together to apply their effects on an object in one go with a composite pattern.</description>
+    </item>
+    
+    <item>
+      <title>Holi: A library of colors, gradients and utils for Jetpack Compose</title>
+      <link>https://siddroid.com/post/projects/holi-a-library-of-colors-for-jetpack-compose/</link>
+      <pubDate>Tue, 30 Mar 2021 13:22:25 +0530</pubDate>
+      
+      <guid>https://siddroid.com/post/projects/holi-a-library-of-colors-for-jetpack-compose/</guid>
+      <description>A library of colors, gradients and utils built using Jetpack Compose for Android  Features  A wide collection of colors from different palettes for easy access in your pet projects Provides easy gradient building functions that all your composable brushes need Just 28 KB in size!</description>
+    </item>
+    
+  </channel>
+</rss>
