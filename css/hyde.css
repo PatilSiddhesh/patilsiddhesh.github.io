@@ -63,10 +63,11 @@
    --color-blue: #0366d6;
    --color-sunset-pink: #ff7b81;
    --color-light-pink: #ffb3ba;
+   --color-light-purple: #d89be4;
  }
 
 html {
-  font-family: "sansfont" -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";;
+  font-family: "sansfont", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";;
 }
 
 @media (min-width: 48em) {

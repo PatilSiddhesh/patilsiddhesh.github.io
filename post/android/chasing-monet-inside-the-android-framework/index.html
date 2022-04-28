@@ -1,0 +1,1604 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="theme-color" content="#f6f8fc" />
+  <meta name="theme-color" content="#f6f8fc" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#f6f8fc" media="(prefers-color-scheme: dark)">
+
+  <meta property="og:image" content="https://siddroid.com//images/gif-monet-material.gif" />
+ 
+  <meta name="generator" content="Hugo 0.92.1" />
+
+  <title>Chasing Monet inside the Android framework &middot; Sid Patil</title>
+
+  <meta name="description" content="We deep dive into the internals of the Android framework, covering the System-UI to understand the changes introduced starting from Android 12/12L and above, code-named Monet. We will explore the new system-wide dynamic theming capabilities and take a look at how Monet fuels the Material You design." />
+
+  
+  <meta property="og:locale" content="en-us"/>
+
+  
+  <meta property="og:image" content="https://siddroid.com//images/siddhesh_patil_about_dev_banner.jpeg">
+
+  
+  <meta property="og:site_name" content="Sid Patil - Android Engineer and Kotlin Advocate"/>
+  <meta property="og:title" content="Chasing Monet inside the Android framework"/>
+  <meta property="og:description" content="We deep dive into the internals of the Android framework, covering the System-UI to understand the changes introduced starting from Android 12/12L and above, code-named Monet. We will explore the new system-wide dynamic theming capabilities and take a look at how Monet fuels the Material You design."/>
+  <meta property="og:url" content="https://siddroid.com/post/android/chasing-monet-inside-the-android-framework/"/>
+  <meta property="og:type" content="article"/>
+  <meta property="article:published_time" content="2022-04-28T00:50:55&#43;0100"/>
+  <meta property="article:modified_time" content="2022-04-28T17:13:08"/>
+  <meta property="article:author" content="Sid Patil">
+  
+  
+  <meta name="thumbnail" content="https://siddroid.com//images/siddhesh_patil_about_dev_banner.jpeg">
+  <meta name="twitter:image" content="https://siddroid.com//images/gif-monet-material.gif">
+  <meta name="twitter:card" content="summary_large_image">
+  
+
+  
+  <script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "TechArticle",
+    "name": "Chasing Monet inside the Android framework",
+    "headline": "Chasing Monet inside the Android framework",
+    "alternativeHeadline": "Learn Kotlin and Android development with Sid Patil",
+    "editor": "Sid Patil",
+    "genre": "Android development and Kotlin programming",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Siddroid",
+      "url": "https://siddroid.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://siddroid.com/images/siddhesh_patil.jpg"
+      },
+      "sameAs" : [ "https://www.linkedin.com/in/patilsid/",
+        "https://www.github.com/patilsiddhesh/",
+        "https://facebook.com/siddroid/",
+        "https://patilsiddhesh.medium.com/",
+        "http://twitter.com/siddroid"]
+    },
+     
+    "datePublished": "2022-04-28T00:50:55",
+    
+    "dateModified": "2022-04-28T17:13:08",
+    "author": {
+      "@type" : "Person",
+      "name": "Siddhesh Patil",
+      "alternateName" : "Sid Patil",
+      "@id": "https://siddroid.com/about",
+      "image": "https://siddroid.com/images/siddhesh_patil.jpg",
+      "alumniOf": [
+      {
+       "@type": "CollegeOrUniversity",
+       "name": "University of Mumbai",
+       "sameAs": "https://en.wikipedia.org/wiki/University_of_Mumbai"
+      },
+      {
+        "@type": "CollegeOrUniversity",
+        "name": "Atharva College of Engineering",
+        "sameAs": "http://www.atharvacoe.ac.in/"
+       },
+      {
+       "@type": "CollegeOrUniversity",
+       "name": "Bhavans College",
+       "sameAs": "https://en.wikipedia.org/wiki/Bhavan's_College"
+      }
+    ],
+      "nationality": "Indian",
+      "gender": "male",
+      "sameAs" : [ "https://www.linkedin.com/in/patilsid/",
+        "https://facebook.com/siddroid/",
+        "https://www.github.com/patilsiddhesh/",
+        "https://patilsiddhesh.medium.com/",
+        "http://twitter.com/siddroid"],
+        "birthPlace": {
+          "@type": "Place",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Mumbai",
+            "addressRegion": "Maharashtra"
+          }
+        },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Berlin",
+        "addressRegion": "Germany"
+      },
+      "affiliation": [
+	    {
+		  "@type": "Organization",
+		  "name": "Paytm",
+		  "sameAs": [
+			"https://twitter.com/paytm",
+			"https://paytm.com"
+		  ]
+  	},
+    {
+		  "@type": "Organization",
+		  "name": "Delivery Hero",
+		  "sameAs": [
+			"https://twitter.com/deliveryherocom",
+			"https://www.deliveryhero.com"
+		  ]
+  	},
+    {
+		  "@type": "Organization",
+		  "name": "Paytm Insider",
+		  "sameAs": [
+			"https://twitter.com/paytminsider",
+			"https://insider.in"
+		  ]
+  	},
+    {
+		  "@type": "Organization",
+		  "name": "Kotlin Mumbai",
+		  "sameAs": [
+			"https://twitter.com/kotlinmumbai",
+			"https://kotlinmumbai.tech"
+		  ]
+  	}
+
+],
+      "jobTitle": "Android Engineer",
+      "worksFor": [
+      {
+      "@type": "Organization",
+      "name": "Delivery Hero",
+      "sameAs": [
+        "https://twitter.com/deliveryherocom",
+        "https://deliveryhero.com"
+      ]
+      },
+          {
+      "@type": "Organization",
+      "name": "Paytm",
+      "sameAs": [
+        "https://twitter.com/paytm",
+        "https://paytm.com"
+      ]
+      }
+    ],
+      "url" : "https://siddroid.com",
+      "disambiguatingDescription": "Android Engineer at Paytm Insider and Organizer of Kotlin Mumbai",
+      "description": "Android Engineer and Kotlin Advocate from Berlin, Germany. Learn to develop quality Android apps and build software with Kotlin."
+    
+    },
+    
+    "image": "https://siddroid.com//images/gif-monet-material.gif",
+    "url": "https://siddroid.com/post/android/chasing-monet-inside-the-android-framework/",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://siddroid.com/"
+    },
+     
+    "keywords": ["Kotlin","MD3","Material Design 3","Material You","Dynamic Theming","Android 12","Articles by Sid Patil","Dynamic colors Jetpack compose","Android framework","Monet","Android System UI","System-UI.apk","Monet theming","Android 13","Tiramisu","AOSP","Android Open Source Project","Monet in AOSP","Dynamic theming on Android","How does dynamic theming work on Android","Monet theme engine"],
+    
+    "description": "We deep dive into the internals of the Android framework, covering the System-UI to understand the changes introduced starting from Android 12\/12L and above, code-named Monet. We will explore the new system-wide dynamic theming capabilities and take a look at how Monet fuels the Material You design.",
+    "articleBody": "We deep dive into the internals of the Android framework, covering the System-UI to understand the changes introduced starting from Android 12\/12L and above, code-named Monet. We will explore the new system-wide dynamic theming capabilities and take a look at how Monet fuels the Material You design."
+  }
+  </script>
+  
+
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="https://siddroid.com/css/print.css?v=735"
+        media="print">
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="https://siddroid.com/css/poole.css?v=394">
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="https://siddroid.com/css/hyde.css?v=669">
+  
+  <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined"
+        rel="stylesheet">
+
+
+  
+<style type="text/css">
+  .sidebar {
+    background-color: #1769e0;
+  }
+
+  .read-more-link a {
+    border-color: #1769e0;
+  }
+
+  footer a,
+  .content a,
+  .related-posts li a:hover {
+    color: #1769e0;
+  }
+</style>
+
+
+
+  <link rel="preload" as="font" href="/fonts/HeadingStandard.woff2" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" as="font" href="/fonts/Body-Regular.woff2" type="font/woff2" crossorigin="anonymous">
+
+  
+
+
+        <link rel="apple-touch-icon-precomposed" sizes="57x57" href="https://siddroid.com//favicon/apple-touch-icon-57x57.png?v=571" />
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://siddroid.com//favicon/apple-touch-icon-114x114.png?v=705" />
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://siddroid.com//favicon/apple-touch-icon-72x72.png?v=406" />
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://siddroid.com//favicon/apple-touch-icon-144x144.png?v=662" />
+        <link rel="apple-touch-icon-precomposed" sizes="60x60" href="https://siddroid.com//favicon/apple-touch-icon-60x60.png?v=747" />
+        <link rel="apple-touch-icon-precomposed" sizes="120x120" href="https://siddroid.com//favicon/apple-touch-icon-120x120.png?v=122" />
+        <link rel="apple-touch-icon-precomposed" sizes="76x76" href="https://siddroid.com//favicon/apple-touch-icon-76x76.png?v=203" />
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="https://siddroid.com//favicon/apple-touch-icon-152x152.png?v=575" />
+        <link rel="icon" type="image/png" href="https://siddroid.com//favicon/favicon-196x196.png?v=823" sizes="196x196" />
+        <link rel="icon" type="image/png" href="https://siddroid.com//favicon/favicon-96x96.png?v=696" sizes="96x96" />
+        <link rel="icon" type="image/png" href="https://siddroid.com//favicon/favicon-32x32.png?v=25" sizes="32x32" />
+        <link rel="icon" type="image/png" href="https://siddroid.com//favicon/favicon-16x16.png?v=201" sizes="16x16" />
+        <link rel="icon" type="image/png" href="https://siddroid.com//favicon/favicon-128.png?v=420" sizes="128x128" />
+        <meta name="application-name" content="Siddroid"/>
+        <meta name="msapplication-TileColor" content="#FFFFFF" />
+        <meta name="msapplication-TileImage" content="https://siddroid.com//favicon/mstile-144x144.png?v=818" />
+        <meta name="msapplication-square70x70logo" content="https://siddroid.com//favicon/mstile-70x70.png?v=580" />
+        <meta name="msapplication-square150x150logo" content="https://siddroid.com//favicon/mstile-150x150.png?v=376" />
+        <meta name="msapplication-wide310x150logo" content="https://siddroid.com//favicon/mstile-310x150.png?v=434" />
+        <meta name="msapplication-square310x310logo" content="https://siddroid.com//favicon/mstile-310x310.png?v=271" />
+
+  
+  </head>
+<body class="mainPageBg">
+  <div class="topBar" style="display: flex;justify-content: space-between;">
+
+  <div style="margin-left: 1.5rem;">
+
+    <a href="/" style="color: #fff;text-decoration:none;-webkit-tap-highlight-color: transparent;">
+
+    <div style="display:flex; justify-content: center;">
+
+      <div class="author-image" style="margin-right: 10px;width:29px;height:29px;margin-top: 0rem;margin-bottom:12px;clip-path: circle(50% at 50% 50%);">
+          <img src="/images/siddhesh_patil.jpg" class="img-headshot center" width="29px" height="29px"
+            title="Sid Patil"
+            alt="Siddroid - your place to learn Kotlin and Android">
+      </div>
+
+      <div>
+          <p style="font-size: 20px;color: var(--color-topbar-text2);;font-weight: bold;margin-bottom: 0;max-lines: 1;">
+            <span id="siteTitleText" style="max-lines: 1;">Sid Patil</span><span id="siteTitleText"></span>   
+          </p> 
+          
+
+      </div>
+
+          
+      
+      
+    </div>
+  </a>
+
+  </div>
+
+  
+
+  
+
+
+    
+
+    <div style="display:flex;justify-content: center;margin-right: rem;margin-top: 0.2rem;">
+
+          
+            
+          
+
+    
+    <a href="/browse/" title="Navigate this site" style="color:var(--color-topbar-text2);font-family:sansfont;text-decoration: none;-webkit-tap-highlight-color: transparent;">
+      <div style="width: 50px;margin-left: 0.7rem;margin-right: 0.7rem;">
+          <div style="display: flex;align-items: center;justify-content: center;">
+            
+            <span class="material-icons-outlined"  style="color: var(--color-topbar-text2);">
+              code
+            </span>
+        </div>
+    </div>
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    <a href="/search/" title="Search android articles on Siddroid" style="color:   var(--color-topbar-text2);font-family:sansfont;text-decoration: none;-webkit-tap-highlight-color: transparent;
+      ">
+
+<div style="width: 50px;margin-left: 0.7rem;margin-right: 0.7rem;">
+    <div style="display: flex;align-items: center;justify-content: center;">
+      
+      
+    </div>
+      <div style="display: flex;align-items: center;justify-content: center;">
+                  
+        <span class="material-icons-outlined"  style="color: var(--color-topbar-text2);">
+          search
+        </span>
+
+        
+    </div>
+</div>
+    </a>
+    
+    
+    <a href="/about/" title="Some stuff about Siddhesh" style="color:   var(--color-topbar-text2);font-family:sansfont;text-decoration: none;-webkit-tap-highlight-color: transparent;
+      ">
+    <div style="width: 50px;margin-left: 0.7rem;margin-right: 0.7rem;">
+        <div style="display: flex;align-items: center;justify-content: center;">
+          
+          
+            
+        </div>
+          <div style="display: flex;align-items: center;justify-content: center;">
+            <span class="material-icons-outlined"  style="color: var(--color-topbar-text2);">
+              person_outline
+            </span>
+            
+        </div>
+    </div>
+    </a>
+    
+  </div>
+
+  
+
+</div>
+
+
+  <main id="main-container" style="padding-top: 0.1rem;">
+      <div id="main-page-ct" class="parentContainer" style="min-height: 100vh;">
+            <div class="post">
+ 
+  <div>
+    <h1 class="postTitleHeading">
+      Chasing Monet inside the Android framework
+    </h1>
+  </div>
+
+  
+
+  
+
+  
+
+  
+  <div style="margin-top: 1rem;margin-bottom: 1rem;">
+    <div>
+      <p style="color: var(--color-text-l2);white-space: nowrap;display: inline-block;"><time datetime=" 2022-04-28T00:50:55&#43;0100">Apr 28, 2022</time>&nbsp;<span style="color: var(--color-text-l1);"> · </span>&nbsp;14 min read
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+          
+            
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+      
+      </p>
+    </div>
+  </div>
+
+
+  
+
+
+  <div>
+    
+  </div>
+
+  
+  
+
+  <meta name="thumbnail" content="https://siddroid.com/images/gif-monet-material.gif">
+<meta name="twitter:image" content="https://siddroid.com/images/gif-monet-material.gif">
+<meta name="twitter:card" content="summary_large_image">
+<div style="display: flex;align-items: center;justify-content: center;">
+    <img style="border-radius: 2rem;" src="/images/gif-monet-material.gif" alt="Use wallpaper generated system colors from Android 12 and Material You to repaint your apps to the users taste by using the material design 3 library and Jetpack compose">
+</div>
+
+<div style="display: flex;align-items: center;justify-content: center;">
+    <p style="font-size: 80%;font-style: italic;opacity: 80%;"> Material You graphic from Material.io </p>
+</div>
+
+
+<p>Android 13 Tiramisu is a couple of months away from a full stable release and only last year did Google introduce Material You with Android 12/12L, changing their material design guidelines for the third time.</p>
+<p>Material You is the latest iteration of Google&rsquo;s design system for Android, it focuses on providing a personalized feel to the user by using system-wide dynamic theming, generating richer tonal palettes, and improving the overall user experience between the Android system UI and third-party apps.</p>
+<hr>
+<p>In this article, we will explore the Android framework and changes introduced with Monet to understand how dynamic theming works under the hood and fuels the new Material You design.</p>
+<h3 id="table-of-content">Table of Content</h3>
+<ul>
+<li><a href="#what-is-monet">What is Monet?</a></li>
+<li><a href="#exploring-the-android-framework">Exploring the Android framework</a>
+<ol>
+<li><a href="#system-ui--monet">System UI &amp; Monet</a></li>
+<li><a href="#theme-overlay-controller">Theme overlay controller</a></li>
+<li><a href="#wallpaper-manager--wallpaper-manager-service">Wallpaper manager &amp; wallpaper manager service</a></li>
+<li><a href="#step-1-listening-to-changes-in-wallpaper">Listening to changes in system wallpaper</a></li>
+<li><a href="#step-2-extracting-wallpaper-colors">Extracting colors from the wallpaper</a></li>
+<li><a href="#variance-in-color-extraction-algorithms">Variance in color extraction algorithms</a></li>
+<li><a href="#quantization-algorithms">K-Means &amp; Celebi quantizers</a></li>
+<li><a href="#palettes-and-swatches">Palettes and Swatches</a></li>
+<li><a href="#step-3-identifying-dominant-colors">Identifying dominant colors</a></li>
+<li><a href="#re-evaluating-system-theme">Re-evaluating system theme</a></li>
+<li><a href="#monet-color-schemes">Monet color scheme</a></li>
+<li><a href="#theme-overlay-applier">Theme overlay applier</a></li>
+</ol>
+</li>
+<li><a href="#material-you">Material You</a></li>
+<li><a href="#further-reading--references">Further reading &amp; references</a></li>
+<li><a href="#attributions">Attributions</a></li>
+</ul>
+<hr>
+<h2 id="what-is-monet">What is Monet?</h2>
+<p><a href="https://developer.android.com/about/versions/12">Android 12/12L</a> adds support for dynamic themes a.k.a. <strong>Monet</strong>. Monet as a term is a codename for a subset of changes within the <strong>Android framework</strong>, primarily in the <strong>System-UI</strong> which allows dynamic theming.</p>
+<blockquote>
+<p>Monet is most likely named after the French painter <a href="https://en.wikipedia.org/wiki/Claude_Monet">Claude Monet</a>.</p>
+</blockquote>
+<p><em>With Monet, Tiramisu and UpsideDownCake, it&rsquo;s good to be back in the fancy Android naming world!</em></p>
+<p>Parts of the logic that encompass Monet were first added in Android 12 and were only available on Pixel devices (6 and 6 Pro), with the 12L release we see the <a href="https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-12.1.0_r1/packages/SystemUI/monet/">remaining components added to AOSP</a>.</p>
+<p><strong>So what exactly is dynamic theming?</strong></p>
+<div style="display: flex;align-items: center;justify-content: center;">
+    <img style="border-radius: 2rem;" src="/images/image-siddroid-dynamic-theming.gif" alt="Use wallpaper generated system colors from Android 12 and Material You to repaint your apps to the users taste by using the material design 3 library and Jetpack compose">
+</div>
+
+<div style="display: flex;align-items: center;justify-content: center;">
+    <p style="font-size: 80%;font-style: italic;opacity: 80%;"> A gif from Material Theme Builder </p>
+</div>
+
+
+<p>Let&rsquo;s say if you set a new wallpaper on Android 12/12L, the system contains a color extraction logic within the framework which will generate tonal palettes and swatches that you can avail for your apps, thus enabling a more uniform look between the Android system UI and your application.</p>
+<hr>
+<h2 id="exploring-the-android-framework">Exploring the Android framework</h2>
+<div style="display: flex;align-items: center;">
+    <img style="border-radius: 1rem;width:10%;float:left;margin-right:2rem;" src="/images/tag_android_logo_move.gif">
+<p>With a bit of prelude on Material You, we can talk about changes in the Android framework with Monet and understand the entire pipeline where a user selects a wallpaper and the system dynamically adapts to new colors.</p>
+</div>
+<p>While we take a walkthrough of System UI and the logic that forms Monet, I will also slightly explore some other interesting aspects of the framework.</p>
+<p>The outline of the logic is simple</p>
+<ul>
+<li>Events when the user sets a new wallpaper</li>
+<li>System reacting to the change</li>
+<li>Color extraction, palette generation</li>
+<li>Refreshing the system context with new colors</li>
+</ul>
+<h3 id="system-ui--monet">System UI &amp; Monet</h3>
+<p>Changes made in the framework that form what we call dynamic system theming are largely a part of System-UI with other components from the graphic package which enable major portions of color extraction logic.</p>
+<p>And like all good things, Monet is hidden behind a feature flag.</p>
+<a href="https://cs.android.com/android/platform/superproject/&#43;/master:frameworks/base/packages/SystemUI/src/com/android/systemui/theme/ThemeOverlayController.java;l=344;drc=6cf6099dcab87865e33439215e7ea0087e60c9f2;bpv=1;bpt=1?q=featureFlags.isMonetEnabled%28%29&amp;ss=android" target="_blank">
+    <div style="display: flex;margin-left:0.5rem;width: 90%;">   
+        <i class="fas fa-terminal" style="color: var(--color-accent);margin-top:3px;font-size:80%;"></i>
+        <p style="color: var(--color-accent);margin-left:0.5rem;font-size:80%;width: 100%;word-wrap: break-word;">frameworks/base/packages/SystemUI/src/com/android/systemui/theme/ThemeOverlayController.java</p>  
+    </div>
+</a>
+
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java">    <span class="n">mIsMonetEnabled</span> <span class="o">=</span> <span class="n">featureFlags</span><span class="o">.</span><span class="na">isMonetEnabled</span><span class="o">();</span></code></pre></div>
+<p>As we continue our deep dive we will take a look at the following parts of the Android framework</p>
+<ol>
+<li>ThemeOverlayController.java</li>
+<li>WallpaperManagerService.java</li>
+<li>WallpaperColors.java</li>
+</ol>
+<h3 id="theme-overlay-controller">Theme Overlay Controller</h3>
+<p>The <strong>ThemeOverlayController.java</strong> from the System UI package of the framework contains the bulk of the logic for determining events that affect dynamic theming. It prepares the theme colors initially when the system boots.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java">    <span class="kd">public</span> <span class="kd">interface</span> <span class="nc">OnColorsChangedListener</span> <span class="o">{</span>
+        <span class="kt">void</span> <span class="nf">onColorsChanged</span><span class="o">(</span><span class="n">WallpaperColors</span> <span class="n">colors</span><span class="o">,</span> <span class="kt">int</span> <span class="n">which</span><span class="o">);</span>
+        <span class="kt">void</span> <span class="nf">onColorsChanged</span><span class="o">(</span><span class="n">WallpaperColors</span> <span class="n">colors</span><span class="o">,</span> <span class="kt">int</span> <span class="n">which</span><span class="o">,</span> <span class="kt">int</span> <span class="n">userId</span><span class="o">)</span>
+    <span class="o">}</span></code></pre></div>
+<p>First things first, the color change listener is a simple interface that contains two overloaded functions to notify that the colors have changed. There could be two or more user profiles active on the device and each of the users could have a different wallpaper set, so the framework needs to take into consideration a multi-user situation and only update the colors specific to the user.</p>
+<p>The <strong>start()</strong> method of the overlay controller, first upon device boot, extracts the latest colors from the wallpaper via the <strong>WallpaperManagerService</strong> and applies them to the System-UI.</p>
+<a href="https://cs.android.com/android/platform/superproject/&#43;/master:frameworks/base/packages/SystemUI/src/com/android/systemui/theme/ThemeOverlayController.java;l=344;drc=6cf6099dcab87865e33439215e7ea0087e60c9f2;bpv=1;bpt=1?q=featureFlags.isMonetEnabled%28%29&amp;ss=android" target="_blank">
+    <div style="display: flex;margin-left:0.5rem;width: 90%;">   
+        <i class="fas fa-terminal" style="color: var(--color-accent);margin-top:3px;font-size:80%;"></i>
+        <p style="color: var(--color-accent);margin-left:0.5rem;font-size:80%;width: 100%;word-wrap: break-word;">frameworks/base/packages/SystemUI/src/com/android/systemui/theme/ThemeOverlayController.java</p>  
+    </div>
+</a>
+
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java">    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">start</span><span class="o">()</span> <span class="o">{</span>
+        <span class="o">...</span>
+
+        <span class="c1">// Do nothing if monet is disabled
+</span><span class="c1"></span>        <span class="k">if</span> <span class="o">(!</span><span class="n">mIsMonetEnabled</span><span class="o">)</span> <span class="o">{</span>
+            <span class="k">return</span><span class="o">;</span>
+        <span class="o">}</span>
+        <span class="o">...</span>
+
+        <span class="c1">// Upon boot, make sure we have the most up to date colors
+</span><span class="c1"></span>        <span class="n">Runnable</span> <span class="n">updateColors</span> <span class="o">=</span> <span class="o">()</span> <span class="o">-&gt;</span> <span class="o">{</span>
+            <span class="n">WallpaperColors</span> <span class="n">systemColor</span> <span class="o">=</span> <span class="n">mWallpaperManager</span><span class="o">.</span><span class="na">getWallpaperColors</span><span class="o">(</span>
+                    <span class="n">getLatestWallpaperType</span><span class="o">(</span><span class="n">mUserTracker</span><span class="o">.</span><span class="na">getUserId</span><span class="o">()));</span>
+            <span class="n">Runnable</span> <span class="n">applyColors</span> <span class="o">=</span> <span class="o">()</span> <span class="o">-&gt;</span> <span class="o">{</span>
+                <span class="k">if</span> <span class="o">(</span><span class="n">DEBUG</span><span class="o">)</span> <span class="n">Log</span><span class="o">.</span><span class="na">d</span><span class="o">(</span><span class="n">TAG</span><span class="o">,</span> <span class="s">&#34;Boot colors: &#34;</span> <span class="o">+</span> <span class="n">systemColor</span><span class="o">);</span>
+                <span class="n">mCurrentColors</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="n">mUserTracker</span><span class="o">.</span><span class="na">getUserId</span><span class="o">(),</span> <span class="n">systemColor</span><span class="o">);</span>
+                <span class="n">reevaluateSystemTheme</span><span class="o">(</span><span class="kc">false</span> <span class="cm">/* forceReload */</span><span class="o">);</span>
+            <span class="o">};</span>
+            <span class="k">if</span> <span class="o">(</span><span class="n">mDeviceProvisionedController</span><span class="o">.</span><span class="na">isCurrentUserSetup</span><span class="o">())</span> <span class="o">{</span>
+                <span class="n">mMainExecutor</span><span class="o">.</span><span class="na">execute</span><span class="o">(</span><span class="n">applyColors</span><span class="o">);</span>
+            <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+                <span class="n">applyColors</span><span class="o">.</span><span class="na">run</span><span class="o">();</span>
+            <span class="o">}</span>
+        <span class="o">};</span></code></pre></div>
+<blockquote>
+<p><strong>A quick tip:</strong> You can click on the file paths mentioned above code snippets and view the entire source hosted on the <a href="https://cs.android.com" target="_blank">Android Super project</a>.</p>
+</blockquote>
+<p>Two important functions from the above snippet are <strong>getWallpaperColors()</strong> and <strong>reevaluateSystemTheme()</strong>, Let&rsquo;s explore each of them in detail.</p>
+<h3 id="wallpaper-manager--wallpaper-manager-service">Wallpaper Manager &amp; Wallpaper Manager Service</h3>
+<p>We will now need to look into how exactly the system listens to changes in the wallpaper and changes in the dynamic colors. We start with two important components of this logic, one is the <strong>WallpaperManager</strong> and the second is the <strong>WallpaperManagerService</strong>.</p>
+<a href="https://cs.android.com/android/platform/superproject/&#43;/master:frameworks/base/core/java/android/app/WallpaperManager.java;l=360;drc=4207a3747b08fb5943fa64e9cbde2e9c166fd388;bpv=1;bpt=1" target="_blank">
+    <div style="display: flex;margin-left:0.5rem;width: 90%;">   
+        <i class="fas fa-terminal" style="color: var(--color-accent);margin-top:3px;font-size:80%;"></i>
+        <p style="color: var(--color-accent);margin-left:0.5rem;font-size:80%;width: 100%;word-wrap: break-word;">frameworks/base/core/java/android/app/WallpaperManager.java</p>  
+    </div>
+</a>
+
+<p>Aptly named, the wallpaper manager is responsible for connecting to the system wallpaper service and utilizes the service to set up observers for changes in the wallpaper and its colors and react to its events.</p>
+<h4 id="step-1-listening-to-changes-in-wallpaper">Step 1: Listening to Changes in Wallpaper</h4>
+<p>The service contains a wallpaper observer, which simply checks if the wallpaper file has changed and triggers sub-routines for color extraction and theme re-evaluation.</p>
+<a href="https://cs.android.com/android/platform/superproject/&#43;/master:frameworks/base/services/core/java/com/android/server/wallpaper/WallpaperManagerService.java;l=1051;drc=6cf6099dcab87865e33439215e7ea0087e60c9f2;bpv=1;bpt=0?q=wallpapermanagerser&amp;ss=android%2Fplatform%2Fsuperproject" target="_blank">
+    <div style="display: flex;margin-left:0.5rem;width: 90%;">   
+        <i class="fas fa-terminal" style="color: var(--color-accent);margin-top:3px;font-size:80%;"></i>
+        <p style="color: var(--color-accent);margin-left:0.5rem;font-size:80%;width: 100%;word-wrap: break-word;">frameworks/base/services/core/java/com/android/server/wallpaper/WallpaperManagerService.java</p>  
+    </div>
+</a>
+
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java">    <span class="kd">class</span> <span class="nc">WallpaperObserver</span> <span class="kd">extends</span> <span class="n">FileObserver</span> <span class="o">{</span>
+        <span class="o">...</span>
+        <span class="kd">final</span> <span class="kt">boolean</span> <span class="n">sysWallpaperChanged</span> <span class="o">=</span> <span class="o">(</span><span class="n">mWallpaperFile</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="n">changedFile</span><span class="o">));</span>
+        <span class="kd">final</span> <span class="kt">boolean</span> <span class="n">lockWallpaperChanged</span> <span class="o">=</span> <span class="o">(</span><span class="n">mWallpaperLockFile</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="n">changedFile</span><span class="o">));</span>
+        <span class="o">...</span>
+
+        <span class="c1">// Based on a bunch of conditionals some of the below functions are called
+</span><span class="c1"></span>        <span class="n">notifyLockWallpaperChanged</span><span class="o">();</span>
+        <span class="n">notifyWallpaperColorsChanged</span><span class="o">(</span><span class="n">wallpaper</span><span class="o">,</span> <span class="n">FLAG_LOCK</span><span class="o">);</span>
+        <span class="n">notifyWallpaperChanged</span><span class="o">(</span><span class="n">wallpaper</span><span class="o">);</span>
+    <span class="o">}</span></code></pre></div>
+<p>If we look into one of the above functions and its implementation we&rsquo;ll see that the logic takes into consideration a multi-display scenario. For example, foldable devices or a multi-display device that contains two or more displays. Hence we could have a live wallpaper that supports multiple displays and can contain separate logic for per display surface rendering of the wallpaper or just two separate wallpapers for the home screen and the lock screen.</p>
+<p>The color extraction logic needs to be aware of this, hence we find a <strong>DisplayConnector</strong> which is <strong>displayId</strong> specific. Our notifier logic runs through a custom iterator for display connectors and notifies color change per connection.</p>
+<a href="https://cs.android.com/android/platform/superproject/&#43;/master:frameworks/base/services/core/java/com/android/server/wallpaper/WallpaperManagerService.java;l=1051;drc=6cf6099dcab87865e33439215e7ea0087e60c9f2;bpv=1;bpt=0?q=wallpapermanagerser&amp;ss=android%2Fplatform%2Fsuperproject" target="_blank">
+    <div style="display: flex;margin-left:0.5rem;width: 90%;">   
+        <i class="fas fa-terminal" style="color: var(--color-accent);margin-top:3px;font-size:80%;"></i>
+        <p style="color: var(--color-accent);margin-left:0.5rem;font-size:80%;width: 100%;word-wrap: break-word;">frameworks/base/services/core/java/com/android/server/wallpaper/WallpaperManagerService.java</p>  
+    </div>
+</a>
+
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java">    <span class="kd">private</span> <span class="kt">void</span> <span class="nf">notifyWallpaperColorsChanged</span><span class="o">(</span><span class="nd">@NonNull</span> <span class="n">WallpaperData</span> <span class="n">wallpaper</span><span class="o">,</span> <span class="kt">int</span> <span class="n">which</span><span class="o">)</span> <span class="o">{</span>
+        <span class="o">...</span>
+        <span class="n">wallpaper</span><span class="o">.</span><span class="na">connection</span><span class="o">.</span><span class="na">forEachDisplayConnector</span><span class="o">(</span><span class="n">connector</span> <span class="o">-&gt;</span> <span class="o">{</span>
+            <span class="n">notifyWallpaperColorsChangedOnDisplay</span><span class="o">(</span><span class="n">wallpaper</span><span class="o">,</span> <span class="n">which</span><span class="o">,</span> <span class="n">connector</span><span class="o">.</span><span class="na">mDisplayId</span><span class="o">);</span>
+        <span class="o">});</span>
+        <span class="o">...</span>
+    <span class="o">}</span></code></pre></div>
+<h4 id="step-2-extracting-wallpaper-colors">Step 2: Extracting Wallpaper Colors</h4>
+<p>The <strong>getWallpaperColors()</strong> function extracts user-specific wallpaper data and determines if colors can be extracted or not.</p>
+<a href="https://cs.android.com/android/platform/superproject/&#43;/master:frameworks/base/services/core/java/com/android/server/wallpaper/WallpaperManagerService.java;l=1051;drc=6cf6099dcab87865e33439215e7ea0087e60c9f2;bpv=1;bpt=0?q=wallpapermanagerser&amp;ss=android%2Fplatform%2Fsuperproject" target="_blank">
+    <div style="display: flex;margin-left:0.5rem;width: 90%;">   
+        <i class="fas fa-terminal" style="color: var(--color-accent);margin-top:3px;font-size:80%;"></i>
+        <p style="color: var(--color-accent);margin-left:0.5rem;font-size:80%;width: 100%;word-wrap: break-word;">frameworks/base/services/core/java/com/android/server/wallpaper/WallpaperManagerService.java</p>  
+    </div>
+</a>
+
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java">    <span class="kd">public</span> <span class="n">WallpaperColors</span> <span class="nf">getWallpaperColors</span><span class="o">(</span><span class="kt">int</span> <span class="n">which</span><span class="o">,</span> <span class="kt">int</span> <span class="n">userId</span><span class="o">,</span> <span class="kt">int</span> <span class="n">displayId</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">RemoteException</span> <span class="o">{</span>
+        <span class="o">...</span>
+        <span class="n">shouldExtract</span> <span class="o">=</span> <span class="n">wallpaperData</span><span class="o">.</span><span class="na">primaryColors</span> <span class="o">==</span> <span class="kc">null</span><span class="o">;</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">shouldExtract</span><span class="o">)</span> <span class="o">{</span>
+            <span class="n">extractColors</span><span class="o">(</span><span class="n">wallpaperData</span><span class="o">);</span>
+        <span class="o">}</span>
+        <span class="k">return</span> <span class="n">wallpaperData</span><span class="o">.</span><span class="na">primaryColors</span><span class="o">;</span>
+        
+    <span class="o">}</span></code></pre></div>
+<p>The <strong>extractColors()</strong> function of the service is responsible for taking the wallpaper data, reading the user-specific wallpaper file, and creating a downscaled bitmap of it before color extraction.</p>
+<h3 id="variance-in-color-extraction-algorithms">Variance in Color Extraction Algorithms</h3>
+<p>The first step of color extraction that Monet relies on is the calculation of the wallpaper bitmap size. If the bitmap size is greater than the hardcoded limit, a downscale of the bitmap is required before color swatches can be extracted. We don&rsquo;t want to process an image larger than it needs to be, possibly saving some computation time and resource while still maintaining the effectiveness of the color extraction algorithm from the image sample.</p>
+<a href="https://cs.android.com/android/platform/superproject/&#43;/master:frameworks/base/core/java/android/app/WallpaperColors.java;l=1?q=wallpapercolors.jav&amp;sq=" target="_blank">
+    <div style="display: flex;margin-left:0.5rem;width: 90%;">   
+        <i class="fas fa-terminal" style="color: var(--color-accent);margin-top:3px;font-size:80%;"></i>
+        <p style="color: var(--color-accent);margin-left:0.5rem;font-size:80%;width: 100%;word-wrap: break-word;">frameworks/base/core/java/android/app/WallpaperColors.java</p>  
+    </div>
+</a>
+
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java">    <span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="kt">int</span> <span class="n">MAX_BITMAP_SIZE</span> <span class="o">=</span> <span class="n">112</span><span class="o">;</span>
+    <span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="kt">int</span> <span class="n">MAX_WALLPAPER_EXTRACTION_AREA</span> <span class="o">=</span> <span class="n">MAX_BITMAP_SIZE</span> <span class="o">*</span> <span class="n">MAX_BITMAP_SIZE</span><span class="o">;</span>
+
+    <span class="kd">final</span> <span class="kt">int</span> <span class="n">bitmapArea</span> <span class="o">=</span> <span class="n">bitmap</span><span class="o">.</span><span class="na">getWidth</span><span class="o">()</span> <span class="o">*</span> <span class="n">bitmap</span><span class="o">.</span><span class="na">getHeight</span><span class="o">();</span>
+    <span class="k">if</span> <span class="o">(</span><span class="n">bitmapArea</span> <span class="o">&gt;</span> <span class="n">MAX_WALLPAPER_EXTRACTION_AREA</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">Size</span> <span class="n">optimalSize</span> <span class="o">=</span> <span class="n">calculateOptimalSize</span><span class="o">(</span><span class="n">bitmap</span><span class="o">.</span><span class="na">getWidth</span><span class="o">(),</span> <span class="n">bitmap</span><span class="o">.</span><span class="na">getHeight</span><span class="o">());</span>
+        <span class="n">bitmap</span> <span class="o">=</span> <span class="n">Bitmap</span><span class="o">.</span><span class="na">createScaledBitmap</span><span class="o">(</span><span class="n">bitmap</span><span class="o">,</span> <span class="n">optimalSize</span><span class="o">.</span><span class="na">getWidth</span><span class="o">(),</span>
+                <span class="n">optimalSize</span><span class="o">.</span><span class="na">getHeight</span><span class="o">(),</span> <span class="kc">true</span> <span class="cm">/* filter */</span><span class="o">);</span>
+    <span class="o">}</span></code></pre></div>
+<p>Post resizing of the bitmap <em>(if required)</em>, we move on to extracting the palette from the bitmap. The extraction logic takes into account if the device is a low RAM device based on build config and uses appropriate quantization logic to extract the palette for efficient performance.</p>
+<a href="https://cs.android.com/android/platform/superproject/&#43;/master:frameworks/base/core/java/android/app/WallpaperColors.java;l=1?q=wallpapercolors.jav&amp;sq=" target="_blank">
+    <div style="display: flex;margin-left:0.5rem;width: 90%;">   
+        <i class="fas fa-terminal" style="color: var(--color-accent);margin-top:3px;font-size:80%;"></i>
+        <p style="color: var(--color-accent);margin-left:0.5rem;font-size:80%;width: 100%;word-wrap: break-word;">frameworks/base/core/java/android/app/WallpaperColors.java</p>  
+    </div>
+</a>
+
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java">    <span class="kd">final</span> <span class="n">Palette</span> <span class="n">palette</span><span class="o">;</span>
+    <span class="k">if</span> <span class="o">(</span><span class="n">ActivityManager</span><span class="o">.</span><span class="na">isLowRamDeviceStatic</span><span class="o">())</span> <span class="o">{</span>
+        <span class="n">palette</span> <span class="o">=</span> <span class="n">Palette</span>
+                <span class="o">.</span><span class="na">from</span><span class="o">(</span><span class="n">bitmap</span><span class="o">,</span> <span class="k">new</span> <span class="n">VariationalKMeansQuantizer</span><span class="o">())</span>
+                <span class="o">.</span><span class="na">maximumColorCount</span><span class="o">(</span><span class="n">5</span><span class="o">)</span>
+                <span class="o">.</span><span class="na">resizeBitmapArea</span><span class="o">(</span><span class="n">MAX_WALLPAPER_EXTRACTION_AREA</span><span class="o">)</span>
+                <span class="o">.</span><span class="na">generate</span><span class="o">();</span>
+    <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+        <span class="n">palette</span> <span class="o">=</span> <span class="n">Palette</span>
+                <span class="o">.</span><span class="na">from</span><span class="o">(</span><span class="n">bitmap</span><span class="o">,</span> <span class="k">new</span> <span class="n">CelebiQuantizer</span><span class="o">())</span>
+                <span class="o">.</span><span class="na">maximumColorCount</span><span class="o">(</span><span class="n">256</span><span class="o">)</span>
+                <span class="o">.</span><span class="na">resizeBitmapArea</span><span class="o">(</span><span class="n">MAX_WALLPAPER_EXTRACTION_AREA</span><span class="o">)</span>
+                <span class="o">.</span><span class="na">generate</span><span class="o">();</span>
+    <span class="o">}</span></code></pre></div>
+<p><strong>Makefiles define if the device is low ram!</strong></p>
+<p>If you have ever built Android from scratch and compiled AOSP, you probably know that we use .mk or makefiles to instruct the build system/toolchain about the build configuration of the device you are trying to compile Android for.</p>
+<p>The value indicating if device is a Low RAM device is a hard coded static value supplied from build makefile for the device. Take a look at the build file for Pixel 4a for reference:</p>
+<a href="https://cs.android.com/android/platform/superproject/&#43;/master:device/google/sunfish/device-common.mk;l=67;drc=dbaa24309f3fa5660918d52b0aa2e3d7e69baca1?q=ro.config.low_ram&amp;sq=&amp;ss=android%2Fplatform%2Fsuperproject" target="_blank">
+    <div style="display: flex;margin-left:0.5rem;width: 90%;">   
+        <i class="fas fa-terminal" style="color: var(--color-accent);margin-top:3px;font-size:80%;"></i>
+        <p style="color: var(--color-accent);margin-left:0.5rem;font-size:80%;width: 100%;word-wrap: break-word;">/device/google/sunfish/device-common.mk</p>  
+    </div>
+</a>
+
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh">    <span class="c1"># Set lmkd options</span>
+<span class="nv">PRODUCT_PRODUCT_PROPERTIES</span> <span class="o">+=</span> <span class="se">\
+</span><span class="se"></span>	ro.config.low_ram <span class="o">=</span> <span class="nb">false</span> <span class="se">\
+</span><span class="se"></span>	ro.lmk.log_stats <span class="o">=</span> <span class="nb">true</span> <span class="err">\</span></code></pre></div>
+<a href="https://cs.android.com/android/platform/superproject/&#43;/master:frameworks/base/core/java/com/android/internal/os/RoSystemProperties.java;drc=dbaa24309f3fa5660918d52b0aa2e3d7e69baca1;l=27" target="_blank">
+    <div style="display: flex;margin-left:0.5rem;width: 90%;">   
+        <i class="fas fa-terminal" style="color: var(--color-accent);margin-top:3px;font-size:80%;"></i>
+        <p style="color: var(--color-accent);margin-left:0.5rem;font-size:80%;width: 100%;word-wrap: break-word;">frameworks/base/core/java/com/android/internal/os/RoSystemProperties.java</p>  
+    </div>
+</a>
+
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java">    <span class="kd">public</span> <span class="kd">static</span> <span class="kd">final</span> <span class="kt">boolean</span> <span class="n">CONFIG_LOW_RAM</span> <span class="o">=</span>
+            <span class="n">SystemProperties</span><span class="o">.</span><span class="na">getBoolean</span><span class="o">(</span><span class="s">&#34;ro.config.low_ram&#34;</span><span class="o">,</span> <span class="kc">false</span><span class="o">);</span></code></pre></div>
+<p>This value is provided by the ActivityManager.</p>
+<a href="https://cs.android.com/android/platform/superproject/&#43;/master:frameworks/base/core/java/android/app/ActivityManager.java;l=1056?q=isLowramdev&amp;ss=android%2Fplatform%2Fsuperproject" target="_blank">
+    <div style="display: flex;margin-left:0.5rem;width: 90%;">   
+        <i class="fas fa-terminal" style="color: var(--color-accent);margin-top:3px;font-size:80%;"></i>
+        <p style="color: var(--color-accent);margin-left:0.5rem;font-size:80%;width: 100%;word-wrap: break-word;">frameworks/base/core/java/android/app/ActivityManager.java</p>  
+    </div>
+</a>
+
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java">    <span class="cm">/**
+</span><span class="cm">     * Returns true if this is a low-RAM device.  Exactly whether a device is low-RAM
+</span><span class="cm">     * is ultimately up to the device configuration, but currently it generally means
+</span><span class="cm">     * something with 1GB or less of RAM.  This is mostly intended to be used by apps
+</span><span class="cm">     * to determine whether they should turn off certain features that require more RAM.
+</span><span class="cm">     */</span>
+    <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">isLowRamDevice</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="n">isLowRamDeviceStatic</span><span class="o">();</span>
+    <span class="o">}</span></code></pre></div>
+<p>The key takeaway from the above is that the Android system may use different logic based on system resource constraints, in our case the color extraction algorithm.</p>
+<h3 id="k-means--celebi-quantizers">K-Means &amp; Celebi Quantizers</h3>
+<p>To understand it simply, a quantizer/quantization algorithm or a clustering algorithm is used to extract dominant values from a set of values. For our color extraction logic, this set of values comes from our image which is the wallpaper.</p>
+<p>This wallpaper, <em>(or any image for that matter)</em> consists of pixels of various colors arranged in specific ways, that together constitute an image.</p>
+<p>Our color quantizer thus needs to identify dominant portions of these sets of pixels that share the same color and cluster them together so that we can extract meaningful information from the image.</p>
+<p><strong>Android framework relies on two algorithms</strong></p>
+<ul>
+<li>Variational K-means clustering</li>
+<li>Celebi K-means clustering</li>
+</ul>
+<div style="display: flex;align-items: center;justify-content: center;">
+    <img style="border-radius: 2rem;" src="/images/dominant-colors-kmeans.jpeg" alt="Use wallpaper generated system colors from Android 12 and Material You to repaint your apps to the users taste by using the material design 3 library and Jetpack compose">
+</div>
+
+<div style="display: flex;align-items: center;justify-content: center;">
+    <p style="font-size: 80%;font-style: italic;opacity: 80%;"> Finding dominant colors using K-means by Ailephant.com </p>
+</div>
+
+
+<p>Read more about the <a href="https://www.projectrhea.org/rhea/index.php/Quantization_and_Classification_using_K-Means_Clustering">Color quantization K means algorithm used in Android 12</a>.</p>
+<p>The K Means algorithm largely works on identifying clusters in an image but is not the most effective when extracting colors.</p>
+<p><a href="https://arxiv.org/pdf/1101.0395.pdf">M Emre Celebi</a>&rsquo;s paper improved the performance and effectiveness of the K-Means quantizer in their paper published in 2011.</p>
+<p>So if you are using any device that has over 1 gigabyte of RAM and it is running Android 12/12L or Tiramisu, Monet will use the Celebi quantizer to extract colors from your wallpaper.</p>
+<p>Both the above quantizers are a part of AOSP and can be found at</p>
+<a href="https://cs.android.com/android/platform/superproject/&#43;/master:frameworks/base/core/java/com/android/internal/graphics/palette/CelebiQuantizer.java;l=22?q=celebi" target="_blank">
+    <div style="display: flex;margin-left:0.5rem;width: 90%;">   
+        <i class="fas fa-terminal" style="color: var(--color-accent);margin-top:3px;font-size:80%;"></i>
+        <p style="color: var(--color-accent);margin-left:0.5rem;font-size:80%;width: 100%;word-wrap: break-word;">frameworks/base/core/java/com/android/internal/graphics/palette/CelebiQuantizer.java</p>  
+    </div>
+</a>
+
+<a href="https://cs.android.com/android/platform/superproject/&#43;/master:frameworks/base/core/java/com/android/internal/graphics/palette/VariationalKMeansQuantizer.java" target="_blank">
+    <div style="display: flex;margin-left:0.5rem;width: 90%;">   
+        <i class="fas fa-terminal" style="color: var(--color-accent);margin-top:3px;font-size:80%;"></i>
+        <p style="color: var(--color-accent);margin-left:0.5rem;font-size:80%;width: 100%;word-wrap: break-word;">frameworks/base/core/java/com/android/internal/graphics/palette/VariationalKMeansQuantizer.java</p>  
+    </div>
+</a>
+
+<h3 id="palettes-and-swatches">Palettes and Swatches</h3>
+<p>Let us now understand what a swatch is and what a palette is.</p>
+<div style="display: flex;align-items: center; padding:1em;">
+    <img style="border-radius: 1rem;width:10%;float:left;margin-right:2rem;" src="/images/image-siddroid-color-pal.png">
+<p>A swatch consists of a color. Many swatches form a palette. The population of a swatch is the number of pixels the color of the swatch represents. The higher the number of pixels of a certain color in the wallpaper, the higher the population value of the swatch.</p>
+</div>
+<p>The population of a swatch is an important factor in determining the dominant colors of the wallpaper, the higher the population of the swatch, the higher the chances that the color will become the dominant color of the theme.</p>
+<a href="https://cs.android.com/android/platform/superproject/&#43;/master:frameworks/base/core/java/com/android/internal/graphics/palette/Palette.java" target="_blank">
+    <div style="display: flex;margin-left:0.5rem;width: 90%;">   
+        <i class="fas fa-terminal" style="color: var(--color-accent);margin-top:3px;font-size:80%;"></i>
+        <p style="color: var(--color-accent);margin-left:0.5rem;font-size:80%;width: 100%;word-wrap: break-word;">frameworks/base/core/java/com/android/internal/graphics/palette/Palette.java</p>  
+    </div>
+</a>
+
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java">    <span class="kd">public</span> <span class="kd">static</span> <span class="kd">class</span> <span class="nc">Swatch</span> <span class="o">{</span>
+        <span class="kd">private</span> <span class="kd">final</span> <span class="n">Color</span> <span class="n">mColor</span><span class="o">;</span>
+        <span class="kd">private</span> <span class="kd">final</span> <span class="kt">int</span> <span class="n">mPopulation</span><span class="o">;</span>
+        <span class="o">...</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="nc">Palette</span> <span class="o">{</span>
+        <span class="kd">private</span> <span class="kd">final</span> <span class="n">List</span><span class="o">&lt;</span><span class="n">Swatch</span><span class="o">&gt;</span> <span class="n">mSwatches</span><span class="o">;</span>
+        <span class="kd">private</span> <span class="kd">final</span> <span class="n">Swatch</span> <span class="n">mDominantSwatch</span><span class="o">;</span>
+        <span class="o">...</span>
+    <span class="o">}</span></code></pre></div>
+<h4 id="step-3-identifying-dominant-colors">Step 3: Identifying dominant colors</h4>
+<p>Once our wallpaper is run through the quantization logic, we end up with a list of swatches or colors. This list of swatches now needs to be sorted by their population value to identify the dominant colors from the image.</p>
+<p>The final container is a HashMap key-value pair which consists of swatch color and population count, encapsulated within a <strong>WallpaperColors</strong> object before forwarding it back to System-UIs theme overlay controller.</p>
+<a href="https://cs.android.com/android/platform/superproject/&#43;/master:frameworks/base/core/java/com/android/internal/graphics/palette/Palette.java" target="_blank">
+    <div style="display: flex;margin-left:0.5rem;width: 90%;">   
+        <i class="fas fa-terminal" style="color: var(--color-accent);margin-top:3px;font-size:80%;"></i>
+        <p style="color: var(--color-accent);margin-left:0.5rem;font-size:80%;width: 100%;word-wrap: break-word;">frameworks/base/core/java/com/android/internal/graphics/palette/Palette.java</p>  
+    </div>
+</a>
+
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java">    <span class="kd">final</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Palette</span><span class="o">.</span><span class="na">Swatch</span><span class="o">&gt;</span> <span class="n">swatches</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;&gt;(</span><span class="n">palette</span><span class="o">.</span><span class="na">getSwatches</span><span class="o">());</span>
+    <span class="n">swatches</span><span class="o">.</span><span class="na">sort</span><span class="o">((</span><span class="n">a</span><span class="o">,</span> <span class="n">b</span><span class="o">)</span> <span class="o">-&gt;</span> <span class="n">b</span><span class="o">.</span><span class="na">getPopulation</span><span class="o">()</span> <span class="o">-</span> <span class="n">a</span><span class="o">.</span><span class="na">getPopulation</span><span class="o">());</span>
+
+    <span class="kd">final</span> <span class="kt">int</span> <span class="n">swatchesSize</span> <span class="o">=</span> <span class="n">swatches</span><span class="o">.</span><span class="na">size</span><span class="o">();</span>
+
+    <span class="kd">final</span> <span class="n">Map</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">,</span> <span class="n">Integer</span><span class="o">&gt;</span> <span class="n">populationByColor</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HashMap</span><span class="o">&lt;&gt;();</span>
+    <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">swatchesSize</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+        <span class="n">Palette</span><span class="o">.</span><span class="na">Swatch</span> <span class="n">swatch</span> <span class="o">=</span> <span class="n">swatches</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">i</span><span class="o">);</span>
+        <span class="kt">int</span> <span class="n">colorInt</span> <span class="o">=</span> <span class="n">swatch</span><span class="o">.</span><span class="na">getInt</span><span class="o">();</span>
+        <span class="n">populationByColor</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="n">colorInt</span><span class="o">,</span> <span class="n">swatch</span><span class="o">.</span><span class="na">getPopulation</span><span class="o">());</span>
+    <span class="o">}</span>
+
+    <span class="kt">int</span> <span class="n">hints</span> <span class="o">=</span> <span class="n">calculateDarkHints</span><span class="o">(</span><span class="n">bitmap</span><span class="o">);</span>
+
+    <span class="k">return</span> <span class="k">new</span> <span class="n">WallpaperColors</span><span class="o">(</span><span class="n">populationByColor</span><span class="o">,</span> <span class="n">HINT_FROM_BITMAP</span> <span class="o">|</span> <span class="n">hints</span><span class="o">);</span></code></pre></div>
+<h3 id="re-evaluating-system-theme">Re-evaluating system theme</h3>
+<p>Let&rsquo;s go back to our Theme Overlay Controller, which registered a wallpaper change listener in its <strong>start()</strong> method. Every time the user changes a wallpaper, the intent filter filters the wallpaper change intent and passes the newly calculated colors from our wallpaper manager service through the wallpaper change listener.</p>
+<p>The broadcast receiver within the theme controller listens to the <strong>Intent.ACTION_WALLPAPER_CHANGED</strong> and triggers conditional flows to re-evaluate the system theme.</p>
+<p>The wallpaper change listener invokes <strong>reevaluateSystemTheme()</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java">    <span class="c1">// Intercept wallpaper change intent and changes in system user profiles
+</span><span class="c1"></span>    <span class="kd">private</span> <span class="kd">final</span> <span class="n">BroadcastReceiver</span> <span class="n">mBroadcastReceiver</span> <span class="o">=</span> <span class="k">new</span> <span class="n">BroadcastReceiver</span><span class="o">()</span> <span class="o">{</span>
+        <span class="nd">@Override</span>
+        <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onReceive</span><span class="o">(</span><span class="n">Context</span> <span class="n">context</span><span class="o">,</span> <span class="n">Intent</span> <span class="n">intent</span><span class="o">)</span> <span class="o">{</span>
+
+            <span class="kt">boolean</span> <span class="n">newWorkProfile</span> <span class="o">=</span> <span class="n">Intent</span><span class="o">.</span><span class="na">ACTION_MANAGED_PROFILE_ADDED</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="n">intent</span><span class="o">.</span><span class="na">getAction</span><span class="o">());</span>
+            <span class="kt">boolean</span> <span class="n">isManagedProfile</span> <span class="o">=</span> <span class="n">mUserManager</span><span class="o">.</span><span class="na">isManagedProfile</span><span class="o">(</span>
+                    <span class="n">intent</span><span class="o">.</span><span class="na">getIntExtra</span><span class="o">(</span><span class="n">Intent</span><span class="o">.</span><span class="na">EXTRA_USER_HANDLE</span><span class="o">,</span> <span class="n">0</span><span class="o">));</span>
+
+            <span class="k">if</span> <span class="o">(</span><span class="n">newWorkProfile</span><span class="o">)</span> <span class="o">{</span>
+                    <span class="o">...</span>
+                    <span class="n">reevaluateSystemTheme</span><span class="o">(</span><span class="kc">true</span> <span class="cm">/* forceReload */</span><span class="o">);</span>
+            <span class="o">}</span> <span class="k">else</span> <span class="k">if</span> <span class="o">(</span><span class="n">Intent</span><span class="o">.</span><span class="na">ACTION_WALLPAPER_CHANGED</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="n">intent</span><span class="o">.</span><span class="na">getAction</span><span class="o">()))</span> <span class="o">{</span>
+                    <span class="o">...</span>
+                    <span class="n">mAcceptColorEvents</span> <span class="o">=</span> <span class="kc">true</span><span class="o">;</span>
+                    <span class="n">Log</span><span class="o">.</span><span class="na">i</span><span class="o">(</span><span class="n">TAG</span><span class="o">,</span> <span class="s">&#34;Wallpaper changed, allowing color events again&#34;</span><span class="o">);</span>
+                    <span class="o">..</span>
+            <span class="o">}</span>
+        <span class="o">}</span>
+    <span class="o">};</span>
+
+    <span class="c1">// color change listener triggering system theme reevaluation
+</span><span class="c1"></span>    <span class="n">mWallpaperManager</span><span class="o">.</span><span class="na">addOnColorsChangedListener</span><span class="o">((</span><span class="n">wallpaperColors</span><span class="o">,</span> <span class="n">which</span><span class="o">)</span> <span class="o">-&gt;</span> <span class="o">{</span>
+        <span class="o">...</span>
+        <span class="n">reevaluateSystemTheme</span><span class="o">(</span><span class="kc">false</span> <span class="cm">/* forceReload */</span><span class="o">);</span>
+        <span class="o">...</span>
+
+    <span class="o">},</span> <span class="kc">null</span><span class="o">,</span> <span class="n">UserHandle</span><span class="o">.</span><span class="na">USER_ALL</span><span class="o">);</span>
+
+
+    <span class="c1">// Re evaluation logic
+</span><span class="c1"></span>    <span class="kd">private</span> <span class="kt">void</span> <span class="nf">reevaluateSystemTheme</span><span class="o">(</span><span class="kt">boolean</span> <span class="n">forceReload</span><span class="o">)</span> <span class="o">{</span>
+        <span class="kd">final</span> <span class="n">WallpaperColors</span> <span class="n">currentColors</span> <span class="o">=</span> <span class="n">mCurrentColors</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">mUserTracker</span><span class="o">.</span><span class="na">getUserId</span><span class="o">());</span>
+        <span class="kd">final</span> <span class="kt">int</span> <span class="n">mainColor</span><span class="o">;</span>
+        <span class="kd">final</span> <span class="kt">int</span> <span class="n">accentCandidate</span><span class="o">;</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">currentColors</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+            <span class="n">mainColor</span> <span class="o">=</span> <span class="n">Color</span><span class="o">.</span><span class="na">TRANSPARENT</span><span class="o">;</span>
+            <span class="n">accentCandidate</span> <span class="o">=</span> <span class="n">Color</span><span class="o">.</span><span class="na">TRANSPARENT</span><span class="o">;</span>
+        <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+            <span class="n">mainColor</span> <span class="o">=</span> <span class="n">getNeutralColor</span><span class="o">(</span><span class="n">currentColors</span><span class="o">);</span>
+            <span class="n">accentCandidate</span> <span class="o">=</span> <span class="n">getAccentColor</span><span class="o">(</span><span class="n">currentColors</span><span class="o">);</span>
+        <span class="o">}</span>
+
+        <span class="o">...</span>
+
+        <span class="n">mMainWallpaperColor</span> <span class="o">=</span> <span class="n">mainColor</span><span class="o">;</span>
+        <span class="n">mWallpaperAccentColor</span> <span class="o">=</span> <span class="n">accentCandidate</span><span class="o">;</span>
+
+        <span class="c1">// Extract colors from palette according to M3 specs
+</span><span class="c1"></span>        <span class="k">if</span> <span class="o">(</span><span class="n">mIsMonetEnabled</span><span class="o">)</span> <span class="o">{</span>
+            <span class="n">mSecondaryOverlay</span> <span class="o">=</span> <span class="n">getOverlay</span><span class="o">(</span><span class="n">mWallpaperAccentColor</span><span class="o">,</span> <span class="n">ACCENT</span><span class="o">);</span>
+            <span class="n">mNeutralOverlay</span> <span class="o">=</span> <span class="n">getOverlay</span><span class="o">(</span><span class="n">mMainWallpaperColor</span><span class="o">,</span> <span class="n">NEUTRAL</span><span class="o">);</span>
+            <span class="n">mNeedsOverlayCreation</span> <span class="o">=</span> <span class="kc">true</span><span class="o">;</span>
+        <span class="o">}</span>
+
+        <span class="c1">// Overlay Manager &amp; overlay manager service will update specific packages
+</span><span class="c1"></span>        <span class="n">updateThemeOverlays</span><span class="o">();</span>
+    <span class="o">}</span></code></pre></div>
+<h3 id="monet-color-schemes">Monet Color Schemes</h3>
+<p>A color scheme typed entity encapsulates the colors generated by above logic from the <strong>getOverlay()</strong> method. It is the class that calculates the required color values in definition of the Material You specs, we use the <strong>WallpaperColors</strong> class that contains the extracted colors to build the final color scheme.</p>
+<a href="https://cs.android.com/android/platform/superproject/&#43;/master:frameworks/base/packages/SystemUI/monet/src/com/android/systemui/monet/ColorScheme.kt;l=17;drc=4207a3747b08fb5943fa64e9cbde2e9c166fd388;bpv=1;bpt=0" target="_blank">
+    <div style="display: flex;margin-left:0.5rem;width: 90%;">   
+        <i class="fas fa-terminal" style="color: var(--color-accent);margin-top:3px;font-size:80%;"></i>
+        <p style="color: var(--color-accent);margin-left:0.5rem;font-size:80%;width: 100%;word-wrap: break-word;">frameworks/base/packages/SystemUI/monet/src/com/android/systemui/monet/ColorScheme.kt</p>  
+    </div>
+</a>
+
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="k">public</span> <span class="k">class</span> <span class="nc">ColorScheme</span><span class="p">(</span><span class="nd">@ColorInt</span> <span class="n">seed</span><span class="p">:</span> <span class="n">Int</span><span class="p">,</span> <span class="k">val</span> <span class="py">darkTheme</span><span class="p">:</span> <span class="n">Boolean</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">val</span> <span class="py">accent1</span><span class="p">:</span> <span class="n">List</span><span class="p">&lt;</span><span class="n">Int</span><span class="p">&gt;</span>
+    <span class="k">val</span> <span class="py">accent2</span><span class="p">:</span> <span class="n">List</span><span class="p">&lt;</span><span class="n">Int</span><span class="p">&gt;</span>
+    <span class="k">val</span> <span class="py">accent3</span><span class="p">:</span> <span class="n">List</span><span class="p">&lt;</span><span class="n">Int</span><span class="p">&gt;</span>
+    <span class="k">val</span> <span class="py">neutral1</span><span class="p">:</span> <span class="n">List</span><span class="p">&lt;</span><span class="n">Int</span><span class="p">&gt;</span>
+    <span class="k">val</span> <span class="py">neutral2</span><span class="p">:</span> <span class="n">List</span><span class="p">&lt;</span><span class="n">Int</span><span class="p">&gt;</span>
+    <span class="k">constructor</span><span class="p">(</span><span class="n">wallpaperColors</span><span class="p">:</span> <span class="n">WallpaperColors</span><span class="p">,</span> <span class="n">darkTheme</span><span class="p">:</span> <span class="n">Boolean</span><span class="p">):</span>
+            <span class="k">this</span><span class="p">(</span><span class="n">getSeedColor</span><span class="p">(</span><span class="n">wallpaperColors</span><span class="p">),</span> <span class="n">darkTheme</span><span class="p">)</span>
+
+    <span class="o">..</span><span class="p">.</span></code></pre></div>
+<p>To calculate the system theme colors, identify dominant swatches and build them according to the required specifications. The class identifies a seed color, maps a score to each swatch, considers hue proportions and ranks them to find the most prominent colors.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-kotlin" data-lang="kotlin">        <span class="cm">/**
+</span><span class="cm">         * Filters and ranks colors from WallpaperColors.
+</span><span class="cm">         *
+</span><span class="cm">         * @param wallpaperColors Colors extracted from an image via quantization.
+</span><span class="cm">         * @return List of ARGB ints, ordered from highest scoring to lowest.
+</span><span class="cm">         */</span>
+        <span class="nd">@JvmStatic</span>
+        <span class="k">fun</span> <span class="nf">getSeedColors</span><span class="p">(</span><span class="n">wallpaperColors</span><span class="p">:</span> <span class="n">WallpaperColors</span><span class="p">):</span> <span class="n">List</span><span class="p">&lt;</span><span class="n">Int</span><span class="p">&gt;</span> </code></pre></div>
+<h3 id="theme-overlay-applier">Theme Overlay Applier</h3>
+<p>This last section would ask of us to step into the overlay manager service to understand how the Android system persists the new overlay information upon re evaluation with new colors. We&rsquo;ll look at specific parts of this logic.</p>
+<a href="https://cs.android.com/android/platform/superproject/&#43;/master:frameworks/base/packages/SystemUI/src/com/android/systemui/theme/ThemeOverlayApplier.java;drc=4207a3747b08fb5943fa64e9cbde2e9c166fd388;bpv=1;bpt=1;l=67" target="_blank">
+    <div style="display: flex;margin-left:0.5rem;width: 90%;">   
+        <i class="fas fa-terminal" style="color: var(--color-accent);margin-top:3px;font-size:80%;"></i>
+        <p style="color: var(--color-accent);margin-left:0.5rem;font-size:80%;width: 100%;word-wrap: break-word;">frameworks/base/packages/SystemUI/src/com/android/systemui/theme/ThemeOverlayApplier.java</p>  
+    </div>
+</a>
+
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java">    <span class="kd">static</span> <span class="kd">final</span> <span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">THEME_CATEGORIES</span> <span class="o">=</span> <span class="n">Lists</span><span class="o">.</span><span class="na">newArrayList</span><span class="o">(</span>
+            <span class="n">OVERLAY_CATEGORY_SYSTEM_PALETTE</span><span class="o">,</span>
+            <span class="n">OVERLAY_CATEGORY_ICON_LAUNCHER</span><span class="o">,</span>
+            <span class="n">OVERLAY_CATEGORY_SHAPE</span><span class="o">,</span>
+            <span class="n">OVERLAY_CATEGORY_FONT</span><span class="o">,</span>
+            <span class="n">OVERLAY_CATEGORY_ACCENT_COLOR</span><span class="o">,</span>
+            <span class="n">OVERLAY_CATEGORY_ICON_ANDROID</span><span class="o">,</span>
+            <span class="n">OVERLAY_CATEGORY_ICON_SYSUI</span><span class="o">,</span>
+            <span class="n">OVERLAY_CATEGORY_ICON_SETTINGS</span><span class="o">,</span>
+            <span class="n">OVERLAY_CATEGORY_ICON_THEME_PICKER</span><span class="o">);</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">applyCurrentUserOverlays</span><span class="o">(</span>
+            <span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">OverlayIdentifier</span><span class="o">&gt;</span> <span class="n">categoryToPackage</span><span class="o">,</span>
+            <span class="n">FabricatedOverlay</span><span class="o">[]</span> <span class="n">pendingCreation</span><span class="o">,</span>
+            <span class="kt">int</span> <span class="n">currentUser</span><span class="o">,</span>
+            <span class="n">Set</span><span class="o">&lt;</span><span class="n">UserHandle</span><span class="o">&gt;</span> <span class="n">managedProfiles</span><span class="o">)</span></code></pre></div>
+<p>We have a list of categories the applier will run through to apply the new overlay in a given sequence. A map of the category to the overlay identifier is calculated to determine which packages should be updated with the new colors.</p>
+<p>The applier will utilize the overlay manager and the overlay manager service to update the System UI and packages.</p>
+<p>Thus the system will reflect the new dynamically calculated colors based on the user&rsquo;s wallpaper.</p>
+<blockquote>
+<p><em>I would love to extend this article and talk in finer detail about how the overlay manager and overlay manager service function, doing so may run us out of the scope of this article. Drop a comment if you’d like to read more about them, perhaps in a separate article..</em></p>
+</blockquote>
+<hr>
+<h2 id="material-you">Material You</h2>
+<p>As a result of the above color extraction we end up with colors that have the highest population, and the most prominent colors are extracted from the wallpaper.</p>
+<p>Monet maps the top-most colors/seed colors with the highest rank by the Material You guideline:</p>
+<div style="display: flex;align-items: center;justify-content: center;">
+    <img style="border-radius: 1rem;width:50%;float:left;" src="/images/image-siddroid-m3-palatte.png">
+<ol>
+<li>Primary color</li>
+<li>Secondary color</li>
+<li>Tertiary color</li>
+<li>Neutral color</li>
+<li>Neutral key variant color</li>
+</ol>
+</div>
+<div style="display: flex;align-items: center;justify-content: center;">
+    <p style="font-size: 80%;font-style: italic;opacity: 80%;"> Five dominant colors of Material You from Material.io</p>
+</div>
+<p>13 tones in varying degrees of opacity are extracted from each of the five core colors and only selective colors are used for Material You.</p>
+<div style="display: flex;align-items: center;justify-content: center;">
+    <img style="border-radius: 2rem;" src="/images/image-siddroid-thirteen-tones.png" alt="Use wallpaper generated system colors from Android 12 and Material You to repaint your apps to the users taste by using the material design 3 library and Jetpack compose">
+</div>
+
+<div style="display: flex;align-items: center;justify-content: center;">
+    <p style="font-size: 80%;font-style: italic;opacity: 80%;"> Color tonality based on black and white levels from Material.io </p>
+</div>
+
+
+<hr>
+<p>We end up with an operating system that is truly invested in enriching the user&rsquo;s experience by allowing the expression of their styles, preferences, and aesthetics. <em>It&rsquo;s perfectly called Material You.</em></p>
+<div style="display: flex;align-items: center;justify-content: center;">
+    <img style="border-radius: 2rem;" src="/images/material_you.png" alt="Use wallpaper generated system colors from Android 12 and Material You to repaint your apps to the users taste by using the material design 3 library and Jetpack compose">
+</div>
+
+<div style="display: flex;align-items: center;justify-content: center;">
+    <p style="font-size: 80%;font-style: italic;opacity: 80%;"> A promo from Material.io, showcasing Monet in action with Material You </p>
+</div>
+
+
+<p>Hope you enjoyed this article and understand the framework a bit more than before, while writing it, I cherry-picked portions of code from the Android framework that I felt were important to give an overview of the entire logic that constitutes Monet. If someone from Google or the framework team by any chance happens to read it, please share your feedback and add to our understanding of Monet where ever applicable!</p>
+<p>The source changed quite a lot while I researched into this aspect of the framework, in the future, it will change with new builds and releases of the operating system, yet I think the silhouette of how Monet works should remain the same. <em>(for the most part!)</em></p>
+<hr>
+<h2 id="further-reading--references">Further reading &amp; references</h2>
+<ul>
+<li><a href="https://cs.android.com">Android Superproject</a> for exploring the latest AOSP source.</li>
+<li>Material 3/You guidelines at <a href="https://m3.material.io">Material.io</a></li>
+<li><a href="https://ailephant.com/dominant-colors-in-image-with-k-means/">Using K-Means for identifying dominant colors</a> by Ailephant.com</li>
+<li><a href="https://uca.edu/cse/facultystaff/m-emre-celebi/">More works by ME Celebi</a></li>
+<li><a href="https://www.xda-developers.com/monet-engine-open-sourced-android-12l/#:~:text=One%20of%20the%20most%20notable,Google's%20Pixel%20phones%20so%20far.">XDA: Inclusion of Monet in AOSP with Android 12L</a></li>
+</ul>
+<h2 id="attributions">Attributions</h2>
+<ul>
+<li><a href="https://www.flaticon.com/free-icon/color-palette_3214398?term=palette&amp;page=1&amp;position=3&amp;page=1&amp;position=3&amp;related_id=3214398&amp;origin=search#">Flaticon for icons</a></li>
+<li><a href="https://developer.android.com">Android Developers</a> for Android logo, and other assets.</li>
+<li><a href="https://m3.material.io">Material.io</a> on imagery for Material You.</li>
+</ul>
+<hr>
+
+</div>
+
+
+
+
+<div class="authorCard" style="margin-bottom: 1em;">
+  <p style="font-weight: bold;">
+    <i class="fas fa-bookmark" style="margin-right: 0.5em;color: #FFD54F;"></i>
+    About the author
+  </p>
+
+  <img src="/images/siddhesh_patil.jpg" style="width: 3rem;height:3rem;float:left;margin-right:0.5rem;margin-bottom: 0.5rem;clip-path: circle(50% at 50% 50%);shape-outside: circle(50%);
+  " alt="Siddhesh Patil is an Android Engineer at DeliveryHero. Building core ordering experiences at Foodpanda and Foodora. He is the organzier of Kotlin Mumbai, a developer community in Mumbai, India. Find talks, articles and latest developments in Android and Kotlin on this website siddroid.com">
+
+  <p style="font-size: 80%;">
+      Sid Patil is an Android Engineer and Kotlin Advocate based in Berlin, Germany. He works at Delivery Hero, building ordering experiences for food delivery and Q-commerce brands like Foodpanda and Foodora. 
+  </p>
+  
+  
+
+
+
+
+
+    <a href="https://twitter.com/Siddroid?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="true">Follow @Siddroid</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+    
+    
+  
+
+  </div>
+
+  <div>
+    <p style="font-size: 90%;margin-top: 10px;font-style: italic;">
+      This publication was last updated on April 28, 2022
+    </p>
+  
+  </div>
+  
+  
+
+ 
+  
+  
+  
+  
+
+<style>
+#share-buttons {display: inline-block; vertical-align: middle; }
+#share-buttons:after {content: ""; display: block; clear: both;}
+#share-buttons > div {
+position: relative;
+text-align: left; 
+height: 36px; 
+width: 32px; 
+float: left; 
+text-align: center;
+}
+#share-buttons > div > svg {height: 16px; fill: var(--color-text-l2); margin-top: 10px;}
+#share-buttons > div:hover {cursor: pointer;}
+#share-buttons > div.facebook:hover > svg {fill: #3B5998;}
+#share-buttons > div.twitter:hover > svg {fill: #55ACEE;}
+#share-buttons > div.mail:hover > svg {fill: rgb(238, 36, 36);}
+#share-buttons > div.instagram:hover > svg {fill: #C73B92;}
+#share-buttons > div.facebook > svg {height: 18px; margin-top: 9px;}
+#share-buttons > div.twitter > svg {height: 20px; margin-top: 8px;}
+#share-buttons > div.mail > svg {height: 14px; margin-top: 11px;}
+</style>
+
+<span style="color: var(--color-text-l2);font-family: sansfont;">Share on </span><div id="share-buttons">
+<div class="facebook" title="Share this on Facebook" onclick="window.open('http://www.facebook.com/share.php?u=https:\/\/siddroid.com\/post\/android\/chasing-monet-inside-the-android-framework\/');"><svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1343 12v264h-157q-86 0-116 36t-30 108v189h293l-39 296h-254v759h-306v-759h-255v-296h255v-218q0-186 104-288.5t277-102.5q147 0 228 12z"/></svg></div>
+<div class="twitter" title="Share this on Twitter" onclick="window.open('https://twitter.com/intent/tweet?&url=https:\/\/siddroid.com\/post\/android\/chasing-monet-inside-the-android-framework\/');"><svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1684 408q-67 98-162 167 1 14 1 42 0 130-38 259.5t-115.5 248.5-184.5 210.5-258 146-323 54.5q-271 0-496-145 35 4 78 4 225 0 401-138-105-2-188-64.5t-114-159.5q33 5 61 5 43 0 85-11-112-23-185.5-111.5t-73.5-205.5v-4q68 38 146 41-66-44-105-115t-39-154q0-88 44-163 121 149 294.5 238.5t371.5 99.5q-8-38-8-74 0-134 94.5-228.5t228.5-94.5q140 0 236 102 109-21 205-78-37 115-142 178 93-10 186-50z"/></svg></div>
+<div class="mail" title="Share this through Email" onclick="window.open('mailto:?&body=https:\/\/siddroid.com\/post\/android\/chasing-monet-inside-the-android-framework\/');"><svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1792 710v794q0 66-47 113t-113 47h-1472q-66 0-113-47t-47-113v-794q44 49 101 87 362 246 497 345 57 42 92.5 65.5t94.5 48 110 24.5h2q51 0 110-24.5t94.5-48 92.5-65.5q170-123 498-345 57-39 100-87zm0-294q0 79-49 151t-122 123q-376 261-468 325-10 7-42.5 30.5t-54 38-52 32.5-57.5 27-50 9h-2q-23 0-50-9t-57.5-27-52-32.5-54-38-42.5-30.5q-91-64-262-182.5t-205-142.5q-62-42-117-115.5t-55-136.5q0-78 41.5-130t118.5-52h1472q65 0 112.5 47t47.5 113z"/></svg></div>
+</div>
+  
+  
+
+
+  
+
+  
+
+
+  <div id="disqus_thread" style="z-index: 0;"></div>
+
+  <script>
+    (function () {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://truestark.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+
+
+      
+      
+      
+   
+      
+
+      
+
+
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by
+      Disqus.</a></noscript>
+
+    
+      
+  
+
+  
+  
+
+
+  
+
+  <div>
+  <hr>
+  <h3>
+    <i class="fas fa-book" style="margin-right: 0.5em;"></i>
+    More articles to read
+  </h3>
+  
+  
+  <div style="overflow: auto;white-space: nowrap;">
+  
+  
+  
+  <ul style="list-style: none;margin-left: -10px;padding: 0;margin-top: 10px;display: flex;">
+    
+        <li style="margin: 10px;;margin-bottom: 10px;">
+          <a href="https://siddroid.com/post/compose/dynamic-themes-with-compose-and-material-3/" style="color: #4b4444;text-decoration: none;">
+            <div class="card" style="background-color: var(--color-canvas-l2);max-width: 20em;min-height: 7em;">
+    
+              <div style="padding: 10px;">
+    
+                <div style="padding-left: 20px;padding-right: 20px;height: 50%;">
+                  <h4 style="color: var(--color-text-l2);max-lines: 1;text-overflow: ellipsis;overflow: hidden;max-height: 3em;white-space: nowrap;">Dynamic themes with Compose and Material 3</h4>
+                  <p style="font-size: 80%;color: var(--color-text-l2);">
+                    <i class="far fa-calendar" aria-hidden="true" style="margin-right: 0.2em;"></i>
+                    <time datetime="2022-04-28T00:50:55&#43;0100">Apr 28, 2022</time>
+                  </p>
+        
+                  <p style="font-size: 80%;color: var(--color-text-l2);max-height:3em;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;max-lines: 2;">
+                    
+                    Use wallpaper generated system colors from Android 12 and Material You to repaint your apps to the users taste by using the material design 3 library and Jetpack compose
+                    
+                  </p>
+              </div>
+            </div>
+          </a>
+        </li> 
+        
+        <li style="margin: 10px;;margin-bottom: 10px;">
+          <a href="https://siddroid.com/post/community/event-android-worldwide-january-2022/" style="color: #4b4444;text-decoration: none;">
+            <div class="card" style="background-color: var(--color-canvas-l2);max-width: 20em;min-height: 7em;">
+    
+              <div style="padding: 10px;">
+    
+                <div style="padding-left: 20px;padding-right: 20px;height: 50%;">
+                  <h4 style="color: var(--color-text-l2);max-lines: 1;text-overflow: ellipsis;overflow: hidden;max-height: 3em;white-space: nowrap;">Android Worldwide: January 2022</h4>
+                  <p style="font-size: 80%;color: var(--color-text-l2);">
+                    <i class="far fa-calendar" aria-hidden="true" style="margin-right: 0.2em;"></i>
+                    <time datetime="2022-01-27T00:02:16&#43;0530">Jan 27, 2022</time>
+                  </p>
+        
+                  <p style="font-size: 80%;color: var(--color-text-l2);max-height:3em;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;max-lines: 2;">
+                    
+                    We kickstart 2022 at Android Worldwide with a two days session on January 25th &amp; 26th. This quarter we cover different topics ranging from managing memory at multiplatform level with Kotlin, maxing out the performance of your SQLite database, implementing FTS for faster database querying and much more!
+                    
+                  </p>
+              </div>
+            </div>
+          </a>
+        </li> 
+        
+        <li style="margin: 10px;;margin-bottom: 10px;">
+          <a href="https://siddroid.com/post/post-i-have-joined-delivery-hero-in-berlin-germany/" style="color: #4b4444;text-decoration: none;">
+            <div class="card" style="background-color: var(--color-canvas-l2);max-width: 20em;min-height: 7em;">
+    
+              <div style="padding: 10px;">
+    
+                <div style="padding-left: 20px;padding-right: 20px;height: 50%;">
+                  <h4 style="color: var(--color-text-l2);max-lines: 1;text-overflow: ellipsis;overflow: hidden;max-height: 3em;white-space: nowrap;">I have joined Delivery Hero!</h4>
+                  <p style="font-size: 80%;color: var(--color-text-l2);">
+                    <i class="far fa-calendar" aria-hidden="true" style="margin-right: 0.2em;"></i>
+                    <time datetime="2021-11-11T13:21:39&#43;0100">Nov 11, 2021</time>
+                  </p>
+        
+                  <p style="font-size: 80%;color: var(--color-text-l2);max-height:3em;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;max-lines: 2;">
+                    
+                    Super excited to share that I have joined Delivery Hero and relocated to Berlin, Germany. For the next chapter of my career, I will be helping shape ordering experiences of multiple food delivery and Q-commerce apps.
+                    
+                  </p>
+              </div>
+            </div>
+          </a>
+        </li> 
+        
+        <li style="margin: 10px;;margin-bottom: 10px;">
+          <a href="https://siddroid.com/post/kotlin-mumbai-events/post-kotlin-for-backend-engineering-himanshu-singh/" style="color: #4b4444;text-decoration: none;">
+            <div class="card" style="background-color: var(--color-canvas-l2);max-width: 20em;min-height: 7em;">
+    
+              <div style="padding: 10px;">
+    
+                <div style="padding-left: 20px;padding-right: 20px;height: 50%;">
+                  <h4 style="color: var(--color-text-l2);max-lines: 1;text-overflow: ellipsis;overflow: hidden;max-height: 3em;white-space: nowrap;">Kotlin Mumbai: Learn backend engineering with Ktor</h4>
+                  <p style="font-size: 80%;color: var(--color-text-l2);">
+                    <i class="far fa-calendar" aria-hidden="true" style="margin-right: 0.2em;"></i>
+                    <time datetime="2021-08-31T13:11:34&#43;0530">Aug 31, 2021</time>
+                  </p>
+        
+                  <p style="font-size: 80%;color: var(--color-text-l2);max-height:3em;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;max-lines: 2;">
+                    
+                    Himanshu Singh convinces us why Kotlin is a viable option for backend engineering. Explore popular Kotlin backend frameworks and understand the merits of using Ktor.
+                    
+                  </p>
+              </div>
+            </div>
+          </a>
+        </li> 
+        
+        <li style="margin: 10px;;margin-bottom: 10px;">
+          <a href="https://siddroid.com/post/kotlin/build-function-chains-using-composition-in-kotlin/" style="color: #4b4444;text-decoration: none;">
+            <div class="card" style="background-color: var(--color-canvas-l2);max-width: 20em;min-height: 7em;">
+    
+              <div style="padding: 10px;">
+    
+                <div style="padding-left: 20px;padding-right: 20px;height: 50%;">
+                  <h4 style="color: var(--color-text-l2);max-lines: 1;text-overflow: ellipsis;overflow: hidden;max-height: 3em;white-space: nowrap;">Build function chains using composition in Kotlin</h4>
+                  <p style="font-size: 80%;color: var(--color-text-l2);">
+                    <i class="far fa-calendar" aria-hidden="true" style="margin-right: 0.2em;"></i>
+                    <time datetime="2021-08-24T12:06:12&#43;0530">Aug 24, 2021</time>
+                  </p>
+        
+                  <p style="font-size: 80%;color: var(--color-text-l2);max-height:3em;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;max-lines: 2;">
+                    
+                    Leverage Kotlin fold aggregating operators to build function chains with compositional patterns. Learn how you can build a system similar to compose UIs Modifier logic on Android
+                    
+                  </p>
+              </div>
+            </div>
+          </a>
+        </li> 
+        
+        <li style="margin: 10px;;margin-bottom: 10px;">
+          <a href="https://siddroid.com/post/kotlin-mumbai-events/post-android-worldwide-july-2021/" style="color: #4b4444;text-decoration: none;">
+            <div class="card" style="background-color: var(--color-canvas-l2);max-width: 20em;min-height: 7em;">
+    
+              <div style="padding: 10px;">
+    
+                <div style="padding-left: 20px;padding-right: 20px;height: 50%;">
+                  <h4 style="color: var(--color-text-l2);max-lines: 1;text-overflow: ellipsis;overflow: hidden;max-height: 3em;white-space: nowrap;">Android Worldwide: July 2021</h4>
+                  <p style="font-size: 80%;color: var(--color-text-l2);">
+                    <i class="far fa-calendar" aria-hidden="true" style="margin-right: 0.2em;"></i>
+                    <time datetime="2021-08-19T00:02:16&#43;0530">Aug 19, 2021</time>
+                  </p>
+        
+                  <p style="font-size: 80%;color: var(--color-text-l2);max-height:3em;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;max-lines: 2;">
+                    
+                    This quarter we explore simple stacks, Error handling with arrow, new activity results API, mobile devops, better gradle dependencies, shared flows in Kotlin, common code issues with KSP, new Window insets API in Android worldwide July 2021 sessions
+                    
+                  </p>
+              </div>
+            </div>
+          </a>
+        </li> 
+        
+      </ul>
+  </div>  
+  
+  </div>
+  
+  
+
+
+  
+
+</div>
+
+
+
+
+
+
+
+      </div>
+
+  </main>
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js"
+          integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0="
+          crossorigin="anonymous"></script>
+
+  
+  <script src="https://siddroid.com/js/highlight.pack.js"></script>
+  <script>hljs.highlightAll();</script>
+
+  <script src="https://unpkg.com/lunr/lunr.js"></script>
+
+  <script src="https://siddroid.com/js/search.js"></script>
+
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-172413499-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+  <script src="https://siddroid.com/js/custom.js"></script> </script>
+</body>
+
+<footer>
+
+  <div class="bottomBar">
+
+  
+    <section class="social-icons">
+      <div style="display: flex;justify-content: center;margin-bottom: 1rem;">
+          
+          <a href="http://twitter.com/intent/user?screen_name=siddroid" rel="me" title="Twitter" target="_blank" style="color: #c7c7c7;margin-left: 1rem;margin-right: 1rem;">
+            
+            <div style="display: flex;align-items: center;justify-content: center;color: var(--color-text-experimental);">
+              <i class="fab fa-twitter" aria-hidden="true" style="height: 23px;width: 23px;"></i>
+          </div>
+          </a>
+          
+          <a href="https://www.linkedin.com/in/patilsid/" rel="me" title="Linkedin" target="_blank" style="color: #c7c7c7;margin-left: 1rem;margin-right: 1rem;">
+            
+            <div style="display: flex;align-items: center;justify-content: center;color: var(--color-text-experimental);">
+              <i class="fab fa-linkedin" aria-hidden="true" style="height: 23px;width: 23px;"></i>
+          </div>
+          </a>
+          
+          <a href="https://github.com/patilsiddhesh" rel="me" title="GitHub" target="_blank" style="color: #c7c7c7;margin-left: 1rem;margin-right: 1rem;">
+            
+            <div style="display: flex;align-items: center;justify-content: center;color: var(--color-text-experimental);">
+              <i class="fab fa-github" aria-hidden="true" style="height: 23px;width: 23px;"></i>
+          </div>
+          </a>
+          
+          <a href="https://www.reddit.com/user/siddheshpatil/" rel="me" title="Reddit" target="_blank" style="color: #c7c7c7;margin-left: 1rem;margin-right: 1rem;">
+            
+            <div style="display: flex;align-items: center;justify-content: center;color: var(--color-text-experimental);">
+              <i class="fab fa-reddit" aria-hidden="true" style="height: 23px;width: 23px;"></i>
+          </div>
+          </a>
+          
+      </div>
+    </section>
+
+    <section>
+      <div style="display: flex;justify-content: center;">
+          <a href="/browse/android/" rel="me" title="Android" style="color:  var(--color-accent);margin-left: 0.5rem;margin-right: 0.5rem;">
+            
+            <div style="display: flex;align-items: center;justify-content: center;">
+                <p style="font-size:80%; color:  var(--color-accent); font-family:sansfont;">Android</p>                      
+            </div>
+          </a>
+          <a href="/browse/" rel="me" title="browse" style="color:  var(--color-accent);margin-left: 0.5rem;margin-right: 0.5rem;">
+            
+            <div style="display: flex;align-items: center;justify-content: center;">
+                <p style="font-size:80%; color:  var(--color-accent); font-family:sansfont;">Browse</p>                      
+            </div>
+          </a>
+          <a href="/work/" rel="me" title="work" style="color:  var(--color-accent);margin-left: 0.5rem;margin-right: 0.5rem;">
+            
+            <div style="display: flex;align-items: center;justify-content: center;">
+                <p style="font-size:80%; color:  var(--color-accent); font-family:sansfont;">Work</p>                      
+            </div>
+          </a>
+          <a href="/browse/talks/" rel="me" title="talks" style="color:  var(--color-accent);margin-left: 0.5rem;margin-right: 0.5rem;">
+            
+            <div style="display: flex;align-items: center;justify-content: center;">
+                <p style="font-size:80%; color:  var(--color-accent); font-family:sansfont;">Talks</p>                      
+            </div>
+          </a>
+          <a href="/about/" rel="me" title="About" style="color:  var(--color-accent);margin-left: 0.5rem;margin-right: 0.5rem;">
+            
+            <div style="display: flex;align-items: center;justify-content: center;">
+                <p style="font-size:80%; color:  var(--color-accent); font-family:sansfont;">About</p>                      
+            </div>
+          </a>
+      </div>
+    </section>
+
+  
+
+  <p style="font-size: 70%;margin-top: 0.5rem;margin-bottom:1rem;margin-left:5rem;margin-right:5rem;text-align: center;">Read the latest articles on Android, Kotlin and open-source projects. Find tech talks, news from communities, developer events, and workshops by Android app developers around the world.</p>
+
+  <div class="copyright" style="font-family: sansfont;">
+    Sid Patil 2022 · <a href="/policy/">Content & Privacy Policy</a>
+  </div>
+
+  </div>      
+
+  
+  
+
+</footer>
+
+
+
+
+</html>

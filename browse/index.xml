@@ -6,7 +6,25 @@
     <description>Recent content in Browse on Sid Patil - Android Engineer and Kotlin Advocate</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 27 Jan 2022 00:02:16 +0530</lastBuildDate><atom:link href="https://siddroid.com/browse/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 28 Apr 2022 00:50:55 +0100</lastBuildDate><atom:link href="https://siddroid.com/browse/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Android</title>
+      <link>https://siddroid.com/browse/android/</link>
+      <pubDate>Thu, 28 Apr 2022 00:50:55 +0100</pubDate>
+      
+      <guid>https://siddroid.com/browse/android/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Compose</title>
+      <link>https://siddroid.com/browse/compose/</link>
+      <pubDate>Thu, 28 Apr 2022 00:50:55 +0100</pubDate>
+      
+      <guid>https://siddroid.com/browse/compose/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Community</title>
       <link>https://siddroid.com/browse/community/</link>
@@ -22,15 +40,6 @@
       <pubDate>Thu, 11 Nov 2021 13:21:39 +0100</pubDate>
       
       <guid>https://siddroid.com/browse/updates/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Compose</title>
-      <link>https://siddroid.com/browse/compose/</link>
-      <pubDate>Tue, 24 Aug 2021 12:06:12 +0530</pubDate>
-      
-      <guid>https://siddroid.com/browse/compose/</guid>
       <description></description>
     </item>
     
@@ -58,15 +67,6 @@
       <pubDate>Sat, 24 Oct 2020 16:37:06 +0530</pubDate>
       
       <guid>https://siddroid.com/browse/talks/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Android</title>
-      <link>https://siddroid.com/browse/android/</link>
-      <pubDate>Sun, 08 Mar 2020 20:11:21 +0530</pubDate>
-      
-      <guid>https://siddroid.com/browse/android/</guid>
       <description></description>
     </item>
     

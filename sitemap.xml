@@ -17,19 +17,31 @@
     <loc>https://siddroid.com/about/</loc>
     <lastmod>2020-03-08T20:22:27+05:30</lastmod>
   </url><url>
+    <loc>https://siddroid.com/browse/android/</loc>
+    <lastmod>2022-04-28T00:50:55+01:00</lastmod>
+  </url><url>
+    <loc>https://siddroid.com/browse/</loc>
+    <lastmod>2022-04-28T00:50:55+01:00</lastmod>
+  </url><url>
+    <loc>https://siddroid.com/post/android/chasing-monet-inside-the-android-framework/</loc>
+    <lastmod>2022-04-28T00:50:55+01:00</lastmod>
+  </url><url>
+    <loc>https://siddroid.com/browse/compose/</loc>
+    <lastmod>2022-04-28T00:50:55+01:00</lastmod>
+  </url><url>
+    <loc>https://siddroid.com/post/compose/dynamic-themes-with-compose-and-material-3/</loc>
+    <lastmod>2022-04-28T00:50:55+01:00</lastmod>
+  </url><url>
+    <loc>https://siddroid.com/post/</loc>
+    <lastmod>2022-04-28T00:50:55+01:00</lastmod>
+  </url><url>
+    <loc>https://siddroid.com/</loc>
+    <lastmod>2022-04-28T00:50:55+01:00</lastmod>
+  </url><url>
     <loc>https://siddroid.com/post/community/event-android-worldwide-january-2022/</loc>
     <lastmod>2022-01-27T00:02:16+05:30</lastmod>
   </url><url>
-    <loc>https://siddroid.com/browse/</loc>
-    <lastmod>2022-01-27T00:02:16+05:30</lastmod>
-  </url><url>
     <loc>https://siddroid.com/browse/community/</loc>
-    <lastmod>2022-01-27T00:02:16+05:30</lastmod>
-  </url><url>
-    <loc>https://siddroid.com/post/</loc>
-    <lastmod>2022-01-27T00:02:16+05:30</lastmod>
-  </url><url>
-    <loc>https://siddroid.com/</loc>
     <lastmod>2022-01-27T00:02:16+05:30</lastmod>
   </url><url>
     <loc>https://siddroid.com/post/post-i-have-joined-delivery-hero-in-berlin-germany/</loc>
@@ -42,9 +54,6 @@
     <lastmod>2021-08-31T13:11:34+05:30</lastmod>
   </url><url>
     <loc>https://siddroid.com/post/kotlin/build-function-chains-using-composition-in-kotlin/</loc>
-    <lastmod>2021-08-24T12:06:12+05:30</lastmod>
-  </url><url>
-    <loc>https://siddroid.com/browse/compose/</loc>
     <lastmod>2021-08-24T12:06:12+05:30</lastmod>
   </url><url>
     <loc>https://siddroid.com/browse/kotlin/</loc>
@@ -124,9 +133,6 @@
   </url><url>
     <loc>https://siddroid.com/post/post-march-kotlin-mumbai-2020/</loc>
     <lastmod>2020-04-05T15:33:09+05:30</lastmod>
-  </url><url>
-    <loc>https://siddroid.com/browse/android/</loc>
-    <lastmod>2020-03-08T20:11:21+05:30</lastmod>
   </url><url>
     <loc>https://siddroid.com/post/post-android-rationale-permission-dialogs-2020/</loc>
     <lastmod>2020-03-08T20:11:21+05:30</lastmod>
