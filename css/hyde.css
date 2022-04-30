@@ -580,6 +580,33 @@ line-height: 1;
   }
 }
 
+.mobileHidden {
+  visibility:visible;
+  height:auto;
+  width:auto;
+}
+
+@media (max-width: 64em) {
+  .mobileHidden {
+    visibility: hidden;
+    height: 0px;
+    width: 0px;
+  }
+}
+
+.mobileShown {
+  visibility: hidden;
+  height: 0px;
+  width: 0px;
+}
+
+@media (max-width: 64em) {
+  .mobileShown {
+    visibility: visible;
+    height: fit-content;
+    width: fit-content;
+  }
+}
 
 @media (max-width: 64em) {
   .topBarLayoutDesk {
