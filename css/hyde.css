@@ -350,12 +350,28 @@ ul.posts {
 
 @font-face {
   font-family: gilroysb;
-  src: url(/fonts/Gilroy-Medium.woff2);
+  src: url(/fonts/Gilroy.woff2) format("woff");
+  speak: none;
+font-style: normal;
+font-weight: bold;
+font-variant: normal;
+text-transform: none;
+line-height: 1;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
 }
 
 @font-face {
   font-family: gilroyb;
-  src: url(/fonts/Gilroy-Medium.woff2);
+  src: url(/fonts/Gilroy.woff2) format("woff");
+  speak: none;
+font-style: normal;
+font-weight: bold;
+font-variant: normal;
+text-transform: none;
+line-height: 1;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
 }
 
 .tagBg {
