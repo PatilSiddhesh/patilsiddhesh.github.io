@@ -345,7 +345,7 @@ ul.posts {
 
 @font-face {
   font-family: sansfont;
-  src: url(/fonts/Roboto-Regular.woff2);
+  src: url(/fonts/Roboto-Regular.woff2) format("woff");
 }
 
 @font-face {
