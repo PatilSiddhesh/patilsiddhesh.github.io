@@ -103,27 +103,27 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: 2rem;
-  font-family: "manropeb";
+  font-family: "gilroyb";
 
 }
 
 h2 {
   margin-top: 1rem;
   font-size: 1.5rem;
-  font-family: "manropesb";
+  font-family: "gilroysb";
 
 }
 
 h3 {
   margin-top: 1rem;
   font-size: 1.25rem;
-  font-family: manropesb;
+  font-family: gilroysb;
 }
 
 h4, h5, h6 {
   margin-top: 1rem;
   font-size: 1rem;
-  font-family: manropesb;
+  font-family: gilroysb;
 }
 
 /* Body text */
@@ -135,6 +135,7 @@ p {
 
 strong {
   color: var(--color-text-l2) !important;
+  font-family: gilroyb;
 }
 
 /* Lists */

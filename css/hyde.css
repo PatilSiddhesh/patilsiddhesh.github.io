@@ -349,13 +349,13 @@ ul.posts {
 }
 
 @font-face {
-  font-family: manropesb;
-  src: url(/fonts/HeadingStandard.woff2);
+  font-family: gilroysb;
+  src: url(/fonts/Gilroy-Medium.woff2);
 }
 
 @font-face {
-  font-family: manropeb;
-  src: url(/fonts/HeadingStandard.woff2);
+  font-family: gilroyb;
+  src: url(/fonts/Gilroy-Medium.woff2);
 }
 
 .tagBg {
