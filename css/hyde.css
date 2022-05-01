@@ -68,6 +68,7 @@
 
 html {
   font-family: "sansfont", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";;
+  -webkit-tap-highlight-color: transparent;
 }
 
 @media (min-width: 48em) {
@@ -159,10 +160,25 @@ html, body {
 }
 
 .copyright {
-  font-size: .7rem;
+  font-size: .8rem;
   text-align: center;
 }
 
+.footerDescText {
+  margin-top: 0.5rem;
+  margin-bottom:1rem;
+  margin-left:5rem;
+  margin-right:5rem;
+}
+
+@media (max-width: 64em) {
+  .footerDescText {
+    margin-top: 0.5rem;
+    margin-bottom:1rem;
+    margin-left:2rem;
+    margin-right:2rem;
+  }
+}
 
 footer {
   margin-bottom: 5rem;
@@ -178,11 +194,13 @@ footer {
 
 .postTitleHeading {
   font-size:40pt;
+  font-family: gilroy-desk;
 }
 
 @media (max-width: 74em) {
   .postTitleHeading {
     font-size:30pt;
+    font-family: gilroyb;
   }
 }
 
@@ -351,6 +369,19 @@ ul.posts {
 @font-face {
   font-family: gilroysb;
   src: url(/fonts/Gilroy.woff2) format("woff");
+  speak: none;
+font-style: normal;
+font-weight: bold;
+font-variant: normal;
+text-transform: none;
+line-height: 1;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+}
+
+@font-face {
+  font-family: gilroy-desk;
+  src: url(/fonts/Gilroy-SemiBold.woff2) format("woff");
   speak: none;
 font-style: normal;
 font-weight: bold;

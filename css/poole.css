@@ -138,6 +138,30 @@ strong {
   font-family: gilroyb;
 }
 
+@media (min-width: 64em) {
+  .strong {
+    font-family: gilroy-desk;
+  }
+}
+
+@media (min-width: 64em) {
+  .h1, h2, h3, h4, h5, h6 {
+    font-family: gilroy-desk;
+  }
+}
+
+.headerTxt {
+  font-family: gilroyb;
+}
+
+@media (min-width: 64em) {
+  .headerTxt {
+    font-family: gilroy-desk;
+  }
+}
+
+
+
 /* Lists */
 
 ul, ol, dl {
