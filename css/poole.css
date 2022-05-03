@@ -228,7 +228,7 @@ pre {
   padding: 1rem;
   font-size: .8rem;
   line-height: 1.6;
-  background-color: var(--color-canvas-pitview) !important;
+  background-color: var(--color-code-bg) !important;
   border:0.08rem solid var(--color-canvas-border);
   overflow-x: scroll !important;
   word-wrap: normal;
@@ -244,7 +244,7 @@ pre code {
   background-color: transparent;
   overflow-x: scroll !important;
   word-wrap: normal;
-  background-color: var(--color-canvas-pitview) !important;
+  background-color: var(--color-code-bg) !important;
   white-space: pre;
 }
 
@@ -252,7 +252,7 @@ pre code {
   overflow-x: hidden !important;
   margin-bottom: 1rem;
   border-radius: 4px;
-  background-color: var(--color-canvas-pitview) !important;
+  background-color: var(--color-code-bg) !important;
   font-family: jetbrains;
 }
 
@@ -260,8 +260,8 @@ pre code {
   overflow-x: scroll !important;
   margin-bottom: 0;
   border:0.08rem solid var(--color-canvas-border-l2);
-  color:  #37474f !important;
-  background-color: var(--color-canvas-pitview) !important;
+  color:  #ffffff !important;
+  background-color: var(--color-code-bg) !important;
 }
 
 /* Quotes */
@@ -447,8 +447,17 @@ tbody tr:nth-child(odd) td, tbody tr:nth-child(odd) th {
   color: #999;
 }
 
+.a:hover {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+.a {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
 .related-posts li a:hover {
-  color: #227bb9;
+  color: var(--color-accent);
   text-decoration: none;
 }
 
