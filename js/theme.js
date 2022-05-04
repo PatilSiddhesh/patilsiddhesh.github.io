@@ -31,8 +31,14 @@ function toggleTheme() {
           ga('send', 'event', 'Theme', "dark");
 
         }
-
+        try {
+          DISQUS.reset({
+            reload: true
+          });
+        } catch (error) {
+          console.log("No disqus embed to reset");
+        }
+        
 }
-
 
 
