@@ -6,7 +6,7 @@
     <description>Recent content on Sid Patil - Android Engineer and Kotlin Advocate</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 28 Apr 2022 00:50:55 +0100</lastBuildDate><atom:link href="https://siddroid.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 19 May 2022 12:50:55 +0100</lastBuildDate><atom:link href="https://siddroid.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Work</title>
       <link>https://siddroid.com/work/</link>
@@ -51,6 +51,15 @@
       
       <guid>https://siddroid.com/about/</guid>
       <description>Android Engineer and Kotlin Advocate based in Berlin, Germany.</description>
+    </item>
+    
+    <item>
+      <title>Supporting adaptive themed icons on Android 13</title>
+      <link>https://siddroid.com/post/android/supporting-adaptive-themed-icons-on-android-13/</link>
+      <pubDate>Thu, 19 May 2022 12:50:55 +0100</pubDate>
+      
+      <guid>https://siddroid.com/post/android/supporting-adaptive-themed-icons-on-android-13/</guid>
+      <description>Android 13 Tiramisu adds support for adaptive dynamic themed icons.</description>
     </item>
     
     <item>
