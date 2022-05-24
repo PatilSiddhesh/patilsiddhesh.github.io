@@ -101,6 +101,7 @@
  --color-footer:#28282e;
  --color-site-logo-text: #e8eaed;
  --color-text-experimental: #e8eaed;
+ --color-text-highlight: #008f5d;
 
  --color-code-text:#f8f8f2;
  --color-code-bg:#252529;
@@ -458,10 +459,14 @@ line-height: 1;
 .tagBg {
  display: flex;
  justify-content: center;
- padding-right: 0.5em;
+ padding-top: 0.3rem;
+ padding-bottom: 0.3rem;
+ padding-left: 0.5rem;
+ padding-right: 0.5rem;
  font-size: 80%;
  color: var(--color-text-l2);
-
+ background: var(--color-canvas-pitview);
+ border-radius: 2rem;
  /* color: var(--color-text-l2); */
 }
 
@@ -506,16 +511,18 @@ line-height: 1;
 
 .iconHeader {
   padding-top: 4rem !important;
-  margin-top: -3rem !important;
+  margin-top: -3.2rem !important;
 }
 
 .negativeBlockquote {
-  border-left: 0.3rem solid var(--color-red-orange) !important;
+  border-left: 0rem solid var(--color-green) !important;
+  border-radius: 0.5rem !important;
   background-color: var(--color-hot-orange-quote) !important;
 }
 
 .positiveBlockquote {
-  border-left: 0.3rem solid var(--color-green) !important;
+  border-left: 0rem solid var(--color-green) !important;
+  border-radius: 0.5rem !important;
   background-color: var(--color-pear-green-quote) !important;
 }
 
