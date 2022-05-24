@@ -59,7 +59,7 @@
       <pubDate>Thu, 19 May 2022 12:50:55 +0100</pubDate>
       
       <guid>https://siddroid.com/post/android/supporting-adaptive-themed-icons-on-android-13/</guid>
-      <description>Android 13 Tiramisu adds support for adaptive dynamic themed icons.</description>
+      <description>Android 13 Tiramisu adds support for adaptive dynamic themed icons. You can now migrate your applications to add support for the dynamic behavior where your apps can change colors according to the system-wide theme.</description>
     </item>
     
     <item>
