@@ -418,6 +418,11 @@ ul.posts {
 }
 
 @font-face {
+  font-family: robotomed;
+  src: url(/fonts/Roboto-Medium.woff2) format("woff");
+ }
+
+@font-face {
  font-family: gilroysb;
  src: url(/fonts/Gilroy.woff2) format("woff");
  speak: none;
@@ -463,11 +468,13 @@ line-height: 1;
  padding-bottom: 0.3rem;
  padding-left: 0.5rem;
  padding-right: 0.5rem;
- font-size: 72%;
+ font-size: 85%;
  line-height: 21px;
  color: var(--color-text-l2);
  background: var(--color-canvas-pitview);
- border-radius: 2rem;
+ border-radius: 1rem;
+ overflow:hidden;
+ white-space: nowrap;
  /* color: var(--color-text-l2); */
 }
 

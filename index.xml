@@ -68,7 +68,7 @@
       <pubDate>Thu, 28 Apr 2022 00:50:55 +0100</pubDate>
       
       <guid>https://siddroid.com/post/android/chasing-monet-inside-the-android-framework/</guid>
-      <description>Material You graphic from Material.io  Android 13 Tiramisu is a couple of months away from a full stable release and only last year did Google introduce Material You with Android 12/12L, changing their material design guidelines for the third time.</description>
+      <description>bookmark_border  Featured in AndroidWeekly.net  Issue #516     Android 13 Tiramisu is a couple of months away from a full stable release and only last year did Google introduce Material You with Android 12/12L, changing their material design guidelines for the third time.</description>
     </item>
     
     <item>
@@ -113,7 +113,7 @@
       <pubDate>Tue, 24 Aug 2021 12:06:12 +0530</pubDate>
       
       <guid>https://siddroid.com/post/kotlin/build-function-chains-using-composition-in-kotlin/</guid>
-      <description>We are going to focus on how we can use functions to alter the nature of an object and change it, and how we can chain functions together to apply their effects on an object in one go with a composite pattern.</description>
+      <description>bookmark_border  Featured in KotlinWeekly.net  Issue #267    bookmark_border  Featured in AndroidWeekly.</description>
     </item>
     
     <item>
@@ -158,7 +158,7 @@
       <pubDate>Tue, 30 Mar 2021 13:22:25 +0530</pubDate>
       
       <guid>https://siddroid.com/post/projects/holi-a-library-of-colors-for-jetpack-compose/</guid>
-      <description>A library of colors, gradients and utils built using Jetpack Compose for Android  Listed on Google developers</description>
+      <description>bookmark_border  Featured in AndroidWeekly.net  Issue #460    code  Open-sourced on  Google Developers Library     A library of colors, gradients and utils built using Jetpack Compose for Android   Features  A wide collection of colors from different palettes for easy access in your pet projects Provides easy gradient building functions that all your composable brushes need Just 28 KB in size!</description>
     </item>
     
     <item>
