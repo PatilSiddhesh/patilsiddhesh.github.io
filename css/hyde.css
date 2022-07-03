@@ -38,18 +38,19 @@
   --color-canvas-border: #dadce0;
   --color-text-l1:#1f1f1f;
   --color-text-l2: #1f1f1f;
+  --color-text-headers: #1f1f1f;
   --color-text-experimental: #1f1f1f;
   --color-text-sub: #86868B;
   --color-accent: #1769e0;
   --color-topbar: #f6f8fc;
   --color-topbar2: #f6f8fc;
-  --color-topbar-text2: #1f1f1f;
+  --color-topbar-text2: #000000;
   --color-footer:#f6f8fc;
   --color-hyperlink: #1769e0;
   --color-site-logo-text: #1f1f1f;
   --color-text-highlight: #8cdfb1;
   --color-canvas-border-l2:#e8eaed;
-  --color-canvas-pitview: #f8f9fa;
+  --color-canvas-pitview: #f6f8fc;
   --color-red: #f03009;
   --color-red-orange: #ff2e00;
   --color-hot-orange: #ff5c00;
@@ -64,6 +65,7 @@
   --color-sunset-pink: #ff7b81;
   --color-light-pink: #ffb3ba;
   --color-light-purple: #d89be4;
+  --color-pill-bg:#f6f8fc;
   
   --color-code-text:#24292e;
   --color-code-bg:#f8f9fa;
@@ -84,8 +86,8 @@
 
 
 .dark-theme {
- --color-canvas-bg: #202124;
- --color-canvas-l1: #202124;
+ --color-canvas-bg: #202126;
+ --color-canvas-l1: #202126;
  --color-canvas-l2: #232427;
  --color-canvas-l3: #28282e;
  --color-canvas-border: #383941;
@@ -93,6 +95,7 @@
  --color-canvas-pitview: #28282e;
  --color-text-l1:#e8eaed;
  --color-text-l2: #e8eaed;
+ --color-text-headers: #e8eaed;
  --color-topbar: #28282e;
  --color-topbar2: #28282e;
  --color-topbar-text2: #e8eaed;
@@ -102,6 +105,7 @@
  --color-site-logo-text: #e8eaed;
  --color-text-experimental: #e8eaed;
  --color-text-highlight: #008f5d;
+ --color-pill-bg:#28282e;
 
  --color-code-text:#f8f8f2;
  --color-code-bg:#252529;
@@ -120,6 +124,8 @@
 html {
  font-family: "sansfont", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";;
  -webkit-tap-highlight-color: transparent;
+ scroll-padding-top: 4rem;
+ scroll-behavior: smooth;
 }
 
 @media (min-width: 48em) {
@@ -471,12 +477,29 @@ line-height: 1;
  font-size: 85%;
  line-height: 21px;
  color: var(--color-text-l2);
- background: var(--color-canvas-pitview);
+ background: var(--color-pill-bg);
  border-radius: 1rem;
  overflow:hidden;
  white-space: nowrap;
  /* color: var(--color-text-l2); */
 }
+
+.headerPill {
+  display: flex;
+  justify-content: center;
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  font-size: 85%;
+  line-height: 21px;
+  color: var(--color-text-l2);
+  background: var(--color-pill-bg);
+  border-radius: 1rem;
+  overflow:hidden;
+  white-space: nowrap;
+  /* color: var(--color-text-l2); */
+ }
 
 .twitterFollow {
  background-color: #333333;
@@ -518,8 +541,7 @@ line-height: 1;
 } */
 
 .iconHeader {
-  padding-top: 4rem !important;
-  margin-top: -3.2rem !important;
+ 
 }
 
 .negativeBlockquote {
@@ -973,7 +995,6 @@ textarea:focus,input:focus {
  word-wrap: normal;
  white-space: nowrap;
  direction: ltr;
-
  /* Support for all WebKit browsers. */
  -webkit-font-smoothing: antialiased;
  /* Support for Safari and Chrome. */
@@ -989,5 +1010,7 @@ textarea:focus,input:focus {
 
 .material-icons-outlined.md-20 { font-size: 20px; }
 .material-icons-outlined.md-24 { font-size: 24px; }
+.material-icons-outlined.md-header { font-size: 30px; }
+.material-icons-outlined.md-32 { font-size: 32px; }
 .material-icons-outlined.md-36 { font-size: 36px; }
 .material-icons-outlined.md-48 { font-size: 48px; }

@@ -96,7 +96,7 @@ a:hover, a:focus {
 h1, h2, h3, h4, h5, h6 {
   margin-bottom: .5rem;
   line-height: 1.25;
-  color: var(--color-text-l1);
+  color: var(--color-text-headers);
   text-rendering: optimizeLegibility;
 }
 
@@ -209,11 +209,11 @@ code, pre {
 }
 
 code {
-  padding: .25em .5em;
-  font-size: 85%;
-  color: #b3555e;
-  background-color: #202020;
-  border-radius: 3px;
+  padding: .07em .5em;
+  font-size: 90%;
+  color: var(--color-text-headers);
+  background-color: var(--color-canvas-l2);
+  border-radius: 0.3rem;
 }
 
 pre {
@@ -240,6 +240,7 @@ pre code {
   background-color: transparent;
   overflow-x: scroll !important;
   word-wrap: normal;
+  border:0rem solid var(--color-canvas-border) !important;
   background-color: var(--color-code-bg) !important;
   white-space: pre;
 }
