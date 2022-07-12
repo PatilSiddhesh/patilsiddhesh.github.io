@@ -17,16 +17,28 @@
     <loc>https://siddroid.com/about/</loc>
     <lastmod>2020-03-08T20:22:27+05:30</lastmod>
   </url><url>
-    <loc>https://siddroid.com/browse/android/</loc>
-    <lastmod>2022-05-19T12:50:55+01:00</lastmod>
-  </url><url>
     <loc>https://siddroid.com/browse/</loc>
-    <lastmod>2022-05-19T12:50:55+01:00</lastmod>
+    <lastmod>2022-07-12T00:50:55+01:00</lastmod>
+  </url><url>
+    <loc>https://siddroid.com/post/talks/a-ride-through-aosp-new-colors-droidcon-berlin-july-2022/</loc>
+    <lastmod>2022-07-12T00:50:55+01:00</lastmod>
   </url><url>
     <loc>https://siddroid.com/post/</loc>
-    <lastmod>2022-05-19T12:50:55+01:00</lastmod>
+    <lastmod>2022-07-12T00:50:55+01:00</lastmod>
   </url><url>
     <loc>https://siddroid.com/</loc>
+    <lastmod>2022-07-12T00:50:55+01:00</lastmod>
+  </url><url>
+    <loc>https://siddroid.com/browse/talks/</loc>
+    <lastmod>2022-07-12T00:50:55+01:00</lastmod>
+  </url><url>
+    <loc>https://siddroid.com/browse/community/</loc>
+    <lastmod>2022-07-12T00:45:55+01:00</lastmod>
+  </url><url>
+    <loc>https://siddroid.com/post/community/event-droidcon-berlin-2022/</loc>
+    <lastmod>2022-07-12T00:45:55+01:00</lastmod>
+  </url><url>
+    <loc>https://siddroid.com/browse/android/</loc>
     <lastmod>2022-05-19T12:50:55+01:00</lastmod>
   </url><url>
     <loc>https://siddroid.com/post/android/supporting-adaptive-themed-icons-on-android-13/</loc>
@@ -42,9 +54,6 @@
     <lastmod>2022-04-28T00:50:55+01:00</lastmod>
   </url><url>
     <loc>https://siddroid.com/post/community/event-android-worldwide-january-2022/</loc>
-    <lastmod>2022-01-27T00:02:16+05:30</lastmod>
-  </url><url>
-    <loc>https://siddroid.com/browse/community/</loc>
     <lastmod>2022-01-27T00:02:16+05:30</lastmod>
   </url><url>
     <loc>https://siddroid.com/post/post-i-have-joined-delivery-hero-in-berlin-germany/</loc>
@@ -96,9 +105,6 @@
     <lastmod>2020-11-28T15:18:16+05:30</lastmod>
   </url><url>
     <loc>https://siddroid.com/post/post-hacktoberfest-kotlin-mumbai-git-alias-zsh-siddhesh-patil/</loc>
-    <lastmod>2020-10-24T16:37:06+05:30</lastmod>
-  </url><url>
-    <loc>https://siddroid.com/browse/talks/</loc>
     <lastmod>2020-10-24T16:37:06+05:30</lastmod>
   </url><url>
     <loc>https://siddroid.com/post/post-kotlin-mumbai-jetpack-compose-scoped-storage-on-android-2020-siddhesh-patil/</loc>

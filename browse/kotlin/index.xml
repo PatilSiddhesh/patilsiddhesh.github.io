@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+
   <channel>
     <title>Kotlin on Sid Patil - Android Engineer and Kotlin Advocate</title>
     <link>https://siddroid.com/browse/kotlin/</link>
@@ -7,6 +8,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 24 Aug 2021 12:06:12 +0530</lastBuildDate><atom:link href="https://siddroid.com/browse/kotlin/index.xml" rel="self" type="application/rss+xml" />
+    
     <item>
       <title>Build function chains using composition in Kotlin</title>
       <link>https://siddroid.com/post/kotlin/build-function-chains-using-composition-in-kotlin/</link>
@@ -15,6 +17,7 @@
       <guid>https://siddroid.com/post/kotlin/build-function-chains-using-composition-in-kotlin/</guid>
       <description>bookmark_border  Featured in KotlinWeekly.net  Issue #267    bookmark_border  Featured in AndroidWeekly.</description>
     </item>
+    
     
   </channel>
 </rss>

@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+
   <channel>
     <title>Talks on Sid Patil - Android Engineer and Kotlin Advocate</title>
     <link>https://siddroid.com/browse/talks/</link>
     <description>Recent content in Talks on Sid Patil - Android Engineer and Kotlin Advocate</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 24 Oct 2020 16:37:06 +0530</lastBuildDate><atom:link href="https://siddroid.com/browse/talks/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 12 Jul 2022 00:50:55 +0100</lastBuildDate><atom:link href="https://siddroid.com/browse/talks/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
     <item>
       <title>Hacktoberfest: Speed up your workflows with ZSH and command line aliases!</title>
       <link>https://siddroid.com/post/post-hacktoberfest-kotlin-mumbai-git-alias-zsh-siddhesh-patil/</link>
@@ -15,6 +19,8 @@
       <guid>https://siddroid.com/post/post-hacktoberfest-kotlin-mumbai-git-alias-zsh-siddhesh-patil/</guid>
       <description>Using ZSH and OHMYZSH and Command line aliases Workflows can get tedious, often at times you&amp;rsquo;ll find yourself switching between tools to accomplish your tasks.</description>
     </item>
+    
+    
     
     <item>
       <title>VESIT: Building Apps For Android in Kotlin</title>
@@ -25,6 +31,8 @@
       <description>Talk details Title: Building apps for Android in Kotlin</description>
     </item>
     
+    
+    
     <item>
       <title>VESIT: Getting Started With Kotlin</title>
       <link>https://siddroid.com/post/talk-getting-started-with-kotlin-vesit-cmpn-siddhesh-patil/</link>
@@ -33,6 +41,8 @@
       <guid>https://siddroid.com/post/talk-getting-started-with-kotlin-vesit-cmpn-siddhesh-patil/</guid>
       <description>Talk details Title: Getting Started With Kotlin</description>
     </item>
+    
+    
     
     <item>
       <title>Kotlin Hyderabad: Introduction to Kotlin</title>
@@ -43,6 +53,7 @@
       <description>Talk details Title: Introduction to Kotlin
 Platform: Youtube live stream</description>
     </item>
+    
     
   </channel>
 </rss>
