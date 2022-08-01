@@ -349,8 +349,8 @@ footer {
  border-radius: 50%;
  flex-shrink: 0;
  align-self: center;
- /* padding: 0.10rem;
- border: 0.10rem solid var(--color-accent); */
+ /* padding: 0.20rem;
+ border: 0.20rem solid var(--color-text-l1); */
 }
 
 .img-headshot {
@@ -585,8 +585,8 @@ line-height: 1;
  margin-bottom: 2rem;
  border-radius: 0.5rem;
  /* box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px; */
- /* border:0.08rem solid var(--color-canvas-border); */
- /* background-color: var(--color-canvas-l1); */
+ /* border:0.08rem solid var(--color-canvas-border);  */
+ /* background-color: var(--color-canvas-pitview); */
 }
 
 /**

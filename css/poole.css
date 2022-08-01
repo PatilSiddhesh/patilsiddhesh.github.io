@@ -598,6 +598,13 @@ img.card {
   overflow: hidden;
   margin-left:2.4em;
 }
+
+.m3Container {
+  background-color: var(--color-canvas-l3);
+  border-radius: 2rem;
+  padding: 1.5rem;
+}
+
 /* 
 .CodeMirror {
   line-height: 1.4 !important;

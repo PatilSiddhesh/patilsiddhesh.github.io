@@ -2,9 +2,9 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 
   <channel>
-    <title>Talks on Sid Patil - Android Engineer and Kotlin Advocate</title>
+    <title>Talks on Sid Patil</title>
     <link>https://siddroid.com/browse/talks/</link>
-    <description>Recent content in Talks on Sid Patil - Android Engineer and Kotlin Advocate</description>
+    <description>Recent content in Talks on Sid Patil</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 12 Jul 2022 00:50:55 +0100</lastBuildDate><atom:link href="https://siddroid.com/browse/talks/index.xml" rel="self" type="application/rss+xml" />
@@ -17,7 +17,7 @@
       <pubDate>Sat, 24 Oct 2020 16:37:06 +0530</pubDate>
       
       <guid>https://siddroid.com/post/post-hacktoberfest-kotlin-mumbai-git-alias-zsh-siddhesh-patil/</guid>
-      <description>Using ZSH and OHMYZSH and Command line aliases Workflows can get tedious, often at times you&amp;rsquo;ll find yourself switching between tools to accomplish your tasks.</description>
+      <description>Boost your productivity and workflows while working on Android projects through Z-shell and OhMyZsh. We will learn how to escape the GUI and perform daily git actions through custom command-line aliases.</description>
     </item>
     
     
@@ -28,7 +28,7 @@
       <pubDate>Sat, 08 Aug 2020 01:11:44 +0530</pubDate>
       
       <guid>https://siddroid.com/post/talk-building-apps-for-android-in-kotlin-vesit-cmpn-siddhesh-patil/</guid>
-      <description>Talk details Title: Building apps for Android in Kotlin</description>
+      <description>Continuing our two-day session on kickstarting your journey to become Android developers, budding computer engineering students learn to build their very first app for Android using Kotlin.</description>
     </item>
     
     
@@ -39,7 +39,7 @@
       <pubDate>Fri, 07 Aug 2020 01:10:38 +0530</pubDate>
       
       <guid>https://siddroid.com/post/talk-getting-started-with-kotlin-vesit-cmpn-siddhesh-patil/</guid>
-      <description>Talk details Title: Getting Started With Kotlin</description>
+      <description>Comp Science students from VESIT engineering college discover why Kotlin is the next-gen language for modern application development as a part of a two-day session on building android apps in Kotlin.</description>
     </item>
     
     
@@ -50,8 +50,7 @@
       <pubDate>Sat, 01 Aug 2020 16:17:09 +0530</pubDate>
       
       <guid>https://siddroid.com/post/talk-introduction-to-kotlin-siddhesh-patil-kotlin-hyderabad/</guid>
-      <description>Talk details Title: Introduction to Kotlin
-Platform: Youtube live stream</description>
+      <description>At their monthly event, Siddhesh Patil gives a talk on introduction to Kotlin at Kotlin User Group Hyderabad</description>
     </item>
     
     

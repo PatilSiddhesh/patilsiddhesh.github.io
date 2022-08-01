@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 
   <channel>
-    <title>Sid Patil - Android Engineer and Kotlin Advocate</title>
+    <title>Sid Patil</title>
     <link>https://siddroid.com/</link>
-    <description>Recent content on Sid Patil - Android Engineer and Kotlin Advocate</description>
+    <description>Recent content on Sid Patil</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 12 Jul 2022 00:50:55 +0100</lastBuildDate><atom:link href="https://siddroid.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 31 Jul 2022 23:23:16 +0530</lastBuildDate><atom:link href="https://siddroid.com/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Work</title>
@@ -15,7 +15,7 @@
       <pubDate>Sun, 08 Mar 2020 20:09:35 +0530</pubDate>
       
       <guid>https://siddroid.com/work/</guid>
-      <description>Professional  Delivery Hero Since Nov 2021 | Berlin, Germany</description>
+      <description>Sid Patil is an Android Engineer and Kotlin Advocate. He currently works at Delivery Hero SE in Berlin, Germany. Previously he worked at Paytm and Insider.in on payment related mobile software. He also helped build mobile learning apps for banks like Axis, ICICI and Yes in India.</description>
     </item>
     
     
@@ -26,7 +26,7 @@
       <pubDate>Wed, 12 May 2021 19:49:56 +0530</pubDate>
       
       <guid>https://siddroid.com/search/</guid>
-      <description>Search articles, talks, tutorials on this site. P.S. Tap enter to search.</description>
+      <description>Sid Patil is an Android Engineer and Kotlin Advocate. He works at Delivery Hero SE in Berlin Germany. Search this website for articles on Android, Kotlin, Jetpack Compose and much more.</description>
     </item>
     
     
@@ -37,19 +37,7 @@
       <pubDate>Sun, 08 Mar 2020 20:09:35 +0530</pubDate>
       
       <guid>https://siddroid.com/projects/</guid>
-      <description>Active Projects Some projects that I am currently maintaining
-   Holi  An open-source library of colors, gradients and utils built using Jetpack Compose for Android.</description>
-    </item>
-    
-    
-    
-    <item>
-      <title>Gallery</title>
-      <link>https://siddroid.com/gallery/</link>
-      <pubDate>Sun, 08 Mar 2020 20:09:52 +0530</pubDate>
-      
-      <guid>https://siddroid.com/gallery/</guid>
-      <description>Apps Paytm Entertainment (Movies, Parks, Events)  Paytm Chat  Mobile learning app - Master-O  Veute - Promotions around you  Custom UI for Samsung  Finnst - AMOLED wallpapers  A theme for CyanogenMod   Honors &amp;amp; Achievements Mastery Award at InspireOne  Bachelor&amp;rsquo;s in Engineering   Community Kotlin Mumbai - May 2020  Kotlin Mumbai - March 2020  Google Developer Groups, MAD - Feb 2020  </description>
+      <description>Sid Patil is an Android Engineer and Kotlin Advocate. He works at Delivery Hero SE in Berlin Germany. Currently he helps build food delivery and quick commerce experiences imacting over 50 countries. You will find him organizing events, giving talks and writing articles that help others.</description>
     </item>
     
     
@@ -60,9 +48,10 @@
       <pubDate>Sun, 08 Mar 2020 20:22:27 +0530</pubDate>
       
       <guid>https://siddroid.com/about/</guid>
-      <description>Hey there 👋🏼
-I&amp;rsquo;m Sid, an overly curious Android engineer.</description>
+      <description>Sid Patil is an Android Engineer and Kotlin Advocate. He works at Delivery Hero SE in Berlin Germany. Currently he helps build food delivery and quick commerce experiences impacting over 50 countries. You will find him organizing events, giving talks and writing articles that help others.</description>
     </item>
+    
+    
     
     
     
@@ -76,7 +65,7 @@ I&amp;rsquo;m Sid, an overly curious Android engineer.</description>
       <pubDate>Thu, 19 May 2022 12:50:55 +0100</pubDate>
       
       <guid>https://siddroid.com/post/android/supporting-adaptive-themed-icons-on-android-13/</guid>
-      <description>Android 13 Tiramisu adds support for adaptive dynamic themed icons.</description>
+      <description>One of the coolest features of Android 13 with Material You and Monet is dynamically themed icons. Let us take a look at how we can migrate our apps to Tiramisu and add support for custom themed icons to match the system wide dynamic theme colors.</description>
     </item>
     
     
@@ -87,7 +76,7 @@ I&amp;rsquo;m Sid, an overly curious Android engineer.</description>
       <pubDate>Thu, 28 Apr 2022 00:50:55 +0100</pubDate>
       
       <guid>https://siddroid.com/post/android/chasing-monet-inside-the-android-framework/</guid>
-      <description>bookmark_border  Featured in AndroidWeekly.net  Issue #516     Android 13 Tiramisu is a couple of months away from a full stable release and only last year did Google introduce Material You with Android 12/12L, changing their material design guidelines for the third time.</description>
+      <description>We deep dive into the internals of the Android framework, covering the System-UI to understand the changes introduced starting from Android 12/12L and above, code-named Monet. We will explore the new system-wide dynamic theming capabilities and take a look at how Monet fuels the Material You design.</description>
     </item>
     
     
@@ -98,7 +87,7 @@ I&amp;rsquo;m Sid, an overly curious Android engineer.</description>
       <pubDate>Thu, 28 Apr 2022 00:50:55 +0100</pubDate>
       
       <guid>https://siddroid.com/post/compose/dynamic-themes-with-compose-and-material-3/</guid>
-      <description>Dynamic colors with compose-m3   In this article we will quickly learn how to use Jetpack Compose and Material design 3 library to build a theme for your app which uses colors generated by Material You on Android versions 12/12L and above.</description>
+      <description>Use wallpaper generated system colors from Android 12 and Material You to repaint your apps to the users taste by using the material design 3 library and Jetpack compose</description>
     </item>
     
     
@@ -109,7 +98,7 @@ I&amp;rsquo;m Sid, an overly curious Android engineer.</description>
       <pubDate>Thu, 27 Jan 2022 00:02:16 +0530</pubDate>
       
       <guid>https://siddroid.com/post/community/event-android-worldwide-january-2022/</guid>
-      <description>Event Details We kickstart 2022 at Android Worldwide with a two days session on January 25th &amp;amp; 26th.</description>
+      <description>We kickstart 2022 at Android Worldwide with a two days session on January 25th &amp; 26th. This quarter we cover different topics ranging from managing memory at multiplatform level with Kotlin, maxing out the performance of your SQLite database, implementing FTS for faster database querying and much more!</description>
     </item>
     
     
@@ -120,7 +109,7 @@ I&amp;rsquo;m Sid, an overly curious Android engineer.</description>
       <pubDate>Thu, 11 Nov 2021 13:21:39 +0100</pubDate>
       
       <guid>https://siddroid.com/post/post-i-have-joined-delivery-hero-in-berlin-germany/</guid>
-      <description>Two years in rewind For the last two years I had been building Paytm&amp;rsquo;s chat-based payment experience.</description>
+      <description>Super excited to share that I have joined Delivery Hero and relocated to Berlin, Germany. For the next chapter of my career, I will be helping shape ordering experiences of multiple food delivery and Q-commerce apps.</description>
     </item>
     
     
@@ -131,7 +120,7 @@ I&amp;rsquo;m Sid, an overly curious Android engineer.</description>
       <pubDate>Tue, 31 Aug 2021 13:11:34 +0530</pubDate>
       
       <guid>https://siddroid.com/post/kotlin-mumbai-events/post-kotlin-for-backend-engineering-himanshu-singh/</guid>
-      <description>Event Details Abstract: 2:00 PM (IST) - Kotlin for backend Engineering with Himanshu Singh</description>
+      <description>Himanshu Singh convinces us why Kotlin is a viable option for backend engineering. Explore popular Kotlin backend frameworks and understand the merits of using Ktor.</description>
     </item>
     
     
@@ -142,7 +131,7 @@ I&amp;rsquo;m Sid, an overly curious Android engineer.</description>
       <pubDate>Tue, 24 Aug 2021 12:06:12 +0530</pubDate>
       
       <guid>https://siddroid.com/post/kotlin/build-function-chains-using-composition-in-kotlin/</guid>
-      <description>bookmark_border  Featured in KotlinWeekly.net  Issue #267    bookmark_border  Featured in AndroidWeekly.</description>
+      <description>Leverage Kotlin fold aggregating operators to build function chains with compositional patterns. Learn how you can build a system similar to compose UIs Modifier logic on Android</description>
     </item>
     
     
@@ -153,7 +142,7 @@ I&amp;rsquo;m Sid, an overly curious Android engineer.</description>
       <pubDate>Thu, 19 Aug 2021 00:02:16 +0530</pubDate>
       
       <guid>https://siddroid.com/post/kotlin-mumbai-events/post-android-worldwide-july-2021/</guid>
-      <description>Event Details Our third event at Android worldwide took place on 27th July 2021 over two days (or one day depending on your timezone).</description>
+      <description>This quarter we explore simple stacks, Error handling with arrow, new activity results API, mobile devops, better gradle dependencies, shared flows in Kotlin, common code issues with KSP, new Window insets API in Android worldwide July 2021 sessions</description>
     </item>
     
     
@@ -164,7 +153,7 @@ I&amp;rsquo;m Sid, an overly curious Android engineer.</description>
       <pubDate>Wed, 18 Aug 2021 23:45:34 +0530</pubDate>
       
       <guid>https://siddroid.com/post/kotlin-mumbai-events/post-kotlin-multiplatform-graphql-compose-and-server-driven-ui/</guid>
-      <description>Event Details A page out of server-driven UI: Speaker: Adit Lal from Gojek</description>
+      <description>Build multiplatform projects with SwitfUI and compose and learn the art of server driven UI on Android with John Oreilly and Adit Lal</description>
     </item>
     
     
@@ -175,7 +164,7 @@ I&amp;rsquo;m Sid, an overly curious Android engineer.</description>
       <pubDate>Sun, 27 Jun 2021 15:00:25 +0530</pubDate>
       
       <guid>https://siddroid.com/post/kotlin-mumbai-events/post-uncoiling-the-coil-with-sagar-viradiya-2021/</guid>
-      <description>Event Details Image loading is hard but luckily this problem has already been addressed on Android.</description>
+      <description>Choosing an image loading library in 2021 can be a challenge. Sagar Viradiya, GDE for Android tells us why Coil is one of the best image loading libraries.</description>
     </item>
     
     
@@ -186,7 +175,7 @@ I&amp;rsquo;m Sid, an overly curious Android engineer.</description>
       <pubDate>Thu, 06 May 2021 22:59:25 +0530</pubDate>
       
       <guid>https://siddroid.com/post/kotlin-mumbai-events/post-android-worldwide-april-2021/</guid>
-      <description>Event Details The second event of the Android Worldwide group of communities happened on April 27th, 2021.</description>
+      <description>As the second event of the series unfolds, Julien Salvi, Honey Sonwani, Marton Braun, Karan Dhillon, Mohit Sarveiya, Rikin Marfatia and Wajahat Karim talk about the latest in Android development.</description>
     </item>
     
     
@@ -197,7 +186,7 @@ I&amp;rsquo;m Sid, an overly curious Android engineer.</description>
       <pubDate>Tue, 30 Mar 2021 13:22:25 +0530</pubDate>
       
       <guid>https://siddroid.com/post/projects/holi-a-library-of-colors-for-jetpack-compose/</guid>
-      <description>bookmark_border  Featured in AndroidWeekly.net  Issue #460    code  Open-sourced on  Google Developers Library     A library of colors, gradients and utils built using Jetpack Compose for Android   Features  A wide collection of colors from different palettes for easy access in your pet projects Provides easy gradient building functions that all your composable brushes need Just 28 KB in size!</description>
+      <description>An open-source library of colors, gradients and utils built using Jetpack Compose for Android. Licenced under MIT and available on Maven central. </description>
     </item>
     
     
@@ -208,7 +197,7 @@ I&amp;rsquo;m Sid, an overly curious Android engineer.</description>
       <pubDate>Sat, 20 Mar 2021 06:31:08 +0530</pubDate>
       
       <guid>https://siddroid.com/policy/</guid>
-      <description>Hey I do this for fun and with passion in my heart and with the hope that in some way I will be able to help someone out there through the content hosted on this site.</description>
+      <description>Sid Patil is an Android Engineer and Kotlin Advocate. He works at Delivery Hero SE in Berlin Germany. Currently he helps build food delivery and quick commerce experiences imacting over 50 countries. You will find him organizing events, giving talks and writing articles that help others.</description>
     </item>
     
     
@@ -219,7 +208,7 @@ I&amp;rsquo;m Sid, an overly curious Android engineer.</description>
       <pubDate>Sun, 14 Mar 2021 22:49:09 +0530</pubDate>
       
       <guid>https://siddroid.com/post/post-diving-into-kotlin-js-sebastian-aigner-siddhesh-patil/</guid>
-      <description>link   Event Details We&amp;rsquo;re going fully online into 2021 as a community our last meetup was a global collaboration of communities with Android Worldwide.</description>
+      <description>Let us talk about how we can use Kotlin to leverage one of the most exciting platforms of the last decade, the browser. We will see what it takes to get started with writing Kotlin JS applications.</description>
     </item>
     
     
@@ -230,7 +219,7 @@ I&amp;rsquo;m Sid, an overly curious Android engineer.</description>
       <pubDate>Tue, 19 Jan 2021 13:27:37 +0530</pubDate>
       
       <guid>https://siddroid.com/post/post-joda-time-kotlin-flows-android-worldwide-2021/</guid>
-      <description>Event Details I. Be the flow in a reactive world Himanshu Singh and Niharika Arora, Google Developer experts for Android talk about reactive programming and how Kotlin flows can help solve some problems with reactive programming.</description>
+      <description>Kotlin Mumbai joins communities from around the globe for a worldwide event. Niharika Arora, Himanshu Singh and Shubrajyoti Sen take us through Kotin Flows and Joda Time!</description>
     </item>
     
     
@@ -241,7 +230,7 @@ I&amp;rsquo;m Sid, an overly curious Android engineer.</description>
       <pubDate>Sat, 26 Dec 2020 19:48:27 +0530</pubDate>
       
       <guid>https://siddroid.com/post/post-exploring-future-of-android-with-jetpack-compose-siddhesh-patil/</guid>
-      <description>Event Details  Speaker: Gurupreet Singh , Android Developer at Foodpanda Location: Online, Microsoft Teams   Exploring the future of Android UI with Jetpack Compose Compose is a new declarative way of making user interfaces on Android.</description>
+      <description>Compose is a new declarative way of making user interfaces on Android. In this talk Gurupreet shares how one can quickly bootstrap a project with compose.</description>
     </item>
     
     
@@ -252,7 +241,7 @@ I&amp;rsquo;m Sid, an overly curious Android engineer.</description>
       <pubDate>Sat, 28 Nov 2020 15:18:16 +0530</pubDate>
       
       <guid>https://siddroid.com/post/post-dissecting-coroutines-kotlin-mumbai-nov-2020-siddhesh-patil-siddroid/</guid>
-      <description>Event Details  Speaker: Mohit Sarveiya ,Google Developer Expert for Kotlin Date: 28th November 2020 Location: Online   Dissecting Coroutines The coroutines library contains many features for starting coroutines, creating Flows and Channels, and handling a mutable shared state.</description>
+      <description>Mohit Sarveiya walks us through using coroutines in Kotlin and how they work under the hood. In this talk, we will explore basic to advanced features provided by the coroutines library.</description>
     </item>
     
     
@@ -263,7 +252,7 @@ I&amp;rsquo;m Sid, an overly curious Android engineer.</description>
       <pubDate>Sat, 24 Oct 2020 16:37:06 +0530</pubDate>
       
       <guid>https://siddroid.com/post/post-hacktoberfest-kotlin-mumbai-git-alias-zsh-siddhesh-patil/</guid>
-      <description>Using ZSH and OHMYZSH and Command line aliases Workflows can get tedious, often at times you&amp;rsquo;ll find yourself switching between tools to accomplish your tasks.</description>
+      <description>Boost your productivity and workflows while working on Android projects through Z-shell and OhMyZsh. We will learn how to escape the GUI and perform daily git actions through custom command-line aliases.</description>
     </item>
     
     
@@ -274,7 +263,7 @@ I&amp;rsquo;m Sid, an overly curious Android engineer.</description>
       <pubDate>Sat, 26 Sep 2020 21:31:29 +0530</pubDate>
       
       <guid>https://siddroid.com/post/post-kotlin-mumbai-jetpack-compose-scoped-storage-on-android-2020-siddhesh-patil/</guid>
-      <description>Event Details  Speaker: Wajahat Karim, GDE for Android &amp;amp; Carlos Mota, Organizer of GDG Coimbra Date: 26th September 2020 Location: Online   Scoped Storage on Android Scoped storage is still a sensitive subject to most of us due to the impact it had on most apps, but the most needed one!</description>
+      <description>In this talk Wajahat Karim, GDE for Android walks us through the basics of building a game in Jetpack Compose and Carlos Mota of GDG Coimbra teaches us more about Scoped storage.</description>
     </item>
     
     
@@ -285,7 +274,7 @@ I&amp;rsquo;m Sid, an overly curious Android engineer.</description>
       <pubDate>Sat, 22 Aug 2020 20:58:04 +0530</pubDate>
       
       <guid>https://siddroid.com/post/post-august-kotlin-mumbai-2020-siddhesh-patil/</guid>
-      <description>Event Details  Speaker: Subhrajyoti Sen, Android Developer from smallcase Date: 22nd August 2020 Location: Online   Description Lint is a powerful static analysis tool that can be used to enforce coding styles and also find common bugs across a codebase.</description>
+      <description>On popular demand, the Lint API was extended to support non-Android Kotlin projects. In this talk Subhrajyoti Sen talks about using lint rules to build better codebases on Android.</description>
     </item>
     
     
@@ -296,8 +285,7 @@ I&amp;rsquo;m Sid, an overly curious Android engineer.</description>
       <pubDate>Thu, 20 Aug 2020 20:06:51 +0530</pubDate>
       
       <guid>https://siddroid.com/post/post-siddhesh-patil-times-of-india-kotlin/</guid>
-      <description>Details Publication: Times of India
-Date: 19th August 2020</description>
+      <description>Kotlin has changed the way app developers write apps for Android. In this Times of India article, Siddhesh Patil talks about the state of Kotlin in India.</description>
     </item>
     
     
@@ -308,7 +296,7 @@ Date: 19th August 2020</description>
       <pubDate>Sat, 08 Aug 2020 01:11:44 +0530</pubDate>
       
       <guid>https://siddroid.com/post/talk-building-apps-for-android-in-kotlin-vesit-cmpn-siddhesh-patil/</guid>
-      <description>Talk details Title: Building apps for Android in Kotlin</description>
+      <description>Continuing our two-day session on kickstarting your journey to become Android developers, budding computer engineering students learn to build their very first app for Android using Kotlin.</description>
     </item>
     
     
@@ -319,7 +307,7 @@ Date: 19th August 2020</description>
       <pubDate>Fri, 07 Aug 2020 01:10:38 +0530</pubDate>
       
       <guid>https://siddroid.com/post/talk-getting-started-with-kotlin-vesit-cmpn-siddhesh-patil/</guid>
-      <description>Talk details Title: Getting Started With Kotlin</description>
+      <description>Comp Science students from VESIT engineering college discover why Kotlin is the next-gen language for modern application development as a part of a two-day session on building android apps in Kotlin.</description>
     </item>
     
     
@@ -330,8 +318,7 @@ Date: 19th August 2020</description>
       <pubDate>Sat, 01 Aug 2020 16:17:09 +0530</pubDate>
       
       <guid>https://siddroid.com/post/talk-introduction-to-kotlin-siddhesh-patil-kotlin-hyderabad/</guid>
-      <description>Talk details Title: Introduction to Kotlin
-Platform: Youtube live stream</description>
+      <description>At their monthly event, Siddhesh Patil gives a talk on introduction to Kotlin at Kotlin User Group Hyderabad</description>
     </item>
     
     
@@ -342,7 +329,7 @@ Platform: Youtube live stream</description>
       <pubDate>Sat, 25 Jul 2020 20:58:04 +0530</pubDate>
       
       <guid>https://siddroid.com/post/post-july-kotlin-mumbai-2020/</guid>
-      <description>Making your app accessible for everyone is more than a “nice thing to do” It also increases the quality of your app.</description>
+      <description>Senior Android Engineer at Meetup, Victoria Gonda talks about accessibility on apps and how to make it better!</description>
     </item>
     
     
@@ -353,7 +340,7 @@ Platform: Youtube live stream</description>
       <pubDate>Sat, 11 Jul 2020 21:47:51 +0530</pubDate>
       
       <guid>https://siddroid.com/post/post-android-11-meetup-gdg-mad-kotlin-mumbai-siddhesh-patil/</guid>
-      <description>It&amp;rsquo;s July 11th and Android 11 is just around the corner!</description>
+      <description>GDG MAD and Kotlin Mumbai co-organize an Android 11 meetup with Google!</description>
     </item>
     
     
@@ -364,7 +351,7 @@ Platform: Youtube live stream</description>
       <pubDate>Wed, 01 Jul 2020 19:18:45 +0530</pubDate>
       
       <guid>https://siddroid.com/post/post-june-kotlin-mumbai-2020/</guid>
-      <description>Senior Android Engineer at BYJU&amp;rsquo;s, Rivu Chakraborty gives a talk on test driven development using Spek</description>
+      <description>Senior Android Engineer at BYJUs, Rivu Chakraborty gives a talk on test driven development using Spek</description>
     </item>
     
     
@@ -375,7 +362,7 @@ Platform: Youtube live stream</description>
       <pubDate>Sat, 30 May 2020 16:50:05 +0530</pubDate>
       
       <guid>https://siddroid.com/post/post-may-kotlin-mumbai-2020/</guid>
-      <description>Nicola Corti from Spotify walks us through Github actions! It&amp;rsquo;s time to roll up your sleeves and make production easier!</description>
+      <description>Nicola Corti from Spotify walks us through Github actions! It is time to roll up your sleeves and make production easier!</description>
     </item>
     
     
@@ -386,7 +373,7 @@ Platform: Youtube live stream</description>
       <pubDate>Mon, 27 Apr 2020 18:56:47 +0530</pubDate>
       
       <guid>https://siddroid.com/post/post-april-kotlin-mumbai-2020/</guid>
-      <description>Introductions &amp;amp; Introductions We recently organized our April meetup at Kotlin Mumbai.</description>
+      <description>Filip Babic and Akshay Chordiya take us through the world of kotlin!</description>
     </item>
     
     
@@ -408,7 +395,7 @@ Platform: Youtube live stream</description>
       <pubDate>Sun, 08 Mar 2020 20:11:21 +0530</pubDate>
       
       <guid>https://siddroid.com/post/post-android-rationale-permission-dialogs-2020/</guid>
-      <description>Permissions request dialogs are a vital part of user’s experience on the app.</description>
+      <description>Gracefully handle permission denial on Android permission dialogs and leverage permission rational dialogs to enhance the user experience of your application.</description>
     </item>
     
     

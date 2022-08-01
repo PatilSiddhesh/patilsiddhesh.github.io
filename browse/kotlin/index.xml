@@ -2,9 +2,9 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 
   <channel>
-    <title>Kotlin on Sid Patil - Android Engineer and Kotlin Advocate</title>
+    <title>Kotlin on Sid Patil</title>
     <link>https://siddroid.com/browse/kotlin/</link>
-    <description>Recent content in Kotlin on Sid Patil - Android Engineer and Kotlin Advocate</description>
+    <description>Recent content in Kotlin on Sid Patil</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 24 Aug 2021 12:06:12 +0530</lastBuildDate><atom:link href="https://siddroid.com/browse/kotlin/index.xml" rel="self" type="application/rss+xml" />
@@ -15,7 +15,7 @@
       <pubDate>Tue, 24 Aug 2021 12:06:12 +0530</pubDate>
       
       <guid>https://siddroid.com/post/kotlin/build-function-chains-using-composition-in-kotlin/</guid>
-      <description>bookmark_border  Featured in KotlinWeekly.net  Issue #267    bookmark_border  Featured in AndroidWeekly.</description>
+      <description>Leverage Kotlin fold aggregating operators to build function chains with compositional patterns. Learn how you can build a system similar to compose UIs Modifier logic on Android</description>
     </item>
     
     
