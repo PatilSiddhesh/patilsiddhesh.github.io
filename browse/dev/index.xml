@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+
+  <channel>
+    <title>Dev on Sid Patil</title>
+    <link>https://siddroid.com/browse/dev/</link>
+    <description>Recent content in Dev on Sid Patil</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 16 Aug 2022 00:50:55 +0100</lastBuildDate><atom:link href="https://siddroid.com/browse/dev/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Obsidian: My second brain</title>
+      <link>https://siddroid.com/post/dev/obsidian-your-second-brain/</link>
+      <pubDate>Tue, 16 Aug 2022 00:50:55 +0100</pubDate>
+      
+      <guid>https://siddroid.com/post/dev/obsidian-your-second-brain/</guid>
+      <description>Tired of moving between note-taking tools? Keep losing code snippets, TODOs and ideas? Meet Obsidian, a Markdown note taking tool to boost your developer productivity.</description>
+    </item>
+    
+    
+  </channel>
+</rss>

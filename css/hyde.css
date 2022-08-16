@@ -600,8 +600,8 @@ line-height: 1;
  and (orientation: landscape) 
  and (-webkit-min-device-pixel-ratio: 1.5) {
    .parentContainer {
-     margin-left: 4rem;
-     margin-right: 4rem;
+     margin-left: 6rem;
+     margin-right: 6rem;
    }
 }
 @media only screen and (min-width: 834px) and (max-width: 1112px) and (orientation: landscape){ 
@@ -1014,3 +1014,49 @@ textarea:focus,input:focus {
 .material-icons-outlined.md-32 { font-size: 32px; }
 .material-icons-outlined.md-36 { font-size: 36px; }
 .material-icons-outlined.md-48 { font-size: 48px; }
+
+
+.overview {
+  font-size: 85%;
+  padding-right: 1rem;
+}
+
+.overview ul {
+  list-style: none;
+  border-left: 0.3rem solid var(--color-accent);
+  margin-block-start: 0em !important;
+  padding-inline-start: 1em !important;
+  margin-left: 1em;
+}
+
+.overview li {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
+.overview blockquote {
+  border: 0em !important;
+  border-radius: 0.5rem !important;
+}
+
+.yin {
+  visibility: visible;
+  width: 100%;
+}
+
+.dark-theme .yin {
+  visibility:hidden;
+  width: 0;
+  height: 0;
+}
+
+.yang {
+  visibility:hidden;
+  width: 0;
+  height: 0;
+}
+
+.dark-theme .yang {
+  visibility: visible;
+  width: 100%;
+}
