@@ -1,10 +1,10 @@
 const currentTheme = localStorage.getItem("theme");
-if (currentTheme == null) {
-  localStorage.setItem("theme","dark");
-  document.body.classList.toggle("dark-theme");
-  document.getElementById("theme-icon").innerHTML = "light_mode"
-  document.querySelector('meta[name="theme-color"]').setAttribute("content", "#28282e");
-}
+// if (currentTheme == null) {
+//   localStorage.setItem("theme","dark");
+//   document.body.classList.toggle("dark-theme");
+//   document.getElementById("theme-icon").innerHTML = "light_mode"
+//   document.querySelector('meta[name="theme-color"]').setAttribute("content", "#28282e");
+// }
 if (currentTheme == "dark") {
   document.body.classList.toggle("dark-theme");
   document.getElementById("theme-icon").innerHTML = "light_mode"
