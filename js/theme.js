@@ -13,7 +13,7 @@ if (currentTheme == "dark") {
 } else if (currentTheme == "light") {
   document.body.classList.toggle("light-theme");
   document.getElementById("theme-icon").innerHTML = "dark_mode"
-  document.querySelector('meta[name="theme-color"]').setAttribute("content", "#f6f8fc");
+  document.querySelector('meta[name="theme-color"]').setAttribute("content", "#f6f6f6");
   console.log("setting light from user pref")
 }
 
