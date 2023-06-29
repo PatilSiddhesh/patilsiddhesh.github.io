@@ -24,9 +24,11 @@ function toggleTheme() {
           document.getElementById("theme-icon").innerHTML = "dark_mode";
           document.body.classList.toggle("dark-theme");
           localStorage.setItem("theme","light");
-          document.querySelector('meta[name="theme-color"]').setAttribute("content", "#f6f8fc");
+          document.querySelector('meta[name="theme-color"]').setAttribute("content", "#f4f6fb");
           console.log("setting light")
-          ga('send', 'event', 'Theme', "light");
+          gtag('event', 'Theme', {
+            'mode': 'light',
+          });
 
         } else {
           document.getElementById("theme-icon").innerHTML = "light_mode";
@@ -34,8 +36,9 @@ function toggleTheme() {
           document.querySelector('meta[name="theme-color"]').setAttribute("content", "#28282e");
           localStorage.setItem("theme", "dark");
           console.log("setting dark");
-          ga('send', 'event', 'Theme', "dark");
-
+          gtag('event', 'Theme', {
+            'mode': 'dark',
+          });
         }
         try {
           DISQUS.reset({
