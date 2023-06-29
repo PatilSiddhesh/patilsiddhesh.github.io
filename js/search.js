@@ -25,21 +25,21 @@ function handleSearchQuery(event) {
   event.preventDefault();
   const query = document.getElementById("search").value.trim().toLowerCase();
   if (!query) {
-    displayErrorMessage("Hey! Looks like you forgot to enter something in the search box");
+    displayErrorMessage("Enter a query to search!");
     clearSearchResults();
-    ga('send', 'event', 'Search', "no query");
+    gtag('event', 'Search', {
+      'query': "No Query",
+    });
     return;
   }
   const results = searchSite(query);
   if (!results.length) {
     displayErrorMessage("No results found for " + query);
     clearSearchResults();
-    ga('send', 'event', 'Search', query);
     return;
   }
   document.getElementById("search-msg").innerHTML = ""
   renderSearchResults(query, results);
-  ga('send', 'event', 'Search', query);
 }
 
 function displayErrorMessage(message) {
@@ -117,6 +117,10 @@ function updateSearchResults(query, results) {
   const searchResultListItems = document.querySelectorAll(".search-results div");
   document.getElementById("results-count").innerHTML = searchResultListItems.length - 1;
   document.getElementById("results-count-text").innerHTML = searchResultListItems.length > 1 ? " results for " : " result for ";
+  gtag('event', 'Search', {
+    'query': query,
+    'results': results
+  });
 }
 
 function createSearchResultBlurb(query, pageContent) {
@@ -240,6 +244,12 @@ initSearchIndex();
 document.addEventListener("DOMContentLoaded", function () {
   if (document.getElementById("search-form") != null) {
     const searchInput = document.getElementById("search");
+    const inputHandler = function(e) {
+      handleSearchQuery(e);
+      console.log(e)
+    }
+    
+    searchInput.addEventListener('input', inputHandler);
     searchInput.addEventListener("keydown", (event) => {
       if (event.keyCode == 13) handleSearchQuery(event);
     });

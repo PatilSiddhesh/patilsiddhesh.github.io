@@ -537,6 +537,7 @@ line-height: 1;
   padding-bottom: 0.5rem;
   padding-left: 1rem;
   padding-right: 1rem;
+  margin-right: 0.2rem;
   font-size: 90%;
   line-height: 21px;
   color: var(--color-text-l2);
@@ -830,8 +831,8 @@ input[type=text] {
  border: none;
  font-size: 17px;
  color: var(--color-text-l2);
- border:0.08rem solid var(--color-canvas-border);
- background-color:  var(--color-canvas-l1);
+ /* border:0.08rem solid var(--color-canvas-border); */
+ background-color:  var(--color-canvas-l3);
  border-radius: 1rem;
 }
 textarea:focus,input:focus {
