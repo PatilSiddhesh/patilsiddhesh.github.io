@@ -148,6 +148,7 @@ strong {
 
 .headerTxt {
   font-family: gilroyb;
+  color: var(--color-topbar-text2);
 }
 
 @media (min-width: 64em) {

@@ -1133,19 +1133,16 @@ textarea:focus,input:focus {
   width: 100%;
 }
 
-/* Slideshow container */
 .slideshow-container {
   position: relative;
   margin: auto;
   margin-bottom: 1rem;
 }
 
-/* Hide the images by default */
 .mySlides {
   margin-bottom: 1rem;
 }
 
-/* Caption text */
 .slideShowText {
   color: var(--color-text-l1);
   background: var(--color-pill-bg);
@@ -1153,4 +1150,15 @@ textarea:focus,input:focus {
   font-size: 80%;
   padding: 8px 12px;
   text-align: center;
+}
+
+.pinnedPill {
+  width: fit-content;
+  margin-right: 0.5rem;
+  margin-top: 0.5rem;
+  color: var(--color-text-l2);
+  background-color: var(--color-card-bg);
+  padding: 0.4rem;
+  padding-bottom: 0rem;
+  border-radius: 1rem;
 }
