@@ -492,12 +492,12 @@ ul.posts {
 
 @font-face {
  font-family: sansfont;
- src: url(/fonts/Inter-Regular.woff2) format("woff");
+ src: url(/fonts/Roboto-Regular.woff2) format("woff");
 }
 
 @font-face {
   font-family: robotomed;
-  src: url(/fonts/Inter-Medium.woff2) format("woff");
+  src: url(/fonts/Roboto-Medium.woff2) format("woff");
  }
 
 @font-face {
