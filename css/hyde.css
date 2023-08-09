@@ -138,7 +138,7 @@ html {
 
 @media (min-width: 58em) {
  html {
-   font-size: 19px;
+   font-size: 18px;
  }
 }
 
@@ -680,8 +680,8 @@ line-height: 1;
  and (orientation: landscape) 
  and (-webkit-min-device-pixel-ratio: 1.5) {
    .parentContainer {
-     margin-left: 6rem;
-     margin-right: 6rem;
+     margin-left: 10rem;
+     margin-right: 10rem;
    }
 }
 @media only screen and (min-width: 834px) and (max-width: 1112px) and (orientation: landscape){ 
