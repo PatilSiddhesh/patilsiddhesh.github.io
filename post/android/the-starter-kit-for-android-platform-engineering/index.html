@@ -1,0 +1,1806 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="theme-color" content="#f4f6fb" />
+
+
+  <meta property="og:image" content="https://siddroid.com//images/siddroid-aosp-android-platform-engineering-thumb.png" />
+ 
+  <meta name="generator" content="Hugo 0.127.0">
+
+  <title>The Starter kit for Android Platform Engineering &middot; Sid Patil</title>
+
+  <meta name="description" content="Unlock the secrets of the Android Open Source Project (AOSP) with a comprehensive guide to Platform Engineering. This article covers everything from machine setup and IDE configuration to compiling a full Android system builds for Google Pixels." />
+
+  
+  <meta property="og:locale" content="en-us"/>
+
+  <meta property="og:image" content="https://siddroid.com//images/siddroid-aosp-android-platform-engineering-thumb.png" />
+
+  
+  <meta property="og:site_name" content="Sid Patil"/>
+  <meta property="og:title" content="The Starter kit for Android Platform Engineering"/>
+  <meta property="og:description" content="Unlock the secrets of the Android Open Source Project (AOSP) with a comprehensive guide to Platform Engineering. This article covers everything from machine setup and IDE configuration to compiling a full Android system builds for Google Pixels."/>
+  <meta property="og:url" content="https://siddroid.com/post/android/the-starter-kit-for-android-platform-engineering/"/>
+  <meta property="og:type" content="article"/>
+  <meta property="article:published_time" content="2024-06-21T12:50:55&#43;0100"/>
+  <meta property="article:modified_time" content="2024-06-21T15:15:03"/>
+  <meta property="article:author" content="Sid Patil">
+  
+  
+  <meta name="thumbnail" content="https://siddroid.com//images/siddroid-aosp-android-platform-engineering-thumb.png">
+  <meta name="twitter:image" content="https://siddroid.com//images/siddroid-aosp-android-platform-engineering-thumb.png">
+  <meta name="twitter:card" content="summary_large_image">
+  
+
+  
+  <script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "TechArticle",
+    "name": "The Starter kit for Android Platform Engineering",
+    "headline": "The Starter kit for Android Platform Engineering",
+    "alternativeHeadline": "Learn Kotlin and Android development with Sid Patil",
+    "editor": "Sid Patil",
+    "genre": "Android development and Kotlin programming",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Siddroid",
+      "url": "https://siddroid.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://siddroid.com/images/siddhesh_patil.jpg"
+      },
+      "sameAs" : [ "https://www.linkedin.com/in/patilsid/",
+        "https://www.github.com/patilsiddhesh/",
+        "https://facebook.com/siddroid/",
+        "https://patilsiddhesh.medium.com/",
+        "http://twitter.com/siddroid"]
+    },
+     
+    "datePublished": "2024-06-21T12:50:55",
+    
+    "dateModified": "2024-06-21T15:15:03",
+    "author": {
+      "@type" : "Person",
+      "name": "Siddhesh Patil",
+      "alternateName" : "Sid Patil",
+      "@id": "https://siddroid.com/about",
+      "image": "https://siddroid.com/images/siddhesh_patil.jpg",
+      "alumniOf": [
+      {
+       "@type": "CollegeOrUniversity",
+       "name": "University of Mumbai",
+       "sameAs": "https://en.wikipedia.org/wiki/University_of_Mumbai"
+      },
+      {
+        "@type": "CollegeOrUniversity",
+        "name": "Atharva College of Engineering",
+        "sameAs": "http://www.atharvacoe.ac.in/"
+       },
+      {
+       "@type": "CollegeOrUniversity",
+       "name": "Bhavans College",
+       "sameAs": "https://en.wikipedia.org/wiki/Bhavan's_College"
+      }
+    ],
+      "nationality": "Indian",
+      "gender": "male",
+      "sameAs" : [ "https://www.linkedin.com/in/patilsid/",
+        "https://facebook.com/siddroid/",
+        "https://www.github.com/patilsiddhesh/",
+        "https://patilsiddhesh.medium.com/",
+        "http://twitter.com/siddroid"],
+        "birthPlace": {
+          "@type": "Place",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Mumbai",
+            "addressRegion": "Maharashtra"
+          }
+        },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Berlin",
+        "addressRegion": "Germany"
+      },
+      "affiliation": [
+	    {
+		  "@type": "Organization",
+		  "name": "Paytm",
+		  "sameAs": [
+			"https://twitter.com/paytm",
+			"https://paytm.com"
+		  ]
+  	},
+    {
+		  "@type": "Organization",
+		  "name": "Delivery Hero",
+		  "sameAs": [
+			"https://twitter.com/deliveryherocom",
+			"https://www.deliveryhero.com"
+		  ]
+  	},
+    {
+		  "@type": "Organization",
+		  "name": "Paytm Insider",
+		  "sameAs": [
+			"https://twitter.com/paytminsider",
+			"https://insider.in"
+		  ]
+  	},
+    {
+		  "@type": "Organization",
+		  "name": "Kotlin Mumbai",
+		  "sameAs": [
+			"https://twitter.com/kotlinmumbai",
+			"https://kotlinmumbai.tech"
+		  ]
+  	}
+
+],
+      "jobTitle": "Android Engineer",
+      "worksFor": [
+      {
+      "@type": "Organization",
+      "name": "Delivery Hero",
+      "sameAs": [
+        "https://twitter.com/deliveryherocom",
+        "https://deliveryhero.com"
+      ]
+      },
+          {
+      "@type": "Organization",
+      "name": "Paytm",
+      "sameAs": [
+        "https://twitter.com/paytm",
+        "https://paytm.com"
+      ]
+      }
+    ],
+      "url" : "https://siddroid.com",
+      "disambiguatingDescription": "Android Engineer at Paytm Insider and Organizer of Kotlin Mumbai",
+      "description": "Android Engineer and Software Evangelist from Berlin, Germany. Learn to develop quality Android apps and build software with Kotlin."
+    
+    },
+    
+    "image": "https://siddroid.com//images/siddroid-aosp-android-platform-engineering-thumb.png",
+    "url": "https://siddroid.com/post/android/the-starter-kit-for-android-platform-engineering/",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://siddroid.com/"
+    },
+     
+    "keywords": ["Kotlin","MD3","Android 15","Articles by Sid Patil","AOSP","Tiramisu","Monet","Android System UI","System-UI.apk","Android","AOSP","Android Open Source Project","build AOSP","AOSP guide","AOSP tutorial","AOSP setup","AOSP build","machine setup for AOSP","IDE configuration for AOSP","full system build AOSP","Android development","AOSP development","build Android from source","Android OS build","AOSP machine configuration","custom Android build","AOSP installation","AOSP step-by-step","AOSP build tools","AOSP environment setup","AOSP codebase","AOSP compilation","Android system build","AOSP for beginners","Android platform engineering","building Android kernel","Android 15","Ubuntu setup for AOSP","Intellij IDEA for AOSP","Java for Android","Kotlin for Android","systems engineering for Android","Android framework","AOSP kernel build","Android kernel development","AOSP with Ubuntu","Android development tools","AOSP compilation errors","troubleshooting AOSP build","Android source code","custom Android ROM","AOSP on Ubuntu","Intellij IDEA setup","Java programming for Android","Kotlin programming for Android","Android systems engineering","AOSP framework development","Android OS customization"],
+    
+    "description": "Unlock the secrets of the Android Open Source Project (AOSP) with a comprehensive guide to Platform Engineering. This article covers everything from machine setup and IDE configuration to compiling a full Android system builds for Google Pixels.",
+    "articleBody": "Unlock the secrets of the Android Open Source Project (AOSP) with a comprehensive guide to Platform Engineering. This article covers everything from machine setup and IDE configuration to compiling a full Android system builds for Google Pixels."
+  }
+  </script>
+  
+
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="https://siddroid.com/css/print.css?v=566"
+        media="print">
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="https://siddroid.com/css/poole.css?v=506">
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="https://siddroid.com/css/hyde.css?v=172">
+  
+  <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined"
+        rel="stylesheet">
+
+
+  
+
+
+  <link rel="preload" as="font" href="https://siddroid.com/fonts/Gilroy-SemiBold.woff2" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" as="font" href="https://siddroid.com/fonts/Gilroy.woff2" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" as="font" href="https://siddroid.com/fonts/Roboto-Regular.woff2" type="font/woff2" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+
+
+        <link rel="apple-touch-icon-precomposed" sizes="57x57" href="https://siddroid.com//favicon/apple-touch-icon-57x57.png?v=383" />
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://siddroid.com//favicon/apple-touch-icon-114x114.png?v=497" />
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://siddroid.com//favicon/apple-touch-icon-72x72.png?v=782" />
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://siddroid.com//favicon/apple-touch-icon-144x144.png?v=457" />
+        <link rel="apple-touch-icon-precomposed" sizes="60x60" href="https://siddroid.com//favicon/apple-touch-icon-60x60.png?v=395" />
+        <link rel="apple-touch-icon-precomposed" sizes="120x120" href="https://siddroid.com//favicon/apple-touch-icon-120x120.png?v=356" />
+        <link rel="apple-touch-icon-precomposed" sizes="76x76" href="https://siddroid.com//favicon/apple-touch-icon-76x76.png?v=572" />
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="https://siddroid.com//favicon/apple-touch-icon-152x152.png?v=893" />
+        <link rel="icon" type="image/png" href="https://siddroid.com//favicon/favicon-196x196.png?v=741" sizes="196x196" />
+        <link rel="icon" type="image/png" href="https://siddroid.com//favicon/favicon-96x96.png?v=988" sizes="96x96" />
+        <link rel="icon" type="image/png" href="https://siddroid.com//favicon/favicon-32x32.png?v=92" sizes="32x32" />
+        <link rel="icon" type="image/png" href="https://siddroid.com//favicon/favicon-16x16.png?v=650" sizes="16x16" />
+        <link rel="icon" type="image/png" href="https://siddroid.com//favicon/favicon-128.png?v=557" sizes="128x128" />
+        <meta name="application-name" content="Siddroid"/>
+        <meta name="msapplication-TileColor" content="#FFFFFF" />
+        <meta name="msapplication-TileImage" content="https://siddroid.com//favicon/mstile-144x144.png?v=588" />
+        <meta name="msapplication-square70x70logo" content="https://siddroid.com//favicon/mstile-70x70.png?v=753" />
+        <meta name="msapplication-square150x150logo" content="https://siddroid.com//favicon/mstile-150x150.png?v=310" />
+        <meta name="msapplication-wide310x150logo" content="https://siddroid.com//favicon/mstile-310x150.png?v=165" />
+        <meta name="msapplication-square310x310logo" content="https://siddroid.com//favicon/mstile-310x310.png?v=853" />
+
+  
+  </head>
+<body class="mainPageBg">
+  <div class="topBar" style="display: flex;justify-content: space-between;">
+
+  <div style="margin-left: 1.5rem;">
+
+    <a href="/" style="color: #fff;text-decoration:none;-webkit-tap-highlight-color: transparent;">
+
+    <div style="display:flex; justify-content: center;">
+
+      <div class="author-image topbar-logo" style="margin-right: 10px;width:29px;height:29px;margin-top: 0rem;margin-bottom:12px;clip-path: circle(50% at 50% 50%);">
+          <img src="/images/sid_patil.JPG" class="img-headshot center" width="29px" height="29px"
+            title="Sid Patil"
+            alt="Siddroid - your place to learn Kotlin and Android">
+      </div>
+
+      <div>
+          <p class="headerTxt" style="font-size: 22px;margin-bottom: 0.5em;max-lines: 1;overflow: hidden;white-space: nowrap;">
+            <span id="siteTitleText" style="max-lines: 1;">Sid Patil</span><span id="siteTitleText"></span>   
+          </p> 
+          
+
+      </div>
+
+          
+      
+      
+    </div>
+  </a>
+
+  </div>
+
+  
+
+  
+
+
+    
+
+    <div style="display:flex;justify-content: center;margin-right: rem;margin-top: 0.2rem;">
+
+          
+            
+          
+
+    
+    <a href="/browse/" title="Browse the archive" style="color:var(--color-topbar-text2);font-family:outfit-regular;text-decoration: none;-webkit-tap-highlight-color: transparent;">
+      <div style="width: 50px;margin-left: 0.3rem;margin-right: 0.3rem;">
+          <div style="display: flex;align-items: center;justify-content: center;">
+            
+            <span class="material-icons-outlined"  style="color: var(--color-topbar-text2);">
+              code
+            </span>
+        </div>
+    </div>
+    </a>
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    <a href="/search/" title="Search android articles on Siddroid" style="color:   var(--color-topbar-text2);font-family:outfit-regular;text-decoration: none;-webkit-tap-highlight-color: transparent;
+      ">
+
+<div style="width: 50px;margin-left: 0.3rem;margin-right: 0.3rem;">
+    <div style="display: flex;align-items: center;justify-content: center;">
+      
+      
+    </div>
+      <div style="display: flex;align-items: center;justify-content: center;">
+                  
+        <span class="material-icons-outlined"  style="color: var(--color-topbar-text2);">
+          search
+        </span>
+
+        
+    </div>
+</div>
+    </a>
+    
+    <div id="theme-btn" style="width: 50px;margin-left: 0.3rem;margin-right: 0.3rem;" onclick="toggleTheme()">
+      <div style="display: flex;align-items: center;justify-content: center;">
+        <span id="theme-icon" class="material-icons-outlined"  style="color: var(--color-topbar-text2);">
+          dark_mode
+        </span>
+    </div>
+  </div>
+    <a href="/about/" title="About Sid Patil" style="color:   var(--color-topbar-text2);font-family:outfit-regular;text-decoration: none;-webkit-tap-highlight-color: transparent;
+      ">
+    <div style="width: 50px;margin-left: 0.3rem;margin-right: 0.3rem;">
+        <div style="display: flex;align-items: center;justify-content: center;">
+          
+          
+            
+        </div>
+          <div style="display: flex;align-items: center;justify-content: center;">
+            <span class="material-icons-outlined"  style="color: var(--color-topbar-text2);">
+              person_outline
+            </span>
+            
+        </div>
+    </div>
+    </a>
+    
+  </div>
+
+  
+
+</div>
+
+  <script src="https://siddroid.com/js/theme.js"></script>
+
+  <main id="main-container" style="padding-top: 0.1rem;">
+      <div id="main-page-ct" class="parentContainer" style="min-height: 100vh;">
+            <div class="post">
+
+  
+
+  
+
+  
+
+  
+
+  <div>
+    <h1 class="postTitleHeading">
+      The Starter kit for Android Platform Engineering
+    </h1>
+  </div>
+
+  
+ 
+
+
+ 
+
+      
+  <div style="margin-top: 0.1rem;">
+    <span>
+    
+      <span class="headerPill" style="font-size: 90% !important; overflow: hidden;max-lines: 1;white-space: nowrap;display: inline-flex;margin-bottom: 0.5em;">
+        <span class="material-icons-outlined md-20" style="color: var(--color-text-l2);margin-right: 0.2rem;">
+          calendar_today
+        </span>
+        <time datetime=" 2024-06-21T12:50:55&#43;0100">Jun 21, 2024</time>
+      </span>
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+      
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+      
+      
+        
+
+        <span class="headerPill" style="font-size: 90%;overflow: hidden;max-lines: 1;white-space: nowrap;display: inline-flex;margin-bottom: 0.5em;">
+          <span class="material-icons-outlined md-20" style="color: var(--color-text-l2);margin-right: 0.2em;">
+            hourglass_empty
+            </span>
+          17 min read
+        </span>
+
+          
+          <span class="headerPill" style="color: var(--color-text-l2);font-size: 90% !important;overflow: hidden;max-lines: 1;white-space: nowrap;display: inline-flex;margin-bottom: 0.5em;">
+
+          
+
+          <svg style="margin-bottom: 0;margin-right: 5px;" width="22px" height="19" viewBox="0 0 36 25" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path d="M28.4116 7.31748L30.4159 5.3131C30.9452 4.7838 30.9452 3.92638 30.4159 3.39709C29.8866 2.8678 29.0289 2.8678 28.4997 3.39709L26.1115 5.78522C23.6866 4.44376 20.9013 3.67758 17.9392 3.67758C14.9773 3.67758 12.192 4.44376 9.76704 5.78522L7.37867 3.39697C6.84938 2.86768 5.99172 2.86768 5.46243 3.39697C4.93313 3.92626 4.93313 4.78368 5.46243 5.31298L7.46681 7.31736C3.5326 10.422 1 15.2417 1 20.6307C1 21.379 1.60683 22 2.35515 22H33.5232C34.2715 22 34.8783 21.379 34.8783 20.6307C34.8783 15.2419 32.3457 10.4221 28.4116 7.31748ZM3.7745 19.2898C4.45863 12.1753 10.5501 6.41611 17.9392 6.41611C25.3282 6.41611 31.4197 12.1754 32.1038 19.2898H3.7745Z" fill="currentColor"/>
+            <path d="M11.4628 16.4772C12.5533 16.4772 13.4373 15.5932 13.4373 14.5027C13.4373 13.4122 12.5533 12.5282 11.4628 12.5282C10.3723 12.5282 9.48834 13.4122 9.48834 14.5027C9.48834 15.5932 10.3723 16.4772 11.4628 16.4772Z" fill="currentColor"/>
+            <path d="M24.3259 16.4772C25.4164 16.4772 26.3004 15.5932 26.3004 14.5027C26.3004 13.4122 25.4164 12.5282 24.3259 12.5282C23.2355 12.5282 22.3514 13.4122 22.3514 14.5027C22.3514 15.5932 23.2355 16.4772 24.3259 16.4772Z" fill="currentColor"/>
+            </svg>
+                              
+          
+          
+          
+
+          <span style="margin-right: 0.5rem;color: var(--color-text-l2);">Android </span>
+
+        </span>
+
+        
+          <span class="headerPill" style="color: var(--color-text-l2);font-size: 90% !important;overflow: hidden;max-lines: 1;white-space: nowrap;display: inline-flex;margin-bottom: 0.5em;">
+
+          
+                      <span class="material-icons-outlined md-20" style="margin-right: 0.2rem;">
+                        layers
+                      </span>
+          
+
+          <span style="margin-right: 0.5rem;color: var(--color-text-l2);">Platform </span>
+
+        </span>
+
+        
+
+        
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+    
+
+      
+    </span>
+  </div>
+
+  
+  
+
+
+  <div >
+    
+  </div>
+
+  
+  
+
+  <meta name="thumbnail" content="https://siddroid.com/images/siddroid-aosp-android-platform-engineering-thumb.png">
+<meta name="twitter:image" content="https://siddroid.com/images/siddroid-aosp-android-platform-engineering-thumb.png">
+<meta name="twitter:card" content="summary_large_image">
+<div style="margin-top:1rem;"></div>
+
+<div style="display: flex;align-items: center;justify-content: center;margin-top: 0.4rem;">
+    <div style="background-image: url('/images/siddroid-aosp-android-platform-engineering-thumb.png');background-size: cover;background-repeat: no-repeat;border-radius: 1rem;background-position: 50% 50%;width: 100%;height: 15rem;margin-bottom: 1rem;">
+    </div>
+</div>
+
+<div style="display: flex;align-items: center;justify-content: center;">
+    <p style="font-size: 80%;font-style: italic;opacity: 80%;text-align: center;"> The bare-bone setup for Android System Building on Ubuntu </p>
+</div>
+
+
+<p>Android has been around since November 2007, and today, it&rsquo;s an impressive 17 years old. With a staggering 3 billion devices running Android, it&rsquo;s one of the largest and most influential operating systems globally. The evolution has been phenomenal, and with countless new features and smartphones being released by various OEMs, there&rsquo;s never been a more exciting time to dive into Android platform engineering.</p>
+<p>Ready to build your own Android?</p>
+<p>This article is your ultimate guide, taking you from the initial machine setup for building AOSP, and IDE configurations, to booting your very first Android system image on a compatible device. Let&rsquo;s get started!</p>
+<hr>
+<div class="overview">
+    <div style="display: flex;align-items: center;margin-bottom: 0.3rem;margin-top: 1.5rem;">
+        <span class="material-icons-outlined md-header" style="color: var(--color-text-headers);margin-right: 0.3rem;margin-top: 0.2em;">
+            toc
+        </span>
+        <h3 class= "iconHeader" id="table-of-content">
+            <span>
+                Table of content
+            </span>
+        </h3>
+    </div>
+
+<ul>
+<li><a href="#my-experience-building-mobile-operating-systems">My experience building Mobile Operating Systems</a></li>
+<li><a href="#machine-setup-for-building-aosp">Machine setup for building AOSP</a>
+<ul>
+<li><a href="#multi-core-cpus-for-build-parallelization">Multi-core CPUs for build parallelization</a></li>
+<li><a href="#fast-memory-for-ides-and-code-compilation">Fast Memory for IDEs and Code Compilation</a></li>
+<li><a href="#nvme-storage-for-fast-access">NVMe Storage for fast access</a></li>
+<li><a href="#network">Network</a></li>
+</ul>
+</li>
+<li><a href="#setting-up-the-build-environment">Setting up the build environment</a>
+<ul>
+<li><a href="#syncing-the-source">Syncing the source</a></li>
+<li><a href="#setup-tools-for-syncing">Setup tools</a></li>
+<li><a href="#setting-up-repo">Setting up Repo</a></li>
+<li><a href="#initializing-android-repo">Initializing Android Repo</a></li>
+<li><a href="#syncing">Sync with repo</a></li>
+</ul>
+</li>
+<li><a href="#compiling-the-android-os">Compiling the Android OS</a>
+<ul>
+<li><a href="#optional-device-binaries-or-blobs">Device binaries or Blobs</a></li>
+<li><a href="#setting-up-device-binaries">Setting up device binaries</a></li>
+<li><a href="#lunch-time">Lunch Time</a></li>
+<li><a href="#setup-the-build-environment">Build environment</a></li>
+<li><a href="#identifying-build-target">Identifying build target</a></li>
+<li><a href="#release">Release</a></li>
+<li><a href="#variant">Variant</a></li>
+<li><a href="#make-android">Make Android</a></li>
+<li><a href="#monitor-your-system-during-builds">Monitor your system during builds</a></li>
+<li><a href="#successful-android-build">Successful Android Build</a></li>
+</ul>
+</li>
+<li><a href="#comparing-build-times">Comparing build times</a></li>
+<li><a href="#booting-your-android-build-on-a-pixel">Booting your Android build on a Pixel</a></li>
+<li><a href="#ide-setup">Android Studio for Platform (ASfP)</a></li>
+<li><a href="#alternative-setups">Alternative setups</a></li>
+<li><a href="#summary">Summary</a></li>
+<li><a href="#references">References, Citations &amp; Attribution</a></li>
+</ul>
+    <div style="display: flex;align-items: center;margin-bottom: 0.3rem;margin-top: 1.5rem;">
+        <span class="material-icons-outlined md-header" style="color: var(--color-text-headers);margin-right: 0.3rem;margin-top: 0.2em;">
+            arrow_forward
+        </span>
+        <h3 class= "iconHeader" id="tldr">
+            <span>
+                TLDR
+            </span>
+        </h3>
+    </div>
+
+<ul>
+<li>
+<p>Use Ubuntu LTS with performant systems to build Android</p>
+</li>
+<li>
+<p>Build the Android source using Repo, Lunch, and Soong</p>
+</li>
+<li>
+<p>Prepare your test devices for booting Android OS</p>
+</li>
+<li>
+<p>Rely on the Android Studio for Platform (ASfP) for development</p>
+</li>
+</ul>
+</div>
+<hr>
+    <div style="display: flex;align-items: center;margin-bottom: 0.3rem;margin-top: 1.5rem;">
+        <span class="material-icons-outlined md-header" style="color: var(--color-text-headers);margin-right: 0.3rem;margin-top: 0.2em;">
+            favorite_outline
+        </span>
+        <h3 class= "iconHeader" id="my-experience-building-mobile-operating-systems">
+            <span>
+                My experience building Mobile Operating Systems
+            </span>
+        </h3>
+    </div>
+
+<p>I am an engineer with a deep fascination for operating systems that began 14 years ago when I first encountered an Android device. Although my career has primarily focused on third-party app development for major tech companies in Asia and Europe, my journey started with academic pursuits, building the Linux and Android kernel.</p>
+<p>Before Android, I spent a considerable time building aftermarket Symbian OS builds for Nokia touch devices around 2009, adding features and apps from newer devices, and optimizing battery and memory usage for older smartphones. It was fascinating!</p>
+<p>Building mobile operating systems is really cool. I must say this, it has always given me greater satisfaction as a developer than app development.</p>
+<p><strong>I am not a custom ROM developer</strong> or a device maintainer on XDA, a question often asked by other developers, Googlers, or ROM maintainers at public conferences. My interest in the Android OS has always been purely academic, and I believe that <em>you</em> &ndash; the reader, share this same passion.</p>
+<hr>
+    <div style="display: flex;align-items: center;margin-bottom: 0.3rem;margin-top: 1.5rem;">
+        <span class="material-icons-outlined md-header" style="color: var(--color-text-headers);margin-right: 0.3rem;margin-top: 0.2em;">
+            memory
+        </span>
+        <h3 class= "iconHeader" id="machine-setup-for-building-aosp">
+            <span>
+                Machine setup for building AOSP
+            </span>
+        </h3>
+    </div>
+
+<blockquote>
+<p>A good machine is required for building Android. I mean &ndash; <em>you are seriously building an entire OS on a system!</em></p>
+</blockquote>
+<p>This task requires a robust machine equipped with substantial multi-core processing power, fast storage, ample network bandwidth, and sufficient memory to handle intensive IDE operations. Although there are no defined requirements for building AOSP, Google states its <strong>minimum</strong> <a href="https://source.android.com/docs/setup/start/requirements">machine requirements</a>. Which are as follows:</p>
+<p><strong>System requirements for building Android 15:</strong></p>
+<table class="tg"><thead>
+  <tr>
+    <th class="tg-0pky">System</th>
+    <th class="tg-0pky">Spec</th>
+    <th class="tg-0pky">Type</th>
+    <th class="tg-0pky">Options</th>
+  </tr></thead>
+<tbody>
+  <tr>
+    <td class="tg-0pky">CPU</td>
+    <td class="tg-0pky">72 Core</td>
+    <td class="tg-0pky">X86_64</td>
+    <td class="tg-0pky">Intel Xeon</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Memory</td>
+    <td class="tg-0pky">64 GB</td>
+    <td class="tg-0pky">DDR4-5</td>
+    <td class="tg-0pky">Any</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Storage</td>
+    <td class="tg-0pky">400 GB</td>
+    <td class="tg-0pky">NVMe</td>
+    <td class="tg-0pky">Any</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">OS</td>
+    <td class="tg-0pky">64bit</td>
+    <td class="tg-0pky">LTS</td>
+    <td class="tg-0pky">Ubuntu</td>
+  </tr>
+</tbody>
+</table>
+<p>While it might seem daunting, we&rsquo;re not discussing your typical desktop setup here— even high-end gaming rigs would struggle to match the specifications needed for building an operating system. Developing an OS demands significant computing power. Such a robust system is crucial for developer efficiency, reducing build times and accelerating development.</p>
+<blockquote class="infoBlockquote">
+    <div style="display: flex;align-items: center;">
+        <span class="material-icons-outlined md-36" style="color: var(--color-text-l2);margin-right: 1rem;opacity: 0.9;">
+            speed
+        </span>
+        <p>
+            According to Google, a machine of this caliber can complete a full Android build in about 40 minutes. In contrast, a 6-core machine with comparable memory would require a staggering 6 hours to achieve the same task.
+        </p>
+    </div>
+</blockquote>
+<p>While having a 72-core system for building Android sounds appealing, it&rsquo;s not feasible for most platform engineers. Our goal is to achieve a similar setup and also explore alternatives to physical systems.</p>
+<p>Before we proceed to our system setup let&rsquo;s look at each of the system requirements and understand why each of them is essential.</p>
+    <div style="display: flex;align-items: center;margin-bottom: 0.3rem;margin-top: 1.5rem;">
+        <span class="material-icons-outlined md-header" style="color: var(--color-text-headers);margin-right: 0.3rem;margin-top: 0.2em;">
+            account_tree
+        </span>
+        <h3 class= "iconHeader" id="multi-core-cpus-for-build-parallelization">
+            <span>
+                Multi-core CPUs for build parallelization
+            </span>
+        </h3>
+    </div>
+
+<p>Compiling software or packaging software components into binaries benefits greatly from parallelization, a process known as build parallelization. Android&rsquo;s build system, called <a href="https://source.android.com/docs/setup/build">&ldquo;Soong&rdquo;</a>, supports compiling with multiple jobs, as did previous toolchains.</p>
+<p>Given AOSP&rsquo;s extensive size—approximately <strong>150,000 code files</strong> as of 2024—parallelizing builds is essential.</p>
+<p>This necessitates powerful multi-core CPUs capable of handling multi-threaded jobs, hence the consideration for systems with high multi-core count. There&rsquo;s typically a trade-off between machines with higher core counts versus those with higher single-core clock speeds; a balanced CPU will do a decent job of generating Android builds for you.</p>
+<p><strong>The machine I use has a</strong> <a href="https://www.intel.com/content/www/us/en/products/sku/230490/intel-core-i713700-processor-30m-cache-up-to-5-20-ghz/specifications.html">13th Gen Intel i7-13700</a>. It takes about <strong>1h 27min</strong> for a full build of Android.</p>
+<div style="display: flex;align-items: center;">
+<img style="border-radius: 1rem;width:60%;float:right;margin-right:1rem;filter:grayscale();opacity:90%" src="/images/siddroid-building-aosp-android-cpu-usage.png">
+<ul>
+<li>16 Physical cores / 24 Threads</li>
+<li>Base: 2.10 Ghz</li>
+<li>Max: 5.10 Ghz</li>
+</ul>
+</div>
+<blockquote>
+<p>I chose this spec as it was the best I could find. I also think the compile time is still decent enough for a complete build. Depending on your budget for your system, you can look for decent alternatives with higher thread counts.</p>
+</blockquote>
+    <div style="display: flex;align-items: center;margin-bottom: 0.3rem;margin-top: 1.5rem;">
+        <span class="material-icons-outlined md-header" style="color: var(--color-text-headers);margin-right: 0.3rem;margin-top: 0.2em;">
+            fast_forward
+        </span>
+        <h3 class= "iconHeader" id="fast-memory-for-ides-and-code-compilation">
+            <span>
+                Fast Memory for IDEs and Code Compilation
+            </span>
+        </h3>
+    </div>
+
+<p>Having ample memory enables concurrent Android development and coding. Given its vast scale, opening the AOSP in an IDE could overwhelm a system with limited memory. The Android Open Source Project primarily comprises Java and C++ files, demanding sufficient memory for effective development and compilation.</p>
+<p><strong>My system uses</strong> <a href="https://www.corsair.com/de/de/p/memory/CMH64GX5M2B6000C40/vengeance-rgb-64gb-2x32gb-ddr5-dram-6000mhz-c40-memory-kit-black-cmh64gx5m2b6000c40?srsltid=AfmBOooJNnrd-Yad-LFf967UMgCN6AAavsjquW2btnvcH1U36LvcHgiwI0A">64 GB 5200Mhz DDR5 memory (Corsair Vengeance)</a> with low latency.</p>
+<p>I&rsquo;ve observed memory usage ranging between <strong>12 to 30GB</strong> during different tasks when building AOSP. If you add an IDE with complete Android Framework files loaded, memory consumption could rise significantly.</p>
+<p>We will set-up an IDE in the later part of this article and use tools for importing the Android Framework packages into the IDE for daily development.</p>
+    <div style="display: flex;align-items: center;margin-bottom: 0.3rem;margin-top: 1.5rem;">
+        <span class="material-icons-outlined md-header" style="color: var(--color-text-headers);margin-right: 0.3rem;margin-top: 0.2em;">
+            sd_card
+        </span>
+        <h3 class= "iconHeader" id="nvme-storage-for-fast-access">
+            <span>
+                NVMe Storage for fast access
+            </span>
+        </h3>
+    </div>
+
+<p>Synchronizing the entire Android source and building a single specified target can occupy up to 500GB of storage. As the system compiles Android using Soong, it simultaneously writes out the compiled files. Opting for fast read-write storage facilitates quick access to source code within your preferred IDE, as well as faster compilation.</p>
+<p>Although there is no upper limit on storage specifications, a recommended setup would include a substantial 1-2TB NVMe drive.</p>
+<p>We will learn how to setup dedicated <code>out</code> directories on multi-disc / drive environments to avoid bottlenecks on performant systems.</p>
+<p><strong>Personally, my system is equipped with</strong> <a href="https://www.samsung.com/de/memory-storage/nvme-ssd/980-pro-pcle-4-0-nvme-m-2-ssd-500gb-mz-v8p500bw/">2TB of NVMe storage</a>, 2TB of solid-state drive storage, and an additional 1TB of high-speed SATA storage.</p>
+    <div style="display: flex;align-items: center;margin-bottom: 0.3rem;margin-top: 1.5rem;">
+        <span class="material-icons-outlined md-header" style="color: var(--color-text-headers);margin-right: 0.3rem;margin-top: 0.2em;">
+            cloud_sync
+        </span>
+        <h3 class= "iconHeader" id="network">
+            <span>
+                network
+            </span>
+        </h3>
+    </div>
+
+<p>At first sync, AOSP is about <strong>200-300GB</strong> in size. Consider a decent enough internet connection for fast sync of the source as you will be pulling in new changes while you develop for the platform.</p>
+<hr>
+    <div style="display: flex;align-items: center;margin-bottom: 0.3rem;margin-top: 1.5rem;">
+        <span class="material-icons-outlined md-header" style="color: var(--color-text-headers);margin-right: 0.3rem;margin-top: 0.2em;">
+            build
+        </span>
+        <h3 class= "iconHeader" id="setting-up-the-build-environment">
+            <span>
+                Setting up the build environment
+            </span>
+        </h3>
+    </div>
+
+<p>In all practicality consider setting up a 64-bit environment on your machine. Setup your machine with a Long-term support release of Ubuntu. You can download the latest installation images <a href="https://ubuntu.com/download/desktop">here</a>.</p>
+<blockquote class="infoBlockquote">
+    <div style="display: flex;align-items: center;">
+        <span class="material-icons-outlined md-36" style="color: var(--color-text-l2);margin-right: 1rem;opacity: 0.9;">
+            history
+        </span>
+        <p>
+            Earlier versions of Android can be compiled on Mac OS. Current-gen Apple devices with Apple Silicon still run into incompatibility issues as many libs used for building AOSP are specifically for X86_64 systems and Apple Silicon uses Arm64.
+        </p>
+    </div>
+</blockquote>
+    <div style="display: flex;align-items: center;margin-bottom: 0.3rem;margin-top: 1.5rem;">
+        <span class="material-icons-outlined md-header" style="color: var(--color-text-headers);margin-right: 0.3rem;margin-top: 0.2em;">
+            sync
+        </span>
+        <h3 class= "iconHeader" id="setting-up-the-build-environment">
+            <span>
+                Syncing the source
+            </span>
+        </h3>
+    </div>
+
+<p>Create a dedicated directory for syncing the Android source using the file manager or via  <code>mkdir</code>. From our example:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">/Projects/AOSP/</span></span></code></pre></div>
+<h4 id="setup-tools-for-syncing">Setup tools for syncing</h4>
+<p>Install dependencies, build-essentials and libs on your system for building on Ubuntu</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">sudo apt-get install git-core gnupg flex bison build-essential zip curl zlib1g-dev libc6-dev-i386 x11proto-core-dev libx11-dev lib32z1-dev libgl1-mesa-dev libxml2-utils xsltproc unzip fontconfig</span></span></code></pre></div>
+<p>Now, let&rsquo;s set up the tools for source control. Google uses Repo and Git to manage AOSP sources. AOSP relies completely on Git, while Repo acts as a super-tool for handling Git repositories. Since Android is a large &ldquo;super-project,&rdquo; Repo helps sync multiple Git directories. It’s a Python-based tool that wraps around Git to make source management easier.</p>
+<h4 id="setting-up-repo">Setting up Repo</h4>
+<p>Install repo on your system using apt-get</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">sudo apt-get install repo</span></span></code></pre></div>
+<h4 id="initializing-android-repo">Initializing Android repo</h4>
+<p>Once repo has been setup along with all the build dependencies we can start cloning the source to our machine. Navigate to your project directory and initialize repo via</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">repo init --partial-clone -b main -u https://android.googlesource.com/platform/manifest</span></span></code></pre></div>
+<h4 id="syncing">Syncing</h4>
+<p>Sync the repo and start downloading the source to your local directory.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">repo sync -j8</span></span></code></pre></div>
+<p>This will launch 8 sync jobs and start fetching AOSP, you can also use the <code>-c</code> flag to sync the current manifest. Depending on your internet connection and server latencies the sync may take time.</p>
+<hr>
+    <div style="display: flex;align-items: center;margin-bottom: 0.3rem;margin-top: 1.5rem;">
+        <span class="material-icons-outlined md-header" style="color: var(--color-text-headers);margin-right: 0.3rem;margin-top: 0.2em;">
+            rocket
+        </span>
+        <h3 class= "iconHeader" id="compiling-the-android-os">
+            <span>
+                Compiling the Android OS
+            </span>
+        </h3>
+    </div>
+
+<p>With the majority of our build setup complete, we can finally proceed to building the system images and compiling the Android OS. In this example, we are building AOSP for the Google Pixel 6A (bluejay).</p>
+<h4 id="optional-device-binaries-or-blobs">(Optional) Device binaries or Blobs</h4>
+<p>Since we are compiling for a physical device we require the device binaries supplied by its manufacturer aka Blobs. We are building for a Google device and Google supplies binaries for most of their devices they can be found <a href="https://developers.google.com/android/blobs-preview">here</a>.</p>
+<p>Download appropriate binaries for your device matching the tagged build/branch. In case you want to build for an emulator you can skip this step entirely.</p>
+<h4 id="setting-up-device-binaries">Setting up device binaries</h4>
+<p>To setup the blobs unarchive the downloaded file and place the outputs in the root directory of your project. In this example, we will place them in <code>/Projects/AOSP</code>.</p>
+<p>Execute the shell script in your terminal at the root path. This will place all the blobs and extract them correctly in the project. Eg for the Pixel 6A:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">sudo extract-google_devices-bluejay.sh</span></span></code></pre></div>
+<p>Make sure you run it in sudo as the script needs permissions to write in certain directories.</p>
+    <div style="display: flex;align-items: center;margin-bottom: 0.3rem;margin-top: 1.5rem;">
+        <span class="material-icons-outlined md-header" style="color: var(--color-text-headers);margin-right: 0.3rem;margin-top: 0.2em;">
+            lunch_dining
+        </span>
+        <h3 class= "iconHeader" id="lunch-time">
+            <span>
+                Lunch Time
+            </span>
+        </h3>
+    </div>
+
+<p>Before we go and grab our favorite snack, let&rsquo;s setup a fresh build for compilation. By the time you are back, Android should have compiled for your device and we will proceed to booting it on the physical device.</p>
+<h4 id="setup-the-build-environment">Setup the build environment</h4>
+<p>Prepare the execution environment with the following command</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="nb">source</span> setup/buildenv.sh</span></span></code></pre></div>
+<h4 id="identifying-build-target">Identifying build target</h4>
+<p>Build targets are like recipes we pass as args to the <code>lunch</code> command line utility to compile the source for a specific target. The format of a build target is a string consisting of the target, release, and variant like <code>target-release-variant</code>.</p>
+<table class="tg"><thead>
+  <tr>
+    <th class="tg-0pky">Target</th>
+    <th class="tg-0pky">Release</th>
+    <th class="tg-0pky">Variant</th>
+  </tr></thead>
+<tbody>
+  <tr>
+    <td class="tg-0pky">bluejay</td>
+    <td class="tg-0pky">trunk_staging</td>
+    <td class="tg-0pky">eng</td>
+  </tr>
+</tbody>
+</table>
+<p>A target or product is a device or an emulator that you want to build Android for. Here are some sample targets:</p>
+<ul>
+<li>Cuttlefish emulator: <code>cf</code></li>
+<li>Pixel 6A: <code>bluejay</code></li>
+<li>Pixel 8 Pro: <code>husky</code></li>
+<li>Nexus 5X: <code>bullhead</code></li>
+</ul>
+<p>Since we are building AOSP for bluejay, we will identify our product as <code>aosp_bluejay</code>. You can look for more <a href="https://source.android.com/docs/setup/reference/build-numbers#build-targets">supported device codenames</a> in the source.</p>
+<h5 id="release">Release</h5>
+<p>We will set our release as <code>trunk_staging</code></p>
+<h5 id="variant">Variant</h5>
+<p>Identify the type of build you want to generate. There are three types of builds:</p>
+<table class="tg"><thead>
+  <tr>
+    <th class="tg-0pky">Build</th>
+    <th class="tg-0pky">Compile time</th>
+    <th class="tg-0pky">Performance</th>
+    <th class="tg-0pky">Debuggable</th>
+  </tr></thead>
+<tbody>
+  <tr>
+    <td class="tg-0pky">eng</td>
+    <td class="tg-0pky">Fast</td>
+    <td class="tg-0pky">Slow</td>
+    <td class="tg-0pky">Yes</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">user</td>
+    <td class="tg-0pky">Slow</td>
+    <td class="tg-0pky">Fast</td>
+    <td class="tg-0pky">No</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">user_debug</td>
+    <td class="tg-0pky">Slow</td>
+    <td class="tg-0pky">Fast</td>
+    <td class="tg-0pky">Yes</td>
+  </tr>
+</tbody>
+</table>
+<p>Performance relates to the actual on-device performance of the build. Since it&rsquo;s our first build, let&rsquo;s set it to <code>eng</code> as that will provide us with the fastest build. Our recipe target can be now identified as <code>aosp_bluejay-trunk_staging-eng</code>. Don&rsquo;t worry if you mess it up, the command line utility will throw an error for format errors. Execute the <code>lunch</code> command to set the target.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">lunch aosp_bluejay-trunk_staging-eng</span></span></code></pre></div>
+<p>If set correctly the console should indicate the following output:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="o">============================================</span>
+</span></span><span class="line"><span class="cl"><span class="nv">PLATFORM_VERSION_CODENAME</span><span class="o">=</span>VanillaIceCream
+</span></span><span class="line"><span class="cl"><span class="nv">PLATFORM_VERSION</span><span class="o">=</span>VanillaIceCream
+</span></span><span class="line"><span class="cl"><span class="nv">TARGET_PRODUCT</span><span class="o">=</span>aosp_bluejay
+</span></span><span class="line"><span class="cl"><span class="nv">TARGET_BUILD_VARIANT</span><span class="o">=</span>eng
+</span></span><span class="line"><span class="cl"><span class="nv">TARGET_ARCH</span><span class="o">=</span>arm64
+</span></span><span class="line"><span class="cl"><span class="nv">TARGET_ARCH_VARIANT</span><span class="o">=</span>armv8-2a
+</span></span><span class="line"><span class="cl"><span class="nv">TARGET_CPU_VARIANT</span><span class="o">=</span>cortex-a55
+</span></span><span class="line"><span class="cl"><span class="nv">TARGET_2ND_ARCH</span><span class="o">=</span>arm
+</span></span><span class="line"><span class="cl"><span class="nv">TARGET_2ND_ARCH_VARIANT</span><span class="o">=</span>armv8-a
+</span></span><span class="line"><span class="cl"><span class="nv">TARGET_2ND_CPU_VARIANT</span><span class="o">=</span>generic
+</span></span><span class="line"><span class="cl"><span class="nv">HOST_OS</span><span class="o">=</span>linux
+</span></span><span class="line"><span class="cl"><span class="nv">HOST_OS_EXTRA</span><span class="o">=</span>Linux-6.8.0-35-generic-x86_64-Ubuntu-24.04-LTS
+</span></span><span class="line"><span class="cl"><span class="nv">HOST_CROSS_OS</span><span class="o">=</span>windows
+</span></span><span class="line"><span class="cl"><span class="nv">BUILD_ID</span><span class="o">=</span>MAIN
+</span></span><span class="line"><span class="cl"><span class="nv">OUT_DIR</span><span class="o">=</span><span class="nv">out</span>
+</span></span><span class="line"><span class="cl"><span class="o">============================================</span></span></span></code></pre></div>
+    <div style="display: flex;align-items: center;margin-bottom: 0.3rem;margin-top: 1.5rem;">
+        <span class="material-icons-outlined md-header" style="color: var(--color-text-headers);margin-right: 0.3rem;margin-top: 0.2em;">
+            code
+        </span>
+        <h3 class= "iconHeader" id="make-android">
+            <span>
+                Make Android
+            </span>
+        </h3>
+    </div>
+
+<p>Let&rsquo;s compile Android 15, <code>vanillaIceCream</code>. Initiate the build process for the set target with the <code>m</code> command.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">m -j24</span></span></code></pre></div>
+<p>You can configure the <code>-j</code> flag and specify the number of jobs you want to launch. We have specified it as 24 in this example based on the maximum supported thread count of my system.</p>
+    <div style="display: flex;align-items: center;margin-bottom: 0.3rem;margin-top: 1.5rem;">
+        <span class="material-icons-outlined md-header" style="color: var(--color-text-headers);margin-right: 0.3rem;margin-top: 0.2em;">
+            insights
+        </span>
+        <h3 class= "iconHeader" id="monitor-your-system-during-builds">
+            <span>
+                Monitor your system during builds
+            </span>
+        </h3>
+    </div>
+
+<div style="display: flex;align-items: center;">
+<img style="border-radius: 1rem;width:60%;float:right;margin-right:1rem;filter:grayscale();opacity:90%" src="/images/siddroid-build-monitoring-aosp-system.png">
+<p>I like to monitor system memory consumption, CPU utilization, and temperatures during Android builds. You can achieve this using <code>htop</code> on Ubuntu. It&rsquo;s important to pay attention to your CPU temperatures, as they can rise significantly during a full Android build. On my system, CPU temperatures range from 60 to 80 degrees Celsius. These temperatures are quite high and indicate the need for effective cooling solutions. As I continue to enhance my system for daily platform development and experimentation, addressing this cooling requirement will be essential.</p>
+</div>
+    <div style="display: flex;align-items: center;margin-bottom: 0.3rem;margin-top: 1.5rem;">
+        <span class="material-icons-outlined md-header" style="color: var(--color-text-headers);margin-right: 0.3rem;margin-top: 0.2em;">
+            emoji_events
+        </span>
+        <h3 class= "iconHeader" id="successful-android-build">
+            <span>
+                Successful Android Build
+            </span>
+        </h3>
+    </div>
+
+<p>Upon completion of the build your console output should indicate the following</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-md" data-lang="md"><span class="line"><span class="cl">[100% 44162/44162 0s remaining] Target vbmeta image: out/target/product/bluejay/
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="gu">#### build completed successfully (16:52 (mm:ss)) ####
+</span></span></span><span class="line"><span class="cl"><span class="gu"></span>
+</span></span><span class="line"><span class="cl">siddroid-com% ➜ AOSP</span></span></code></pre></div>
+<p>Here in the example output, the generated output resides in the root of the project under the <code>out</code> directory. This is where the final compiled sources for Android will be stored and then used for flashing our physical device. If you are working in a multi-drive environment and would like to specify a separate out directory, you can do so by setting the <code>OUT_DIR</code> environment variable on your system.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">OUT_DIR</span><span class="o">=</span>YOUR_PATH</span></span></code></pre></div>
+<p>Having a dedicated <code>out</code> directory on another physically mounted drive can help speed up builds as it can access the full read-write of the disc. This can also help if your system has multiple storage drives.</p>
+    <div style="display: flex;align-items: center;margin-bottom: 0.3rem;margin-top: 1.5rem;">
+        <span class="material-icons-outlined md-header" style="color: var(--color-text-headers);margin-right: 0.3rem;margin-top: 0.2em;">
+            timer
+        </span>
+        <h3 class= "iconHeader" id="comparing-build-times">
+            <span>
+                Comparing Build Times
+            </span>
+        </h3>
+    </div>
+
+<p>Build times can range significantly depending on the number of files you have changed. A full build will take a longer time when you compile, incremental builds are usually fast but can still take proportionate time with the number of files and packages you have changed.</p>
+<p>The build system is impressively good at keeping a tab of changes and it will only re-compile packages and classes that you have changed. Here is a small comparison of expected build times for Android 15.</p>
+<table class="tg"><thead>
+  <tr>
+    <th class="tg-0pky">Build Type</th>
+    <th class="tg-0pky">Compile time</th>
+    <th class="tg-0pky">Incremental</th>
+  </tr></thead>
+<tbody>
+  <tr>
+    <td class="tg-0pky">eng</td>
+    <td class="tg-0pky">1h 27mins with 24 jobs</td>
+    <td class="tg-0pky">No, full build</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">eng</td>
+    <td class="tg-0pky">2-5mins with 24 jobs</td>
+    <td class="tg-0pky">Yes, single package changes</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">user</td>
+    <td class="tg-0pky">46mins</td>
+    <td class="tg-0pky">Yes, with a previous eng build generated.</td>
+  </tr>
+</tbody>
+</table>
+<blockquote class="infoBlockquote">
+    <div style="display: flex;align-items: center;">
+        <span class="material-icons-outlined md-36" style="color: var(--color-text-l2);margin-right: 1rem;opacity: 0.9;">
+            speed
+        </span>
+        <p>
+            As much as I would like to perform an accurate analysis of Android system builds on multiple systems, these numbers are just to give you an idea of the overall build time expectations. These figures are approximated on my machine with a 16C/24T CPU. They will vary vastly depending on your system configuration.
+        </p>
+    </div>
+</blockquote>
+<p>The Soong build system will notify you of the progression and number of code files being compiled <code>[100% 44162/44162 0s remaining]</code> like so, with an estimated time remaining. Measuring an incremental build can be varied, as you could be compiling incrementally with repo syncs or local code changes.</p>
+<p>The figures can be quite high yet daily development usually is not tedious, I have noticed build-time-to-boot in the range of 4 to 5 minutes while developing AOSP.</p>
+<hr>
+    <div style="display: flex;align-items: center;margin-bottom: 0.3rem;margin-top: 1.5rem;">
+        <span class="material-icons-outlined md-header" style="color: var(--color-text-headers);margin-right: 0.3rem;margin-top: 0.2em;">
+            send_to_mobile
+        </span>
+        <h3 class= "iconHeader" id="booting-your-android-build-on-a-pixel">
+            <span>
+                Booting your Android build on a Pixel
+            </span>
+        </h3>
+    </div>
+
+<p>With a complete compilation of the AOSP, we can now proceed to boot it on your physical device or emulator. In our example, we are going to boot the OS on a Google Pixel 6A, the one we built our system images for.</p>
+<p>The process is fairly straightforward. This process of installing the Android OS on a device is called <strong>&ldquo;Flashing&rdquo;</strong>.</p>
+<blockquote>
+<p>The term flashing originates from <a href="https://en.wikipedia.org/wiki/Flash_memory">Flash Memory</a>, the non-volatile storage on your device. Named by an <a href="https://books.google.de/books?id=VOnyWUUUj04C&amp;pg=SA6-PA4#v=onepage&amp;q&amp;f=false">employee at Toshiba</a> in the 1980s inspired by the flash of a camera, analogous to the erasure of the NAND in an instant.</p>
+</blockquote>
+<p><em>You can skip the portion below if you are not flashing the OS on a physical device.</em></p>
+<p>To flash our system image on the device, we require an unlocked device. The steps to unlock a Google Pixel are simple and require the <code>fastboot</code> utility. You can acquire it by installing <code>platform-tools</code> on your system.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">sudo apt install adb fastboot</span></span></code></pre></div>
+<p>The above will install <code>adb</code> and <code>fastboot</code> command-line utilities on your system. You could alternatively just install the Android SDK on your system and run the binaries from the installation path.</p>
+<p>Prepare your device for OEM unlocking. Note that this will erase everything on your device, do create backups for any user data that you may have on the test device. I would recommend investing in a dedicated test device for platform development and not using your daily device.</p>
+<p>Navigate to settings, and developer options and check OEM unlocking on the device. Also, enable ADB in the developer options.</p>
+<p>Issue the following commands sequentially:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">adb reboot bootloader</span></span></code></pre></div>
+<p>Your phone will boot into the OEM bootloader, and you can now use <code>fastboot</code> to unlock the device.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">fastboot oem unlock</span></span></code></pre></div>
+<p>The device should unlock, use the device buttons to say yes and the device should now be ready for daily platform development and experimentation. Proceed to flash our freshly built system images on the device.</p>
+<p>Set the variable <code>ANDROID_PRODUCT_OUT</code>, just export the <code>out</code> directory path for your device in your env variables. Do set the whole path to the target output directory.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">ANROID_PRODUCT_OUT</span><span class="o">=</span>/home/user-name/Projects/AOSP/out/target/product/codename</span></span></code></pre></div>
+<p>You can set the path in your <code>.zshrc</code> as well to avoid setting it daily. Follow this by executing the fastboot flash</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">fastboot flashall -w</span></span></code></pre></div>
+<p>It hardly takes a minute to deploy our build to the actual device via fastboot. The device should self-reboot into the OS. Since we are booting the pure AOSP vanilla Android, you will boot directly into the launcher with no setups required.</p>
+<div style="display: flex;align-items: center;justify-content: center;margin-top: 0.4rem;">
+    <div style="background-image: url('/images/siddroid-booting-aosp-on-a-pixel.JPG');background-size: cover;background-repeat: no-repeat;border-radius: 1rem;background-position: 50% 50%;width: 100%;height: 15rem;margin-bottom: 1rem;">
+    </div>
+</div>
+
+<div style="display: flex;align-items: center;justify-content: center;">
+    <p style="font-size: 80%;font-style: italic;opacity: 80%;text-align: center;"> Android 15 - AOSP build booting on a Google Pixel 6A </p>
+</div>
+
+
+<p>Super! We have a full setup for generating Android system images and testing them on our physical devices. This concludes our first major milestone for building Android and developing the open-source platform.</p>
+<p>We can now proceed to learn about how to setup a nice IDE for Android Platform Development.</p>
+<hr>
+    <div style="display: flex;align-items: center;margin-bottom: 0.3rem;margin-top: 1.5rem;">
+        <span class="material-icons-outlined md-header" style="color: var(--color-text-headers);margin-right: 0.3rem;margin-top: 0.2em;">
+            architecture
+        </span>
+        <h3 class= "iconHeader" id="ide-setup">
+            <span>
+                Android Studio for Platform (ASfP)
+            </span>
+        </h3>
+    </div>
+
+<p>Given the vast size of AOSP, any IDE will struggle to keep up with the entire source code. An IDE needs to monitor file changes in your file system as you code and make adjustments. However, it&rsquo;s unnecessary to monitor all 150,000 files of the Android Open Source Platform. Instead, you only need parts of the project, the generated platform sources, and link them with the IDE to create your applications or make changes to the project.</p>
+<p>AOSP still includes helpful tools called IDE-Gen and AIDEGen that simplify developer workflows. But we are not going to use them as they are no longer supported.</p>
+<p>In 2024 the IDE of choice to develop for the Android Platform is a custom variant of the Android Studio, called <strong>Android Studio for Platform (ASfP)</strong>.</p>
+<p>Proceed to <a href="https://developer.android.com/studio/platform">developer.android.com</a> and download the <strong>ASfP</strong> latest build. The setup is quite simple, download the Debian package and install it with the <code>dpkg</code> utility. Launch the <strong>ASfP</strong> from the command line with</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">/opt/android-studio-for-platform/bin/studio.sh</span></span></code></pre></div>
+<div style="display: flex;align-items: center;justify-content: center;margin-top: 0.4rem;">
+    <div style="background-image: url('/images/siddroid-asfp-android-studio-platform-setup-aosp.png');background-size: cover;background-repeat: no-repeat;background-position: 50% 50%;width: 100%;height: 15rem;margin-bottom: 1rem;">
+    </div>
+</div>
+
+<div style="display: flex;align-items: center;justify-content: center;">
+    <p style="font-size: 80%;font-style: italic;opacity: 80%;text-align: center;"> Initial Setup for ASfP </p>
+</div>
+
+<p>The initial setup is straightforward. Open the root of your repo directory which is <code>/Projects/AOSP</code> in our example. Set the lunch target as we determined earlier in the lunch input box. Add any modules you specifically want to develop, in this example, I will import the entire AOSP Framework. You will find that the IDE will initiate sync using the Soong build system and start building the module much like Gradle builds for a third-party consumer apps in the regular Android studio.</p>
+<div style="display: flex;align-items: center;justify-content: center;margin-top: 0.4rem;">
+    <div style="background-image: url('/images/siddroid-asfp-android-studio-platform-setup-aosp-choreographer.png');background-size: cover;background-repeat: no-repeat;background-position: 50% 50%;width: 100%;height: 15rem;margin-bottom: 1rem;">
+    </div>
+</div>
+
+<div style="display: flex;align-items: center;justify-content: center;">
+    <p style="font-size: 80%;font-style: italic;opacity: 80%;text-align: center;"> A framework class opened within ASfP </p>
+</div>
+
+<p>Now, you can dive into the source files, add new modules and packages, and build Android! Contribute to the OS, experiment with its system, framework, and applications, and unleash your creativity.</p>
+<p>Make a change, create a new build, and deploy it on your device to see your modifications in action!</p>
+<hr>
+    <div style="display: flex;align-items: center;margin-bottom: 0.3rem;margin-top: 1.5rem;">
+        <span class="material-icons-outlined md-header" style="color: var(--color-text-headers);margin-right: 0.3rem;margin-top: 0.2em;">
+            cloud
+        </span>
+        <h3 class= "iconHeader" id="alternative-setups">
+            <span>
+                Alternative setups
+            </span>
+        </h3>
+    </div>
+
+<p>You may have noticed that I haven&rsquo;t recommended a laptop for your setup, as high-spec configurations can be quite expensive. However, if portability is important to you, you could opt for a laptop with similar specifications or get a decent one with strong processing capabilities and upgrade it with additional memory and NVMe drives for building the Android platform.</p>
+<p><strong>Similarly one could ask</strong> &ndash; <em>why not just setup the environment on the Cloud?</em></p>
+<p>Yes, you could set everything up on the cloud, where systems can be dynamically configured using tools like Docker. I explored several cloud providers, including Google, Amazon, and Digital Ocean. Despite their massive computing capabilities, building the OS within a reasonable time frame for daily development and learning wasn&rsquo;t feasible on a server setup.</p>
+<blockquote class="infoBlockquote">
+    <div style="display: flex;align-items: center;">
+        <span class="material-icons-outlined md-36" style="color: var(--color-text-l2);margin-right: 1rem;opacity: 0.9;">
+            bookmark_outline
+        </span>
+        <p>
+            While a cloud setup is ideal for building Android platform development infrastructure, for daily development, I prefer a local machine and recommend the same to the reader.
+        </p>
+    </div>
+</blockquote>
+<p>In case your inclinations for studying the internals of the Android OS are purely to gain an understanding of the system and not develop it, <a href="https://cs.android.com/android/platform/superproject">the Android Superproject</a> is a great web-based tool to navigate around AOSP.</p>
+<hr>
+    <div style="display: flex;align-items: center;margin-bottom: 0.3rem;margin-top: 1.5rem;">
+        <span class="material-icons-outlined md-header" style="color: var(--color-text-headers);margin-right: 0.3rem;margin-top: 0.2em;">
+            summarize
+        </span>
+        <h3 class= "iconHeader" id="summary">
+            <span>
+                Summary
+            </span>
+        </h3>
+    </div>
+
+<h4 id="weve-embarked-on-an-exciting-journey-and-learned-how-to">We’ve embarked on an exciting journey and learned how to:</h4>
+<ul>
+<li>
+<p>Configure your machine and workflows to build the Android OS locally.</p>
+</li>
+<li>
+<p>Use the custom VCS tool Repo to sync Android sources.</p>
+</li>
+<li>
+<p>Prepare environments to generate system images for development devices.</p>
+</li>
+<li>
+<p>Set up devices with Fastboot to launch your Android builds.</p>
+</li>
+<li>
+<p>Leverage the <strong>ASfP</strong> Android Studio for Platform development and take your Android OS projects to the next level.</p>
+</li>
+</ul>
+<p>I hope you found this guide both exciting and helpful. Share your thoughts in the comments below, I&rsquo;m eager to hear from you. Thank you!</p>
+<hr>
+    <div style="display: flex;align-items: center;margin-bottom: 0.3rem;margin-top: 1.5rem;">
+        <span class="material-icons-outlined md-header" style="color: var(--color-text-headers);margin-right: 0.3rem;margin-top: 0.2em;">
+            link
+        </span>
+        <h3 class= "iconHeader" id="references">
+            <span>
+                References, Citations &amp; Attributions
+            </span>
+        </h3>
+    </div>
+
+<ul>
+<li><a href="https://source.android.com/docs/setup/start">Android Developers | Source</a> contains a nice step-by-step guide for building AOSP.</li>
+<li><a href="https://cs.android.com/android/platform/superproject">Android Super Project</a> for studying AOSP on the go.</li>
+<li><a href="https://developer.android.com/studio/platform">Android Studio for Platform</a> for developing the Android OS.</li>
+</ul>
+<hr>
+
+</div>
+
+
+
+
+<div class="authorCard" style="margin-bottom: 1em;">
+  <p style="font-family: outfit-medium, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
+    <i class="fas fa-bookmark" style="margin-right: 0.5em;color: #FFD54F;"></i>
+    About the author
+  </p>
+
+  <img src="/images/sid_patil.JPG" style="width: 3rem;height:3rem;float:left;margin-right:0.5rem;margin-bottom: 0.5rem;clip-path: circle(50% at 50% 50%);shape-outside: circle(50%);
+  " alt="Siddhesh Patil is an Android Engineer at DeliveryHero. Building core ordering experiences at Foodpanda and Foodora. He is the organzier of Kotlin Mumbai, a developer community in Mumbai, India. Find talks, articles and latest developments in Android and Kotlin on this website siddroid.com">
+
+  <p style="font-size: 80%;">
+      Sid Patil is an Android Engineer and Software Evangelist based in Berlin, Germany. He works at Delivery Hero, building ordering experiences for food delivery and Q-commerce brands like Foodpanda and Foodora. 
+  </p>
+  
+  
+
+
+
+
+
+    <a href="https://twitter.com/Siddroid?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="true">Follow @Siddroid</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+    
+    
+  
+
+  </div>
+
+  
+  
+
+ 
+  
+  
+  
+  
+
+<style>
+#share-buttons {display: inline-block; vertical-align: middle; }
+#share-buttons:after {content: ""; display: block; clear: both;}
+#share-buttons > div {
+position: relative;
+text-align: left; 
+height: 36px; 
+width: 32px; 
+float: left; 
+text-align: center;
+}
+#share-buttons > div > svg {height: 16px; fill: var(--color-text-l2); margin-top: 10px;}
+#share-buttons > div:hover {cursor: pointer;}
+#share-buttons > div.facebook:hover > svg {fill: #3B5998;}
+#share-buttons > div.twitter:hover > svg {fill: #55ACEE;}
+#share-buttons > div.mail:hover > svg {fill: rgb(238, 36, 36);}
+#share-buttons > div.instagram:hover > svg {fill: #C73B92;}
+#share-buttons > div.facebook > svg {height: 18px; margin-top: 9px;}
+#share-buttons > div.twitter > svg {height: 20px; margin-top: 8px;}
+#share-buttons > div.mail > svg {height: 14px; margin-top: 11px;}
+</style>
+
+<span style="color: var(--color-text-l2);font-family: outfit-regular;">Share on </span><div id="share-buttons">
+<div class="facebook" title="Share this on Facebook" onclick="window.open('http://www.facebook.com/share.php?u=https:\/\/siddroid.com\/post\/android\/the-starter-kit-for-android-platform-engineering\/');"><svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1343 12v264h-157q-86 0-116 36t-30 108v189h293l-39 296h-254v759h-306v-759h-255v-296h255v-218q0-186 104-288.5t277-102.5q147 0 228 12z"/></svg></div>
+<div class="twitter" title="Share this on Twitter" onclick="window.open('https://twitter.com/intent/tweet?&url=https:\/\/siddroid.com\/post\/android\/the-starter-kit-for-android-platform-engineering\/');"><svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1684 408q-67 98-162 167 1 14 1 42 0 130-38 259.5t-115.5 248.5-184.5 210.5-258 146-323 54.5q-271 0-496-145 35 4 78 4 225 0 401-138-105-2-188-64.5t-114-159.5q33 5 61 5 43 0 85-11-112-23-185.5-111.5t-73.5-205.5v-4q68 38 146 41-66-44-105-115t-39-154q0-88 44-163 121 149 294.5 238.5t371.5 99.5q-8-38-8-74 0-134 94.5-228.5t228.5-94.5q140 0 236 102 109-21 205-78-37 115-142 178 93-10 186-50z"/></svg></div>
+<div class="mail" title="Share this through Email" onclick="window.open('mailto:?&body=https:\/\/siddroid.com\/post\/android\/the-starter-kit-for-android-platform-engineering\/');"><svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1792 710v794q0 66-47 113t-113 47h-1472q-66 0-113-47t-47-113v-794q44 49 101 87 362 246 497 345 57 42 92.5 65.5t94.5 48 110 24.5h2q51 0 110-24.5t94.5-48 92.5-65.5q170-123 498-345 57-39 100-87zm0-294q0 79-49 151t-122 123q-376 261-468 325-10 7-42.5 30.5t-54 38-52 32.5-57.5 27-50 9h-2q-23 0-50-9t-57.5-27-52-32.5-54-38-42.5-30.5q-91-64-262-182.5t-205-142.5q-62-42-117-115.5t-55-136.5q0-78 41.5-130t118.5-52h1472q65 0 112.5 47t47.5 113z"/></svg></div>
+</div>
+  
+  
+
+
+  
+
+  
+
+
+    <div id="disqus_thread" style="z-index: 0;"></div>
+
+    <script>
+      (function () {
+        var d = document, s = d.createElement('script');
+        s.src = 'https://truestark.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+  
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by
+        Disqus.</a></noscript>
+  
+
+
+  
+
+  <div>
+  <hr>
+
+  <div style="display: flex;align-items: center;">
+      <span class="material-icons-outlined md-36" style="color: var(--color-text-l2);margin-right: 0.5rem;margin-top: 0.2em;">
+        book
+      </span>
+      <h3>
+      More articles to read
+    </h3>
+  </div>
+ 
+  
+  
+  <div style="overflow: auto;white-space: nowrap;">
+  
+  
+  
+  <ul style="list-style: none;margin-left: -10px;padding: 0;margin-top: 10px;display: flex;">
+    
+        <li style="margin: 10px;;margin-bottom: 10px;">
+          <a href="https://siddroid.com/post/dev/obsidian-your-second-brain/" style="color: #4b4444;text-decoration: none;">
+            <div class="card" style="background-color: var(--color-card-bg);max-width: 20em;min-height: 7em;">
+    
+              <div style="padding: 10px;">
+    
+                <div style="padding-left: 20px;padding-right: 20px;height: 50%;">
+                  <h4 style="color: var(--color-text-l2);max-lines: 1;text-overflow: ellipsis;overflow: hidden;max-height: 3em;white-space: nowrap;">Obsidian: My second brain</h4>
+                  <p style="font-size: 80%;color: var(--color-text-l2);">
+                    <i class="far fa-calendar" aria-hidden="true" style="margin-right: 0.2em;"></i>
+                    <time datetime="2022-08-16T00:50:55&#43;0100">Aug 16, 2022</time>
+                  </p>
+        
+                  <p style="font-size: 80%;color: var(--color-text-l2);max-height:3em;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;max-lines: 2;">
+                    
+                    Tired of moving between note-taking tools? Keep losing code snippets, TODOs and ideas? Meet Obsidian, a Markdown note taking tool to boost your developer productivity.
+                    
+                  </p>
+              </div>
+            </div>
+          </a>
+        </li> 
+        
+        <li style="margin: 10px;;margin-bottom: 10px;">
+          <a href="https://siddroid.com/post/community/event-android-worldwide-july-2022/" style="color: #4b4444;text-decoration: none;">
+            <div class="card" style="background-color: var(--color-card-bg);max-width: 20em;min-height: 7em;">
+    
+              <div style="padding: 10px;">
+    
+                <div style="padding-left: 20px;padding-right: 20px;height: 50%;">
+                  <h4 style="color: var(--color-text-l2);max-lines: 1;text-overflow: ellipsis;overflow: hidden;max-height: 3em;white-space: nowrap;">Android Worldwide: July 2022</h4>
+                  <p style="font-size: 80%;color: var(--color-text-l2);">
+                    <i class="far fa-calendar" aria-hidden="true" style="margin-right: 0.2em;"></i>
+                    <time datetime="2022-07-31T23:23:16&#43;0530">Jul 31, 2022</time>
+                  </p>
+        
+                  <p style="font-size: 80%;color: var(--color-text-l2);max-height:3em;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;max-lines: 2;">
+                    
+                    Android developers assemble! -- We catch-up again for yet another Android Worldwide quarterly event with a set of amazing talks from devs around the world. Here&#39;s a recap of the event in case you missed it.
+                    
+                  </p>
+              </div>
+            </div>
+          </a>
+        </li> 
+        
+        <li style="margin: 10px;;margin-bottom: 10px;">
+          <a href="https://siddroid.com/post/talks/a-ride-through-aosp-new-colors-droidcon-berlin-july-2022/" style="color: #4b4444;text-decoration: none;">
+            <div class="card" style="background-color: var(--color-card-bg);max-width: 20em;min-height: 7em;">
+    
+              <div style="padding: 10px;">
+    
+                <div style="padding-left: 20px;padding-right: 20px;height: 50%;">
+                  <h4 style="color: var(--color-text-l2);max-lines: 1;text-overflow: ellipsis;overflow: hidden;max-height: 3em;white-space: nowrap;">Droidcon Berlin: A ride through AOSP&#39;s new colors</h4>
+                  <p style="font-size: 80%;color: var(--color-text-l2);">
+                    <i class="far fa-calendar" aria-hidden="true" style="margin-right: 0.2em;"></i>
+                    <time datetime="2022-07-12T00:50:55&#43;0100">Jul 12, 2022</time>
+                  </p>
+        
+                  <p style="font-size: 80%;color: var(--color-text-l2);max-height:3em;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;max-lines: 2;">
+                    
+                    Sid Patil talks about the internals of the Android framework examining parts of AOSP that build the dynamic theme system with Monet and Material 3 at Droidcon Berlin.
+                    
+                  </p>
+              </div>
+            </div>
+          </a>
+        </li> 
+        
+        <li style="margin: 10px;;margin-bottom: 10px;">
+          <a href="https://siddroid.com/post/community/event-droidcon-berlin-2022/" style="color: #4b4444;text-decoration: none;">
+            <div class="card" style="background-color: var(--color-card-bg);max-width: 20em;min-height: 7em;">
+    
+              <div style="padding: 10px;">
+    
+                <div style="padding-left: 20px;padding-right: 20px;height: 50%;">
+                  <h4 style="color: var(--color-text-l2);max-lines: 1;text-overflow: ellipsis;overflow: hidden;max-height: 3em;white-space: nowrap;">Droidcon Berlin 2022</h4>
+                  <p style="font-size: 80%;color: var(--color-text-l2);">
+                    <i class="far fa-calendar" aria-hidden="true" style="margin-right: 0.2em;"></i>
+                    <time datetime="2022-07-12T00:45:55&#43;0100">Jul 12, 2022</time>
+                  </p>
+        
+                  <p style="font-size: 80%;color: var(--color-text-l2);max-height:3em;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;max-lines: 2;">
+                    
+                    A three day journey full of amazing people from the Android community. Come take a look at some key highlights of the event, talks, and various activities that happened at Droidcon Berlin 2022.
+                    
+                  </p>
+              </div>
+            </div>
+          </a>
+        </li> 
+        
+        <li style="margin: 10px;;margin-bottom: 10px;">
+          <a href="https://siddroid.com/post/android/supporting-adaptive-themed-icons-on-android-13/" style="color: #4b4444;text-decoration: none;">
+            <div class="card" style="background-color: var(--color-card-bg);max-width: 20em;min-height: 7em;">
+    
+              <div style="padding: 10px;">
+    
+                <div style="padding-left: 20px;padding-right: 20px;height: 50%;">
+                  <h4 style="color: var(--color-text-l2);max-lines: 1;text-overflow: ellipsis;overflow: hidden;max-height: 3em;white-space: nowrap;">Supporting adaptive themed icons on Android 13</h4>
+                  <p style="font-size: 80%;color: var(--color-text-l2);">
+                    <i class="far fa-calendar" aria-hidden="true" style="margin-right: 0.2em;"></i>
+                    <time datetime="2022-05-19T12:50:55&#43;0100">May 19, 2022</time>
+                  </p>
+        
+                  <p style="font-size: 80%;color: var(--color-text-l2);max-height:3em;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;max-lines: 2;">
+                    
+                    One of the coolest features of Android 13 with Material You and Monet is dynamically themed icons. Let us take a look at how we can migrate our apps to Tiramisu and add support for custom themed icons to match the system wide dynamic theme colors.
+                    
+                  </p>
+              </div>
+            </div>
+          </a>
+        </li> 
+        
+        <li style="margin: 10px;;margin-bottom: 10px;">
+          <a href="https://siddroid.com/post/android/chasing-monet-inside-the-android-framework/" style="color: #4b4444;text-decoration: none;">
+            <div class="card" style="background-color: var(--color-card-bg);max-width: 20em;min-height: 7em;">
+    
+              <div style="padding: 10px;">
+    
+                <div style="padding-left: 20px;padding-right: 20px;height: 50%;">
+                  <h4 style="color: var(--color-text-l2);max-lines: 1;text-overflow: ellipsis;overflow: hidden;max-height: 3em;white-space: nowrap;">Chasing Monet inside the Android framework</h4>
+                  <p style="font-size: 80%;color: var(--color-text-l2);">
+                    <i class="far fa-calendar" aria-hidden="true" style="margin-right: 0.2em;"></i>
+                    <time datetime="2022-04-28T00:50:55&#43;0100">Apr 28, 2022</time>
+                  </p>
+        
+                  <p style="font-size: 80%;color: var(--color-text-l2);max-height:3em;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;max-lines: 2;">
+                    
+                    We deep dive into the internals of the Android framework, covering the System-UI to understand the changes introduced starting from Android 12/12L and above, code-named Monet. We will explore the new system-wide dynamic theming capabilities and take a look at how Monet fuels the Material You design.
+                    
+                  </p>
+              </div>
+            </div>
+          </a>
+        </li> 
+        
+      </ul>
+  </div>  
+  
+  </div>
+  
+  
+
+
+  
+
+</div>
+
+
+
+
+
+
+
+      </div>
+
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/js/all.min.js" integrity="sha512-8pHNiqTlsrRjVD4A/3va++W1sMbUHwWxxRPWNyVlql3T+Hgfd81Qc6FC5WMXDC+tSauxxzp1tgiAvSKFu1qIlA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  
+  
+  <script src="https://siddroid.com/js/highlight.pack.js"></script>
+  <script>hljs.highlightAll();</script>
+  
+  <script src="https://unpkg.com/lunr/lunr.js"></script>
+
+  <script src="https://siddroid.com/js/search.js"></script>
+
+  
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8KZ2HPRPJH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8KZ2HPRPJH');
+  var title = document.title
+  gtag('event', 'page_view', {
+  page_title: title,
+  });
+  
+</script>
+  <script src="https://siddroid.com/js/custom.js"></script> </script>
+</body>
+
+<footer>
+
+  <div class="bottomBar">
+
+  
+    <section class="social-icons">
+      <div style="display: flex;justify-content: center;margin-bottom: 1rem;">
+          
+          <a href="http://twitter.com/intent/user?screen_name=siddroid" rel="me" title="Twitter" target="_blank" style="color: #c7c7c7;margin-left: 1rem;margin-right: 1rem;">
+            
+            <div style="display: flex;align-items: center;justify-content: center;color: var(--color-text-experimental);">
+              <i class="fab fa-twitter" aria-hidden="true" style="height: 23px;width: 23px;"></i>
+          </div>
+          </a>
+          
+          <a href="https://www.linkedin.com/in/patilsid/" rel="me" title="Linkedin" target="_blank" style="color: #c7c7c7;margin-left: 1rem;margin-right: 1rem;">
+            
+            <div style="display: flex;align-items: center;justify-content: center;color: var(--color-text-experimental);">
+              <i class="fab fa-linkedin" aria-hidden="true" style="height: 23px;width: 23px;"></i>
+          </div>
+          </a>
+          
+          <a href="https://github.com/patilsiddhesh" rel="me" title="GitHub" target="_blank" style="color: #c7c7c7;margin-left: 1rem;margin-right: 1rem;">
+            
+            <div style="display: flex;align-items: center;justify-content: center;color: var(--color-text-experimental);">
+              <i class="fab fa-github" aria-hidden="true" style="height: 23px;width: 23px;"></i>
+          </div>
+          </a>
+          
+          <a href="https://androiddev.social/@siddroid" rel="me" title="Mastodon" target="_blank" style="color: #c7c7c7;margin-left: 1rem;margin-right: 1rem;">
+            
+            <div style="display: flex;align-items: center;justify-content: center;color: var(--color-text-experimental);">
+              <i class="fab fa-mastodon" aria-hidden="true" style="height: 23px;width: 23px;"></i>
+          </div>
+          </a>
+          
+          <a href="https://www.reddit.com/user/siddheshpatil/" rel="me" title="Reddit" target="_blank" style="color: #c7c7c7;margin-left: 1rem;margin-right: 1rem;">
+            
+            <div style="display: flex;align-items: center;justify-content: center;color: var(--color-text-experimental);">
+              <i class="fab fa-reddit" aria-hidden="true" style="height: 23px;width: 23px;"></i>
+          </div>
+          </a>
+          
+
+          <a href="/index.xml" rel="me" title="RSS" target="_blank" style="color: #c7c7c7;margin-left: 1rem;margin-right: 1rem;">
+            
+            <div style="display: flex;align-items: center;justify-content: center;color: var(--color-text-experimental);">
+              <span class="material-icons-outlined md-24">
+                rss_feed
+              </span>
+          </div>
+          </a>
+      </div>
+    </section>
+
+    <section>
+      <div style="display: flex;justify-content: center;">
+          <a href="/" rel="me" title="Android" style="color:  var(--color-accent);margin-left: 0.5rem;margin-right: 0.5rem;">
+            
+            <div style="display: flex;align-items: center;justify-content: center;">
+                <p class="headerTxt" style="font-size:90%; color:  var(--color-accent);">Home</p>                      
+            </div>
+          </a>
+          <a href="/browse/" rel="me" title="browse" style="color:  var(--color-accent);margin-left: 0.5rem;margin-right: 0.5rem;">
+            
+            <div style="display: flex;align-items: center;justify-content: center;">
+                <p class="headerTxt" style="font-size:90%; color:  var(--color-accent);">Archive</p>                      
+            </div>
+          </a>
+          <a href="/browse/android/" rel="me" title="work" style="color:  var(--color-accent);margin-left: 0.5rem;margin-right: 0.5rem;">
+            
+            <div style="display: flex;align-items: center;justify-content: center;">
+                <p class="headerTxt" style="font-size:90%; color:  var(--color-accent);">Android</p>                      
+            </div>
+          </a>
+          <a href="/browse/compose/" rel="me" title="talks" style="color:  var(--color-accent);margin-left: 0.5rem;margin-right: 0.5rem;">
+            
+            <div style="display: flex;align-items: center;justify-content: center;">
+                <p class="headerTxt" style="font-size:90%; color:  var(--color-accent); ">Compose</p>                      
+            </div>
+          </a>
+          <a href="/about/" rel="me" title="About" style="color:  var(--color-accent);margin-left: 0.5rem;margin-right: 0.5rem;">
+            
+            <div style="display: flex;align-items: center;justify-content: center;">
+                <p class="headerTxt" style="font-size:90%; color:  var(--color-accent);">About</p>                      
+            </div>
+          </a>
+      </div>
+    </section>
+
+  
+
+  <p class="footerDescText" style="font-size: 80%;text-align: center;">Read the latest articles on Android, Kotlin and open-source projects. Find tech talks, news from communities, developer events, and workshops by Android developers around the world.</p>
+
+  <div class="copyright" style="color: var(--color-accent);">
+    <p class="headerTxt" style="color: var(--color-text-l1);">
+      Sid Patil 2024 · <a href="/policy/">Content & Privacy Policy</a>
+    </p>
+  </div>
+
+  </div>      
+
+</footer>
+
+
+
+
+</html>

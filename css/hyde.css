@@ -83,6 +83,7 @@
 
   --color-hot-orange-quote: #ff5e0028;
   --color-pear-green-quote: #77dd862c;
+  --color-info-block-quote: #1767e01f;
 }
 
 
@@ -124,7 +125,7 @@
 }
 
 html {
- font-family: "sansfont", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";;
+ font-family: "outfit-regular", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";;
  -webkit-tap-highlight-color: transparent;
  scroll-padding-top: 4rem;
  scroll-behavior: smooth;
@@ -253,13 +254,13 @@ footer {
 
 .postTitleHeading {
  font-size:40pt;
- font-family: gilroy-desk;
+ font-family: gilroy-semi-bold;
 }
 
 @media (max-width: 74em) {
  .postTitleHeading {
    font-size:30pt;
-   font-family: gilroyb;
+   font-family: gilroy-bold;
  }
 }
 
@@ -487,22 +488,22 @@ ul.posts {
 
 @font-face {
  font-family: jetbrains;
- src: url(/fonts/JetBrainsMono-Regular.woff2);
+ src: url(https://siddroid.com/fonts/JetBrainsMono-Regular.woff2);
 }
 
 @font-face {
- font-family: sansfont;
- src: url(/fonts/Outfit-Regular.woff2) format("woff");
+ font-family: outfit-regular;
+ src: url(https://siddroid.com/fonts/Outfit-Regular.woff2) format("woff");
 }
 
 @font-face {
-  font-family: robotomed;
-  src: url(/fonts/Outfit-Medium.woff2) format("woff");
+  font-family: outfit-medium;
+  src: url(https://siddroid.com/fonts/Outfit-Medium.woff2) format("woff");
  }
 
 @font-face {
- font-family: gilroysb;
- src: url(/fonts/Gilroy.woff2) format("woff");
+ font-family: gilroy-semibold-desk;
+ src: url(https://siddroid.com/fonts/Gilroy.woff2) format("woff");
  speak: none;
 font-style: normal;
 font-weight: bold;
@@ -514,8 +515,8 @@ line-height: 1;
 }
 
 @font-face {
- font-family: gilroy-desk;
- src: url(/fonts/Gilroy-SemiBold.woff2) format("woff");
+ font-family: gilroy-semi-bold;
+ src: url(https://siddroid.com/fonts/Gilroy-SemiBold.woff2) format("woff");
  speak: none;
 font-style: normal;
 font-weight: bold;
@@ -527,8 +528,8 @@ line-height: 1;
 }
 
 @font-face {
- font-family: gilroyb;
- src: url(/fonts/Gilroy.woff2) format("woff");
+ font-family: gilroy-bold;
+ src: url(https://siddroid.com/fonts/Gilroy.woff2) format("woff");
  speak: none;
 font-style: normal;
 font-weight: bold;
@@ -555,6 +556,12 @@ line-height: 1;
  white-space: nowrap;
  background: var(--color-pill-bg);
  border-radius: 1rem;
+}
+
+@media (min-width: 64em) {
+  .tagBg {
+    padding-left: 1rem;
+  }
 }
 
 .headerPill {
@@ -634,6 +641,12 @@ line-height: 1;
   border-left: 0rem solid var(--color-green) !important;
   border-radius: 0.5rem !important;
   background-color: var(--color-pear-green-quote) !important;
+}
+
+.infoBlockquote {
+  border-left: 0rem solid var(--color-accent) !important;
+  border-radius: 0.5rem !important;
+  background-color: var(--color-info-block-quote) !important;
 }
 
 
@@ -878,7 +891,7 @@ textarea:focus,input:focus {
 }
 
 .timeline-header {
- font-family: sansfont !important;
+ font-family: outfit-regular !important;
 }
 
 .utterances-frame em {
@@ -1161,4 +1174,11 @@ textarea:focus,input:focus {
   padding: 0.4rem;
   padding-bottom: 0rem;
   border-radius: 1rem;
+}
+
+.center-cropped {
+  width: 100px;
+  height: 100px;
+  background-position: center center;
+  background-repeat: no-repeat;
 }

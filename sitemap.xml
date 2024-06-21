@@ -17,19 +17,28 @@
     <loc>https://siddroid.com/about/</loc>
     <lastmod>2020-03-08T20:22:27+05:30</lastmod>
   </url><url>
+    <loc>https://siddroid.com/browse/android/</loc>
+    <lastmod>2024-06-21T12:50:55+01:00</lastmod>
+  </url><url>
     <loc>https://siddroid.com/browse/</loc>
-    <lastmod>2022-08-16T00:50:55+01:00</lastmod>
+    <lastmod>2024-06-21T12:50:55+01:00</lastmod>
+  </url><url>
+    <loc>https://siddroid.com/browse/platform/</loc>
+    <lastmod>2024-06-21T12:50:55+01:00</lastmod>
+  </url><url>
+    <loc>https://siddroid.com/post/</loc>
+    <lastmod>2024-06-21T12:50:55+01:00</lastmod>
+  </url><url>
+    <loc>https://siddroid.com/</loc>
+    <lastmod>2024-06-21T12:50:55+01:00</lastmod>
+  </url><url>
+    <loc>https://siddroid.com/post/android/the-starter-kit-for-android-platform-engineering/</loc>
+    <lastmod>2024-06-21T12:50:55+01:00</lastmod>
   </url><url>
     <loc>https://siddroid.com/browse/dev/</loc>
     <lastmod>2022-08-16T00:50:55+01:00</lastmod>
   </url><url>
     <loc>https://siddroid.com/post/dev/obsidian-your-second-brain/</loc>
-    <lastmod>2022-08-16T00:50:55+01:00</lastmod>
-  </url><url>
-    <loc>https://siddroid.com/post/</loc>
-    <lastmod>2022-08-16T00:50:55+01:00</lastmod>
-  </url><url>
-    <loc>https://siddroid.com/</loc>
     <lastmod>2022-08-16T00:50:55+01:00</lastmod>
   </url><url>
     <loc>https://siddroid.com/post/community/event-android-worldwide-july-2022/</loc>
@@ -46,9 +55,6 @@
   </url><url>
     <loc>https://siddroid.com/post/community/event-droidcon-berlin-2022/</loc>
     <lastmod>2022-07-12T00:45:55+01:00</lastmod>
-  </url><url>
-    <loc>https://siddroid.com/browse/android/</loc>
-    <lastmod>2022-05-19T12:50:55+01:00</lastmod>
   </url><url>
     <loc>https://siddroid.com/post/android/supporting-adaptive-themed-icons-on-android-13/</loc>
     <lastmod>2022-05-19T12:50:55+01:00</lastmod>
