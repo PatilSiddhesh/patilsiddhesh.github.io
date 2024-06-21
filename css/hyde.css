@@ -285,6 +285,14 @@ footer {
  }
 }
 
+@media only screen 
+ and (min-width: 2400px) {
+   .deskListItem {
+     padding-left: 20rem;
+     padding-right: 20rem;
+   }
+}
+
 @media (min-width: 48em) {
   .deskListItem {
     margin-top: 0rem;
@@ -697,6 +705,15 @@ line-height: 1;
      margin-right: 10rem;
    }
 }
+
+@media only screen 
+ and (min-width: 2400px) {
+   .parentContainer {
+     padding-left: 20rem;
+     padding-right: 20rem;
+   }
+}
+
 @media only screen and (min-width: 834px) and (max-width: 1112px) and (orientation: landscape){ 
  .parentContainer {
    margin-left: 2rem;
