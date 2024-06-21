@@ -7,7 +7,7 @@
     <description>Recent content on Sid Patil</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 16 Aug 2022 00:50:55 +0100</lastBuildDate><atom:link href="https://siddroid.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 21 Jun 2024 12:50:55 +0100</lastBuildDate><atom:link href="https://siddroid.com/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Work</title>
@@ -15,7 +15,7 @@
       <pubDate>Sun, 08 Mar 2020 20:09:35 +0530</pubDate>
       
       <guid>https://siddroid.com/work/</guid>
-      <description>Sid Patil is an Android Engineer and Kotlin Advocate. He currently works at Delivery Hero SE in Berlin, Germany. Previously he worked at Paytm and Insider.in on payment related mobile software. He also helped build mobile learning apps for banks like Axis, ICICI and Yes in India.</description>
+      <description>Sid Patil is an Android Engineer and Software Evangelist. He currently works at Delivery Hero SE in Berlin, Germany. Previously he worked at Paytm and Insider.in on payment related mobile software. He also helped build mobile learning apps for banks like Axis, ICICI and Yes in India.</description>
     </item>
     
     
@@ -28,7 +28,7 @@
       <pubDate>Wed, 12 May 2021 19:49:56 +0530</pubDate>
       
       <guid>https://siddroid.com/search/</guid>
-      <description>Sid Patil is an Android Engineer and Kotlin Advocate. He works at Delivery Hero SE in Berlin Germany. Search this website for articles on Android, Kotlin, Jetpack Compose and much more.</description>
+      <description>Sid Patil is an Android Engineer and Software Evangelist. He works at Delivery Hero SE in Berlin Germany. Search this website for articles on Android, Kotlin, Jetpack Compose and much more.</description>
     </item>
     
     
@@ -39,7 +39,7 @@
       <pubDate>Sun, 08 Mar 2020 20:09:35 +0530</pubDate>
       
       <guid>https://siddroid.com/projects/</guid>
-      <description>Sid Patil is an Android Engineer and Kotlin Advocate. He works at Delivery Hero SE in Berlin Germany. Currently he helps build food delivery and quick commerce experiences imacting over 50 countries. You will find him organizing events, giving talks and writing articles that help others.</description>
+      <description>Sid Patil is an Android Engineer and Software Evangelist. He works at Delivery Hero SE in Berlin Germany. Currently he helps build food delivery and quick commerce experiences imacting over 50 countries. You will find him organizing events, giving talks and writing articles that help others.</description>
     </item>
     
     
@@ -50,7 +50,18 @@
       <pubDate>Sun, 08 Mar 2020 20:22:27 +0530</pubDate>
       
       <guid>https://siddroid.com/about/</guid>
-      <description>Sid Patil is an Android Engineer and Kotlin Advocate. He works at Delivery Hero SE in Berlin Germany. Currently he helps build food delivery and quick commerce experiences impacting over 50 countries. You will find him organizing events, giving talks and writing articles that help others.</description>
+      <description>Sid Patil is an Android Engineer and Software Evangelist. He works at Delivery Hero SE in Berlin Germany. Currently he helps build food delivery and quick commerce experiences impacting over 50 countries. You will find him organizing events, giving talks and writing articles that help others.</description>
+    </item>
+    
+    
+    
+    <item>
+      <title>The Starter kit for Android Platform Engineering</title>
+      <link>https://siddroid.com/post/android/the-starter-kit-for-android-platform-engineering/</link>
+      <pubDate>Fri, 21 Jun 2024 12:50:55 +0100</pubDate>
+      
+      <guid>https://siddroid.com/post/android/the-starter-kit-for-android-platform-engineering/</guid>
+      <description>Unlock the secrets of the Android Open Source Project (AOSP) with a comprehensive guide to Platform Engineering. This article covers everything from machine setup and IDE configuration to compiling a full Android system builds for Google Pixels.</description>
     </item>
     
     
@@ -210,7 +221,7 @@
       <pubDate>Sat, 20 Mar 2021 06:31:08 +0530</pubDate>
       
       <guid>https://siddroid.com/policy/</guid>
-      <description>Sid Patil is an Android Engineer and Kotlin Advocate. He works at Delivery Hero SE in Berlin Germany. Currently he helps build food delivery and quick commerce experiences imacting over 50 countries. You will find him organizing events, giving talks and writing articles that help others.</description>
+      <description>Sid Patil is an Android Engineer and Software Evangelist. He works at Delivery Hero SE in Berlin Germany. Currently he helps build food delivery and quick commerce experiences imacting over 50 countries. You will find him organizing events, giving talks and writing articles that help others.</description>
     </item>
     
     
