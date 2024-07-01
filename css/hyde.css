@@ -51,7 +51,7 @@
   --color-text-highlight: #8cdfb1;
   --color-canvas-border-l2:#e8eaed;
   --color-canvas-pitview: #f4f6fb;
-  --color-card-bg:#F8FAFD;
+  --color-card-bg:#f4f6fb;
   --color-red: #f03009;
   --color-red-orange: #ff2e00;
   --color-hot-orange: #ff5c00;
@@ -66,7 +66,7 @@
   --color-sunset-pink: #ff7b81;
   --color-light-pink: #ffb3ba;
   --color-light-purple: #d89be4;
-  --color-pill-bg:#F8FAFD;
+  --color-pill-bg:#f4f6fb;
   
   --color-code-text:#24292e;
   --color-code-bg:#F8FAFD;
@@ -107,8 +107,8 @@
  --color-site-logo-text: #e8eaed;
  --color-text-experimental: #e8eaed;
  --color-text-highlight: #008f5d;
- --color-pill-bg:#28292A;
- --color-card-bg:#28292A;
+ --color-pill-bg:#28282e;
+ --color-card-bg:#28282e;
 
  --color-code-text:#f8f8f2;
  --color-code-bg:#252529;
